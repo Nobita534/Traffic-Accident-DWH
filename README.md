@@ -16,7 +16,7 @@ Hệ thống sử dụng luồng xử lý ELT (Extract - Load - Transform) tối
 
 ## 🗄 Mô hình Dữ liệu (Star Schema)
 
-![Star Schema Diagram](./Database/star schema.png)
+![Star Schema Diagram](./Database/star_schema.png)
 
 Hệ thống được thiết kế theo mô hình hình sao (Star Schema) chuẩn, bao gồm:
 
