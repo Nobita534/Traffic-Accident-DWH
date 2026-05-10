@@ -1,0 +1,320 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="4da4da22-caa5-4369-aa99-cb7bb3a64636" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Date Of Crash</ID>
+  <Name>Dim Date Of Crash</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2869" scrolltop="-6350" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9525" y="15367" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Date_Of_Crash" left="-446" top="-5122" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3747" height="2667" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000a30e00006b0a0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Date_Of_Crash" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2869</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6350</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>-446</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-5122</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ARDiagramLayout</Name>
+      <Value>
+        <DiagramLayout ZoomPercent="100" ViewPortX="0" ViewPortY="0" xmlns="">
+          <Shapes NodeWidth="164">
+            <Shape Id="Crash Date" Expanded="false">
+              <Attributes>
+                <Attribute Id="Crash Date" />
+              </Attributes>
+              <Position x="20" y="20" />
+            </Shape>
+            <Shape Id="Crash Hour" Expanded="false">
+              <Attributes>
+                <Attribute Id="Crash Hour" />
+              </Attributes>
+              <Position x="230" y="20" />
+            </Shape>
+            <Shape Id="Crash Day Of Week" Expanded="false">
+              <Attributes>
+                <Attribute Id="Crash Day Of Week" />
+              </Attributes>
+              <Position x="440" y="20" />
+            </Shape>
+            <Shape Id="Crash Month" Expanded="false">
+              <Attributes>
+                <Attribute Id="Crash Month" />
+              </Attributes>
+              <Position x="650" y="20" />
+            </Shape>
+            <Shape Id="Crash Year" Expanded="false">
+              <Attributes>
+                <Attribute Id="Crash Year" />
+              </Attributes>
+              <Position x="860" y="20" />
+            </Shape>
+          </Shapes>
+        </DiagramLayout>
+      </Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="b172280c-fced-4fd2-80ea-54294e2fd62b">
+    <DataSourceViewID>TRAFFIC ACCIDENT</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="ec68a40a-694a-448e-970a-4c7d153a0d77">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="33f6c844-ddaf-470c-b0ad-e0dbd5b7207e">
+      <ID>Crash Date</ID>
+      <Name>Crash Date</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6aae1dc6-0d3f-4cb6-b69b-ef526b0d55a1">
+          <DataType>Date</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="0f0c90c3-20cc-481f-9b09-9076027785f0">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_date</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="e8dd6997-83ff-4b17-aeec-2380e52dc836">
+          <AttributeID>Crash Hour</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Crash Hour</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="273b4387-ca31-4ba5-a5da-459ed7a280a8">
+      <ID>Crash Hour</ID>
+      <Name>Crash Hour</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dbf2aa27-902b-4ed7-ac01-7d7cf9b6e0c7">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="cde85866-c715-424f-a1d8-489d9ca4ddfc">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_hour</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="be21b923-662d-4490-98a4-0d23253f526b">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="53adc48f-0c95-47b3-ac11-24203d8cbd03">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_day_of_week</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="6def6de0-7edf-4f64-9b40-0a545cc717a0">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="02532d59-da98-4c2c-bf01-3bf122e27ae6">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="271204a0-0428-4897-b277-f5afc8f26779">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="71c6770c-1a2b-40b8-b0e7-e819f7d35137">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="afb4ce9f-3a7d-44ff-808e-04174692eefa">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="b6749266-7f0c-4050-8fd7-162418858683">
+          <TableID>dbo_Dim_Date_Of_Crash</TableID>
+          <ColumnID>crash_hour</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="68f8e743-ce42-4f13-9d8d-e701cde05e98">
+          <AttributeID>Crash Day Of Week</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Crash Day Of Week</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="57dc75e7-f905-4bd7-8c6d-a12e508574ec">
+      <ID>Crash Day Of Week</ID>
+      <Name>Crash Day Of Week</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="dfe7e1bd-ce23-4b61-868f-1ca00f6ed56e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="4febe918-a78d-438b-8fb8-49eb40e83118">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_day_of_week</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="668f5c1f-8b96-42bc-be77-43783f33501c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="f247b846-38af-4332-bd74-5e508227c473">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="bcc0af60-d3a0-49b9-86f0-e2a0c2a2d47c">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e0473079-27b0-4abb-8f7c-436642d71f24">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="40e4f490-a68b-4767-b494-d8802e607ecc">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="2f0d99bb-97fb-4677-8bb2-8bec949695a1">
+          <TableID>dbo_Dim_Date_Of_Crash</TableID>
+          <ColumnID>crash_day_of_week</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="2abe9ba4-2893-41ca-88da-5152378059e5">
+          <AttributeID>Crash Month</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Crash Month</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3010781c-1a6a-485e-b552-5837f4c4093e">
+      <ID>Crash Month</ID>
+      <Name>Crash Month</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="19386e70-cd1b-418f-9436-3ef43df0335d">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="3f19d067-d88a-4abd-9b3e-b1223bc9c228">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_month</ColumnID>
+          </Source>
+        </KeyColumn>
+        <KeyColumn dwd:design-time-name="323895c4-12a2-4467-87e5-cae723764f8e">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="bf63b7a6-86c3-410c-8fa9-02d00e4c5149">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <NameColumn dwd:design-time-name="4d7622e9-abf8-4068-85c7-917c585f6a99">
+        <DataType>WChar</DataType>
+        <Source xsi:type="ColumnBinding" dwd:design-time-name="ef2b68db-956e-49fa-987a-eb1a1c877e92">
+          <TableID>dbo_Dim_Date_Of_Crash</TableID>
+          <ColumnID>crash_month</ColumnID>
+        </Source>
+      </NameColumn>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="b3db075f-d8fd-4ef9-b072-716bb1c79911">
+          <AttributeID>Crash Year</AttributeID>
+          <RelationshipType>Rigid</RelationshipType>
+          <Name>Crash Year</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="443e3518-809f-4096-b9f6-5a7ef66da834">
+      <ID>Crash Year</ID>
+      <Name>Crash Year</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="06c9934d-455f-465f-a3ca-74f473ccdebc">
+          <DataType>Integer</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="21484894-3bad-4e4c-83b9-822f50d5ca49">
+            <TableID>dbo_Dim_Date_Of_Crash</TableID>
+            <ColumnID>crash_year</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <Hierarchies>
+    <Hierarchy dwd:design-time-name="a05d01b4-4092-4eef-96a6-979337369830">
+      <ID>Hierarchy</ID>
+      <Name>Date of Traffic Accident</Name>
+      <Levels>
+        <Level dwd:design-time-name="1d83b826-0a9b-44dc-98ff-cb35224be3ba">
+          <ID>Crash Year</ID>
+          <Name>Crash Year</Name>
+          <SourceAttributeID>Crash Year</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="f5db16aa-0452-4d92-9932-0b3fbb7ba3f8">
+          <ID>Crash Month</ID>
+          <Name>Crash Month</Name>
+          <SourceAttributeID>Crash Month</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="393c9f55-4d4f-4e92-838e-8d96b36ac52a">
+          <ID>Crash Day Of Week</ID>
+          <Name>Crash Day Of Week</Name>
+          <SourceAttributeID>Crash Day Of Week</SourceAttributeID>
+        </Level>
+        <Level dwd:design-time-name="952e07bc-be4e-4c54-aa3d-1584ff10f230">
+          <ID>Crash Hour</ID>
+          <Name>Crash Hour</Name>
+          <SourceAttributeID>Crash Hour</SourceAttributeID>
+        </Level>
+      </Levels>
+    </Hierarchy>
+  </Hierarchies>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>

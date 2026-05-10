@@ -1,0 +1,219 @@
+﻿<Dimension xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="05afec23-52ce-4a3c-a5bb-3019032d5185" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Dim Injury Info</ID>
+  <Name>Dim Injury Info</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-2202" scrolltop="-5990" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="9525" y="15367" backcolor="2039583" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001b0300100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="Dim_Injury_Info" left="126" top="-5567" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="5080" height="3387" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000d81300003b0d0000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_Dim_Injury_Info" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-2202</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-5990</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>126</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>-5567</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="c1a626da-3b6d-43fd-b21f-429caea91050">
+    <DataSourceViewID>TRAFFIC ACCIDENT</DataSourceViewID>
+  </Source>
+  <UnknownMember>Visible</UnknownMember>
+  <ErrorConfiguration dwd:design-time-name="d5e791b3-1972-402b-8c19-a058659f89c6">
+    <KeyNotFound>ReportAndStop</KeyNotFound>
+    <KeyDuplicate>ReportAndStop</KeyDuplicate>
+    <NullKeyNotAllowed>ReportAndStop</NullKeyNotAllowed>
+  </ErrorConfiguration>
+  <CurrentStorageMode>Molap</CurrentStorageMode>
+  <Attributes>
+    <Attribute dwd:design-time-name="0db7062f-e49a-4945-829d-4149a93eb0d7">
+      <ID>Injury Id</ID>
+      <Name>Injury Id</Name>
+      <Usage>Key</Usage>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="e7879a3d-820f-4699-92b9-dbc822b49d32">
+          <DataType>Integer</DataType>
+          <NullProcessing>UnknownMember</NullProcessing>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="477d137f-31a6-4162-a6c5-a996c8391f28">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injury_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <AttributeRelationships>
+        <AttributeRelationship dwd:design-time-name="d55614e8-ccbb-4629-9fc1-66502c102d70">
+          <AttributeID>Injuries Fatal</AttributeID>
+          <Name>Injuries Fatal</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="dde80bbf-d6f6-48d6-a389-da4cd9a3aa6d">
+          <AttributeID>Injuries Incapacitating</AttributeID>
+          <Name>Injuries Incapacitating</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="f7a646a7-11c3-46aa-a09f-07d6de0852d4">
+          <AttributeID>Injuries Non Incapacitating</AttributeID>
+          <Name>Injuries Non Incapacitating</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="8e236779-bbca-4a3e-89c3-684358b6278c">
+          <AttributeID>Injuries Reported Not Evident</AttributeID>
+          <Name>Injuries Reported Not Evident</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="41499dea-32d5-4c1b-a9d8-1286e07e4af4">
+          <AttributeID>Injuries No Indication</AttributeID>
+          <Name>Injuries No Indication</Name>
+        </AttributeRelationship>
+        <AttributeRelationship dwd:design-time-name="3107a348-c881-47e0-b43e-f16ef9680ad7">
+          <AttributeID>Damage Cat</AttributeID>
+          <Name>Damage Cat</Name>
+        </AttributeRelationship>
+      </AttributeRelationships>
+      <OrderBy>Key</OrderBy>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="f7f94cf2-3f8e-484f-b544-0db1427010d4">
+      <ID>Injuries Fatal</ID>
+      <Name>Injuries Fatal</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cb5f3599-3f09-4a67-8146-efec97af2ef0">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="44318bc0-dcfc-4365-bdf7-ad6f03c9f246">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injuries_fatal</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="30c35d48-edd1-4967-8648-8004a88aa561">
+      <ID>Injuries Incapacitating</ID>
+      <Name>Injuries Incapacitating</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="6acca5d2-8cea-452f-b990-10cd37bd1dfb">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6c4271cc-ee65-4d39-8c4e-516c4ad134d2">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injuries_incapacitating</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="73645716-00e5-43f4-97bd-f452da532c47">
+      <ID>Injuries Non Incapacitating</ID>
+      <Name>Injuries Non Incapacitating</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="4b96c87b-743d-47af-b1cd-df43ec898d81">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="2c788700-bb07-444c-a094-dddf75517811">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injuries_non_incapacitating</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="2e53ac37-9112-4bea-9ac2-a20213c6ee33">
+      <ID>Injuries Reported Not Evident</ID>
+      <Name>Injuries Reported Not Evident</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="38f5a8e5-ecd6-4ea6-9657-c7739cdc1ba8">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="68a08350-b8e6-4981-b284-9946fccec857">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injuries_reported_not_evident</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="03a7669c-b34d-40e2-91ed-d80824bd6731">
+      <ID>Injuries No Indication</ID>
+      <Name>Injuries No Indication</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="383c6a97-0b62-4a46-bb04-086f390d1165">
+          <DataType>SmallInt</DataType>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5ba89f75-a795-4ce2-93ec-bd08fc9b449c">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>injuries_no_indication</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+    <Attribute dwd:design-time-name="3bb4eb3c-2573-4688-83d9-9f4f14f03a1c">
+      <ID>Damage Cat</ID>
+      <Name>Damage Cat</Name>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3be2f871-e1e0-47cc-aa28-211876524c66">
+          <DataType>WChar</DataType>
+          <DataSize>6</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="21e30931-3215-4447-a02f-a4eddbe3c0ae">
+            <TableID>dbo_Dim_Injury_Info</TableID>
+            <ColumnID>damage_cat</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+      <ddl200:ProcessingState>Unprocessed</ddl200:ProcessingState>
+      <ddl300:AttributeHierarchyProcessingState>Unprocessed</ddl300:AttributeHierarchyProcessingState>
+    </Attribute>
+  </Attributes>
+  <ddl300:ProcessingState>Unprocessed</ddl300:ProcessingState>
+</Dimension>
