@@ -11,9 +11,8 @@ WITH staging_data AS (
 
 SELECT
     *,
-    
     -- 1. Xử lý ép kiểu dữ liệu chuỗi Y/N sang Boolean thật sự cho trường giao lộ
-    CASE 
+    CASE
         WHEN intersection_related_i_raw = 'Y' THEN true 
         ELSE false
     END AS intersection_related_i,

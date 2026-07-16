@@ -5,7 +5,7 @@ WITH raw_data AS (
 )
 
 SELECT
-    
+
     CAST(crash_date AS TIMESTAMP) AS crash_timestamp,
 
     CAST(traffic_control_device AS VARCHAR) AS traffic_control_device,
@@ -30,6 +30,7 @@ SELECT
     CAST(injuries_reported_not_evident AS INTEGER) AS injuries_reported_not_evident,
     CAST(injuries_no_indication AS INTEGER) AS injuries_no_indication,
 
+    CAST(is_severe AS BOOLEAN) AS is_severe,
     CAST(crash_hour AS INTEGER) AS crash_hour,
     CAST(crash_day_of_week AS INTEGER) AS crash_day_of_week,
     CAST(crash_month AS INTEGER) AS crash_month,
