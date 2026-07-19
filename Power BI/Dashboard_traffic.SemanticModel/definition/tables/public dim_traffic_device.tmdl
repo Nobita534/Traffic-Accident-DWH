@@ -1,0 +1,39 @@
+table 'public dim_traffic_device'
+	lineageTag: 52457bdd-8ca9-4359-8270-69b8b1fcb18d
+
+	column device_id
+		dataType: int64
+		formatString: 0
+		lineageTag: abb9c11c-685e-4e84-b41c-3fc9bb37cff8
+		summarizeBy: none
+		sourceColumn: device_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column traffic_control_device
+		dataType: string
+		lineageTag: cdc81bad-cfe2-4f54-8b93-1d44fc48d11b
+		summarizeBy: none
+		sourceColumn: traffic_control_device
+
+		annotation SummarizationSetBy = Automatic
+
+	column trafficway_type
+		dataType: string
+		lineageTag: 67aed77d-646f-4dd3-a4ec-8ccdb2df8645
+		summarizeBy: none
+		sourceColumn: trafficway_type
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public dim_traffic_device' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_dim_traffic_device = Source{[Schema="public",Item="dim_traffic_device"]}[Data]
+				in
+				    public_dim_traffic_device
+
+	annotation PBI_ResultType = Table
+

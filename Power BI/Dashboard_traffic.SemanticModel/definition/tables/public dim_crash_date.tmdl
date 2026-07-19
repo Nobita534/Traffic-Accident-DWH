@@ -1,0 +1,100 @@
+table 'public dim_crash_date'
+	lineageTag: 57268dc6-54f7-4d98-90dd-397420894725
+
+	column datekey
+		dataType: int64
+		formatString: 0
+		lineageTag: a960c7de-7634-432c-9307-21cb2e46f672
+		summarizeBy: none
+		sourceColumn: datekey
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 38774334-32b0-4db6-94b2-e2d64e58dffa
+		summarizeBy: none
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column quarter
+		dataType: int64
+		formatString: 0
+		lineageTag: e69d4bc3-d3ea-45e9-a628-4b4dfed21c9b
+		summarizeBy: none
+		sourceColumn: quarter
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b691836-209e-4c20-b57b-824ab0b34af8
+		summarizeBy: none
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: int64
+		formatString: 0
+		lineageTag: dc8d563d-9d48-487a-85bc-971567b08874
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column dayofweek
+		dataType: int64
+		formatString: 0
+		lineageTag: 826d4974-cc2a-4e14-b506-8e9850952ad0
+		summarizeBy: none
+		sourceColumn: dayofweek
+
+		annotation SummarizationSetBy = Automatic
+
+	column crash_date
+		dataType: string
+		lineageTag: 8de0152b-6819-4c79-bb56-b85d14198e60
+		summarizeBy: none
+		sourceColumn: crash_date
+
+		annotation SummarizationSetBy = Automatic
+
+	hierarchy 'year Hierarchy'
+		lineageTag: 814163c3-87fc-4fb3-a536-eb1e888ce46f
+
+		level year
+			lineageTag: 753d96a8-369d-4055-a032-02faf7c2b5ef
+			column: year
+
+		level quarter
+			lineageTag: 4da771cd-e5e1-4e47-b858-59262144d2f4
+			column: quarter
+
+		level month
+			lineageTag: 540fb84e-ccc7-44c6-9b0a-351a3870ff0c
+			column: month
+
+		level day
+			lineageTag: 520ea7ff-eb1a-4adb-813e-e4bdfd519a8c
+			column: day
+
+	partition 'public dim_crash_date' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_dim_crash_date = Source{[Schema="public",Item="dim_crash_date"]}[Data],
+				    #"Inserted Merged Column" = Table.AddColumn(public_dim_crash_date, "Merged", each Text.Combine({Text.From([day], "en-US"), "/", Text.From([month], "en-US"), "/", Text.From([year], "en-US")}), type text),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Inserted Merged Column",{"datekey", "Merged", "year", "quarter", "month", "day", "dayofweek"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"Merged", "crash_date"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

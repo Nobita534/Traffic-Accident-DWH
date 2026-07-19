@@ -1,0 +1,50 @@
+table 'public dim_casualty_analysis'
+	lineageTag: 804aa462-7135-46c0-8b80-4c141384b011
+
+	column fact_id
+		dataType: int64
+		formatString: 0
+		lineageTag: ee088f01-1c4e-4232-977f-49e96abe1bc0
+		summarizeBy: none
+		sourceColumn: fact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Casualty Type'
+		dataType: string
+		lineageTag: 7e48695d-9baf-4983-9237-a7123bbe307d
+		summarizeBy: none
+		sourceColumn: Casualty Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'People Count'
+		dataType: double
+		lineageTag: 216e5ade-7b1b-4f22-a71f-cb2d7db1ff3d
+		summarizeBy: sum
+		sourceColumn: People Count
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition 'public dim_casualty_analysis' = m
+		mode: import
+		source =
+				let
+				    Source = #"public fct_traffic_accidents",
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"natural_id", "crash_id", "cause_id", "device_id", "datekey", "crash_hour", "damage", "num_units", "most_severe_injury", "is_severe", "epdo_priority_score", "injuries_total"}),
+				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "Injured", each [injuries_fatal] + [injuries_incapacitating] + [injuries_non_incapacitating]),
+				    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"injuries_fatal", "injuries_incapacitating", "injuries_non_incapacitating"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns1",{"fact_id", "Injured", "injuries_no_indication", "injuries_reported_not_evident"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"injuries_no_indication", "Uninjured"}, {"injuries_reported_not_evident", "Other"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Injured", type number}}),
+				    #"Unpivoted Other Columns" = Table.UnpivotOtherColumns(#"Changed Type", {"fact_id"}, "Attribute", "Value"),
+				    #"Renamed Columns1" = Table.RenameColumns(#"Unpivoted Other Columns",{{"Attribute", "Casualty Type"}, {"Value", "People Count"}})
+				in
+				    #"Renamed Columns1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,29 @@
+relationship AutoDetected_d6d89d00-153a-4d22-81ad-ef75a8dbc86d
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public fct_traffic_accidents'.cause_id
+	toColumn: 'public dim_cause'.cause_id
+
+relationship AutoDetected_d6fb1b58-7ef6-4f4c-acc2-4fe6f380f5fb
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public fct_traffic_accidents'.datekey
+	toColumn: 'public dim_crash_date'.datekey
+
+relationship AutoDetected_1f6fa33e-7664-4ae1-a5b4-50dcd772cbf9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public fct_traffic_accidents'.crash_id
+	toColumn: 'public dim_crash_type'.crash_id
+
+relationship AutoDetected_916476e8-347b-4f58-b1dc-3b5c15816fb9
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public fct_traffic_accidents'.natural_id
+	toColumn: 'public dim_natural_condition'.natural_id
+
+relationship AutoDetected_2cf1bd83-3959-466d-9bbf-ce5c3460c2e8
+	fromColumn: 'public fct_traffic_accidents'.device_id
+	toColumn: 'public dim_traffic_device'.device_id
+
+relationship AutoDetected_4444ee06-69a4-4a7d-a84a-837f7db1c408
+	crossFilteringBehavior: bothDirections
+	fromColumn: 'public dim_casualty_analysis'.fact_id
+	toColumn: 'public fct_traffic_accidents'.fact_id
+

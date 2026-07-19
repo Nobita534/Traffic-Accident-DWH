@@ -1,0 +1,47 @@
+table 'public dim_natural_condition'
+	lineageTag: 3dbfa298-8bc7-4d8b-8668-a6e3da49fa93
+
+	column natural_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 20194c3b-41b6-41b3-aa87-58e20c90e7f8
+		summarizeBy: none
+		sourceColumn: natural_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column weather_condition
+		dataType: string
+		lineageTag: a1d1a821-e0f1-4cd8-adab-461b03397c1a
+		summarizeBy: none
+		sourceColumn: weather_condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column lighting_condition
+		dataType: string
+		lineageTag: ba97dee0-32b3-4b54-9a10-b95badafdaa3
+		summarizeBy: none
+		sourceColumn: lighting_condition
+
+		annotation SummarizationSetBy = Automatic
+
+	column roadway_surface_cond
+		dataType: string
+		lineageTag: 92af0980-9c0d-46c7-a146-4f2aaa468f48
+		summarizeBy: none
+		sourceColumn: roadway_surface_cond
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public dim_natural_condition' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_dim_natural_condition = Source{[Schema="public",Item="dim_natural_condition"]}[Data]
+				in
+				    public_dim_natural_condition
+
+	annotation PBI_ResultType = Table
+

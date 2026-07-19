@@ -1,0 +1,127 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 1.3977862785821491,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 773.83632807005642,
+            "y": 507.39635075174465
+          },
+          "nodeIndex": "public dim_cause",
+          "nodeLineageTag": "4cd7722b-e941-45a8-8664-0228210dc862",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 308.9376952667526
+          },
+          "nodeIndex": "public dim_crash_date",
+          "nodeLineageTag": "57268dc6-54f7-4d98-90dd-397420894725",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 648.77292678457957,
+            "y": 0
+          },
+          "nodeIndex": "public dim_crash_type",
+          "nodeLineageTag": "c5ed452b-13eb-4bfe-8e03-4bfe8fb6ab82",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 71.4487969926532,
+            "y": 0
+          },
+          "nodeIndex": "public dim_natural_condition",
+          "nodeLineageTag": "3dbfa298-8bc7-4d8b-8668-a6e3da49fa93",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 308.37232249069643,
+            "y": 564.73769146303823
+          },
+          "nodeIndex": "public dim_traffic_device",
+          "nodeLineageTag": "52457bdd-8ca9-4359-8270-69b8b1fcb18d",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 337.7796110011588,
+            "y": 176.22880915568297
+          },
+          "nodeIndex": "public fct_traffic_accidents",
+          "nodeLineageTag": "5430cc6b-8d4a-44c1-a537-dd54b0d80841",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 901.004706546713,
+            "y": 283.76663201010126
+          },
+          "nodeIndex": "public dim_casualty_analysis",
+          "nodeLineageTag": "804aa462-7135-46c0-8b80-4c141384b011",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 969.74561964506188,
+            "y": 54.29204905852535
+          },
+          "nodeIndex": "All Measure",
+          "nodeLineageTag": "5cc51e54-a9c6-437f-88bc-b4a9c756579f",
+          "size": {
+            "height": 72,
+            "width": 234
+          },
+          "zIndex": 6,
+          "expandedHeight": 200
+        }
+      ],
+      "name": "All tables",
+      "zoomValue": 71.541695273640443,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "All tables",
+  "defaultDiagram": "All tables"
+}

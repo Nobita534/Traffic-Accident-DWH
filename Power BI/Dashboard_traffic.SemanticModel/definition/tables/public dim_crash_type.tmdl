@@ -1,0 +1,56 @@
+table 'public dim_crash_type'
+	lineageTag: c5ed452b-13eb-4bfe-8e03-4bfe8fb6ab82
+
+	column crash_id
+		dataType: int64
+		formatString: 0
+		lineageTag: d0a03464-b91d-4b27-94d7-eff006d9dfc7
+		summarizeBy: none
+		sourceColumn: crash_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column first_crash_type
+		dataType: string
+		lineageTag: 685005fb-d396-4242-8fba-4f7db37bba65
+		summarizeBy: none
+		sourceColumn: first_crash_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column alignment
+		dataType: string
+		lineageTag: 5c7f68a8-3d70-4d9c-870f-8388150ee5aa
+		summarizeBy: none
+		sourceColumn: alignment
+
+		annotation SummarizationSetBy = Automatic
+
+	column crash_type
+		dataType: string
+		lineageTag: 471d5d42-4a6d-441d-8b32-7be31e1cc64d
+		summarizeBy: none
+		sourceColumn: crash_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column intersection_related_i
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: fa8e879a-7eee-4849-bb61-b008bfc24972
+		summarizeBy: none
+		sourceColumn: intersection_related_i
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public dim_crash_type' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_dim_crash_type = Source{[Schema="public",Item="dim_crash_type"]}[Data]
+				in
+				    public_dim_crash_type
+
+	annotation PBI_ResultType = Table
+

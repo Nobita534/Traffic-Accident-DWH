@@ -1,0 +1,188 @@
+table 'public fct_traffic_accidents'
+	lineageTag: 5430cc6b-8d4a-44c1-a537-dd54b0d80841
+
+	column fact_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6d7a22ed-af3d-47e8-b793-5837b0708334
+		summarizeBy: none
+		sourceColumn: fact_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column natural_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 3f9b9d10-696a-4992-a5f7-b5cf001d8ee4
+		summarizeBy: none
+		sourceColumn: natural_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column crash_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 972f92c1-0975-4913-a8a1-d3ecc0952b40
+		summarizeBy: none
+		sourceColumn: crash_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column cause_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 6cd493e7-effc-4225-aa13-dc14444233e4
+		summarizeBy: none
+		sourceColumn: cause_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_id
+		dataType: int64
+		formatString: 0
+		lineageTag: 797909d0-e240-48ab-8e98-d77e00802859
+		summarizeBy: none
+		sourceColumn: device_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column datekey
+		dataType: int64
+		formatString: 0
+		lineageTag: ce03176b-2b14-4285-8209-776975032057
+		summarizeBy: none
+		sourceColumn: datekey
+
+		annotation SummarizationSetBy = Automatic
+
+	column crash_hour
+		dataType: int64
+		formatString: 0
+		lineageTag: 398b885b-1fe7-4161-b290-33619c0164a3
+		summarizeBy: sum
+		sourceColumn: crash_hour
+
+		annotation SummarizationSetBy = Automatic
+
+	column damage
+		dataType: string
+		lineageTag: 8d9eb48a-d07d-4831-9adb-81098096dbe8
+		summarizeBy: none
+		sourceColumn: damage
+
+		annotation SummarizationSetBy = Automatic
+
+	column num_units
+		dataType: int64
+		formatString: 0
+		lineageTag: b93f6751-1c94-4474-8a67-29c6a7e07814
+		summarizeBy: sum
+		sourceColumn: num_units
+
+		annotation SummarizationSetBy = Automatic
+
+	column most_severe_injury
+		dataType: string
+		lineageTag: 4e03d034-9e8f-4325-919f-933dc1f4a5bf
+		summarizeBy: none
+		sourceColumn: most_severe_injury
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_total
+		dataType: int64
+		formatString: 0
+		lineageTag: fada74e5-63ea-4061-b387-22c68d227e20
+		summarizeBy: sum
+		sourceColumn: injuries_total
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_fatal
+		dataType: int64
+		formatString: 0
+		lineageTag: 64ff85c6-d2b6-4b3d-b0f2-8f0ecd69906b
+		summarizeBy: sum
+		sourceColumn: injuries_fatal
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_incapacitating
+		dataType: int64
+		formatString: 0
+		lineageTag: 559eb5f7-b38c-4e93-aab2-cd7a71678a04
+		summarizeBy: sum
+		sourceColumn: injuries_incapacitating
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_non_incapacitating
+		dataType: int64
+		formatString: 0
+		lineageTag: 62798f7f-f171-4b10-9d5f-46f5751d2228
+		summarizeBy: sum
+		sourceColumn: injuries_non_incapacitating
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_reported_not_evident
+		dataType: int64
+		formatString: 0
+		lineageTag: b56aac92-2988-4542-aee1-cf95001e5e4d
+		summarizeBy: sum
+		sourceColumn: injuries_reported_not_evident
+
+		annotation SummarizationSetBy = Automatic
+
+	column injuries_no_indication
+		dataType: int64
+		formatString: 0
+		lineageTag: 4201fab0-812b-403e-82d2-1d5148ef37b6
+		summarizeBy: sum
+		sourceColumn: injuries_no_indication
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_severe
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 15baa683-4f90-486e-a6ad-49c37f2198ad
+		summarizeBy: none
+		sourceColumn: is_severe
+
+		annotation SummarizationSetBy = Automatic
+
+	column epdo_priority_score
+		dataType: int64
+		formatString: 0
+		lineageTag: c3c9112a-8dc7-4018-ba86-5ca7e4623f63
+		summarizeBy: sum
+		sourceColumn: epdo_priority_score
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Severity Category' =
+			
+			IF(
+			    'public fct_traffic_accidents'[is_severe] = TRUE(),
+			    "Severe",
+			    "Non-severe"
+			)
+		lineageTag: 99d4fd2a-7b55-45b1-8711-547dd81c3aa3
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public fct_traffic_accidents' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_fct_traffic_accidents = Source{[Schema="public",Item="fct_traffic_accidents"]}[Data]
+				in
+				    public_fct_traffic_accidents
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

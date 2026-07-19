@@ -1,0 +1,169 @@
+table 'All Measure'
+	lineageTag: 5cc51e54-a9c6-437f-88bc-b4a9c756579f
+
+	measure 'Adverse Surface Incident Rate' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS('public fct_traffic_accidents'),
+			        'public dim_natural_condition'[roadway_surface_cond] <> "Dry"
+			    ),
+			    COUNTROWS('public fct_traffic_accidents'),
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: b41958a2-ce5f-4b01-99bb-99608c9dfbbb
+
+	measure 'Fatal total' = SUM('public fct_traffic_accidents'[injuries_fatal])
+		formatString: 0
+		lineageTag: fdfe5d02-03ae-4b97-a37e-a73de04bd494
+
+	measure 'Peak Risk Window' = ```
+			
+			VAR _SummaryTable = 
+			    SUMMARIZE(
+			        'public dim_natural_condition',
+			        'public dim_natural_condition'[weather_condition],
+			        'public dim_natural_condition'[lighting_condition],
+			        "SevereRate", DIVIDE(
+			            CALCULATE(COUNTROWS('public fct_traffic_accidents'), 'public fct_traffic_accidents'[is_severe] = TRUE),
+			            COUNTROWS('public fct_traffic_accidents')
+			        )
+			    )
+			VAR _MaxRate = MAXX(_SummaryTable, [SevereRate])
+			VAR _TopPair = FILTER(_SummaryTable, [SevereRate] = _MaxRate)
+			VAR _Result = 
+			    CONCATENATEX(
+			        _TopPair, 
+			        'public dim_natural_condition'[lighting_condition] & " / " & 'public dim_natural_condition'[weather_condition], 
+			        ", "
+			    )
+			RETURN
+			    IF(ISBLANK(_Result), "No Data", _Result)
+			```
+		lineageTag: 6827aa72-6696-43fd-a51d-905f1fa59d17
+
+	measure 'Severe Rate' = DIVIDE(COUNTROWS(FILTER('public fct_traffic_accidents', 'public fct_traffic_accidents'[is_severe] = TRUE)), 'All Measure'[Total Accident])
+		formatString: 0%;-0%;0%
+		lineageTag: 186180c4-c63b-4e3c-8cbc-33a85e193567
+
+	measure 'Severe Total' = CALCULATE(COUNTROWS('public fct_traffic_accidents'), 'public fct_traffic_accidents'[is_severe] = TRUE)
+		lineageTag: 380eb691-4380-455f-84b5-7e7605562320
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Total Accident' = COUNT('public fct_traffic_accidents'[fact_id])
+		formatString: 0
+		lineageTag: 15bca1cb-f544-48ce-a160-b8792d338cfa
+
+	measure 'Severe Environmental Impact' =
+			
+			CALCULATE(
+			    COUNTROWS('public fct_traffic_accidents'),
+			    'public fct_traffic_accidents'[is_severe] = TRUE,
+			    'public dim_natural_condition'[weather_condition] <> "CLEAR"
+			)
+		formatString: 0
+		lineageTag: 5e1a2ced-0e6c-4353-b9c6-aaee555508e2
+
+	measure 'Critical Priority Rate' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        COUNTROWS('public fct_traffic_accidents'),
+			        'public fct_traffic_accidents'[epdo_priority_score] = 12
+			    ),
+			    COUNTROWS('public fct_traffic_accidents'),
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: db02dda8-2754-4682-9e17-43e802c5df28
+
+	measure 'Total EPDO Score' = ```
+			
+			SUMX(
+			    'public fct_traffic_accidents',
+			    ( 'public fct_traffic_accidents'[injuries_fatal] * 12 ) 
+			    + ( 'public fct_traffic_accidents'[injuries_incapacitating] * 3 ) 
+			    + ( 'public fct_traffic_accidents'[injuries_non_incapacitating] * 3 ) 
+			    + ( 'public fct_traffic_accidents'[injuries_reported_not_evident] * 3 ) 
+			    + IF(
+			        'public fct_traffic_accidents'[injuries_total] = 0, 
+			        1, 
+			        0
+			      )
+			)
+			```
+		formatString: 0
+		lineageTag: 6236f094-75d6-4724-af46-d164b8488b14
+
+	measure 'Clear-Weather Severe Accidents' =
+			
+			CALCULATE(
+			    'All Measure'[Total Accident],
+			    'public fct_traffic_accidents'[is_severe] = TRUE(),
+			    'public dim_natural_condition'[weather_condition] = "CLEAR"
+			)
+		formatString: 0
+		lineageTag: 3d6b560a-f55c-4234-bac9-74a08a030547
+
+	measure 'Avg EPDO Score' =
+			
+			DIVIDE(
+			    [Total EPDO Score],
+			    COUNTROWS('public fct_traffic_accidents'),
+			    0
+			)
+		lineageTag: b2fc08af-bc9f-4cb9-8f64-9223627d193b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Identified Blackspots' = ```
+			
+			VAR _ThresholdAccidents = 1000 -- Ngưỡng X định biên tùy chọn
+			VAR _ThresholdSeverity = 1.5   -- Ngưỡng Y định biên tùy chọn
+			VAR _SummaryTable = 
+			    FILTER(
+			        SUMMARIZE(
+			            'public fct_traffic_accidents',
+			            'public dim_crash_type'[first_crash_type]
+			        ),
+			        'All Measure'[Total Accident] > _ThresholdAccidents && [Avg EPDO Score] > _ThresholdSeverity
+			    )
+			RETURN
+			    COUNTROWS(_SummaryTable)
+			```
+		formatString: 0
+		lineageTag: 7934271f-6311-4b6b-82aa-c57e21494923
+
+	measure 'Human Error Ratio' =
+			
+			DIVIDE(
+			    CALCULATE(
+			        'All Measure'[Total Accident],
+			        'public dim_cause'[cause_group] = "Human Factors"
+			    ),
+			    'All Measure'[Total Accident],
+			    0
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
+
+	column Column
+		isHidden
+		formatString: 0
+		lineageTag: 27b01652-60aa-4809-9af8-3886c5c8436d
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'All Measure' = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

@@ -1,0 +1,44 @@
+table 'public dim_cause'
+	lineageTag: 4cd7722b-e941-45a8-8664-0228210dc862
+
+	column cause_id
+		dataType: int64
+		formatString: 0
+		lineageTag: b33a3cf4-2dfa-44ac-8b37-14983bb2975e
+		summarizeBy: none
+		sourceColumn: cause_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column primary_cause
+		dataType: string
+		lineageTag: 549233ea-4487-497a-8af3-f7e1605fc73d
+		summarizeBy: none
+		sourceColumn: primary_cause
+
+		annotation SummarizationSetBy = Automatic
+
+	column cause_group
+		dataType: string
+		lineageTag: d4e93127-904c-4de1-9721-ddc04df321d8
+		summarizeBy: none
+		sourceColumn: cause_group
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'public dim_cause' = m
+		mode: import
+		source =
+				let
+				    Source = PostgreSQL.Database("localhost:5432", "traffic_dwh"),
+				    public_dim_cause = Source{[Schema="public",Item="dim_cause"]}[Data],
+				    #"Duplicated Column" = Table.DuplicateColumn(public_dim_cause, "primary_cause", "primary_cause - Copy"),
+				    #"Renamed Columns" = Table.RenameColumns(#"Duplicated Column",{{"primary_cause - Copy", "human cause"}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Renamed Columns",{"human cause"})
+				in
+				    #"Removed Columns"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
