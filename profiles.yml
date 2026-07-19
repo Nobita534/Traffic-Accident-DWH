@@ -9,4 +9,4 @@ traffic_project_profile:
       port: 5432
       dbname: traffic_dwh
       schema: public
-      threads: 4            
+      threads: 4
