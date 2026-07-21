@@ -23,11 +23,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Identified Blackspots"
+                  "Property": "Identified Critical Scenarios"
                 }
               },
               "queryRef": "All Measure.Identified Blackspots",
-              "nativeQueryRef": "Identified Blackspots"
+              "nativeQueryRef": "Identified Critical Scenarios"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Identified Blackspots"
+                "Property": "Identified Critical Scenarios"
               }
             },
             "direction": "Descending"
@@ -164,5 +164,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "506698ad197e5fc43a83",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Identified Critical Scenarios"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

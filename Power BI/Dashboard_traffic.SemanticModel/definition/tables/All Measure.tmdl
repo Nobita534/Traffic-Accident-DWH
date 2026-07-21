@@ -118,7 +118,7 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Identified Blackspots' = ```
+	measure 'Identified Critical Scenarios' = ```
 			
 			VAR _ThresholdAccidents = 1000 -- Ngưỡng X định biên tùy chọn
 			VAR _ThresholdSeverity = 1.5   -- Ngưỡng Y định biên tùy chọn
