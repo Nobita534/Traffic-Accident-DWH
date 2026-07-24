@@ -8,7 +8,7 @@ flowchart TD
     D -- No --> E[Continue Monitoring]
     D -- Yes --> F[Filter by Time / Location / Weather]
     F --> G[Analyze Accident Pattern]
-    G --> H[Identify Contributing Factors\n(Weather, Lighting, Driver...)]
+    G --> H["Identify Contributing Factors<br/>(Weather, Lighting, Driver...)"]
     H --> I[Generate Business Insight]
     I --> J[Recommend Road Safety Initiative]
     J --> K[End]
