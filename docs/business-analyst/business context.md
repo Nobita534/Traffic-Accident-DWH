@@ -1,31 +1,64 @@
-# Traffic Safety Analytics Project
+# Business Context
 
-## Executive Summary
+## 1. Executive Summary
 
-Road traffic accidents remain one of the leading public safety challenges worldwide. According to the World Health Organization (WHO), approximately 1.19 million people die and 20–50 million people sustain non-fatal injuries each year due to road traffic crashes. Beyond the human impact, traffic accidents impose significant economic costs through medical expenses, infrastructure damage, property loss, and reduced productivity, accounting for an estimated 3% of a country's annual GDP.
+Road traffic accidents are one of the major public safety issues around the world. Every year, millions of people are injured or lose their lives in traffic accidents. These accidents also create significant economic losses, including medical costs, property damage, and reduced productivity.
 
-To reduce traffic accidents effectively, transportation authorities must understand where, when, and why severe crashes occur in order to prioritize road safety initiatives and allocate public resources efficiently. However, identifying high-risk accident scenarios and recurring driver behavior patterns from large volumes of crash records remains a difficult and time-consuming process, limiting timely and evidence-based decision-making.
+Transportation authorities collect a large amount of accident data every year. However, this data is more valuable when it is used to understand accident patterns, identify risk factors, and support better road safety planning.
 
-Although detailed crash data is continuously collected, it is primarily stored in operational, transaction-oriented formats rather than analytical models. This makes it difficult to perform multidimensional analysis, monitor standardized safety KPIs, and generate consistent reports across different business perspectives without significant manual effort.
+This project develops a Traffic Safety Analytics Platform to transform accident data into useful business insights. The platform helps stakeholders monitor road safety performance, analyze accident trends, and support data-driven decision-making.
 
-## Business Objectives
+---
 
-This project aims to support evidence-based road safety management by:
+## 2. Business Context
 
-- Providing a consistent view of road safety performance through standardized KPIs.
-- Identifying high-risk environmental conditions and driver behavior associated with severe accidents.
-- Enabling stakeholders to prioritize road safety initiatives based on analytical insights.
-- Establishing a scalable analytical foundation that can support future business questions and advanced traffic safety analysis.
+Transportation authorities are responsible for improving road safety and reducing serious traffic accidents. To achieve this goal, they need to understand how different factors such as weather, lighting conditions, road surface, and driver behavior affect accident severity.
 
-## Solution Focus
+Traffic accident data contains valuable information about the time, location, environmental conditions, road conditions, driver behavior, and accident severity. When this data is analyzed properly, it can help stakeholders understand accident patterns and identify high-risk situations.
 
-To achieve these business objectives, the project focuses on:
+Different stakeholders, including Transportation Authorities, Road Safety Analysts, and Policy Makers, need a centralized analytics platform to monitor road safety KPIs, explore accident trends, and support evidence-based planning.
 
-- Designing a Kimball dimensional data warehouse optimized for analytical workloads.
-- Developing a standardized and maintainable ELT pipeline using PostgreSQL and dbt.
-- Implementing reusable semantic models for KPI calculation and multidimensional analysis.
-- Delivering interactive Power BI dashboards that support self-service analytics and future system enhancements.
+---
 
-## Target Outcome
+## 3. Project Scope
 
-The project develops a centralized Traffic Safety Analytics Platform that integrates a dimensional Data Warehouse with interactive Power BI dashboards. The platform enables transportation authorities, road safety analysts, and policymakers to monitor key safety indicators, identify emerging accident patterns, evaluate environmental and behavioral risk factors, and support data-driven planning for road safety improvement. Its modular architecture also provides a scalable foundation for future enhancements, including performance optimization, advanced analytics, and data governance.
+This project focuses on building a traffic safety analytics platform that supports:
+
+- Monitoring standardized road safety KPIs.
+- Analyzing the relationship between environmental conditions and accident severity.
+- Analyzing driver behavior under different traffic conditions.
+- Identifying high-risk areas and accident scenarios.
+- Supporting interactive and self-service business analysis.
+
+---
+
+## 4. Business Objectives
+
+The project aims to:
+
+- Provide a consistent view of road safety performance through standardized KPIs.
+- Identify environmental and behavioral factors related to severe accidents.
+- Help transportation authorities prioritize road safety improvements based on analytical results.
+- Build a scalable analytics platform that supports future business questions.
+
+---
+
+## 5. Solution Overview
+
+The project develops a centralized analytics platform by using:
+
+- A Kimball dimensional Data Warehouse.
+- PostgreSQL and dbt for the ELT pipeline.
+- Semantic models for KPI calculation.
+- Interactive Power BI dashboards for business analysis.
+
+---
+
+## 6. Expected Business Value
+
+After implementation, the platform is expected to:
+
+- Improve the consistency of road safety reporting.
+- Reduce the time needed for data analysis.
+- Help stakeholders identify high-risk accident conditions more easily.
+- Support better planning and resource allocation through data-driven insights.

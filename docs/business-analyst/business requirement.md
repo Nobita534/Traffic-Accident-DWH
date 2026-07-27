@@ -8,7 +8,9 @@ This document defines the business requirements for the Traffic Safety Analytics
 
 ### 1.2 Scope
 
-This document covers the business requirements for **Version 1** of the project, including the analysis of historical traffic accident data, standardized road safety KPIs, environmental and driver behavior analysis, risk scenario identification, and interactive analytical dashboards. Advanced capabilities such as predictive analytics, real-time data processing, and data governance are considered out of scope and will be addressed in future project versions.
+This document defines the business requirements for **Version 2** of the Traffic Safety Analytics Platform.
+The scope includes standardizing business documentation, supporting business-driven analytics, defining standardized business KPIs, improving data quality, and enabling root cause analysis to support data-driven decision-making.
+Advanced capabilities such as predictive analytics, real-time data processing, machine learning, and enterprise data governance are considered out of scope and will be addressed in future project versions.
 
 ### 1.3 Reference
 
@@ -31,10 +33,16 @@ The project background, business context, business objectives, and overall proje
 
 The project includes the following business capabilities:
 
+The project includes the following business capabilities:
+
+- Standardize business documentation, including Business Context, Business Problem, Business Questions, and Business Requirements.
 - Collect and integrate Chicago Traffic Crashes data into a centralized analytical platform.
 - Design a Kimball dimensional data warehouse to support multidimensional analysis.
 - Develop a standardized ELT pipeline using PostgreSQL and dbt.
 - Build semantic models for consistent KPI calculation.
+- Define standardized KPI Dictionary and Data Requirements.
+- Support Root Cause Analysis by analyzing environmental conditions, driver behavior, and accident severity.
+- Improve data quality to increase the reliability of analytical results.
 - Deliver interactive Power BI dashboards for road safety monitoring.
 - Enable stakeholders to analyze accident trends across different business dimensions, including:
    - Time
@@ -63,8 +71,8 @@ The current project does **not** include:
 | BR-01 | The platform shall enable stakeholders to monitor standardized road safety KPIs in order to evaluate accident performance from multiple business perspectives. |
 | BR-02 | The platform shall support the analysis of relationships between environmental conditions, driver behavior, and accident severity to identify the major contributing risk factors. |
 | BR-03 | The platform shall allow users to analyze accident data across multiple business dimensions, including time, location, weather conditions, lighting conditions, road surface conditions, driver behavior, and accident severity, to support different analytical scenarios. |
-| BR-04 | The platform shall provide actionable insights that enable transportation authorities to identify high-risk locations, conditions, and accident trends for prioritizing road safety initiatives. |
-| BR-05 | The platform shall support future expansion by allowing new KPIs, analytical metrics, and business questions to be incorporated without disrupting existing analytical capabilities. |
+| BR-04 | The platform shall provide actionable insights and recommendations that enable transportation authorities to identify high-risk locations, conditions, and accident trends for supporting road safety planning and resource prioritization. |
+| BR-05 | The platform shall support future expansion by allowing new business questions, business requirements, KPIs, analytical metrics, and analytical models to be incorporated without disrupting existing analytical capabilities. |
 
 ## 5. Business Rules
 
@@ -75,6 +83,7 @@ The current project does **not** include:
 | BR-03 | Users shall analyze data using standardized dimensions and business metrics provided by the platform. |
 | BR-04 | Dashboards shall reflect the latest available data after each completed data refresh cycle. |
 | BR-05 | KPI definitions shall remain consistent across all analytical reports and dashboards. |
+| BR-06 | KPIs and analytical reports shall only be generated from data that has passed the defined data quality validation rules. |
 
 ## 6. Assumptions and Constraints
 
@@ -83,6 +92,7 @@ The current project does **not** include:
 - The Chicago Traffic Crashes dataset provides sufficient information for road safety analysis.
 - Critical attributes such as accident time, location, severity, environmental conditions, and driver behavior are available with acceptable data quality.
 - End users possess basic knowledge of dashboards and analytical reporting.
+- The dataset contains sufficient information to answer the defined business questions and calculate standardized business KPIs.
 
 ### 6.2 Constraints
 
@@ -90,32 +100,45 @@ The current project does **not** include:
 - Real-time data ingestion is outside the scope of this project.
 - Dashboards provide historical analytical insights only and do not include predictive or simulation capabilities.
 - The platform is developed as an educational analytics project rather than a production-grade operational system.
+- Business recommendations are limited to the available historical data and should not be interpreted as operational or policy decisions.
 
 ## 7. Future Enhancements
 
-### 7.1 Phase 2 - Performance Optimization and Self-Service Analytics
+### 7.1 Phase 2 - Business-driven Analytics
 
 **Objective**
 
-Establish a data governance framework to ensure analytical data remains accurate, consistent, and traceable throughout the entire data lifecycle.
+Enhance business analysis capabilities by improving business documentation, standardizing KPI definitions, and strengthening the relationship between business questions, business requirements, and analytical outputs.
 
 **Expected Outcomes**
 
-- Support analytical workloads on datasets containing millions of records.
-- Improve query performance and report refresh time.
-- Deliver a responsive self-service analytics experience.
-- Maintain system performance as future data volume increases.
+- Standardized business documentation.
+- Standardized KPI Dictionary.
+- Complete Data Requirement documentation.
+- Clear traceability from Business Questions to analytical outputs.
 
-### 7.2 Phase 3 - Data Governance and Data Quality
+### 7.2 Phase 3 - Data Quality Improvement
 
 **Objective**
 
-Establish a data governance framework to ensure analytical data remains accurate, consistent, and traceable throughout the entire data lifecycle.
+Improve the reliability and consistency of analytical data by implementing data quality validation and monitoring processes.
 
 **Expected Outcomes**
 
 - Improve overall data quality.
-- Increase consistency across analytical reports.
-- Enable end-to-end data lineage.
-- Standardize business definitions and data documentation.
-- Reduce operational risks when maintaining or expanding the analytics platform.
+- Standardize data validation rules.
+- Reduce duplicate and inconsistent records.
+- Increase confidence in analytical results.
+
+### 7.3 Phase 4 - Dashboard Enhancement
+
+**Objective**
+
+Improve dashboards by applying business storytelling, root cause analysis, and actionable recommendations.
+
+**Expected Outcomes**
+
+- More interactive dashboards.
+- Better business storytelling.
+- Root cause analysis for key business questions.
+- Clear business recommendations for stakeholders.
