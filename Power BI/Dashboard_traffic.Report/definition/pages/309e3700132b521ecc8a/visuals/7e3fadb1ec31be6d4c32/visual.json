@@ -303,5 +303,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "92e8e85e89aace9c7386",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_casualty_analysis"
+              }
+            },
+            "Property": "Casualty Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f985c78e0ce32041d098",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_casualty_analysis"
+                  }
+                },
+                "Property": "People Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
