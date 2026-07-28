@@ -71,7 +71,7 @@ The current project does **not** include:
 | BR-01 | The platform shall enable stakeholders to monitor standardized road safety KPIs in order to evaluate accident performance from multiple business perspectives. |
 | BR-02 | The platform shall support the analysis of relationships between environmental conditions, driver behavior, and accident severity to identify the major contributing risk factors. |
 | BR-03 | The platform shall allow users to analyze accident data across multiple business dimensions, including time, location, weather conditions, lighting conditions, road surface conditions, driver behavior, and accident severity, to support different analytical scenarios. |
-| BR-04 | The platform shall provide actionable insights and recommendations that enable transportation authorities to identify high-risk locations, conditions, and accident trends for supporting road safety planning and resource prioritization. |
+| BR-04 | The platform shall provide actionable insights and recommendations that enable transportation authorities to identify high-risk accident scenarios, conditions, and trends for supporting road safety planning and resource prioritization. |
 | BR-05 | The platform shall support future expansion by allowing new business questions, business requirements, KPIs, analytical metrics, and analytical models to be incorporated without disrupting existing analytical capabilities. |
 
 ## 5. Business Rules
