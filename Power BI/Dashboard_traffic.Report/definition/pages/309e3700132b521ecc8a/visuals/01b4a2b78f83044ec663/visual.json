@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -165,23 +165,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ab1fc4dbcd34d63277b6",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Fatal total"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -7,7 +7,7 @@
     "z": 0,
     "height": 226.66666666666669,
     "width": 83.333333333333343,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -144,6 +144,19 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showHiddenPages": {
               "expr": {
                 "Literal": {
                   "Value": "false"

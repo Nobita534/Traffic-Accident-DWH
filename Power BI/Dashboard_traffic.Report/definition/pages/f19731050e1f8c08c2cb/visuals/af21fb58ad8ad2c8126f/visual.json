@@ -6,8 +6,7 @@
     "y": 88.333333333333343,
     "z": 2000,
     "height": 93.333333333333343,
-    "width": 310,
-    "tabOrder": 1000
+    "width": 310
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +22,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Identified Critical Scenarios"
+                  "Property": "Priority Trafficways"
                 }
               },
-              "queryRef": "All Measure.Identified Blackspots",
-              "nativeQueryRef": "Identified Critical Scenarios"
+              "queryRef": "All Measure.Priority Trafficways",
+              "nativeQueryRef": "Priority Trafficways"
             }
           ]
         }
@@ -42,7 +41,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Identified Critical Scenarios"
+                "Property": "Priority Trafficways"
               }
             },
             "direction": "Descending"
@@ -164,23 +163,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "506698ad197e5fc43a83",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Identified Critical Scenarios"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

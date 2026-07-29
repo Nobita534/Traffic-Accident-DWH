@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 93.333333333333343,
     "width": 313.33333333333337,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -164,23 +164,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "ea45d16f724588a55a4a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Clear-Weather Severe Accidents"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

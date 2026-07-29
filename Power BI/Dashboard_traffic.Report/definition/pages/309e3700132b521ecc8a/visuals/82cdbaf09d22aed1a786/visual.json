@@ -7,7 +7,7 @@
     "z": 5000,
     "height": 321.66666666666669,
     "width": 451.66666666666669,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -165,37 +165,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "5e3f83764a57876a519b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public fct_traffic_accidents"
-              }
-            },
-            "Property": "damage"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "66cdc2b463b00a73e7cb",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -31,7 +31,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -61,18 +61,18 @@
       "type": "RegisteredResources",
       "items": [
         {
-          "name": "Screenshot_2026-07-17_1451216892769423866145.png",
-          "path": "Screenshot_2026-07-17_1451216892769423866145.png",
+          "name": "Page_39574576265886744.png",
+          "path": "Page_39574576265886744.png",
           "type": "Image"
         },
         {
-          "name": "div.flex17591781729612366.png",
-          "path": "div.flex17591781729612366.png",
+          "name": "Page_33017831271558076.png",
+          "path": "Page_33017831271558076.png",
           "type": "Image"
         },
         {
-          "name": "div.flex18258145254059588.png",
-          "path": "div.flex18258145254059588.png",
+          "name": "Page_15442678826955184.png",
+          "path": "Page_15442678826955184.png",
           "type": "Image"
         }
       ]

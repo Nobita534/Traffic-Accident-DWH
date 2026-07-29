@@ -1,8 +1,8 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "309e3700132b521ecc8a",
-  "displayName": "Page 1",
-  "displayOption": "ActualSize",
+  "displayName": "Executive Overview",
+  "displayOption": "FitToPage",
   "height": 900,
   "width": 1400,
   "objects": {
@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Screenshot 2026-07-17 145121.png'"
+                    "Value": "'Page 1.png'"
                   }
                 }
               },
@@ -23,14 +23,14 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Screenshot_2026-07-17_1451216892769423866145.png"
+                    "ItemName": "Page_15442678826955184.png"
                   }
                 }
               },
               "scaling": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Fit'"
+                    "Value": "'Normal'"
                   }
                 }
               }
@@ -48,8 +48,8 @@
               "color": {
                 "expr": {
                   "ThemeDataColor": {
-                    "ColorId": 2,
-                    "Percent": 0.2
+                    "ColorId": 0,
+                    "Percent": 0
                   }
                 }
               }

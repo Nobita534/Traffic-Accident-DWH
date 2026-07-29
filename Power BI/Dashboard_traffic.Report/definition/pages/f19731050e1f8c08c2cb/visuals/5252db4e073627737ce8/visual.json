@@ -6,7 +6,8 @@
     "y": 88.333333333333343,
     "z": 1000,
     "height": 93.333333333333343,
-    "width": 306.66666666666669
+    "width": 306.66666666666669,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -130,23 +131,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "f5efa830e4cc3fefafbe",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Human Error Ratio"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

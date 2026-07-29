@@ -118,10 +118,10 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Identified Critical Scenarios' = ```
+	measure 'Priority Trafficways' = ```
 			
-			VAR _ThresholdAccidents = 1000 -- Ngưỡng X định biên tùy chọn
-			VAR _ThresholdSeverity = 1.5   -- Ngưỡng Y định biên tùy chọn
+			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
+			VAR _ThresholdSeverity = 'All Measure'[Avg EPDO Score according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
 			VAR _SummaryTable = 
 			    FILTER(
 			        SUMMARIZE(
@@ -148,6 +148,41 @@ table 'All Measure'
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
+
+	measure 'Most Accident-Prone Trafficway' =
+			
+			VAR T =
+			    ADDCOLUMNS(
+			        VALUES('public dim_traffic_device'[trafficway_type]),
+			        "@Accident", [Total Accident]
+			    )
+			RETURN
+			    MAXX(
+			        TOPN(1, T, [@Accident], DESC),
+			        'public dim_traffic_device'[trafficway_type]
+			    )
+		lineageTag: 47680f71-9cd7-4db0-94ce-712233677614
+
+	measure 'Avg Accident' =
+			
+			// AVERAGEX(VALUES('public dim_traffic_device'[trafficway_type]), [Total Accident])
+			DIVIDE(
+			    [Total Accident],
+			    DISTINCTCOUNT('public dim_traffic_device'[trafficway_type])
+			)
+		lineageTag: ab83d69d-a86a-4ad4-9e79-1d1aaa67343c
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Avg EPDO Score according Trafficway_type' =
+			
+			AVERAGEX(
+			    VALUES('public dim_traffic_device'[trafficway_type]),
+			    [Avg EPDO Score]
+			)
+		lineageTag: 04560f72-ffff-428b-8bd7-64787bb191eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Column
 		isHidden
