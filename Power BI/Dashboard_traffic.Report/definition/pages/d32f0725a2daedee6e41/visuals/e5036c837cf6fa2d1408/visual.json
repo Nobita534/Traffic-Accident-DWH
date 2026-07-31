@@ -10,10 +10,94 @@
     "tabOrder": 8000
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
         "Category": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public dim_crash_date"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchy"
+                    }
+                  },
+                  "Level": "year"
+                }
+              },
+              "queryRef": "public dim_crash_date.year Hierarchy.year",
+              "nativeQueryRef": "year Hierarchy year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public dim_crash_date"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchy"
+                    }
+                  },
+                  "Level": "quarter"
+                }
+              },
+              "queryRef": "public dim_crash_date.year Hierarchy.quarter",
+              "nativeQueryRef": "year Hierarchy quarter",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public dim_crash_date"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchy"
+                    }
+                  },
+                  "Level": "month"
+                }
+              },
+              "queryRef": "public dim_crash_date.year Hierarchy.month",
+              "nativeQueryRef": "year Hierarchy month",
+              "active": false
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public dim_crash_date"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchy"
+                    }
+                  },
+                  "Level": "day"
+                }
+              },
+              "queryRef": "public dim_crash_date.year Hierarchy.day",
+              "nativeQueryRef": "year Hierarchy day",
+              "active": false
+            }
+          ]
+        },
+        "Series": {
           "projections": [
             {
               "field": {
@@ -27,8 +111,7 @@
                 }
               },
               "queryRef": "Condition Comparison.Condition",
-              "nativeQueryRef": "Condition",
-              "active": true
+              "nativeQueryRef": "Condition"
             }
           ]
         },
@@ -233,6 +316,88 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EF4444'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Condition Comparison"
+                          }
+                        },
+                        "Property": "Condition"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Bad Condition'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#118DFF'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Condition Comparison"
+                          }
+                        },
+                        "Property": "Condition"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Normal Condition'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
         }
       ],
       "legend": [
@@ -327,13 +492,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "preferredCategoryWidth": {
               "expr": {
                 "Literal": {
@@ -399,6 +557,13 @@
                   }
                 }
               }
+            },
+            "axisType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Categorical'"
+                }
+              }
             }
           }
         }
@@ -448,7 +613,21 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "f5b6a37dd61b80c46078",
+        "name": "cca1123fd7d4e003229e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Rate Comparison"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "04c1e5d6254e4db74170",
         "field": {
           "Column": {
             "Expression": {
@@ -462,15 +641,77 @@
         "type": "Categorical"
       },
       {
-        "name": "f58a15e56a5a7141ca94",
+        "name": "552d8f502a4d01412324",
         "field": {
-          "Measure": {
+          "HierarchyLevel": {
             "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
               }
             },
-            "Property": "Severe Rate Comparison"
+            "Level": "year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3d06b002c8d84524c174",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8049d1801662d4ec644b",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "quarter"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "5c63946755bc88e9b4b5",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "day"
           }
         },
         "type": "Advanced"
