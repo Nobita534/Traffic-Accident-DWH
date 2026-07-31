@@ -14,7 +14,7 @@
               "name": {
                 "expr": {
                   "Literal": {
-                    "Value": "'Page 3.png'"
+                    "Value": "'Page 2.png'"
                   }
                 }
               },
@@ -23,7 +23,7 @@
                   "ResourcePackageItem": {
                     "PackageName": "RegisteredResources",
                     "PackageType": 1,
-                    "ItemName": "Page_33017831271558076.png"
+                    "ItemName": "Page_29886427735142069.png"
                   }
                 }
               },
@@ -40,6 +40,19 @@
             "expr": {
               "Literal": {
                 "Value": "0D"
+              }
+            }
+          }
+        }
+      }
+    ],
+    "outspacePane": [
+      {
+        "properties": {
+          "width": {
+            "expr": {
+              "Literal": {
+                "Value": "184L"
               }
             }
           }

@@ -63,8 +63,9 @@ table 'All Measure'
 			    'public fct_traffic_accidents'[is_severe] = TRUE,
 			    'public dim_natural_condition'[weather_condition] <> "CLEAR"
 			)
-		formatString: 0
 		lineageTag: 5e1a2ced-0e6c-4353-b9c6-aaee555508e2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Critical Priority Rate' =
 			
@@ -181,6 +182,54 @@ table 'All Measure'
 			    [Avg EPDO Score]
 			)
 		lineageTag: 04560f72-ffff-428b-8bd7-64787bb191eb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Severe Rate Comparison' =
+			
+			VAR _Condition =
+			    SELECTEDVALUE('Condition Comparison'[Condition])
+			
+			RETURN
+			SWITCH(
+			    _Condition,
+			
+			    "Normal Condition",
+			        CALCULATE(
+			            [Severe Rate],
+			            FILTER(
+			                'public dim_natural_condition',
+			                'public dim_natural_condition'[weather_condition]
+			                    IN { "CLEAR", "CLOUDY/OVERCAST" }
+			                &&
+			                'public dim_natural_condition'[lighting_condition]
+			                    IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
+			            )
+			        ),
+			
+			    "Bad Condition",
+			        CALCULATE(
+			            [Severe Rate],
+			            FILTER(
+			                'public dim_natural_condition',
+			                'public dim_natural_condition'[weather_condition]
+			                    IN {
+			                        "RAIN",
+			                        "SNOW",
+			                        "BLOWING SNOW",
+			                        "FREEZING RAIN/DRIZZLE",
+			                        "FOG/SMOKE/HAZE",
+			                        "SLEET/HAIL",
+			                        "SEVERE CROSS WIND GATE",
+			                        "BLOWING SAND, SOIL, DIRT"
+			                    }
+			                &&
+			                'public dim_natural_condition'[lighting_condition]
+			                    IN {"DARKNESS"}
+			            )
+			        )
+			)
+		lineageTag: 83b09750-e2b2-491e-bc50-88c18618b66e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

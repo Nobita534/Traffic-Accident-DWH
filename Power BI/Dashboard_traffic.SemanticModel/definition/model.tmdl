@@ -20,6 +20,7 @@ ref table 'public dim_traffic_device'
 ref table 'public fct_traffic_accidents'
 ref table 'public dim_casualty_analysis'
 ref table 'All Measure'
+ref table 'Condition Comparison'
 
 ref cultureInfo en-US
 
