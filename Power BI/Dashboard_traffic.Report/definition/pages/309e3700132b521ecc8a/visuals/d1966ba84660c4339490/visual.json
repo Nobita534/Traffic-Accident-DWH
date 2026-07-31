@@ -3,11 +3,11 @@
   "name": "d1966ba84660c4339490",
   "position": {
     "x": 0,
-    "y": 336.66666666666669,
+    "y": 337,
     "z": 9000,
-    "height": 226.66666666666669,
-    "width": 83.333333333333343,
-    "tabOrder": 9000
+    "height": 243,
+    "width": 83,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "pageNavigator",
@@ -144,6 +144,19 @@
         {
           "properties": {
             "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "pages": [
+        {
+          "properties": {
+            "showHiddenPages": {
               "expr": {
                 "Literal": {
                   "Value": "false"

@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 311.66666666666669,
     "width": 1273.3333333333335,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "public dim_crash_type"
+                      "Entity": "public dim_traffic_device"
                     }
                   },
-                  "Property": "first_crash_type"
+                  "Property": "trafficway_type"
                 }
               },
-              "queryRef": "public dim_crash_type.first_crash_type",
-              "nativeQueryRef": "first_crash_type",
+              "queryRef": "public dim_traffic_device.trafficway_type",
+              "nativeQueryRef": "trafficway_type",
               "active": true
             }
           ]
@@ -164,7 +164,19 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -317,6 +329,19 @@
             }
           }
         }
+      ],
+      "bubbles": [
+        {
+          "properties": {
+            "bubbleSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "-10L"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
@@ -367,51 +392,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fffebeb7dea9e5938d78",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a40c95ca84e6913fa804",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Avg EPDO Score"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "646433b2aebcfd68e882",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_crash_type"
-              }
-            },
-            "Property": "first_crash_type"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

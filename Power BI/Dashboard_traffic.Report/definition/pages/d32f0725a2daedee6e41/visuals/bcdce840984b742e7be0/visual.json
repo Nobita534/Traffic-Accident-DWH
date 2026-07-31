@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -164,5 +164,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "de89322ab8ae0e6cad7b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Environmental Impact"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

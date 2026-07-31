@@ -5630,7 +5630,7 @@ cultureInfo en-US
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Identified Critical Scenarios"
+			          "ConceptualProperty": "Priority Trafficways"
 			        }
 			      },
 			      "State": "Generated",

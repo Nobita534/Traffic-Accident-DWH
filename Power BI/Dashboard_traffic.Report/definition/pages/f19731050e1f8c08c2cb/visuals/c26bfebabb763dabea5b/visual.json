@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 311.66666666666669,
     "width": 635,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "barChart",
@@ -434,20 +434,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "53851019b6821cd2f4ab",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

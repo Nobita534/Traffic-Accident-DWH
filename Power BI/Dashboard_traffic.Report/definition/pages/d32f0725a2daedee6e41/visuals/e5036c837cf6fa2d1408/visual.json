@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "e5036c837cf6fa2d1408",
   "position": {
-    "x": 768,
-    "y": 537,
+    "x": 768.57142857142867,
+    "y": 537.14285714285722,
     "z": 9000,
-    "height": 318,
-    "width": 617,
-    "tabOrder": 9000
+    "height": 318.57142857142861,
+    "width": 607.14285714285722,
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,16 +20,15 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "public dim_crash_type"
+                      "Entity": "Condition Comparison"
                     }
                   },
-                  "Property": "first_crash_type"
+                  "Property": "Condition"
                 }
               },
-              "queryRef": "public dim_crash_type.first_crash_type",
-              "nativeQueryRef": "first crash type",
-              "active": true,
-              "displayName": "first crash type"
+              "queryRef": "Condition Comparison.Condition",
+              "nativeQueryRef": "Condition",
+              "active": true
             }
           ]
         },
@@ -43,11 +42,12 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Total EPDO Score"
+                  "Property": "Severe Rate Comparison"
                 }
               },
-              "queryRef": "All Measure.Total EPDO Score",
-              "nativeQueryRef": "Total EPDO Score"
+              "queryRef": "All Measure.Severe Rate Comparison",
+              "nativeQueryRef": "Severe Rate Comparison",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
@@ -62,7 +62,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Total EPDO Score"
+                "Property": "Severe Rate Comparison"
               }
             },
             "direction": "Descending"
@@ -435,7 +435,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Total EPDO Impact by First Crash Type'"
+                  "Value": "'Severe Accident Rate: Normal vs High-Risk Conditions'"
                 }
               }
             }
@@ -448,105 +448,32 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "b6e653fe6e9dab2fbe40",
+        "name": "f5b6a37dd61b80c46078",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "public dim_crash_type"
+                "Entity": "Condition Comparison"
               }
             },
-            "Property": "first_crash_type"
+            "Property": "Condition"
           }
         },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "p",
-                        "Entity": "public dim_crash_type",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "a",
-                        "Entity": "All Measure",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "p"
-                            }
-                          },
-                          "Property": "first_crash_type"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "a"
-                              }
-                            },
-                            "Property": "Total EPDO Score"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 10
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "p",
-              "Entity": "public dim_crash_type",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "p"
-                          }
-                        },
-                        "Property": "first_crash_type"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
+        "type": "Categorical"
+      },
+      {
+        "name": "f58a15e56a5a7141ca94",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
               }
-            }
-          ]
-        }
+            },
+            "Property": "Severe Rate Comparison"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

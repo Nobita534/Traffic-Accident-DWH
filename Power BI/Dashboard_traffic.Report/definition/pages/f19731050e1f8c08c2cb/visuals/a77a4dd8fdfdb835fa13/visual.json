@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "card",
@@ -23,31 +23,16 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Avg EPDO Score"
+                  "Property": "Most Accident-Prone Trafficway"
                 }
               },
-              "queryRef": "All Measure.Avg EPDO Score",
-              "nativeQueryRef": "Avg EPDO Score"
+              "queryRef": "All Measure.Most Accident-Prone Trafficway",
+              "nativeQueryRef": "Most Accident-Prone Trafficway"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "All Measure"
-                  }
-                },
-                "Property": "Avg EPDO Score"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },

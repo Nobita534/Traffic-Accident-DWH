@@ -1,0 +1,25 @@
+table 'Condition Comparison'
+	lineageTag: 77a3565a-6eb1-4d9d-be74-39431364c486
+
+	column Condition
+		lineageTag: 5cf0024c-1ad6-4863-b891-3eee396e8136
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Condition]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Condition Comparison' = calculated
+		mode: import
+		source =
+				
+				DATATABLE(
+				    "Condition", STRING,
+				    {
+				        {"Normal Condition"},
+				        {"Bad Condition"}
+				    }
+				)
+
+	annotation PBI_Id = 4ee3a01f77bd49149c0c40072e308012
+
