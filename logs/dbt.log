@@ -8941,3 +8941,2546 @@ parsing.
 [0m12:06:28.825821 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B88829EB10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B8857F1C70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001B88869C770>]}
 [0m12:06:28.826129 [debug] [MainThread]: Flushing usage events
 [0m12:06:31.056292 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:17:19.277209 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002261EB9D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002262130BED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002262130B890>]}
+
+
+============================== 15:17:19.282814 | a4707119-58da-435f-bf71-f2e945b6ce3f ==============================
+[0m15:17:19.282814 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m15:17:19.283574 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'invocation_command': 'dbt test', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m15:17:19.490818 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002261F27D6E0>]}
+[0m15:17:19.546203 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000226215B4E20>]}
+[0m15:17:19.547706 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m15:17:19.729280 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m15:17:19.943703 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:17:19.944079 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:17:19.944288 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:17:19.951780 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621A17050>]}
+[0m15:17:20.097105 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m15:17:20.100659 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m15:17:20.137901 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m15:17:20.169256 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B33F20>]}
+[0m15:17:20.169710 [info ] [MainThread]: Found 8 models, 26 data tests, 1 source, 476 macros
+[0m15:17:20.170210 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621BB0C90>]}
+[0m15:17:20.172960 [info ] [MainThread]: 
+[0m15:17:20.173444 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:17:20.173885 [info ] [MainThread]: 
+[0m15:17:20.174509 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:17:20.178946 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh_public'
+[0m15:17:20.249996 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh_public"
+[0m15:17:20.250377 [debug] [ThreadPool]: On list_traffic_dwh_public: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh_public"} */
+select
+      'traffic_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:17:20.250667 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:17:20.438130 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.187 seconds
+[0m15:17:20.439434 [debug] [ThreadPool]: On list_traffic_dwh_public: ROLLBACK
+[0m15:17:20.440437 [debug] [ThreadPool]: On list_traffic_dwh_public: Close
+[0m15:17:20.444990 [debug] [MainThread]: Using postgres connection "master"
+[0m15:17:20.445368 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:17:20.445729 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:17:20.488527 [debug] [MainThread]: SQL status: SELECT 2 in 0.043 seconds
+[0m15:17:20.489918 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'a4707119-58da-435f-bf71-f2e945b6ce3f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621D52EA0>]}
+[0m15:17:20.490305 [debug] [MainThread]: On master: ROLLBACK
+[0m15:17:20.490764 [debug] [MainThread]: On master: COMMIT
+[0m15:17:20.491107 [debug] [MainThread]: Using postgres connection "master"
+[0m15:17:20.491323 [debug] [MainThread]: On master: COMMIT
+[0m15:17:20.491777 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:17:20.492057 [debug] [MainThread]: On master: Close
+[0m15:17:20.498161 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:17:20.498934 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:17:20.499252 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:17:20.498611 [info ] [Thread-1 (]: 1 of 26 START test not_null_dim_cause_cause_id ................................. [RUN]
+[0m15:17:20.500063 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:17:20.499747 [info ] [Thread-4 (]: 4 of 26 START test not_null_dim_natural_condition_natural_id ................... [RUN]
+[0m15:17:20.500875 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9'
+[0m15:17:20.500351 [info ] [Thread-3 (]: 3 of 26 START test not_null_dim_crash_type_crash_id ............................ [RUN]
+[0m15:17:20.501665 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f'
+[0m15:17:20.501252 [info ] [Thread-2 (]: 2 of 26 START test not_null_dim_crash_date_datekey ............................. [RUN]
+[0m15:17:20.502133 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:17:20.502541 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4'
+[0m15:17:20.502881 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:17:20.503297 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509'
+[0m15:17:20.518361 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:17:20.518769 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:17:20.523763 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:17:20.524216 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:17:20.529490 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:17:20.534839 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:17:20.536059 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:17:20.551821 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:17:20.552830 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:17:20.553384 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:17:20.555169 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:17:20.555497 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:17:20.556748 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:17:20.557507 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:17:20.558811 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:17:20.559358 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cause_id
+from "traffic_dwh"."public"."dim_cause"
+where cause_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.559911 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:17:20.560358 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:17:20.561036 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:17:20.561444 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select datekey
+from "traffic_dwh"."public"."dim_crash_date"
+where datekey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.561885 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:17:20.562214 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select natural_id
+from "traffic_dwh"."public"."dim_natural_condition"
+where natural_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.562602 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:17:20.562912 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_id
+from "traffic_dwh"."public"."dim_crash_type"
+where crash_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.563229 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:17:20.563716 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:17:20.606511 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.047 seconds
+[0m15:17:20.610124 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: ROLLBACK
+[0m15:17:20.610777 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.048 seconds
+[0m15:17:20.611157 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: Close
+[0m15:17:20.612380 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: ROLLBACK
+[0m15:17:20.613132 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.050 seconds
+[0m15:17:20.613983 [info ] [Thread-1 (]: 1 of 26 PASS not_null_dim_cause_cause_id ....................................... [[32mPASS[0m in 0.11s]
+[0m15:17:20.616357 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: ROLLBACK
+[0m15:17:20.616711 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: Close
+[0m15:17:20.617019 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.053 seconds
+[0m15:17:20.617593 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:17:20.619461 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: ROLLBACK
+[0m15:17:20.620634 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:17:20.621054 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: Close
+[0m15:17:20.620198 [info ] [Thread-2 (]: 2 of 26 PASS not_null_dim_crash_date_datekey ................................... [[32mPASS[0m in 0.12s]
+[0m15:17:20.622267 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: Close
+[0m15:17:20.621924 [info ] [Thread-1 (]: 5 of 26 START test not_null_dim_traffic_device_device_id ....................... [RUN]
+[0m15:17:20.623077 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:17:20.623682 [info ] [Thread-4 (]: 4 of 26 PASS not_null_dim_natural_condition_natural_id ......................... [[32mPASS[0m in 0.12s]
+[0m15:17:20.624410 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9, now test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad)
+[0m15:17:20.625560 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:17:20.625000 [info ] [Thread-3 (]: 3 of 26 PASS not_null_dim_crash_type_crash_id .................................. [[32mPASS[0m in 0.12s]
+[0m15:17:20.626866 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:17:20.627589 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:17:20.628314 [info ] [Thread-2 (]: 6 of 26 START test not_null_fct_traffic_accidents_cause_id ..................... [RUN]
+[0m15:17:20.629687 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:17:20.630353 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:17:20.636733 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de)
+[0m15:17:20.638642 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:17:20.639283 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:17:20.639795 [info ] [Thread-4 (]: 7 of 26 START test not_null_fct_traffic_accidents_crash_id ..................... [RUN]
+[0m15:17:20.640426 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:17:20.641019 [info ] [Thread-3 (]: 8 of 26 START test not_null_fct_traffic_accidents_datekey ...................... [RUN]
+[0m15:17:20.642058 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f)
+[0m15:17:20.650463 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:17:20.651101 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1)
+[0m15:17:20.651451 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:17:20.652019 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:17:20.652546 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:17:20.660620 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:17:20.662970 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:17:20.669024 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:17:20.670326 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:17:20.672576 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:17:20.673441 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:17:20.673837 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select device_id
+from "traffic_dwh"."public"."dim_traffic_device"
+where device_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.674243 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:17:20.674596 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:17:20.675017 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:20.676534 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:17:20.677891 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:17:20.678737 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:17:20.679277 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cause_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where cause_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.679683 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:17:20.680318 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:17:20.680825 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select datekey
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where datekey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.681129 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:20.681744 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:17:20.682147 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where crash_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.682564 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:17:20.762445 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.087 seconds
+[0m15:17:20.764599 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: ROLLBACK
+[0m15:17:20.765652 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: Close
+[0m15:17:20.766872 [info ] [Thread-1 (]: 5 of 26 PASS not_null_dim_traffic_device_device_id ............................. [[32mPASS[0m in 0.14s]
+[0m15:17:20.769936 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:17:20.770505 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:17:20.771024 [info ] [Thread-1 (]: 9 of 26 START test not_null_fct_traffic_accidents_device_id .................... [RUN]
+[0m15:17:20.772046 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b)
+[0m15:17:20.772723 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:17:20.781265 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:17:20.782709 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:17:20.785157 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:17:20.786953 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:17:20.787630 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select device_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where device_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.788265 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:20.826085 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.146 seconds
+[0m15:17:20.827569 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: ROLLBACK
+[0m15:17:20.828479 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: Close
+[0m15:17:20.829382 [info ] [Thread-2 (]: 6 of 26 PASS not_null_fct_traffic_accidents_cause_id ........................... [[32mPASS[0m in 0.19s]
+[0m15:17:20.830214 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:17:20.830661 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:17:20.831111 [info ] [Thread-2 (]: 10 of 26 START test not_null_fct_traffic_accidents_epdo_priority_score ......... [RUN]
+[0m15:17:20.831949 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817)
+[0m15:17:20.832336 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:17:20.839776 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:17:20.841050 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:17:20.843246 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:17:20.844472 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:17:20.845068 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.164 seconds
+[0m15:17:20.845610 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select epdo_priority_score
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where epdo_priority_score is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.848211 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: ROLLBACK
+[0m15:17:20.849481 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:17:20.850425 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: Close
+[0m15:17:20.851393 [info ] [Thread-3 (]: 8 of 26 PASS not_null_fct_traffic_accidents_datekey ............................ [[32mPASS[0m in 0.20s]
+[0m15:17:20.852422 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:17:20.853027 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:17:20.853719 [info ] [Thread-3 (]: 11 of 26 START test not_null_fct_traffic_accidents_fact_id ..................... [RUN]
+[0m15:17:20.854774 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9)
+[0m15:17:20.855431 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:17:20.862349 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:17:20.863179 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.181 seconds
+[0m15:17:20.865136 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: ROLLBACK
+[0m15:17:20.866064 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:17:20.866621 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: Close
+[0m15:17:20.868769 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:17:20.871959 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:17:20.870298 [info ] [Thread-4 (]: 7 of 26 PASS not_null_fct_traffic_accidents_crash_id ........................... [[32mPASS[0m in 0.23s]
+[0m15:17:20.872977 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fact_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where fact_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.874117 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:17:20.874824 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:20.875729 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:17:20.876824 [info ] [Thread-4 (]: 12 of 26 START test not_null_fct_traffic_accidents_is_severe ................... [RUN]
+[0m15:17:20.878984 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8)
+[0m15:17:20.879761 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:17:20.888055 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:17:20.889537 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:17:20.892095 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:17:20.894090 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:17:20.894929 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_severe
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where is_severe is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.895442 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:17:20.937279 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.149 seconds
+[0m15:17:20.938607 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: ROLLBACK
+[0m15:17:20.939366 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: Close
+[0m15:17:20.940355 [info ] [Thread-1 (]: 9 of 26 PASS not_null_fct_traffic_accidents_device_id .......................... [[32mPASS[0m in 0.17s]
+[0m15:17:20.941445 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:17:20.942124 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:17:20.942810 [info ] [Thread-1 (]: 13 of 26 START test not_null_fct_traffic_accidents_natural_id .................. [RUN]
+[0m15:17:20.943648 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017)
+[0m15:17:20.944134 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:17:20.952432 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:17:20.954321 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:17:20.956846 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:17:20.958754 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:17:20.959412 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select natural_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where natural_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.959903 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:20.974210 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.125 seconds
+[0m15:17:20.976192 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: ROLLBACK
+[0m15:17:20.977030 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: Close
+[0m15:17:20.977964 [info ] [Thread-2 (]: 10 of 26 PASS not_null_fct_traffic_accidents_epdo_priority_score ............... [[32mPASS[0m in 0.15s]
+[0m15:17:20.978955 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:17:20.979590 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:17:20.980129 [info ] [Thread-2 (]: 14 of 26 START test not_null_stg_traffic_accidents_crash_timestamp ............. [RUN]
+[0m15:17:20.981101 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817, now test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c)
+[0m15:17:20.981665 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:17:20.989172 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:17:20.990499 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:17:20.992307 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:17:20.993890 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:17:20.994631 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_timestamp
+from "traffic_dwh"."public"."stg_traffic_accidents"
+where crash_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:20.995218 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:17:21.007377 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.133 seconds
+[0m15:17:21.009426 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: ROLLBACK
+[0m15:17:21.010292 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: Close
+[0m15:17:21.011877 [info ] [Thread-3 (]: 11 of 26 PASS not_null_fct_traffic_accidents_fact_id ........................... [[32mPASS[0m in 0.16s]
+[0m15:17:21.013144 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:17:21.013773 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:17:21.014461 [info ] [Thread-3 (]: 15 of 26 START test relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_  [RUN]
+[0m15:17:21.017438 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e)
+[0m15:17:21.018182 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:17:21.039039 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:17:21.039575 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.144 seconds
+[0m15:17:21.041214 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: ROLLBACK
+[0m15:17:21.042021 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: Close
+[0m15:17:21.043016 [info ] [Thread-4 (]: 12 of 26 PASS not_null_fct_traffic_accidents_is_severe ......................... [[32mPASS[0m in 0.16s]
+[0m15:17:21.043981 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:17:21.044692 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:17:21.046524 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:17:21.047049 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:17:21.047719 [info ] [Thread-4 (]: 16 of 26 START test relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_  [RUN]
+[0m15:17:21.048768 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1)
+[0m15:17:21.049345 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:17:21.062676 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:17:21.063333 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:17:21.063770 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select cause_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where cause_id is not null
+),
+
+parent as (
+    select cause_id as to_field
+    from "traffic_dwh"."public"."dim_cause"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.064386 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:21.065113 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:17:21.066847 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:17:21.068105 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:17:21.068627 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select crash_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where crash_id is not null
+),
+
+parent as (
+    select crash_id as to_field
+    from "traffic_dwh"."public"."dim_crash_type"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.068941 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:17:21.070196 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.110 seconds
+[0m15:17:21.072033 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: ROLLBACK
+[0m15:17:21.072800 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: Close
+[0m15:17:21.073532 [info ] [Thread-1 (]: 13 of 26 PASS not_null_fct_traffic_accidents_natural_id ........................ [[32mPASS[0m in 0.13s]
+[0m15:17:21.074418 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:17:21.074973 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:17:21.075514 [info ] [Thread-1 (]: 17 of 26 START test relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_  [RUN]
+[0m15:17:21.076316 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16)
+[0m15:17:21.076818 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:17:21.093445 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:17:21.094845 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:17:21.097372 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:17:21.098685 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:17:21.099374 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select datekey as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where datekey is not null
+),
+
+parent as (
+    select datekey as to_field
+    from "traffic_dwh"."public"."dim_crash_date"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.099929 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:21.230492 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.166 seconds
+[0m15:17:21.232313 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: ROLLBACK
+[0m15:17:21.233122 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: Close
+[0m15:17:21.234130 [info ] [Thread-3 (]: 15 of 26 PASS relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_  [[32mPASS[0m in 0.22s]
+[0m15:17:21.235264 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:17:21.235810 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:17:21.236351 [info ] [Thread-3 (]: 18 of 26 START test relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_  [RUN]
+[0m15:17:21.237114 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af)
+[0m15:17:21.237540 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:17:21.245668 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.177 seconds
+[0m15:17:21.253288 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:17:21.253942 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.154 seconds
+[0m15:17:21.256227 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: ROLLBACK
+[0m15:17:21.258736 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: ROLLBACK
+[0m15:17:21.259837 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: Close
+[0m15:17:21.260510 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: Close
+[0m15:17:21.261613 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:17:21.266065 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:17:21.262453 [info ] [Thread-1 (]: 17 of 26 PASS relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_  [[32mPASS[0m in 0.19s]
+[0m15:17:21.267568 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:17:21.263441 [info ] [Thread-4 (]: 16 of 26 PASS relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_  [[32mPASS[0m in 0.21s]
+[0m15:17:21.268458 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:17:21.269549 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:17:21.270710 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:17:21.270188 [info ] [Thread-1 (]: 19 of 26 START test relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_  [RUN]
+[0m15:17:21.271436 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b
+[0m15:17:21.271922 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select device_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where device_id is not null
+),
+
+parent as (
+    select device_id as to_field
+    from "traffic_dwh"."public"."dim_traffic_device"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.272586 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd)
+[0m15:17:21.273876 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.279 seconds
+[0m15:17:21.273350 [info ] [Thread-4 (]: 20 of 26 START test source_not_null_traffic_raw_traffic_accidents_crash_timestamp  [RUN]
+[0m15:17:21.274417 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:21.275021 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:17:21.277442 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: ROLLBACK
+[0m15:17:21.278080 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1, now test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b)
+[0m15:17:21.294254 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:17:21.295166 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b
+[0m15:17:21.295907 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: Close
+[0m15:17:21.302532 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b"
+[0m15:17:21.303641 [info ] [Thread-2 (]: 14 of 26 PASS not_null_stg_traffic_accidents_crash_timestamp ................... [[32mPASS[0m in 0.32s]
+[0m15:17:21.304598 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:17:21.305055 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:17:21.305657 [info ] [Thread-2 (]: 21 of 26 START test unique_dim_cause_cause_id .................................. [RUN]
+[0m15:17:21.306424 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c, now test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da)
+[0m15:17:21.307004 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b
+[0m15:17:21.307518 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:17:21.308040 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:17:21.310155 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b"
+[0m15:17:21.312685 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:17:21.320665 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:17:21.322397 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:17:21.323223 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select natural_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where natural_id is not null
+),
+
+parent as (
+    select natural_id as to_field
+    from "traffic_dwh"."public"."dim_natural_condition"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.323870 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:21.324562 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:17:21.325389 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b"
+[0m15:17:21.327750 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:17:21.328821 [debug] [Thread-4 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_timestamp
+from "traffic_dwh"."public"."raw_traffic_accidents"
+where crash_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.329738 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:17:21.331058 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:17:21.331689 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    cause_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_cause"
+where cause_id is not null
+group by cause_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.332313 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:17:21.387604 [debug] [Thread-4 (]: Postgres adapter: Postgres error: column "crash_timestamp" does not exist
+LINE 17: select crash_timestamp
+                ^
+
+[0m15:17:21.388366 [debug] [Thread-4 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b: ROLLBACK
+[0m15:17:21.389442 [debug] [Thread-4 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b: Close
+[0m15:17:21.408119 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.134 seconds
+[0m15:17:21.410486 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: ROLLBACK
+[0m15:17:21.411538 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: Close
+[0m15:17:21.412787 [info ] [Thread-3 (]: 18 of 26 PASS relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_  [[32mPASS[0m in 0.18s]
+[0m15:17:21.414995 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:17:21.415645 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.083 seconds
+[0m15:17:21.416203 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:17:21.418187 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: ROLLBACK
+[0m15:17:21.419029 [info ] [Thread-3 (]: 22 of 26 START test unique_dim_crash_date_datekey .............................. [RUN]
+[0m15:17:21.420203 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af, now test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e)
+[0m15:17:21.420875 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: Close
+[0m15:17:21.421441 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:17:21.428846 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:17:21.429973 [info ] [Thread-2 (]: 21 of 26 PASS unique_dim_cause_cause_id ........................................ [[32mPASS[0m in 0.12s]
+[0m15:17:21.431091 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:17:21.431578 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:17:21.431984 [info ] [Thread-2 (]: 23 of 26 START test unique_dim_crash_type_crash_id ............................. [RUN]
+[0m15:17:21.433038 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:17:21.433791 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da, now test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391)
+[0m15:17:21.435908 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:17:21.436437 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:17:21.443564 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:17:21.444566 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.121 seconds
+[0m15:17:21.446666 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: ROLLBACK
+[0m15:17:21.447849 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: Close
+[0m15:17:21.448480 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:17:21.450486 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:17:21.452048 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:17:21.451461 [info ] [Thread-1 (]: 19 of 26 PASS relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_  [[32mPASS[0m in 0.18s]
+[0m15:17:21.452711 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    datekey as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_crash_date"
+where datekey is not null
+group by datekey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.453479 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:17:21.453978 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:21.454751 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:17:21.455557 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:17:21.456439 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    crash_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_crash_type"
+where crash_id is not null
+group by crash_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.456012 [info ] [Thread-1 (]: 24 of 26 START test unique_dim_natural_condition_natural_id .................... [RUN]
+[0m15:17:21.457135 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:17:21.457877 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd, now test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123)
+[0m15:17:21.458841 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:17:21.465363 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:17:21.466508 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:17:21.468792 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:17:21.472174 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:17:21.472990 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    natural_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_natural_condition"
+where natural_id is not null
+group by natural_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.473586 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:17:21.474484 [debug] [Thread-4 (]: Database Error in test source_not_null_traffic_raw_traffic_accidents_crash_timestamp (models\staging\sources\src_traffic.yml)
+  column "crash_timestamp" does not exist
+  LINE 17: select crash_timestamp
+                  ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\sources\src_traffic.yml\source_not_null_traffic_raw_traffic_accidents_crash_timestamp.sql
+[0m15:17:21.475130 [error] [Thread-4 (]: 20 of 26 ERROR source_not_null_traffic_raw_traffic_accidents_crash_timestamp ... [[31mERROR[0m in 0.20s]
+[0m15:17:21.476097 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b
+[0m15:17:21.476672 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:17:21.477737 [debug] [Thread-7 (]: Marking all children of 'test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b' to be skipped because of status 'error'.  Reason: Database Error in test source_not_null_traffic_raw_traffic_accidents_crash_timestamp (models\staging\sources\src_traffic.yml)
+  column "crash_timestamp" does not exist
+  LINE 17: select crash_timestamp
+                  ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\sources\src_traffic.yml\source_not_null_traffic_raw_traffic_accidents_crash_timestamp.sql.
+[0m15:17:21.477202 [info ] [Thread-4 (]: 25 of 26 START test unique_dim_traffic_device_device_id ........................ [RUN]
+[0m15:17:21.479443 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_timestamp.25284e826b, now test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875)
+[0m15:17:21.479995 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:17:21.486356 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:17:21.487353 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:17:21.489142 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:17:21.490628 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:17:21.491234 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    device_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_traffic_device"
+where device_id is not null
+group by device_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.491694 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:17:21.510769 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.057 seconds
+[0m15:17:21.512665 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: ROLLBACK
+[0m15:17:21.513544 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: Close
+[0m15:17:21.514570 [info ] [Thread-3 (]: 22 of 26 PASS unique_dim_crash_date_datekey .................................... [[32mPASS[0m in 0.09s]
+[0m15:17:21.515621 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:17:21.516338 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:17:21.517001 [info ] [Thread-3 (]: 26 of 26 START test unique_fct_traffic_accidents_fact_id ....................... [RUN]
+[0m15:17:21.517788 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e, now test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659)
+[0m15:17:21.518351 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:17:21.518830 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.062 seconds
+[0m15:17:21.524879 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:17:21.526737 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: ROLLBACK
+[0m15:17:21.527771 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: Close
+[0m15:17:21.529417 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:17:21.528801 [info ] [Thread-2 (]: 23 of 26 PASS unique_dim_crash_type_crash_id ................................... [[32mPASS[0m in 0.10s]
+[0m15:17:21.532155 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:17:21.533183 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:17:21.534990 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:17:21.535568 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.062 seconds
+[0m15:17:21.536260 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    fact_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where fact_id is not null
+group by fact_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:17:21.538304 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: ROLLBACK
+[0m15:17:21.538783 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:17:21.539428 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: Close
+[0m15:17:21.540307 [info ] [Thread-1 (]: 24 of 26 PASS unique_dim_natural_condition_natural_id .......................... [[32mPASS[0m in 0.08s]
+[0m15:17:21.541250 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:17:21.541832 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.050 seconds
+[0m15:17:21.543736 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: ROLLBACK
+[0m15:17:21.544463 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: Close
+[0m15:17:21.545415 [info ] [Thread-4 (]: 25 of 26 PASS unique_dim_traffic_device_device_id .............................. [[32mPASS[0m in 0.07s]
+[0m15:17:21.546506 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:17:21.704345 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.165 seconds
+[0m15:17:21.705668 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: ROLLBACK
+[0m15:17:21.706399 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: Close
+[0m15:17:21.707149 [info ] [Thread-3 (]: 26 of 26 PASS unique_fct_traffic_accidents_fact_id ............................. [[32mPASS[0m in 0.19s]
+[0m15:17:21.708151 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:17:21.710287 [debug] [MainThread]: On master: COMMIT
+[0m15:17:21.710726 [debug] [MainThread]: Using postgres connection "master"
+[0m15:17:21.711082 [debug] [MainThread]: On master: COMMIT
+[0m15:17:21.711309 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:17:21.759803 [debug] [MainThread]: SQL status: COMMIT in 0.048 seconds
+[0m15:17:21.760278 [debug] [MainThread]: On master: Close
+[0m15:17:21.760813 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:17:21.761072 [debug] [MainThread]: Connection 'list_traffic_dwh_public' was properly closed.
+[0m15:17:21.761320 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123' was properly closed.
+[0m15:17:21.761560 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875' was properly closed.
+[0m15:17:21.761743 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659' was properly closed.
+[0m15:17:21.761905 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391' was properly closed.
+[0m15:17:21.762137 [info ] [MainThread]: 
+[0m15:17:21.762675 [info ] [MainThread]: Finished running 26 data tests in 0 hours 0 minutes and 1.59 seconds (1.59s).
+[0m15:17:21.765760 [debug] [MainThread]: Command end result
+[0m15:17:21.796812 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m15:17:21.800041 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m15:17:21.803204 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m15:17:21.810297 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\run_results.json
+[0m15:17:21.810704 [info ] [MainThread]: 
+[0m15:17:21.811220 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m15:17:21.811854 [info ] [MainThread]: 
+[0m15:17:21.812402 [error] [MainThread]: [[31mERROR[0m]: in test source_not_null_traffic_raw_traffic_accidents_crash_timestamp (models\staging\sources\src_traffic.yml)
+[0m15:17:21.813076 [error] [MainThread]:   Database Error in test source_not_null_traffic_raw_traffic_accidents_crash_timestamp (models\staging\sources\src_traffic.yml)
+  column "crash_timestamp" does not exist
+  LINE 17: select crash_timestamp
+                  ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\sources\src_traffic.yml\source_not_null_traffic_raw_traffic_accidents_crash_timestamp.sql
+[0m15:17:21.813481 [info ] [MainThread]: 
+[0m15:17:21.813886 [info ] [MainThread]:   compiled code at target\compiled\traffic_accident_dwh\models\staging\sources\src_traffic.yml\source_not_null_traffic_raw_traffic_accidents_crash_timestamp.sql
+[0m15:17:21.814241 [info ] [MainThread]: 
+[0m15:17:21.814651 [info ] [MainThread]: Done. PASS=25 WARN=0 ERROR=1 SKIP=0 NO-OP=0 REUSED=0 TOTAL=26
+[0m15:17:21.815586 [debug] [MainThread]: Command `dbt test` failed at 15:17:21.815432 after 2.72 seconds
+[0m15:17:21.815916 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621285E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621B56A40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000022621FA68E0>]}
+[0m15:17:21.816215 [debug] [MainThread]: Flushing usage events
+[0m15:17:23.054017 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:19:30.611485 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC9527D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC979EFED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC979EF890>]}
+
+
+============================== 15:19:30.618314 | 880a2ef1-349b-4cd4-9ab2-b7d10153efe3 ==============================
+[0m15:19:30.618314 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m15:19:30.619066 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt test', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m15:19:30.800600 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC9595D6E0>]}
+[0m15:19:30.850861 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC97C54E20>]}
+[0m15:19:30.852560 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m15:19:31.004060 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m15:19:31.142204 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m15:19:31.142757 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC98086550>]}
+[0m15:19:32.053711 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'fct_traffic_accidents' in package 'traffic_accident_dwh'
+(models\marts\facts\facts.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m15:19:32.054393 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC97AE7980>]}
+[0m15:19:32.273666 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC9829F930>]}
+[0m15:19:32.345750 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m15:19:32.350419 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m15:19:32.387271 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m15:19:32.412809 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC98709640>]}
+[0m15:19:32.413211 [info ] [MainThread]: Found 8 models, 26 data tests, 1 source, 476 macros
+[0m15:19:32.413595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC98597650>]}
+[0m15:19:32.416075 [info ] [MainThread]: 
+[0m15:19:32.416428 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m15:19:32.416854 [info ] [MainThread]: 
+[0m15:19:32.417271 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m15:19:32.420974 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh_public'
+[0m15:19:32.483132 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh_public"
+[0m15:19:32.483691 [debug] [ThreadPool]: On list_traffic_dwh_public: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh_public"} */
+select
+      'traffic_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m15:19:32.484076 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:19:32.557020 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.073 seconds
+[0m15:19:32.558557 [debug] [ThreadPool]: On list_traffic_dwh_public: ROLLBACK
+[0m15:19:32.559490 [debug] [ThreadPool]: On list_traffic_dwh_public: Close
+[0m15:19:32.565196 [debug] [MainThread]: Using postgres connection "master"
+[0m15:19:32.565574 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m15:19:32.565992 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:19:32.607528 [debug] [MainThread]: SQL status: SELECT 2 in 0.041 seconds
+[0m15:19:32.608962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '880a2ef1-349b-4cd4-9ab2-b7d10153efe3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC986BFB70>]}
+[0m15:19:32.609334 [debug] [MainThread]: On master: ROLLBACK
+[0m15:19:32.609786 [debug] [MainThread]: On master: COMMIT
+[0m15:19:32.610064 [debug] [MainThread]: Using postgres connection "master"
+[0m15:19:32.610256 [debug] [MainThread]: On master: COMMIT
+[0m15:19:32.610765 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m15:19:32.611064 [debug] [MainThread]: On master: Close
+[0m15:19:32.616484 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:19:32.616964 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:19:32.617285 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:19:32.617920 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:19:32.617603 [info ] [Thread-1 (]: 1 of 26 START test not_null_dim_cause_cause_id ................................. [RUN]
+[0m15:19:32.618322 [info ] [Thread-2 (]: 2 of 26 START test not_null_dim_crash_date_datekey ............................. [RUN]
+[0m15:19:32.618765 [info ] [Thread-4 (]: 4 of 26 START test not_null_dim_natural_condition_natural_id ................... [RUN]
+[0m15:19:32.619666 [debug] [Thread-1 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9'
+[0m15:19:32.619190 [info ] [Thread-3 (]: 3 of 26 START test not_null_dim_crash_type_crash_id ............................ [RUN]
+[0m15:19:32.620287 [debug] [Thread-2 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509'
+[0m15:19:32.620733 [debug] [Thread-4 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f'
+[0m15:19:32.621068 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:19:32.621445 [debug] [Thread-3 (]: Acquiring new postgres connection 'test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4'
+[0m15:19:32.621735 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:19:32.622018 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:19:32.633463 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:19:32.633848 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:19:32.638218 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:19:32.642999 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:19:32.648683 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:19:32.649821 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:19:32.662659 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:19:32.663571 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:19:32.665115 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:19:32.665566 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:19:32.665984 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:19:32.667407 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:19:32.668704 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:19:32.669181 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"
+[0m15:19:32.670050 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cause_id
+from "traffic_dwh"."public"."dim_cause"
+where cause_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.670587 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m15:19:32.671228 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"
+[0m15:19:32.671535 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select datekey
+from "traffic_dwh"."public"."dim_crash_date"
+where datekey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.671850 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m15:19:32.672578 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"
+[0m15:19:32.673360 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_id
+from "traffic_dwh"."public"."dim_crash_type"
+where crash_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.674053 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"
+[0m15:19:32.674458 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m15:19:32.674798 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select natural_id
+from "traffic_dwh"."public"."dim_natural_condition"
+where natural_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.675250 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m15:19:32.715373 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.045 seconds
+[0m15:19:32.719024 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: ROLLBACK
+[0m15:19:32.719511 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.048 seconds
+[0m15:19:32.720643 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: ROLLBACK
+[0m15:19:32.721025 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9: Close
+[0m15:19:32.721642 [info ] [Thread-1 (]: 1 of 26 PASS not_null_dim_cause_cause_id ....................................... [[32mPASS[0m in 0.10s]
+[0m15:19:32.722351 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509: Close
+[0m15:19:32.723135 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9
+[0m15:19:32.723591 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:19:32.724028 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.049 seconds
+[0m15:19:32.724656 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.050 seconds
+[0m15:19:32.724395 [info ] [Thread-1 (]: 5 of 26 START test not_null_dim_traffic_device_device_id ....................... [RUN]
+[0m15:19:32.726311 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: ROLLBACK
+[0m15:19:32.727525 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: ROLLBACK
+[0m15:19:32.728188 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_cause_cause_id.cafc931fd9, now test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad)
+[0m15:19:32.725115 [info ] [Thread-2 (]: 2 of 26 PASS not_null_dim_crash_date_datekey ................................... [[32mPASS[0m in 0.10s]
+[0m15:19:32.728864 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f: Close
+[0m15:19:32.729187 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4: Close
+[0m15:19:32.729503 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:19:32.729976 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509
+[0m15:19:32.736045 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:19:32.737891 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:19:32.736939 [info ] [Thread-4 (]: 4 of 26 PASS not_null_dim_natural_condition_natural_id ......................... [[32mPASS[0m in 0.12s]
+[0m15:19:32.737601 [info ] [Thread-3 (]: 3 of 26 PASS not_null_dim_crash_type_crash_id .................................. [[32mPASS[0m in 0.12s]
+[0m15:19:32.739131 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f
+[0m15:19:32.739541 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4
+[0m15:19:32.739927 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:19:32.738672 [info ] [Thread-2 (]: 6 of 26 START test not_null_fct_traffic_accidents_cause_id ..................... [RUN]
+[0m15:19:32.740279 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:19:32.740650 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:19:32.741323 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_crash_date_datekey.e4ead01509, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de)
+[0m15:19:32.740945 [info ] [Thread-4 (]: 7 of 26 START test not_null_fct_traffic_accidents_crash_id ..................... [RUN]
+[0m15:19:32.742789 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:19:32.743535 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:19:32.743192 [info ] [Thread-3 (]: 8 of 26 START test not_null_fct_traffic_accidents_datekey ...................... [RUN]
+[0m15:19:32.743976 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_natural_condition_natural_id.fc39eaf08f, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f)
+[0m15:19:32.749012 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:19:32.749596 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_crash_type_crash_id.ab3ec1e6e4, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1)
+[0m15:19:32.750305 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:19:32.751156 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:19:32.751602 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"
+[0m15:19:32.756081 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:19:32.761202 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:19:32.761758 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select device_id
+from "traffic_dwh"."public"."dim_traffic_device"
+where device_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.762242 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:19:32.762824 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:32.764341 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:19:32.765166 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:19:32.767020 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:19:32.767428 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:19:32.768850 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:19:32.769618 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"
+[0m15:19:32.770300 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select cause_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where cause_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.770848 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:19:32.771428 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"
+[0m15:19:32.771769 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where crash_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.772135 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:19:32.772939 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"
+[0m15:19:32.773419 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select datekey
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where datekey is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.773849 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:19:32.802244 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.039 seconds
+[0m15:19:32.803500 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: ROLLBACK
+[0m15:19:32.804086 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad: Close
+[0m15:19:32.804722 [info ] [Thread-1 (]: 5 of 26 PASS not_null_dim_traffic_device_device_id ............................. [[32mPASS[0m in 0.08s]
+[0m15:19:32.805569 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad
+[0m15:19:32.806126 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:19:32.806750 [info ] [Thread-1 (]: 9 of 26 START test not_null_fct_traffic_accidents_device_id .................... [RUN]
+[0m15:19:32.807411 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_dim_traffic_device_device_id.028147daad, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b)
+[0m15:19:32.807918 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:19:32.813710 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:19:32.814962 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:19:32.817341 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:19:32.818801 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"
+[0m15:19:32.819423 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select device_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where device_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.819958 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:32.878515 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.105 seconds
+[0m15:19:32.879869 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: ROLLBACK
+[0m15:19:32.880634 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1: Close
+[0m15:19:32.881652 [info ] [Thread-3 (]: 8 of 26 PASS not_null_fct_traffic_accidents_datekey ............................ [[32mPASS[0m in 0.13s]
+[0m15:19:32.882659 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1
+[0m15:19:32.883228 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:19:32.883733 [info ] [Thread-3 (]: 10 of 26 START test not_null_fct_traffic_accidents_epdo_priority_score ......... [RUN]
+[0m15:19:32.884570 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_datekey.f2bd9c0df1, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817)
+[0m15:19:32.885074 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:19:32.890299 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:19:32.891393 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:19:32.893104 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:19:32.894198 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"
+[0m15:19:32.894716 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select epdo_priority_score
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where epdo_priority_score is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.895161 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:19:32.910796 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.091 seconds
+[0m15:19:32.912061 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: ROLLBACK
+[0m15:19:32.912631 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b: Close
+[0m15:19:32.913227 [info ] [Thread-1 (]: 9 of 26 PASS not_null_fct_traffic_accidents_device_id .......................... [[32mPASS[0m in 0.11s]
+[0m15:19:32.914044 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b
+[0m15:19:32.914588 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:19:32.915124 [info ] [Thread-1 (]: 11 of 26 START test not_null_fct_traffic_accidents_fact_id ..................... [RUN]
+[0m15:19:32.915864 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_device_id.7aedf4929b, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9)
+[0m15:19:32.916240 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:19:32.924662 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:19:32.925687 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:19:32.927291 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:19:32.928266 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"
+[0m15:19:32.928756 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select fact_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where fact_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:32.929038 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:32.989123 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.218 seconds
+[0m15:19:32.991753 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: ROLLBACK
+[0m15:19:32.992553 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.220 seconds
+[0m15:19:32.993202 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de: Close
+[0m15:19:32.995300 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: ROLLBACK
+[0m15:19:32.997081 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f: Close
+[0m15:19:32.996469 [info ] [Thread-2 (]: 6 of 26 PASS not_null_fct_traffic_accidents_cause_id ........................... [[32mPASS[0m in 0.26s]
+[0m15:19:33.000495 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de
+[0m15:19:32.998327 [info ] [Thread-4 (]: 7 of 26 PASS not_null_fct_traffic_accidents_crash_id ........................... [[32mPASS[0m in 0.25s]
+[0m15:19:33.001453 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:19:33.002616 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f
+[0m15:19:33.003980 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:19:33.003314 [info ] [Thread-2 (]: 12 of 26 START test not_null_fct_traffic_accidents_is_severe ................... [RUN]
+[0m15:19:33.005655 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_cause_id.364d7b38de, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8)
+[0m15:19:33.004940 [info ] [Thread-4 (]: 13 of 26 START test not_null_fct_traffic_accidents_natural_id .................. [RUN]
+[0m15:19:33.006424 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:19:33.007216 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_crash_id.4b35d7892f, now test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017)
+[0m15:19:33.015767 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:19:33.016611 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:19:33.025048 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:19:33.025891 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:19:33.028124 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:19:33.029141 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.134 seconds
+[0m15:19:33.031456 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: ROLLBACK
+[0m15:19:33.032317 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"
+[0m15:19:33.032835 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817: Close
+[0m15:19:33.033182 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select is_severe
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where is_severe is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.033729 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:19:33.034383 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:19:33.037582 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:19:33.035043 [info ] [Thread-3 (]: 10 of 26 PASS not_null_fct_traffic_accidents_epdo_priority_score ............... [[32mPASS[0m in 0.15s]
+[0m15:19:33.039009 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817
+[0m15:19:33.039644 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:19:33.040089 [info ] [Thread-3 (]: 14 of 26 START test not_null_stg_traffic_accidents_crash_timestamp ............. [RUN]
+[0m15:19:33.041128 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_epdo_priority_score.66ae9e1817, now test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c)
+[0m15:19:33.041988 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:19:33.042743 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"
+[0m15:19:33.051032 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:19:33.051719 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select natural_id
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where natural_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.052542 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:19:33.053653 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:19:33.055671 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:19:33.056683 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"
+[0m15:19:33.057120 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_timestamp
+from "traffic_dwh"."public"."stg_traffic_accidents"
+where crash_timestamp is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.057593 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:19:33.067913 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.139 seconds
+[0m15:19:33.069244 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: ROLLBACK
+[0m15:19:33.069851 [debug] [Thread-1 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9: Close
+[0m15:19:33.070561 [info ] [Thread-1 (]: 11 of 26 PASS not_null_fct_traffic_accidents_fact_id ........................... [[32mPASS[0m in 0.15s]
+[0m15:19:33.071448 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9
+[0m15:19:33.071936 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:19:33.072536 [info ] [Thread-1 (]: 15 of 26 START test relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_  [RUN]
+[0m15:19:33.073426 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_fact_id.1d194ef5c9, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e)
+[0m15:19:33.073774 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:19:33.082107 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:19:33.082912 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:19:33.084422 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:19:33.085287 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"
+[0m15:19:33.085716 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select cause_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where cause_id is not null
+),
+
+parent as (
+    select cause_id as to_field
+    from "traffic_dwh"."public"."dim_cause"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.086089 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:33.141683 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.107 seconds
+[0m15:19:33.143248 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: ROLLBACK
+[0m15:19:33.143870 [debug] [Thread-2 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8: Close
+[0m15:19:33.144649 [info ] [Thread-2 (]: 12 of 26 PASS not_null_fct_traffic_accidents_is_severe ......................... [[32mPASS[0m in 0.14s]
+[0m15:19:33.146056 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8
+[0m15:19:33.146663 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:19:33.147218 [info ] [Thread-2 (]: 16 of 26 START test relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_  [RUN]
+[0m15:19:33.148664 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_is_severe.d82b3440e8, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1)
+[0m15:19:33.149250 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:19:33.163141 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:19:33.163911 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.111 seconds
+[0m15:19:33.165699 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: ROLLBACK
+[0m15:19:33.166678 [debug] [Thread-4 (]: On test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017: Close
+[0m15:19:33.167392 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:19:33.170741 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:19:33.168419 [info ] [Thread-4 (]: 13 of 26 PASS not_null_fct_traffic_accidents_natural_id ........................ [[32mPASS[0m in 0.16s]
+[0m15:19:33.171828 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017
+[0m15:19:33.172443 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:19:33.173112 [info ] [Thread-4 (]: 17 of 26 START test relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_  [RUN]
+[0m15:19:33.174096 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_fct_traffic_accidents_natural_id.545afbd017, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16)
+[0m15:19:33.174865 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"
+[0m15:19:33.175344 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:19:33.175951 [debug] [Thread-2 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select crash_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where crash_id is not null
+),
+
+parent as (
+    select crash_id as to_field
+    from "traffic_dwh"."public"."dim_crash_type"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.188084 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:19:33.188964 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:19:33.190313 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:19:33.192020 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:19:33.193015 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"
+[0m15:19:33.193706 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select datekey as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where datekey is not null
+),
+
+parent as (
+    select datekey as to_field
+    from "traffic_dwh"."public"."dim_crash_date"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.194225 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:19:33.203587 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.117 seconds
+[0m15:19:33.205456 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: ROLLBACK
+[0m15:19:33.206223 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e: Close
+[0m15:19:33.207262 [info ] [Thread-1 (]: 15 of 26 PASS relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_  [[32mPASS[0m in 0.13s]
+[0m15:19:33.208237 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e
+[0m15:19:33.208831 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:19:33.209414 [info ] [Thread-1 (]: 18 of 26 START test relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_  [RUN]
+[0m15:19:33.210158 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_cause_id__cause_id__ref_dim_cause_.8679f8237e, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af)
+[0m15:19:33.210658 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:19:33.224341 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:19:33.225429 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:19:33.227467 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:19:33.228856 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"
+[0m15:19:33.229522 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select device_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where device_id is not null
+),
+
+parent as (
+    select device_id as to_field
+    from "traffic_dwh"."public"."dim_traffic_device"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.230022 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:33.277389 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.220 seconds
+[0m15:19:33.279838 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: ROLLBACK
+[0m15:19:33.280690 [debug] [Thread-3 (]: On test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c: Close
+[0m15:19:33.281697 [info ] [Thread-3 (]: 14 of 26 PASS not_null_stg_traffic_accidents_crash_timestamp ................... [[32mPASS[0m in 0.24s]
+[0m15:19:33.282791 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c
+[0m15:19:33.283465 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:19:33.284174 [info ] [Thread-3 (]: 19 of 26 START test relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_  [RUN]
+[0m15:19:33.285203 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.not_null_stg_traffic_accidents_crash_timestamp.b02a19444c, now test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd)
+[0m15:19:33.285737 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:19:33.298802 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:19:33.299574 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.111 seconds
+[0m15:19:33.301753 [debug] [Thread-2 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: ROLLBACK
+[0m15:19:33.302811 [debug] [Thread-2 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1: Close
+[0m15:19:33.303670 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:19:33.306565 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:19:33.307974 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.114 seconds
+[0m15:19:33.307383 [info ] [Thread-2 (]: 16 of 26 PASS relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_  [[32mPASS[0m in 0.16s]
+[0m15:19:33.310043 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: ROLLBACK
+[0m15:19:33.310774 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1
+[0m15:19:33.311677 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2
+[0m15:19:33.312213 [debug] [Thread-4 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16: Close
+[0m15:19:33.313087 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"
+[0m15:19:33.312615 [info ] [Thread-2 (]: 20 of 26 START test source_not_null_traffic_raw_traffic_accidents_crash_date ... [RUN]
+[0m15:19:33.314699 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with child as (
+    select natural_id as from_field
+    from "traffic_dwh"."public"."fct_traffic_accidents"
+    where natural_id is not null
+),
+
+parent as (
+    select natural_id as to_field
+    from "traffic_dwh"."public"."dim_natural_condition"
+)
+
+select
+    from_field
+
+from child
+left join parent
+    on child.from_field = parent.to_field
+
+where parent.to_field is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.314075 [info ] [Thread-4 (]: 17 of 26 PASS relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_  [[32mPASS[0m in 0.14s]
+[0m15:19:33.315604 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_crash_id__crash_id__ref_dim_crash_type_.a99e8ec4e1, now test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2)
+[0m15:19:33.316261 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:19:33.317154 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16
+[0m15:19:33.317651 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2
+[0m15:19:33.318552 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:19:33.325893 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2"
+[0m15:19:33.326662 [info ] [Thread-4 (]: 21 of 26 START test unique_dim_cause_cause_id .................................. [RUN]
+[0m15:19:33.327746 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_datekey__datekey__ref_dim_crash_date_.fbebbe0c16, now test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da)
+[0m15:19:33.328447 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:19:33.337975 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:19:33.338526 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.108 seconds
+[0m15:19:33.339044 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2
+[0m15:19:33.340688 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: ROLLBACK
+[0m15:19:33.342321 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2"
+[0m15:19:33.342900 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:19:33.343379 [debug] [Thread-1 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af: Close
+[0m15:19:33.344959 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:19:33.345739 [info ] [Thread-1 (]: 18 of 26 PASS relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_  [[32mPASS[0m in 0.14s]
+[0m15:19:33.346781 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af
+[0m15:19:33.347477 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:19:33.348165 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2"
+[0m15:19:33.349122 [debug] [Thread-2 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select crash_date
+from "traffic_dwh"."public"."raw_traffic_accidents"
+where crash_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.349437 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:19:33.348761 [info ] [Thread-1 (]: 22 of 26 START test unique_dim_crash_date_datekey .............................. [RUN]
+[0m15:19:33.350245 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"
+[0m15:19:33.350825 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_device_id__device_id__ref_dim_traffic_device_.a69f1b30af, now test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e)
+[0m15:19:33.351236 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    cause_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_cause"
+where cause_id is not null
+group by cause_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.351660 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:19:33.352069 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:19:33.357966 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:19:33.359290 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:19:33.361927 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:19:33.362995 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"
+[0m15:19:33.363450 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    datekey as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_crash_date"
+where datekey is not null
+group by datekey
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.363736 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:33.406790 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.055 seconds
+[0m15:19:33.409039 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: ROLLBACK
+[0m15:19:33.409854 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da: Close
+[0m15:19:33.411146 [info ] [Thread-4 (]: 21 of 26 PASS unique_dim_cause_cause_id ........................................ [[32mPASS[0m in 0.08s]
+[0m15:19:33.412766 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da
+[0m15:19:33.413364 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.097 seconds
+[0m15:19:33.413790 [debug] [Thread-4 (]: Began running node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:19:33.415451 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: ROLLBACK
+[0m15:19:33.416050 [info ] [Thread-4 (]: 23 of 26 START test unique_dim_crash_type_crash_id ............................. [RUN]
+[0m15:19:33.416829 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.unique_dim_cause_cause_id.5b27b483da, now test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391)
+[0m15:19:33.417396 [debug] [Thread-4 (]: Began compiling node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:19:33.424688 [debug] [Thread-4 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:19:33.425334 [debug] [Thread-3 (]: On test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd: Close
+[0m15:19:33.426200 [info ] [Thread-3 (]: 19 of 26 PASS relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_  [[32mPASS[0m in 0.14s]
+[0m15:19:33.427255 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd
+[0m15:19:33.427683 [debug] [Thread-3 (]: Began running node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:19:33.428107 [debug] [Thread-4 (]: Began executing node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:19:33.428966 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.065 seconds
+[0m15:19:33.431007 [debug] [Thread-4 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:19:33.428521 [info ] [Thread-3 (]: 24 of 26 START test unique_dim_natural_condition_natural_id .................... [RUN]
+[0m15:19:33.432488 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: ROLLBACK
+[0m15:19:33.433168 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.relationships_fct_traffic_accidents_natural_id__natural_id__ref_dim_natural_condition_.4de6ef7abd, now test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123)
+[0m15:19:33.433733 [debug] [Thread-3 (]: Began compiling node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:19:33.434123 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e: Close
+[0m15:19:33.440980 [debug] [Thread-3 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:19:33.442458 [debug] [Thread-4 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"
+[0m15:19:33.441971 [info ] [Thread-1 (]: 22 of 26 PASS unique_dim_crash_date_datekey .................................... [[32mPASS[0m in 0.09s]
+[0m15:19:33.443085 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.094 seconds
+[0m15:19:33.443501 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    crash_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_crash_type"
+where crash_id is not null
+group by crash_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.444183 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e
+[0m15:19:33.445529 [debug] [Thread-2 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2: ROLLBACK
+[0m15:19:33.445956 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m15:19:33.446384 [debug] [Thread-1 (]: Began running node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:19:33.446729 [debug] [Thread-3 (]: Began executing node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:19:33.447593 [debug] [Thread-2 (]: On test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2: Close
+[0m15:19:33.447327 [info ] [Thread-1 (]: 25 of 26 START test unique_dim_traffic_device_device_id ........................ [RUN]
+[0m15:19:33.449277 [debug] [Thread-3 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:19:33.449828 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.unique_dim_crash_date_datekey.dbc4ef880e, now test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875)
+[0m15:19:33.450776 [info ] [Thread-2 (]: 20 of 26 PASS source_not_null_traffic_raw_traffic_accidents_crash_date ......... [[32mPASS[0m in 0.14s]
+[0m15:19:33.451499 [debug] [Thread-1 (]: Began compiling node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:19:33.452240 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2
+[0m15:19:33.457660 [debug] [Thread-1 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:19:33.458559 [debug] [Thread-2 (]: Began running node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:19:33.459393 [debug] [Thread-3 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"
+[0m15:19:33.460204 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    natural_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_natural_condition"
+where natural_id is not null
+group by natural_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.460619 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m15:19:33.459827 [info ] [Thread-2 (]: 26 of 26 START test unique_fct_traffic_accidents_fact_id ....................... [RUN]
+[0m15:19:33.461344 [debug] [Thread-1 (]: Began executing node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:19:33.461818 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.traffic_accident_dwh.source_not_null_traffic_raw_traffic_accidents_crash_date.f3d2b256a2, now test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659)
+[0m15:19:33.463238 [debug] [Thread-1 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:19:33.463675 [debug] [Thread-2 (]: Began compiling node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:19:33.470109 [debug] [Thread-2 (]: Writing injected SQL for node "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:19:33.471074 [debug] [Thread-2 (]: Began executing node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:19:33.471817 [debug] [Thread-1 (]: Using postgres connection "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"
+[0m15:19:33.473873 [debug] [Thread-2 (]: Writing runtime sql for node "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:19:33.474379 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    device_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."dim_traffic_device"
+where device_id is not null
+group by device_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.474944 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:19:33.475540 [debug] [Thread-2 (]: Using postgres connection "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"
+[0m15:19:33.475922 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    fact_id as unique_field,
+    count(*) as n_records
+
+from "traffic_dwh"."public"."fct_traffic_accidents"
+where fact_id is not null
+group by fact_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:19:33.476208 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m15:19:33.487972 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.042 seconds
+[0m15:19:33.489196 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: ROLLBACK
+[0m15:19:33.489764 [debug] [Thread-4 (]: On test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391: Close
+[0m15:19:33.490359 [info ] [Thread-4 (]: 23 of 26 PASS unique_dim_crash_type_crash_id ................................... [[32mPASS[0m in 0.07s]
+[0m15:19:33.491097 [debug] [Thread-4 (]: Finished running node test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391
+[0m15:19:33.500267 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.040 seconds
+[0m15:19:33.502144 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: ROLLBACK
+[0m15:19:33.503061 [debug] [Thread-3 (]: On test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123: Close
+[0m15:19:33.504470 [info ] [Thread-3 (]: 24 of 26 PASS unique_dim_natural_condition_natural_id .......................... [[32mPASS[0m in 0.07s]
+[0m15:19:33.505439 [debug] [Thread-3 (]: Finished running node test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123
+[0m15:19:33.515384 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.040 seconds
+[0m15:19:33.517431 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: ROLLBACK
+[0m15:19:33.518196 [debug] [Thread-1 (]: On test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875: Close
+[0m15:19:33.518870 [info ] [Thread-1 (]: 25 of 26 PASS unique_dim_traffic_device_device_id .............................. [[32mPASS[0m in 0.07s]
+[0m15:19:33.519764 [debug] [Thread-1 (]: Finished running node test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875
+[0m15:19:33.634824 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.158 seconds
+[0m15:19:33.636194 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: ROLLBACK
+[0m15:19:33.636710 [debug] [Thread-2 (]: On test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659: Close
+[0m15:19:33.637265 [info ] [Thread-2 (]: 26 of 26 PASS unique_fct_traffic_accidents_fact_id ............................. [[32mPASS[0m in 0.18s]
+[0m15:19:33.638033 [debug] [Thread-2 (]: Finished running node test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659
+[0m15:19:33.639473 [debug] [MainThread]: On master: COMMIT
+[0m15:19:33.639873 [debug] [MainThread]: Using postgres connection "master"
+[0m15:19:33.640178 [debug] [MainThread]: On master: COMMIT
+[0m15:19:33.640525 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:19:33.681483 [debug] [MainThread]: SQL status: COMMIT in 0.041 seconds
+[0m15:19:33.681848 [debug] [MainThread]: On master: Close
+[0m15:19:33.682233 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:19:33.682472 [debug] [MainThread]: Connection 'list_traffic_dwh_public' was properly closed.
+[0m15:19:33.682683 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_traffic_device_device_id.10628ad875' was properly closed.
+[0m15:19:33.682889 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_fct_traffic_accidents_fact_id.80d1e63659' was properly closed.
+[0m15:19:33.683065 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_crash_type_crash_id.3571516391' was properly closed.
+[0m15:19:33.683231 [debug] [MainThread]: Connection 'test.traffic_accident_dwh.unique_dim_natural_condition_natural_id.5705bf9123' was properly closed.
+[0m15:19:33.683458 [info ] [MainThread]: 
+[0m15:19:33.684086 [info ] [MainThread]: Finished running 26 data tests in 0 hours 0 minutes and 1.27 seconds (1.27s).
+[0m15:19:33.687271 [debug] [MainThread]: Command end result
+[0m15:19:33.714863 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m15:19:33.717879 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m15:19:33.720523 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m15:19:33.727591 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\run_results.json
+[0m15:19:33.727986 [info ] [MainThread]: 
+[0m15:19:33.728471 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:19:33.728952 [info ] [MainThread]: 
+[0m15:19:33.729380 [info ] [MainThread]: Done. PASS=26 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=26
+[0m15:19:33.730101 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m15:19:33.731379 [debug] [MainThread]: Command `dbt test` succeeded at 15:19:33.731227 after 3.34 seconds
+[0m15:19:33.731787 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC98AE1310>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC98767260>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FC985C55D0>]}
+[0m15:19:33.732092 [debug] [MainThread]: Flushing usage events
+[0m15:19:35.029655 [debug] [MainThread]: An error was encountered while trying to flush usage events
