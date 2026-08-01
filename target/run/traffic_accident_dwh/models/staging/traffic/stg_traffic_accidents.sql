@@ -6,7 +6,7 @@
     
 
 WITH raw_data AS (
-    SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+    SELECT * FROM "traffic_dwh"."public"."raw_traffic_accidents"
 )
 
 SELECT

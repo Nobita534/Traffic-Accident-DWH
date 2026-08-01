@@ -17,7 +17,6 @@ sources:
 
     tables:
       - name: raw_traffic_accidents
-        identifier: traffic_accidents
         description: >
           Raw traffic accident records imported from the source system.
 
