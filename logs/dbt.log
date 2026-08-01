@@ -7070,3 +7070,801 @@ parsing.
 [0m09:24:56.488208 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002597F7CE250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002597F8E97B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002597F51D050>]}
 [0m09:24:56.488501 [debug] [MainThread]: Flushing usage events
 [0m09:24:57.698780 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m10:27:48.599001 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47ABE7620>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47C08FD90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47C08FB10>]}
+
+
+============================== 10:27:48.602875 | 0c8d3ae3-36ae-4c4e-a638-3ed55b8118da ==============================
+[0m10:27:48.602875 [info ] [MainThread]: Running with dbt=1.10.22
+[0m10:27:48.603332 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'd:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt ', 'use_experimental_parser': 'False', 'log_path': 'd:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m10:27:48.769135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '0c8d3ae3-36ae-4c4e-a638-3ed55b8118da', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47B3A4C30>]}
+[0m10:27:48.795676 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:27:48.796744 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m10:27:48.797698 [debug] [MainThread]: Command `cli deps` succeeded at 10:27:48.797564 after 0.39 seconds
+[0m10:27:48.797994 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47D28E250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47D3897B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001D47BF1D050>]}
+[0m10:27:48.798264 [debug] [MainThread]: Flushing usage events
+[0m10:27:50.164187 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:51:22.692241 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF4F89160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF770FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF770F890>]}
+
+
+============================== 11:51:22.697019 | 9d308bb3-b81b-44b4-b109-060c3ab743cd ==============================
+[0m11:51:22.697019 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m11:51:22.697565 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'indirect_selection': 'eager', 'hints_enabled': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m11:51:23.308286 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '9d308bb3-b81b-44b4-b109-060c3ab743cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF567D6E0>]}
+[0m11:51:23.355954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '9d308bb3-b81b-44b4-b109-060c3ab743cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF7A04E20>]}
+[0m11:51:23.357357 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m11:51:23.800076 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m11:51:23.927426 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m11:51:23.928069 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '9d308bb3-b81b-44b4-b109-060c3ab743cd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF7DCE550>]}
+[0m11:51:25.206813 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'fct_traffic_accidents' in package 'traffic_accident_dwh'
+(models\marts\facts\facts.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m11:51:25.207394 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '9d308bb3-b81b-44b4-b109-060c3ab743cd', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF7DE16D0>]}
+[0m11:51:25.347793 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Compilation Error
+  Model 'model.traffic_accident_dwh.stg_traffic_accidents' (models\staging\traffic\stg_traffic_accidents.sql) depends on a source named 'traffic.raw_traffic_accidents' which was not found
+[0m11:51:25.348671 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:51:25.349926 [debug] [MainThread]: Command `dbt run` failed at 11:51:25.349723 after 2.86 seconds
+[0m11:51:25.350315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF7583E70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF7F2A510>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001FCF781C6D0>]}
+[0m11:51:25.350675 [debug] [MainThread]: Flushing usage events
+[0m11:51:26.612680 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:53:24.684627 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A28D89160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2B4FBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2B4FB890>]}
+
+
+============================== 11:53:24.692147 | e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd ==============================
+[0m11:53:24.692147 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m11:53:24.693299 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m11:53:24.838737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2946D6E0>]}
+[0m11:53:24.887266 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2B784E20>]}
+[0m11:53:24.889619 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m11:53:25.037222 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m11:53:25.167440 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m11:53:25.167988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2BB4E550>]}
+[0m11:53:25.991625 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'fct_traffic_accidents' in package 'traffic_accident_dwh'
+(models\marts\facts\facts.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m11:53:25.992173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2BB616D0>]}
+[0m11:53:26.189399 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2BE2C590>]}
+[0m11:53:26.271440 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:53:26.321949 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:53:26.379762 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:53:26.397514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2C16B040>]}
+[0m11:53:26.397918 [info ] [MainThread]: Found 8 models, 26 data tests, 1 source, 476 macros
+[0m11:53:26.398296 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2C078E90>]}
+[0m11:53:26.400082 [info ] [MainThread]: 
+[0m11:53:26.400506 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:53:26.400860 [info ] [MainThread]: 
+[0m11:53:26.401338 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:53:26.404588 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh'
+[0m11:53:34.201282 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh"
+[0m11:53:34.202023 [debug] [ThreadPool]: On list_traffic_dwh: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:53:34.202604 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:34.383268 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.181 seconds
+[0m11:53:34.384211 [debug] [ThreadPool]: On list_traffic_dwh: Close
+[0m11:53:34.385775 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh_public'
+[0m11:53:34.389581 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh_public"
+[0m11:53:34.389925 [debug] [ThreadPool]: On list_traffic_dwh_public: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh_public"} */
+select
+      'traffic_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m11:53:34.390211 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:53:34.427176 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.037 seconds
+[0m11:53:34.428211 [debug] [ThreadPool]: On list_traffic_dwh_public: ROLLBACK
+[0m11:53:34.428676 [debug] [ThreadPool]: On list_traffic_dwh_public: Close
+[0m11:53:34.432577 [debug] [MainThread]: Using postgres connection "master"
+[0m11:53:34.432903 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:53:34.433197 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:53:34.470057 [debug] [MainThread]: SQL status: SELECT 2 in 0.037 seconds
+[0m11:53:34.471290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2C06EBA0>]}
+[0m11:53:34.471603 [debug] [MainThread]: On master: ROLLBACK
+[0m11:53:34.471960 [debug] [MainThread]: On master: COMMIT
+[0m11:53:34.472209 [debug] [MainThread]: Using postgres connection "master"
+[0m11:53:34.472391 [debug] [MainThread]: On master: COMMIT
+[0m11:53:34.472718 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m11:53:34.472919 [debug] [MainThread]: On master: Close
+[0m11:53:34.477709 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:53:34.478167 [info ] [Thread-1 (]: 1 of 8 START sql view model public.stg_traffic_accidents ....................... [RUN]
+[0m11:53:34.478654 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.traffic_accident_dwh.stg_traffic_accidents'
+[0m11:53:34.478905 [debug] [Thread-1 (]: Began compiling node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:53:34.483185 [debug] [Thread-1 (]: Writing injected SQL for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:53:34.484246 [debug] [Thread-1 (]: Began executing node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:53:34.507858 [debug] [Thread-1 (]: Writing runtime sql for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:53:34.509216 [debug] [Thread-1 (]: Using postgres connection "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:53:34.509662 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "model.traffic_accident_dwh.stg_traffic_accidents"} */
+
+  create view "traffic_dwh"."public"."stg_traffic_accidents__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw_data AS (
+    SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+)
+
+SELECT
+
+    CAST(crash_date AS TIMESTAMP) AS crash_timestamp,
+
+    CAST(traffic_control_device AS VARCHAR) AS traffic_control_device,
+    CAST(weather_condition AS VARCHAR) AS weather_condition,
+    CAST(lighting_condition AS VARCHAR) AS lighting_condition,
+    CAST(first_crash_type AS VARCHAR) AS first_crash_type,
+    CAST(trafficway_type AS VARCHAR) AS trafficway_type,
+    CAST(alignment AS VARCHAR) AS alignment,
+    CAST(roadway_surface_cond AS VARCHAR) AS roadway_surface_cond,
+    CAST(crash_type AS VARCHAR) AS crash_type,
+    CAST(damage AS VARCHAR) AS damage,
+    CAST(prim_contributory_cause AS VARCHAR) AS prim_contributory_cause,
+    CAST(most_severe_injury AS VARCHAR) AS most_severe_injury,
+
+    CAST(intersection_related_i AS VARCHAR) AS intersection_related_i_raw,
+
+    CAST(num_units AS INTEGER) AS num_units,
+    CAST(injuries_total AS INTEGER) AS injuries_total,
+    CAST(injuries_fatal AS INTEGER) AS injuries_fatal,
+    CAST(injuries_incapacitating AS INTEGER) AS injuries_incapacitating,
+    CAST(injuries_non_incapacitating AS INTEGER) AS injuries_non_incapacitating,
+    CAST(injuries_reported_not_evident AS INTEGER) AS injuries_reported_not_evident,
+    CAST(injuries_no_indication AS INTEGER) AS injuries_no_indication,
+
+    CAST(is_severe AS BOOLEAN) AS is_severe,
+    CAST(crash_hour AS INTEGER) AS crash_hour,
+    CAST(crash_day_of_week AS INTEGER) AS crash_day_of_week,
+    CAST(crash_month AS INTEGER) AS crash_month,
+    CAST(crash_year AS INTEGER) AS crash_year
+
+FROM raw_data
+  );
+[0m11:53:34.510006 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:53:34.541535 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.traffic_accidents" does not exist
+LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                           ^
+
+[0m11:53:34.541966 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: ROLLBACK
+[0m11:53:34.542611 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: Close
+[0m11:53:34.640300 [debug] [Thread-1 (]: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:53:34.642229 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'e458dfbe-c03e-4f26-8c7c-1c22fe76e1bd', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A293EF2F0>]}
+[0m11:53:34.642730 [error] [Thread-1 (]: 1 of 8 ERROR creating sql view model public.stg_traffic_accidents .............. [[31mERROR[0m in 0.16s]
+[0m11:53:34.643218 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:53:34.643591 [debug] [Thread-7 (]: Marking all children of 'model.traffic_accident_dwh.stg_traffic_accidents' to be skipped because of status 'error'.  Reason: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql.
+[0m11:53:34.644473 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:53:34.644787 [info ] [Thread-2 (]: 2 of 8 SKIP relation public.int_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:53:34.645238 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:53:34.645757 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.dim_crash_type
+[0m11:53:34.646365 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:53:34.646662 [debug] [Thread-4 (]: Began running node model.traffic_accident_dwh.dim_crash_date
+[0m11:53:34.646057 [info ] [Thread-1 (]: 5 of 8 SKIP relation public.dim_crash_type ..................................... [[33mSKIP[0m]
+[0m11:53:34.647062 [info ] [Thread-2 (]: 6 of 8 SKIP relation public.dim_natural_condition .............................. [[33mSKIP[0m]
+[0m11:53:34.647647 [debug] [Thread-3 (]: Began running node model.traffic_accident_dwh.dim_cause
+[0m11:53:34.647967 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.dim_crash_type
+[0m11:53:34.647333 [info ] [Thread-4 (]: 4 of 8 SKIP relation public.dim_crash_date ..................................... [[33mSKIP[0m]
+[0m11:53:34.648332 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:53:34.648949 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:53:34.648620 [info ] [Thread-3 (]: 3 of 8 SKIP relation public.dim_cause .......................................... [[33mSKIP[0m]
+[0m11:53:34.649482 [debug] [Thread-4 (]: Finished running node model.traffic_accident_dwh.dim_crash_date
+[0m11:53:34.649856 [info ] [Thread-1 (]: 7 of 8 SKIP relation public.dim_traffic_device ................................. [[33mSKIP[0m]
+[0m11:53:34.650279 [debug] [Thread-3 (]: Finished running node model.traffic_accident_dwh.dim_cause
+[0m11:53:34.650602 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:53:34.651157 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:53:34.651447 [info ] [Thread-2 (]: 8 of 8 SKIP relation public.fct_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:53:34.651833 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:53:34.653634 [debug] [MainThread]: On master: COMMIT
+[0m11:53:34.654040 [debug] [MainThread]: Using postgres connection "master"
+[0m11:53:34.654306 [debug] [MainThread]: On master: COMMIT
+[0m11:53:34.654522 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:53:34.685022 [debug] [MainThread]: SQL status: COMMIT in 0.030 seconds
+[0m11:53:34.685446 [debug] [MainThread]: On master: Close
+[0m11:53:34.685922 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:53:34.686167 [debug] [MainThread]: Connection 'list_traffic_dwh' was properly closed.
+[0m11:53:34.686413 [debug] [MainThread]: Connection 'list_traffic_dwh_public' was properly closed.
+[0m11:53:34.686608 [debug] [MainThread]: Connection 'model.traffic_accident_dwh.stg_traffic_accidents' was properly closed.
+[0m11:53:34.686966 [info ] [MainThread]: 
+[0m11:53:34.687319 [info ] [MainThread]: Finished running 6 table models, 2 view models in 0 hours 0 minutes and 8.29 seconds (8.29s).
+[0m11:53:34.688235 [debug] [MainThread]: Command end result
+[0m11:53:34.714826 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:53:34.717648 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:53:34.720123 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:53:34.725824 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\run_results.json
+[0m11:53:34.726144 [info ] [MainThread]: 
+[0m11:53:34.726641 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:53:34.727013 [info ] [MainThread]: 
+[0m11:53:34.727418 [error] [MainThread]: [[31mERROR[0m]: in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+[0m11:53:34.727779 [error] [MainThread]:   Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:53:34.728086 [info ] [MainThread]: 
+[0m11:53:34.728515 [info ] [MainThread]:   compiled code at target\compiled\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:53:34.728883 [info ] [MainThread]: 
+[0m11:53:34.729274 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=7 NO-OP=0 REUSED=0 TOTAL=8
+[0m11:53:34.729918 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:53:34.731276 [debug] [MainThread]: Command `dbt run` failed at 11:53:34.731092 after 10.23 seconds
+[0m11:53:34.731747 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2BD4A7D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2BEE5CD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000017A2B5741A0>]}
+[0m11:53:34.732158 [debug] [MainThread]: Flushing usage events
+[0m11:53:35.925964 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:55:56.244192 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC2BD9160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC535FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC535F890>]}
+
+
+============================== 11:55:56.250319 | 1b0cbc7f-a838-4e91-b596-cddb37960d82 ==============================
+[0m11:55:56.250319 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m11:55:56.250961 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'use_colors': 'True', 'hints_enabled': 'True', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m11:55:56.407984 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC32CD6E0>]}
+[0m11:55:56.464850 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5624E20>]}
+[0m11:55:56.466157 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m11:55:56.608920 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m11:55:56.813144 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m11:55:56.813904 [debug] [MainThread]: Partial parsing: updated file: traffic_accident_dwh://models\marts\facts\fct_traffic_accidents.sql
+[0m11:55:56.814618 [debug] [MainThread]: Partial parsing: updated file: traffic_accident_dwh://models\staging\sources\src_traffic.yml
+[0m11:55:56.814884 [debug] [MainThread]: Partial parsing: updated file: traffic_accident_dwh://models\staging\traffic\stg_traffic_accidents.sql
+[0m11:55:57.214441 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'fct_traffic_accidents' in package 'traffic_accident_dwh'
+(models\marts\facts\facts.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m11:55:57.215071 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5A7C550>]}
+[0m11:55:57.423217 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC39B8AA0>]}
+[0m11:55:57.491333 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:55:57.493981 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:55:57.516323 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:55:57.530091 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5CABA10>]}
+[0m11:55:57.530518 [info ] [MainThread]: Found 8 models, 26 data tests, 1 source, 476 macros
+[0m11:55:57.530923 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5F17380>]}
+[0m11:55:57.532788 [info ] [MainThread]: 
+[0m11:55:57.533179 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:55:57.533492 [info ] [MainThread]: 
+[0m11:55:57.533921 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:55:57.537187 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh'
+[0m11:55:57.581521 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh"
+[0m11:55:57.581883 [debug] [ThreadPool]: On list_traffic_dwh: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:55:57.582236 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:57.620467 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.038 seconds
+[0m11:55:57.621466 [debug] [ThreadPool]: On list_traffic_dwh: Close
+[0m11:55:57.623280 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh_public'
+[0m11:55:57.627064 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh_public"
+[0m11:55:57.627379 [debug] [ThreadPool]: On list_traffic_dwh_public: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh_public"} */
+select
+      'traffic_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m11:55:57.627594 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:55:57.662858 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.035 seconds
+[0m11:55:57.663896 [debug] [ThreadPool]: On list_traffic_dwh_public: ROLLBACK
+[0m11:55:57.664355 [debug] [ThreadPool]: On list_traffic_dwh_public: Close
+[0m11:55:57.668052 [debug] [MainThread]: Using postgres connection "master"
+[0m11:55:57.668372 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:55:57.668621 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:55:57.711409 [debug] [MainThread]: SQL status: SELECT 2 in 0.043 seconds
+[0m11:55:57.712663 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5FC31D0>]}
+[0m11:55:57.712981 [debug] [MainThread]: On master: ROLLBACK
+[0m11:55:57.713346 [debug] [MainThread]: On master: COMMIT
+[0m11:55:57.713580 [debug] [MainThread]: Using postgres connection "master"
+[0m11:55:57.713756 [debug] [MainThread]: On master: COMMIT
+[0m11:55:57.714089 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m11:55:57.714305 [debug] [MainThread]: On master: Close
+[0m11:55:57.717715 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:55:57.718157 [info ] [Thread-1 (]: 1 of 8 START sql view model public.stg_traffic_accidents ....................... [RUN]
+[0m11:55:57.718645 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.traffic_accident_dwh.stg_traffic_accidents'
+[0m11:55:57.718901 [debug] [Thread-1 (]: Began compiling node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:55:57.723622 [debug] [Thread-1 (]: Writing injected SQL for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:55:57.724307 [debug] [Thread-1 (]: Began executing node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:55:57.748027 [debug] [Thread-1 (]: Writing runtime sql for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:55:57.749519 [debug] [Thread-1 (]: Using postgres connection "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:55:57.749945 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "model.traffic_accident_dwh.stg_traffic_accidents"} */
+
+  create view "traffic_dwh"."public"."stg_traffic_accidents__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw_data AS (
+    SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+)
+
+SELECT
+
+    CAST(crash_date AS TIMESTAMP) AS crash_timestamp,
+
+    CAST(traffic_control_device AS VARCHAR) AS traffic_control_device,
+    CAST(weather_condition AS VARCHAR) AS weather_condition,
+    CAST(lighting_condition AS VARCHAR) AS lighting_condition,
+    CAST(first_crash_type AS VARCHAR) AS first_crash_type,
+    CAST(trafficway_type AS VARCHAR) AS trafficway_type,
+    CAST(alignment AS VARCHAR) AS alignment,
+    CAST(roadway_surface_cond AS VARCHAR) AS roadway_surface_cond,
+    CAST(crash_type AS VARCHAR) AS crash_type,
+    CAST(damage AS VARCHAR) AS damage,
+    CAST(prim_contributory_cause AS VARCHAR) AS prim_contributory_cause,
+    CAST(most_severe_injury AS VARCHAR) AS most_severe_injury,
+
+    CAST(intersection_related_i AS VARCHAR) AS intersection_related_i_raw,
+
+    CAST(num_units AS INTEGER) AS num_units,
+    CAST(injuries_total AS INTEGER) AS injuries_total,
+    CAST(injuries_fatal AS INTEGER) AS injuries_fatal,
+    CAST(injuries_incapacitating AS INTEGER) AS injuries_incapacitating,
+    CAST(injuries_non_incapacitating AS INTEGER) AS injuries_non_incapacitating,
+    CAST(injuries_reported_not_evident AS INTEGER) AS injuries_reported_not_evident,
+    CAST(injuries_no_indication AS INTEGER) AS injuries_no_indication,
+
+    CAST(is_severe AS BOOLEAN) AS is_severe,
+    CAST(crash_hour AS INTEGER) AS crash_hour,
+    CAST(crash_day_of_week AS INTEGER) AS crash_day_of_week,
+    CAST(crash_month AS INTEGER) AS crash_month,
+    CAST(crash_year AS INTEGER) AS crash_year
+
+FROM raw_data
+  );
+[0m11:55:57.750273 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:55:57.778885 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.traffic_accidents" does not exist
+LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                           ^
+
+[0m11:55:57.779260 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: ROLLBACK
+[0m11:55:57.779732 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: Close
+[0m11:55:57.784679 [debug] [Thread-1 (]: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:55:57.786373 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '1b0cbc7f-a838-4e91-b596-cddb37960d82', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC5F8BEE0>]}
+[0m11:55:57.786916 [error] [Thread-1 (]: 1 of 8 ERROR creating sql view model public.stg_traffic_accidents .............. [[31mERROR[0m in 0.07s]
+[0m11:55:57.787427 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:55:57.787835 [debug] [Thread-7 (]: Marking all children of 'model.traffic_accident_dwh.stg_traffic_accidents' to be skipped because of status 'error'.  Reason: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql.
+[0m11:55:57.788802 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:55:57.789119 [info ] [Thread-2 (]: 2 of 8 SKIP relation public.int_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:55:57.789598 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:55:57.790245 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:55:57.790543 [debug] [Thread-4 (]: Began running node model.traffic_accident_dwh.dim_crash_date
+[0m11:55:57.790887 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.dim_crash_type
+[0m11:55:57.791385 [debug] [Thread-3 (]: Began running node model.traffic_accident_dwh.dim_cause
+[0m11:55:57.791170 [info ] [Thread-2 (]: 6 of 8 SKIP relation public.dim_natural_condition .............................. [[33mSKIP[0m]
+[0m11:55:57.791750 [info ] [Thread-4 (]: 4 of 8 SKIP relation public.dim_crash_date ..................................... [[33mSKIP[0m]
+[0m11:55:57.792697 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:55:57.793047 [debug] [Thread-4 (]: Finished running node model.traffic_accident_dwh.dim_crash_date
+[0m11:55:57.793404 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:55:57.792020 [info ] [Thread-1 (]: 5 of 8 SKIP relation public.dim_crash_type ..................................... [[33mSKIP[0m]
+[0m11:55:57.792305 [info ] [Thread-3 (]: 3 of 8 SKIP relation public.dim_cause .......................................... [[33mSKIP[0m]
+[0m11:55:57.794513 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.dim_crash_type
+[0m11:55:57.794182 [info ] [Thread-2 (]: 7 of 8 SKIP relation public.dim_traffic_device ................................. [[33mSKIP[0m]
+[0m11:55:57.794956 [debug] [Thread-3 (]: Finished running node model.traffic_accident_dwh.dim_cause
+[0m11:55:57.795379 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:55:57.796037 [debug] [Thread-4 (]: Began running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:55:57.796378 [info ] [Thread-4 (]: 8 of 8 SKIP relation public.fct_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:55:57.796878 [debug] [Thread-4 (]: Finished running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:55:57.798149 [debug] [MainThread]: On master: COMMIT
+[0m11:55:57.798572 [debug] [MainThread]: Using postgres connection "master"
+[0m11:55:57.798827 [debug] [MainThread]: On master: COMMIT
+[0m11:55:57.799062 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:55:57.855237 [debug] [MainThread]: SQL status: COMMIT in 0.056 seconds
+[0m11:55:57.855813 [debug] [MainThread]: On master: Close
+[0m11:55:57.856572 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:55:57.857020 [debug] [MainThread]: Connection 'list_traffic_dwh' was properly closed.
+[0m11:55:57.857353 [debug] [MainThread]: Connection 'list_traffic_dwh_public' was properly closed.
+[0m11:55:57.857653 [debug] [MainThread]: Connection 'model.traffic_accident_dwh.stg_traffic_accidents' was properly closed.
+[0m11:55:57.858096 [info ] [MainThread]: 
+[0m11:55:57.859406 [info ] [MainThread]: Finished running 6 table models, 2 view models in 0 hours 0 minutes and 0.32 seconds (0.32s).
+[0m11:55:57.860846 [debug] [MainThread]: Command end result
+[0m11:55:57.890156 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:55:57.893050 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:55:57.895717 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:55:57.901202 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\run_results.json
+[0m11:55:57.901554 [info ] [MainThread]: 
+[0m11:55:57.901971 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:55:57.902311 [info ] [MainThread]: 
+[0m11:55:57.902681 [error] [MainThread]: [[31mERROR[0m]: in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+[0m11:55:57.903112 [error] [MainThread]:   Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:55:57.903467 [info ] [MainThread]: 
+[0m11:55:57.903855 [info ] [MainThread]:   compiled code at target\compiled\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:55:57.904214 [info ] [MainThread]: 
+[0m11:55:57.904574 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=7 NO-OP=0 REUSED=0 TOTAL=8
+[0m11:55:57.905026 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:55:57.905925 [debug] [MainThread]: Command `dbt run` failed at 11:55:57.905816 after 1.82 seconds
+[0m11:55:57.906240 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC62FD9F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC6384170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000026FC62962D0>]}
+[0m11:55:57.906514 [debug] [MainThread]: Flushing usage events
+[0m11:55:59.258943 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:57:59.634621 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F667D160>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F8DFBED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F8DFB890>]}
+
+
+============================== 11:57:59.642595 | ba931273-f20b-4f36-8b88-725af3c86b6e ==============================
+[0m11:57:59.642595 [info ] [MainThread]: Running with dbt=1.12.0-rc3
+[0m11:57:59.643865 [debug] [MainThread]: running dbt with arguments {'maximum_seed_size_mib': '1', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'invocation_command': 'dbt run', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'use_colors': 'True', 'log_path': 'D:\\Phuc\\Project cá nhân\\Data Analyst\\Traffic-Accident-DWH\\logs'}
+[0m11:57:59.785494 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F6D6D6E0>]}
+[0m11:57:59.832740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F9064E20>]}
+[0m11:57:59.834097 [info ] [MainThread]: Registered adapter: postgres=1.10.2
+[0m11:58:00.000817 [debug] [MainThread]: checksum: 7f3eb83ec613adc806ffccfba03db0a2b9b69d452509c69d0ec3115bc7894619, vars: {}, profile: traffic_project_profile, target: dev, version: 1.12.0rc3
+[0m11:58:00.130899 [info ] [MainThread]: Unable to do partial parsing because of a version mismatch
+[0m11:58:00.131495 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F946A550>]}
+[0m11:58:00.953587 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `relationships` defined on
+'fct_traffic_accidents' in package 'traffic_accident_dwh'
+(models\marts\facts\facts.yml). Arguments to generic tests should be nested
+under the `arguments` property.
+[0m11:58:00.954143 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F8EF3980>]}
+[0m11:58:01.153424 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F965F150>]}
+[0m11:58:01.222391 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:58:01.225848 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:58:01.247101 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:58:01.259631 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F9A53040>]}
+[0m11:58:01.260038 [info ] [MainThread]: Found 8 models, 26 data tests, 1 source, 476 macros
+[0m11:58:01.260437 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F9914E90>]}
+[0m11:58:01.262160 [info ] [MainThread]: 
+[0m11:58:01.262602 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m11:58:01.262912 [info ] [MainThread]: 
+[0m11:58:01.263337 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m11:58:01.266450 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh'
+[0m11:58:01.310162 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh"
+[0m11:58:01.310461 [debug] [ThreadPool]: On list_traffic_dwh: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m11:58:01.310666 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:58:01.345129 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.034 seconds
+[0m11:58:01.346154 [debug] [ThreadPool]: On list_traffic_dwh: Close
+[0m11:58:01.347706 [debug] [ThreadPool]: Acquiring new postgres connection 'list_traffic_dwh_public'
+[0m11:58:01.351431 [debug] [ThreadPool]: Using postgres connection "list_traffic_dwh_public"
+[0m11:58:01.351754 [debug] [ThreadPool]: On list_traffic_dwh_public: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "list_traffic_dwh_public"} */
+select
+      'traffic_dwh' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+    union all
+    select
+      'traffic_dwh' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public'
+  
+[0m11:58:01.352540 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:58:01.384598 [debug] [ThreadPool]: SQL status: SELECT 9 in 0.032 seconds
+[0m11:58:01.385671 [debug] [ThreadPool]: On list_traffic_dwh_public: ROLLBACK
+[0m11:58:01.386115 [debug] [ThreadPool]: On list_traffic_dwh_public: Close
+[0m11:58:01.389855 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:01.390189 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m11:58:01.390462 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:58:01.424718 [debug] [MainThread]: SQL status: SELECT 2 in 0.034 seconds
+[0m11:58:01.425974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F9A7AA40>]}
+[0m11:58:01.426328 [debug] [MainThread]: On master: ROLLBACK
+[0m11:58:01.426767 [debug] [MainThread]: On master: COMMIT
+[0m11:58:01.427039 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:01.427247 [debug] [MainThread]: On master: COMMIT
+[0m11:58:01.427641 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m11:58:01.427910 [debug] [MainThread]: On master: Close
+[0m11:58:01.431624 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:58:01.432123 [info ] [Thread-1 (]: 1 of 8 START sql view model public.stg_traffic_accidents ....................... [RUN]
+[0m11:58:01.432700 [debug] [Thread-1 (]: Acquiring new postgres connection 'model.traffic_accident_dwh.stg_traffic_accidents'
+[0m11:58:01.432997 [debug] [Thread-1 (]: Began compiling node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:58:01.437569 [debug] [Thread-1 (]: Writing injected SQL for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:58:01.438282 [debug] [Thread-1 (]: Began executing node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:58:01.463524 [debug] [Thread-1 (]: Writing runtime sql for node "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:58:01.464338 [debug] [Thread-1 (]: Using postgres connection "model.traffic_accident_dwh.stg_traffic_accidents"
+[0m11:58:01.464685 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: /* {"app": "dbt", "dbt_version": "1.12.0rc3", "profile_name": "traffic_project_profile", "target_name": "dev", "node_id": "model.traffic_accident_dwh.stg_traffic_accidents"} */
+
+  create view "traffic_dwh"."public"."stg_traffic_accidents__dbt_tmp"
+    
+    
+  as (
+    
+
+WITH raw_data AS (
+    SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+)
+
+SELECT
+
+    CAST(crash_date AS TIMESTAMP) AS crash_timestamp,
+
+    CAST(traffic_control_device AS VARCHAR) AS traffic_control_device,
+    CAST(weather_condition AS VARCHAR) AS weather_condition,
+    CAST(lighting_condition AS VARCHAR) AS lighting_condition,
+    CAST(first_crash_type AS VARCHAR) AS first_crash_type,
+    CAST(trafficway_type AS VARCHAR) AS trafficway_type,
+    CAST(alignment AS VARCHAR) AS alignment,
+    CAST(roadway_surface_cond AS VARCHAR) AS roadway_surface_cond,
+    CAST(crash_type AS VARCHAR) AS crash_type,
+    CAST(damage AS VARCHAR) AS damage,
+    CAST(prim_contributory_cause AS VARCHAR) AS prim_contributory_cause,
+    CAST(most_severe_injury AS VARCHAR) AS most_severe_injury,
+
+    CAST(intersection_related_i AS VARCHAR) AS intersection_related_i_raw,
+
+    CAST(num_units AS INTEGER) AS num_units,
+    CAST(injuries_total AS INTEGER) AS injuries_total,
+    CAST(injuries_fatal AS INTEGER) AS injuries_fatal,
+    CAST(injuries_incapacitating AS INTEGER) AS injuries_incapacitating,
+    CAST(injuries_non_incapacitating AS INTEGER) AS injuries_non_incapacitating,
+    CAST(injuries_reported_not_evident AS INTEGER) AS injuries_reported_not_evident,
+    CAST(injuries_no_indication AS INTEGER) AS injuries_no_indication,
+
+    CAST(is_severe AS BOOLEAN) AS is_severe,
+    CAST(crash_hour AS INTEGER) AS crash_hour,
+    CAST(crash_day_of_week AS INTEGER) AS crash_day_of_week,
+    CAST(crash_month AS INTEGER) AS crash_month,
+    CAST(crash_year AS INTEGER) AS crash_year
+
+FROM raw_data
+  );
+[0m11:58:01.464953 [debug] [Thread-1 (]: Opening a new connection, currently in state init
+[0m11:58:01.493056 [debug] [Thread-1 (]: Postgres adapter: Postgres error: relation "public.traffic_accidents" does not exist
+LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                           ^
+
+[0m11:58:01.493411 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: ROLLBACK
+[0m11:58:01.493864 [debug] [Thread-1 (]: On model.traffic_accident_dwh.stg_traffic_accidents: Close
+[0m11:58:01.498544 [debug] [Thread-1 (]: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:58:01.500202 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': 'ba931273-f20b-4f36-8b88-725af3c86b6e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F6CEF2F0>]}
+[0m11:58:01.500781 [error] [Thread-1 (]: 1 of 8 ERROR creating sql view model public.stg_traffic_accidents .............. [[31mERROR[0m in 0.07s]
+[0m11:58:01.501475 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.stg_traffic_accidents
+[0m11:58:01.501871 [debug] [Thread-7 (]: Marking all children of 'model.traffic_accident_dwh.stg_traffic_accidents' to be skipped because of status 'error'.  Reason: Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql.
+[0m11:58:01.502841 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:58:01.503176 [info ] [Thread-2 (]: 2 of 8 SKIP relation public.int_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:58:01.503584 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.int_traffic_accidents
+[0m11:58:01.504060 [debug] [Thread-4 (]: Began running node model.traffic_accident_dwh.dim_crash_date
+[0m11:58:01.504382 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:58:01.504776 [debug] [Thread-3 (]: Began running node model.traffic_accident_dwh.dim_cause
+[0m11:58:01.505964 [debug] [Thread-1 (]: Began running node model.traffic_accident_dwh.dim_crash_type
+[0m11:58:01.505176 [info ] [Thread-4 (]: 4 of 8 SKIP relation public.dim_crash_date ..................................... [[33mSKIP[0m]
+[0m11:58:01.506652 [debug] [Thread-4 (]: Finished running node model.traffic_accident_dwh.dim_crash_date
+[0m11:58:01.505485 [info ] [Thread-2 (]: 6 of 8 SKIP relation public.dim_natural_condition .............................. [[33mSKIP[0m]
+[0m11:58:01.507083 [debug] [Thread-4 (]: Began running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:58:01.505749 [info ] [Thread-3 (]: 3 of 8 SKIP relation public.dim_cause .......................................... [[33mSKIP[0m]
+[0m11:58:01.507527 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.dim_natural_condition
+[0m11:58:01.506237 [info ] [Thread-1 (]: 5 of 8 SKIP relation public.dim_crash_type ..................................... [[33mSKIP[0m]
+[0m11:58:01.508316 [debug] [Thread-3 (]: Finished running node model.traffic_accident_dwh.dim_cause
+[0m11:58:01.507875 [info ] [Thread-4 (]: 7 of 8 SKIP relation public.dim_traffic_device ................................. [[33mSKIP[0m]
+[0m11:58:01.509030 [debug] [Thread-1 (]: Finished running node model.traffic_accident_dwh.dim_crash_type
+[0m11:58:01.509508 [debug] [Thread-4 (]: Finished running node model.traffic_accident_dwh.dim_traffic_device
+[0m11:58:01.510155 [debug] [Thread-2 (]: Began running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:58:01.510464 [info ] [Thread-2 (]: 8 of 8 SKIP relation public.fct_traffic_accidents .............................. [[33mSKIP[0m]
+[0m11:58:01.510900 [debug] [Thread-2 (]: Finished running node model.traffic_accident_dwh.fct_traffic_accidents
+[0m11:58:01.511879 [debug] [MainThread]: On master: COMMIT
+[0m11:58:01.512143 [debug] [MainThread]: Using postgres connection "master"
+[0m11:58:01.512343 [debug] [MainThread]: On master: COMMIT
+[0m11:58:01.512520 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:58:01.542027 [debug] [MainThread]: SQL status: COMMIT in 0.029 seconds
+[0m11:58:01.542439 [debug] [MainThread]: On master: Close
+[0m11:58:01.542902 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:58:01.543133 [debug] [MainThread]: Connection 'list_traffic_dwh' was properly closed.
+[0m11:58:01.543343 [debug] [MainThread]: Connection 'list_traffic_dwh_public' was properly closed.
+[0m11:58:01.543541 [debug] [MainThread]: Connection 'model.traffic_accident_dwh.stg_traffic_accidents' was properly closed.
+[0m11:58:01.543806 [info ] [MainThread]: 
+[0m11:58:01.544114 [info ] [MainThread]: Finished running 6 table models, 2 view models in 0 hours 0 minutes and 0.28 seconds (0.28s).
+[0m11:58:01.544761 [debug] [MainThread]: Command end result
+[0m11:58:01.588071 [debug] [MainThread]: Wrote artifact WritableManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\manifest.json
+[0m11:58:01.590800 [debug] [MainThread]: Wrote artifact SemanticManifest to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\semantic_manifest.json
+[0m11:58:01.593111 [debug] [MainThread]: Wrote artifact OsiDocument to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\osi_document.json
+[0m11:58:01.598119 [debug] [MainThread]: Wrote artifact RunExecutionResult to D:\Phuc\Project cá nhân\Data Analyst\Traffic-Accident-DWH\target\run_results.json
+[0m11:58:01.598429 [info ] [MainThread]: 
+[0m11:58:01.598996 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m11:58:01.599521 [info ] [MainThread]: 
+[0m11:58:01.599885 [error] [MainThread]: [[31mERROR[0m]: in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+[0m11:58:01.600283 [error] [MainThread]:   Database Error in model stg_traffic_accidents (models\staging\traffic\stg_traffic_accidents.sql)
+  relation "public.traffic_accidents" does not exist
+  LINE 10:     SELECT * FROM "traffic_dwh"."public"."traffic_accidents"
+                             ^
+  compiled code at target\run\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:58:01.600628 [info ] [MainThread]: 
+[0m11:58:01.600975 [info ] [MainThread]:   compiled code at target\compiled\traffic_accident_dwh\models\staging\traffic\stg_traffic_accidents.sql
+[0m11:58:01.601302 [info ] [MainThread]: 
+[0m11:58:01.601608 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=7 NO-OP=0 REUSED=0 TOTAL=8
+[0m11:58:01.602148 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 5 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m11:58:01.603085 [debug] [MainThread]: Command `dbt run` failed at 11:58:01.602972 after 2.14 seconds
+[0m11:58:01.603391 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F9843C50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F6D08250>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000285F8E741A0>]}
+[0m11:58:01.603663 [debug] [MainThread]: Flushing usage events
+[0m11:58:02.759717 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -1,0 +1,97 @@
+version: 2
+
+models:
+  - name: fct_traffic_accidents
+    description: >
+      Fact table containing traffic accident measures and foreign keys
+      used for business analysis and reporting.
+
+    columns:
+
+      - name: fact_id
+        description: Surrogate key of the traffic accident fact table.
+        tests:
+          - unique
+          - not_null
+
+      - name: natural_id
+        description: Foreign key referencing the natural condition dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_natural_condition')
+              field: natural_id
+
+      - name: crash_id
+        description: Foreign key referencing the crash type dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_crash_type')
+              field: crash_id
+
+      - name: cause_id
+        description: Foreign key referencing the cause dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_cause')
+              field: cause_id
+
+      - name: device_id
+        description: Foreign key referencing the traffic device dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_traffic_device')
+              field: device_id
+
+      - name: datekey
+        description: Foreign key referencing the date dimension.
+        tests:
+          - not_null
+          - relationships:
+              to: ref('dim_crash_date')
+              field: datekey
+
+      - name: crash_hour
+        description: Hour when the crash occurred.
+
+      - name: damage
+        description: Reported property damage level.
+
+      - name: num_units
+        description: Number of vehicles or units involved.
+
+      - name: most_severe_injury
+        description: Most severe injury resulting from the crash.
+
+      - name: injuries_total
+        description: Total number of injuries.
+
+      - name: injuries_fatal
+        description: Number of fatal injuries.
+
+      - name: injuries_incapacitating
+        description: Number of incapacitating injuries.
+
+      - name: injuries_non_incapacitating
+        description: Number of non-incapacitating injuries.
+
+      - name: injuries_reported_not_evident
+        description: Number of reported but not evident injuries.
+
+      - name: injuries_no_indication
+        description: Number of occupants with no indication of injury.
+
+      - name: is_severe
+        description: Indicates whether the crash is classified as severe.
+        tests:
+          - not_null
+
+      - name: epdo_priority_score
+        description: >
+          Equivalent Property Damage Only (EPDO) priority score calculated
+          from injury severity.
+        tests:
+          - not_null

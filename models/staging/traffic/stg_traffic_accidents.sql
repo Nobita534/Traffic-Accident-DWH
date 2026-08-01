@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 WITH raw_data AS (
-    SELECT * FROM {{ source('cago_source', 'raw_traffic_accidents') }}
+    SELECT * FROM {{ source('traffic', 'raw_traffic_accidents') }}
 )
 
 SELECT

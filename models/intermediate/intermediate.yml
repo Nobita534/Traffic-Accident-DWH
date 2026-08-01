@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: int_traffic_accidents
+    description: >
+      Intermediate model that applies business transformation logic,
+      derives analytical attributes, and prepares data for dimensional modeling.
+
+    columns:
+
+      - name: intersection_related_i
+        description: >
+          Boolean flag indicating whether the crash occurred at an intersection.
+          Derived from the raw Y/N indicator.
+
+      - name: epdo_priority_score
+        description: >
+          Equivalent Property Damage Only (EPDO) priority score derived from
+          injury severity using the 12–3–1 weighting rule.
+
+      - name: datekey
+        description: >
+          Surrogate date key in YYYYMMDD format used to join the Date Dimension.
