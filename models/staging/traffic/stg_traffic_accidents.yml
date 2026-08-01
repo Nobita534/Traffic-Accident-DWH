@@ -1,0 +1,86 @@
+version: 2
+
+models:
+  - name: stg_traffic_accidents
+    description: >
+      Staging model that standardizes data types and prepares raw traffic
+      accident records for downstream transformations.
+
+    columns:
+
+      - name: crash_timestamp
+        description: Timestamp when the crash occurred.
+        tests:
+          - not_null
+
+      - name: traffic_control_device
+        description: Traffic control device at the crash location.
+
+      - name: weather_condition
+        description: Weather condition during the crash.
+
+      - name: lighting_condition
+        description: Lighting condition during the crash.
+
+      - name: first_crash_type
+        description: First crash type recorded.
+
+      - name: trafficway_type
+        description: Type of trafficway where the crash occurred.
+
+      - name: alignment
+        description: Road alignment at the crash location.
+
+      - name: roadway_surface_cond
+        description: Road surface condition.
+
+      - name: crash_type
+        description: Overall crash classification.
+
+      - name: damage
+        description: Reported property damage level.
+
+      - name: prim_contributory_cause
+        description: Primary contributory cause assigned to the crash.
+
+      - name: most_severe_injury
+        description: Most severe injury resulting from the crash.
+
+      - name: intersection_related_i_raw
+        description: Indicates whether the crash is intersection related.
+
+      - name: num_units
+        description: Number of vehicles or units involved.
+
+      - name: injuries_total
+        description: Total number of injuries.
+
+      - name: injuries_fatal
+        description: Number of fatal injuries.
+
+      - name: injuries_incapacitating
+        description: Number of incapacitating injuries.
+
+      - name: injuries_non_incapacitating
+        description: Number of non-incapacitating injuries.
+
+      - name: injuries_reported_not_evident
+        description: Number of reported but not evident injuries.
+
+      - name: injuries_no_indication
+        description: Number of occupants with no indication of injury.
+
+      - name: is_severe
+        description: Indicates whether the crash is classified as severe.
+
+      - name: crash_hour
+        description: Hour when the crash occurred.
+
+      - name: crash_day_of_week
+        description: Day of week when the crash occurred.
+
+      - name: crash_month
+        description: Month when the crash occurred.
+
+      - name: crash_year
+        description: Year when the crash occurred.

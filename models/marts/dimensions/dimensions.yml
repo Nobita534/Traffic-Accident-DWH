@@ -1,0 +1,107 @@
+version: 2
+
+models:
+  - name: dim_cause
+    description: >
+      Dimension table containing primary contributory causes of traffic
+      accidents and their corresponding business categories.
+
+    columns:
+      - name: cause_id
+        description: Surrogate key of the cause dimension.
+        tests:
+          - unique
+          - not_null
+
+      - name: primary_cause
+        description: Original primary contributory cause reported for the crash.
+
+      - name: cause_group
+        description: Business category assigned to the primary contributory cause.
+
+  - name: dim_crash_date
+    description: >
+      Date dimension used for time-based analysis of traffic accidents.
+
+    columns:
+      - name: datekey
+        description: Surrogate date key in YYYYMMDD format.
+        tests:
+          - unique
+          - not_null
+
+      - name: year
+        description: Calendar year.
+
+      - name: quarter
+        description: Calendar quarter.
+
+      - name: month
+        description: Calendar month.
+
+      - name: day
+        description: Day of the month.
+
+      - name: dayofweek
+        description: Day of the week.
+
+  - name: dim_crash_type
+    description: >
+      Dimension describing crash characteristics and road alignment.
+
+    columns:
+      - name: crash_id
+        description: Surrogate key of the crash type dimension.
+        tests:
+          - unique
+          - not_null
+
+      - name: first_crash_type
+        description: First crash type recorded.
+
+      - name: alignment
+        description: Road alignment at the crash location.
+
+      - name: crash_type
+        description: Overall crash classification.
+
+      - name: intersection_related_i
+        description: Indicates whether the crash occurred at an intersection.
+
+  - name: dim_natural_condition
+    description: >
+      Dimension describing environmental and roadway conditions at the
+      time of the crash.
+
+    columns:
+      - name: natural_id
+        description: Surrogate key of the natural condition dimension.
+        tests:
+          - unique
+          - not_null
+
+      - name: weather_condition
+        description: Weather condition during the crash.
+
+      - name: lighting_condition
+        description: Lighting condition during the crash.
+
+      - name: roadway_surface_cond
+        description: Road surface condition.
+
+  - name: dim_traffic_device
+    description: >
+      Dimension describing traffic control devices and roadway types.
+
+    columns:
+      - name: device_id
+        description: Surrogate key of the traffic device dimension.
+        tests:
+          - unique
+          - not_null
+
+      - name: traffic_control_device
+        description: Traffic control device at the crash location.
+
+      - name: trafficway_type
+        description: Type of trafficway where the crash occurred.

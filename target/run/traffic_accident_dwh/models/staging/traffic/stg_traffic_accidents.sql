@@ -1,7 +1,12 @@
-{{ config(materialized='view') }}
+
+  create view "traffic_dwh"."public"."stg_traffic_accidents__dbt_tmp"
+    
+    
+  as (
+    
 
 WITH raw_data AS (
-    SELECT * FROM {{ source('cago_source', 'raw_traffic_accidents') }}
+    SELECT * FROM "traffic_dwh"."public"."raw_traffic_accidents"
 )
 
 SELECT
@@ -37,3 +42,4 @@ SELECT
     CAST(crash_year AS INTEGER) AS crash_year
 
 FROM raw_data
+  );

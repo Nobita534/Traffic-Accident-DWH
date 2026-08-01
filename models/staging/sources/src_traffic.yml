@@ -1,0 +1,21 @@
+version: 2
+
+sources:
+  - name: traffic
+    description: >
+      Raw traffic accident dataset used as the source for the Traffic Accident
+      Data Warehouse project.
+
+    database: traffic_dwh
+    schema: public
+
+    tables:
+      - name: raw_traffic_accidents
+        description: >
+          Raw traffic accident records imported from the source system.
+
+        columns:
+          - name: crash_date
+            description: Timestamp when the accident occurred.
+            tests:
+              - not_null
