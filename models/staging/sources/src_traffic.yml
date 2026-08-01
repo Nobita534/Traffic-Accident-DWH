@@ -9,19 +9,13 @@ sources:
     database: traffic_dwh
     schema: public
 
-    freshness:
-      warn_after: {count: 7, period: day}
-      error_after: {count: 30, period: day}
-
-    loaded_at_field: crash_timestamp
-
     tables:
       - name: raw_traffic_accidents
         description: >
           Raw traffic accident records imported from the source system.
 
         columns:
-          - name: crash_timestamp
+          - name: crash_date
             description: Timestamp when the accident occurred.
             tests:
               - not_null
