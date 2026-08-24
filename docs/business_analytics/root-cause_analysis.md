@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-Root Cause Analysis được thực hiện nhằm xác định các nguyên nhân chính dẫn đến những mô hình và xu hướng đã được phát hiện trong báo cáo Cross Analysis. Kết quả của Root Cause Analysis sẽ là cơ sở để xây dựng Recommendation Framework và hỗ trợ các bên liên quan đưa ra quyết định phù hợp nhằm giảm thiểu tai nạn giao thông nghiêm trọng.
+Root Cause Analysis is conducted to identify the key factors contributing to the patterns and trends identified in the Cross Analysis report. The findings from the Root Cause Analysis provide the basis for developing the Recommendation Framework and support stakeholders in making appropriate decisions to reduce the occurrence of severe traffic accidents.
 
 ---
 
@@ -12,27 +12,27 @@ Root Cause Analysis được thực hiện nhằm xác định các nguyên nhâ
 
 ### Business Question
 
-Trong điều kiện thời tiết xấu kết hợp với ánh sáng yếu, tỷ lệ tai nạn nghiêm trọng tăng bao nhiêu phần trăm so với điều kiện bình thường?
+Under adverse weather conditions combined with poor lighting, how much does the severe accident rate increase compared with normal conditions?
 
 ### Observation
 
-- Tỷ lệ tai nạn trong điều kiện xấu (**Bad Condition**) biến động cực kỳ mạnh qua các năm và thường xuyên vượt ngưỡng điều kiện bình thường, đạt đỉnh cao nhất vào năm **2023 (khoảng 6.6%)**. Tuy nhiên, trong năm **2015** và **2025** không ghi nhận tỷ lệ tai nạn nghiêm trọng.
-- Các vụ tai nạn xảy ra trên bề mặt đường bất lợi chiếm khoảng **23.83%** tổng số vụ tai nạn trong giai đoạn **2013–2025**, với tỷ lệ cao nhất được ghi nhận vào năm **2022 (~26.27%)**.
-- Trong cùng thời điểm, số vụ tai nạn trong thời tiết xấu chỉ ghi nhận khoảng **1,163 vụ**, trong đó khoảng **0.17%** vụ tai nạn gây tử vong.
-- Năm **2022**, **Critical Priority Rate** tăng lên **0.20%**, đồng thời ghi nhận tỷ lệ **100%** vụ tai nạn nghiêm trọng khi bề mặt đường xuất hiện nhiều đất cát. Các điều kiện bề mặt đường còn lại dao động từ **1–3%**.
+- The severe accident rate under **Bad Conditions** fluctuated significantly across the years and frequently exceeded the rate observed under normal conditions, reaching its highest level in **2023 (approximately 6.6%)**. However, no severe accidents were recorded under these conditions in **2015** and **2025**.
+- Accidents occurring on adverse road surfaces accounted for approximately **23.83%** of all accidents during **2013–2025**, with the highest proportion recorded in **2022 (~26.27%)**.
+- During the same period, only approximately **1,163 accidents** were recorded under adverse weather conditions, of which approximately **0.17%** were fatal accidents.
+- In **2022**, the **Critical Priority Rate** increased to **0.20%**, while a **100% severe accident rate** was recorded for accidents occurring on road surfaces with significant amounts of dirt or sand. Other road surface conditions ranged between **1–3%**.
 
 ### Identified Root Cause
 
-Các vụ tai nạn xảy ra trên bề mặt đường bất lợi chủ yếu liên quan đến sự suy giảm khả năng kiểm soát phương tiện khi điều kiện mặt đường và thời tiết không thuận lợi xuất hiện cùng lúc. Những điều kiện này làm giảm độ bám của mặt đường và tăng khoảng cách phanh, khiến người lái khó xử lý các tình huống bất ngờ.
+Accidents occurring on adverse road surfaces are primarily associated with reduced vehicle control when unfavorable road surface and weather conditions occur simultaneously. These conditions reduce road traction and increase braking distance, making it more difficult for drivers to respond effectively to unexpected situations.
 
-Mặc dù số vụ tai nạn trong điều kiện thời tiết xấu không chiếm tỷ trọng lớn trong toàn bộ tập dữ liệu, các vụ tai nạn xảy ra trong điều kiện này thường liên quan đến các yếu tố môi trường bất lợi, làm tăng khả năng xảy ra va chạm nghiêm trọng.
+Although accidents occurring under adverse weather conditions represent only a relatively small proportion of the overall dataset, these accidents are often associated with unfavorable environmental factors, increasing the likelihood of severe collisions.
 
 ### Supporting Evidence
 
-- **Adverse Surface Incident Rate:** 23.83% tổng số vụ tai nạn xảy ra trên bề mặt đường bất lợi.
-- Ghi nhận **1,163 vụ** tai nạn trong điều kiện thời tiết xấu.
-- **Crash Severity Distribution by Road Surface** cho thấy tỷ lệ tai nạn trên bề mặt đường bất lợi tăng cao trong năm **2022 (~26.27%)**.
-- **Severe Accident Rate: Normal vs High-Risk Conditions** cho thấy tỷ lệ tai nạn nghiêm trọng trong điều kiện khắc nghiệt kèm ánh sáng yếu biến động mạnh so với điều kiện bình thường, đồng thời không ghi nhận tỷ lệ tai nạn nghiêm trọng trong điều kiện này vào năm **2015** và **2025**.
+- **Adverse Surface Incident Rate:** 23.83% of all accidents occurred on adverse road surfaces.
+- **1,163 accidents** were recorded under adverse weather conditions.
+- **Crash Severity Distribution by Road Surface** shows that the proportion of accidents occurring on adverse road surfaces increased significantly in **2022 (~26.27%)**.
+- **Severe Accident Rate: Normal vs High-Risk Conditions** shows that the severe accident rate under adverse conditions combined with poor lighting fluctuated significantly compared with normal conditions, while no severe accidents were recorded under these conditions in **2015** and **2025**.
 
 ---
 
@@ -40,25 +40,25 @@ Mặc dù số vụ tai nạn trong điều kiện thời tiết xấu không ch
 
 ### Business Question
 
-Tổ hợp yếu tố môi trường nào tạo ra mức độ rủi ro cao nhất?
+Which combination of environmental factors creates the highest level of risk?
 
 ### Observation
 
-- Heatmap ghi nhận tổ hợp **SEVERE CROSSWIND** và **DARKNESS, LIGHTED ROAD** có tỷ lệ tai nạn nghiêm trọng cao nhất (**~17%**) trong giai đoạn **2013–2025**.
-- Đến giữa tháng **01/2025**, tổ hợp **BLOWING SNOW** và **DAYLIGHT** ghi nhận **Severe Rate = 100%**.
+- The heatmap shows that the combination of **SEVERE CROSSWIND** and **DARKNESS, LIGHTED ROAD** recorded the highest severe accident rate (**~17%**) during **2013–2025**.
+- By mid-**January 2025**, the combination of **BLOWING SNOW** and **DAYLIGHT** recorded a **Severe Rate of 100%**.
 
 ### Identified Root Cause
 
-Các yếu tố môi trường thường không tác động độc lập mà ảnh hưởng đồng thời đến khả năng quan sát, khả năng điều khiển phương tiện và thời gian phản ứng của người lái xe.
+Environmental factors typically do not affect driving conditions independently. Instead, they can simultaneously influence visibility, vehicle control, and driver reaction time.
 
-Trong điều kiện gió mạnh kết hợp với ánh sáng hạn chế, người lái khó duy trì hướng di chuyển ổn định và khó phát hiện các tình huống nguy hiểm trên đường. Khi nhiều yếu tố bất lợi xuất hiện cùng lúc, khả năng xử lý tình huống giảm đáng kể, từ đó làm tăng mức độ nghiêm trọng của tai nạn.
+Under strong crosswind conditions combined with limited visibility, drivers may have greater difficulty maintaining vehicle stability and detecting potential hazards on the road. When multiple adverse factors occur simultaneously, the driver's ability to respond effectively is significantly reduced, increasing the severity of potential accidents.
 
-Đối với tổ hợp **BLOWING SNOW** và **DAYLIGHT**, mặc dù ghi nhận **Severe Rate** rất cao trong dữ liệu năm **2025**, kết quả này cần được xem xét cùng với số lượng vụ tai nạn thực tế trước khi đưa ra kết luận tổng quát.
+For the **BLOWING SNOW** and **DAYLIGHT** combination, although the dataset recorded a very high **Severe Rate** in **2025**, this result should be evaluated together with the actual number of accidents before drawing a general conclusion.
 
 ### Supporting Evidence
 
-- **Severe Crash Rate Interaction Matrix (Heatmap)** cho thấy tổ hợp **SEVERE CROSSWIND + DARKNESS, LIGHTED ROAD** có **Severe Rate** cao nhất (**~17%**).
-- **Peak Risk Window (KPI)** xác định các tổ hợp điều kiện môi trường có mức độ rủi ro nổi bật.
+- **Severe Crash Rate Interaction Matrix (Heatmap)** shows that the combination of **SEVERE CROSSWIND + DARKNESS, LIGHTED ROAD** recorded the highest **Severe Rate (~17%)**.
+- **Peak Risk Window (KPI)** identifies environmental condition combinations with notably high risk levels.
 
 ---
 
@@ -66,24 +66,24 @@ Trong điều kiện gió mạnh kết hợp với ánh sáng hạn chế, ngư�
 
 ### Business Question
 
-Những hành vi nào của người lái vẫn là nguyên nhân chính dẫn đến tai nạn nghiêm trọng trong điều kiện môi trường thuận lợi?
+Which driver behaviors remain the primary contributors to severe accidents under favorable environmental conditions?
 
 ### Observation
 
-- Số vụ tai nạn trong điều kiện thời tiết thuận lợi cao gấp khoảng **ba lần** so với điều kiện thời tiết bất lợi. **Human Error Rate** đạt khoảng **67.25%** trong toàn bộ giai đoạn phân tích.
-- Trong điều kiện môi trường thuận lợi, **UNABLE TO DETERMINE** và **FAILING TO YIELD RIGHT-OF-WAY** là hai nguyên nhân được ghi nhận nhiều nhất. Trong điều kiện môi trường bất lợi, **WEATHER** xuất hiện trong nhóm các nguyên nhân có số vụ tai nạn cao.
+- The number of accidents under favorable weather conditions was approximately **three times higher** than under adverse weather conditions. The **Human Error Rate** reached approximately **67.25%** across the entire analysis period.
+- Under favorable environmental conditions, **UNABLE TO DETERMINE** and **FAILING TO YIELD RIGHT-OF-WAY** were the two most frequently recorded contributing factors. Under adverse environmental conditions, **WEATHER** appeared among the factors associated with a high number of accidents.
 
 ### Identified Root Cause
 
-Trong điều kiện thời tiết và môi trường thuận lợi, người tham gia giao thông thường có xu hướng chủ quan và đánh giá thấp các rủi ro khi di chuyển. Điều này có thể làm giảm sự tập trung, tăng các hành vi như không nhường đường, xử lý tình huống chậm hoặc không tuân thủ đầy đủ quy tắc giao thông.
+Under favorable weather and environmental conditions, road users may become overconfident and underestimate potential risks while driving. This can lead to reduced attention and behaviors such as failure to yield the right-of-way, delayed responses, or insufficient compliance with traffic regulations.
 
-Ngoài ra, tỷ lệ cao của nhóm nguyên nhân **UNABLE TO DETERMINE** cho thấy nhiều vụ tai nạn chưa được xác định rõ nguyên nhân cụ thể. Điều này phản ánh hạn chế trong quá trình thu thập hoặc ghi nhận dữ liệu, đồng thời cho thấy vẫn còn những yếu tố ảnh hưởng chưa được mô hình hóa trong bộ dữ liệu hiện tại.
+In addition, the high proportion of **UNABLE TO DETERMINE** indicates that the specific causes of many accidents could not be clearly identified. This may reflect limitations in the data collection or reporting process and suggests that additional contributing factors may not yet be captured or modeled in the current dataset.
 
 ### Supporting Evidence
 
-- **Human Error Rate (67.25%)** cho thấy phần lớn các vụ tai nạn có liên quan đến yếu tố con người.
-- **Top 10 Human Errors in Favorable Conditions** ghi nhận **UNABLE TO DETERMINE** và **FAILING TO YIELD RIGHT-OF-WAY** là hai nguyên nhân phổ biến nhất.
-- **Top 10 Behavioral Risks in Adverse Conditions** cho thấy nguyên nhân **WEATHER** xuất hiện trong nhóm các nguyên nhân có số vụ tai nạn cao khi điều kiện môi trường trở nên bất lợi.
+- **Human Error Rate (67.25%)** indicates that a large proportion of accidents were associated with human factors.
+- **Top 10 Human Errors in Favorable Conditions** identifies **UNABLE TO DETERMINE** and **FAILING TO YIELD RIGHT-OF-WAY** as the two most common contributing factors.
+- **Top 10 Behavioral Risks in Adverse Conditions** shows that **WEATHER** appears among the factors associated with a high number of accidents when environmental conditions become unfavorable.
 
 ---
 
@@ -91,22 +91,21 @@ Ngoài ra, tỷ lệ cao của nhóm nguyên nhân **UNABLE TO DETERMINE** cho t
 
 ### Business Question
 
-Khu vực hoặc kịch bản nào cần được ưu tiên đầu tư nguồn lực để giảm thiểu tai nạn nghiêm trọng?
+Which areas or scenarios should be prioritized for resource investment to reduce severe traffic accidents?
 
 ### Observation
 
-- Ba loại hạ tầng giao thông có số vụ tai nạn cao nhất là **NOT DIVIDED**, **FOUR WAY** và **DIVIDED – W/MEDIAN BARRIER**, trong đó **NOT DIVIDED** và **FOUR WAY** đều ghi nhận trên **40,000 vụ** tai nạn trong giai đoạn phân tích.
-- Theo **Infrastructure Blackspot Identification Matrix**, chỉ có **NOT DIVIDED** vượt đồng thời ngưỡng trung bình của **Total Accident** và **Avg EPDO Score**.
+- The three trafficway types with the highest number of accidents are **NOT DIVIDED**, **FOUR WAY**, and **DIVIDED – W/MEDIAN BARRIER**. Both **NOT DIVIDED** and **FOUR WAY** recorded more than **40,000 accidents** during the analysis period.
+- According to the **Infrastructure Blackspot Identification Matrix**, only **NOT DIVIDED** exceeded both the average **Total Accident** and **Avg EPDO Score** thresholds simultaneously.
 
 ### Identified Root Cause
 
-Các vụ tai nạn tập trung nhiều tại loại đường **NOT DIVIDED**, cho thấy đây là khu vực có mật độ lưu thông lớn và thường xuyên phát sinh các tình huống xung đột giữa các phương tiện. Khi lưu lượng giao thông tăng cao, số lượng điểm giao cắt, hoạt động chuyển hướng hoặc thay đổi làn đường cũng làm tăng khả năng xảy ra va chạm.
+A large proportion of accidents are concentrated on **NOT DIVIDED** roads, indicating that these road types experience a high volume of traffic and frequent conflict points between vehicles. As traffic volume increases, the number of intersections, turning movements, and lane changes may also increase, raising the likelihood of collisions.
 
-Bên cạnh đó, **NOT DIVIDED** là loại hạ tầng duy nhất vượt đồng thời ngưỡng trung bình của **Total Accident** và **Avg EPDO Score**. Điều này cho thấy không chỉ có số lượng tai nạn cao mà mức độ nghiêm trọng của các vụ tai nạn tại loại đường này cũng cao hơn mặt bằng chung, khiến đây trở thành khu vực cần được ưu tiên phân tích trong các hoạt động đảm bảo an toàn giao thông.
+Furthermore, **NOT DIVIDED** is the only infrastructure type that simultaneously exceeds the average thresholds for both **Total Accident** and **Avg EPDO Score**. This indicates that it is not only associated with a high number of accidents but also with a higher level of accident severity compared with the overall average. Therefore, it should be prioritized for further analysis and targeted road safety interventions.
 
 ### Supporting Evidence
 
-- **Infrastructure Blackspot Identification Matrix (Scatter Plot)** cho thấy chỉ **NOT DIVIDED** nằm trong vùng vượt cả ngưỡng **Total Accident** và **Avg EPDO Score**.
-- **Most Accident-Prone Trafficway (KPI)** xác định **NOT DIVIDED** là loại đường có số vụ tai nạn cao nhất.
-- **Priority Trafficways (KPI)** ghi nhận chỉ một loại hạ tầng được xếp vào nhóm ưu tiên cải thiện.
-```
+- **Infrastructure Blackspot Identification Matrix (Scatter Plot)** shows that only **NOT DIVIDED** falls within the area exceeding both the **Total Accident** and **Avg EPDO Score** thresholds.
+- **Most Accident-Prone Trafficway (KPI)** identifies **NOT DIVIDED** as the trafficway type with the highest number of accidents.
+- **Priority Trafficways (KPI)** indicates that only one infrastructure type is classified as a priority for improvement.
