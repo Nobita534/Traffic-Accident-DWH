@@ -89,6 +89,14 @@ models:
       - name: roadway_surface_cond
         description: Road surface condition.
 
+      - name: is_favorable_condition
+        description: >
+          Indicates whether the recorded weather and lighting combination is
+          classified as favorable for BQ3 analysis. TRUE when weather is CLEAR
+          or CLOUDY/OVERCAST and lighting is DAWN, DAYLIGHT, or DARKNESS,
+          LIGHTED ROAD. NULL when weather is UNKNOWN or OTHER because the
+          condition cannot be classified reliably; FALSE otherwise.
+
   - name: dim_traffic_device
     description: >
       Dimension describing traffic control devices and roadway types.
