@@ -127,7 +127,7 @@ table 'All Measure'
 			    FILTER(
 			        SUMMARIZE(
 			            'public fct_traffic_accidents',
-			            'public dim_crash_type'[first_crash_type]
+			            'public dim_traffic_device'[trafficway_type]
 			        ),
 			        'All Measure'[Total Accident] > _ThresholdAccidents && [Avg EPDO Score] > _ThresholdSeverity
 			    )

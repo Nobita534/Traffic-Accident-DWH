@@ -37,6 +37,7 @@ table 'public dim_natural_condition'
 	column is_favorable_condition
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 22ef3000-d6ba-41e6-a23a-f76c705ef606
 		summarizeBy: none
 		sourceColumn: is_favorable_condition
 

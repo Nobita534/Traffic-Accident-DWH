@@ -7,7 +7,7 @@
     "z": 9000,
     "height": 318.57142857142861,
     "width": 607.14285714285722,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",
@@ -609,113 +609,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "cca1123fd7d4e003229e",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Rate Comparison"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "04c1e5d6254e4db74170",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Condition Comparison"
-              }
-            },
-            "Property": "Condition"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "552d8f502a4d01412324",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "year"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "3d06b002c8d84524c174",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8049d1801662d4ec644b",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "quarter"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "5c63946755bc88e9b4b5",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "day"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

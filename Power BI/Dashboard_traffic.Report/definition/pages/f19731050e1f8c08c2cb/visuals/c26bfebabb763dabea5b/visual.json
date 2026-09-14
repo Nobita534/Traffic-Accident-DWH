@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 311.66666666666669,
     "width": 635,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "barChart",
@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "public dim_cause.primary_cause",
-              "nativeQueryRef": "primary cause",
+              "nativeQueryRef": "primary_cause",
               "active": true,
               "displayName": "primary cause"
             }
@@ -488,6 +488,20 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "6c15ced063b084244be3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }
