@@ -2,7 +2,7 @@ table 'All Measure'
 	lineageTag: 5cc51e54-a9c6-437f-88bc-b4a9c756579f
 
 	measure 'Adverse Surface Incident Rate' =
-
+			
 			DIVIDE(
 			    CALCULATE(
 			        COUNTROWS('public fct_traffic_accidents'),
@@ -32,7 +32,7 @@ table 'All Measure'
 		lineageTag: 15bca1cb-f544-48ce-a160-b8792d338cfa
 
 	measure 'Severe Environmental Impact' =
-
+			
 			CALCULATE(
 			    COUNTROWS('public fct_traffic_accidents'),
 			    'public fct_traffic_accidents'[is_severe] = TRUE,
@@ -43,7 +43,7 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Critical Priority Rate' =
-
+			
 			DIVIDE(
 			    CALCULATE(
 			        COUNTROWS('public fct_traffic_accidents'),
@@ -56,7 +56,7 @@ table 'All Measure'
 		lineageTag: db02dda8-2754-4682-9e17-43e802c5df28
 
 	measure 'Total EPDO Score' = ```
-
+			
 			SUMX(
 			    'public fct_traffic_accidents',
 			    ( 'public fct_traffic_accidents'[injuries_fatal] * 12 ) 
@@ -74,7 +74,7 @@ table 'All Measure'
 		lineageTag: 6236f094-75d6-4724-af46-d164b8488b14
 
 	measure 'Clear-Weather Severe Accidents' =
-
+			
 			CALCULATE(
 			    'All Measure'[Total Accident],
 			    'public fct_traffic_accidents'[is_severe] = TRUE(),
@@ -84,7 +84,7 @@ table 'All Measure'
 		lineageTag: 3d6b560a-f55c-4234-bac9-74a08a030547
 
 	measure 'Avg EPDO Score' =
-
+			
 			DIVIDE(
 			    [Total EPDO Score],
 			    COUNTROWS('public fct_traffic_accidents'),
@@ -95,7 +95,7 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Priority Trafficways' = ```
-
+			
 			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
 			VAR _ThresholdSeverity = 'All Measure'[Avg EPDO Score according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
 			VAR _SummaryTable = 
@@ -113,7 +113,7 @@ table 'All Measure'
 		lineageTag: 7934271f-6311-4b6b-82aa-c57e21494923
 
 	measure 'Human Error Ratio' =
-
+			
 			DIVIDE(
 			    CALCULATE(
 			        'All Measure'[Total Accident],
@@ -126,7 +126,7 @@ table 'All Measure'
 		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
 
 	measure 'Most Accident-Prone Trafficway' =
-
+			
 			VAR T =
 			    ADDCOLUMNS(
 			        VALUES('public dim_traffic_device'[trafficway_type]),
@@ -140,7 +140,7 @@ table 'All Measure'
 		lineageTag: 47680f71-9cd7-4db0-94ce-712233677614
 
 	measure 'Avg Accident' =
-
+			
 			// AVERAGEX(VALUES('public dim_traffic_device'[trafficway_type]), [Total Accident])
 			DIVIDE(
 			    [Total Accident],
@@ -151,7 +151,7 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Avg EPDO Score according Trafficway_type' =
-
+			
 			AVERAGEX(
 			    VALUES('public dim_traffic_device'[trafficway_type]),
 			    [Avg EPDO Score]
@@ -161,14 +161,14 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Severe Rate Comparison' =
-
+			
 			VAR _Condition =
 			    SELECTEDVALUE('Condition Comparison'[Condition])
-
+			
 			RETURN
 			SWITCH(
 			    _Condition,
-
+			
 			    "Normal Condition",
 			        CALCULATE(
 			            [Severe Rate],
@@ -181,7 +181,7 @@ table 'All Measure'
 			                    IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
 			            )
 			        ),
-
+			
 			    "Bad Condition",
 			        CALCULATE(
 			            [Severe Rate],
@@ -209,7 +209,7 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Peak Severe Condition' =
-
+			
 			VAR _P25 = [Accident Volume P25]
 			VAR _ConditionTable =
 			    FILTER(
@@ -250,60 +250,40 @@ table 'All Measure'
 
 	measure 'Accident Volume P25' =
 			VAR _ConditionTable =
-			    CALCULATETABLE(
+			    FILTER(
 			        SUMMARIZE(
-			            'public dim_natural_condition',
+			            ALLSELECTED('public dim_natural_condition'),
 			            'public dim_natural_condition'[weather_condition],
 			            'public dim_natural_condition'[lighting_condition],
 			            "@Accidents", CALCULATE([Total Accident])
 			        ),
-			        REMOVEFILTERS('public dim_natural_condition'[weather_condition]),
-			        REMOVEFILTERS('public dim_natural_condition'[lighting_condition])
-			    )
-			VAR _ValidConditions =
-			    FILTER(
-			        _ConditionTable,
-			        NOT ISBLANK([@Accidents]) && [@Accidents] > 0
+			        [@Accidents] > 0
 			    )
 			RETURN
-			    IF(
-			        COUNTROWS(_ValidConditions) < 4,
-			        BLANK(),
-			        PERCENTILEX.INC(
-			            _ValidConditions,
-			            [@Accidents],
-			            0.25
-			        )
+			    PERCENTILEX.INC(
+			        _ConditionTable,
+			        [@Accidents],
+			        0.25
 			    )
 		formatString: 0
 		lineageTag: e9ec9a76-27a4-4ef9-a390-61ad03495931
 
 	measure 'Accident Volume P75' =
 			VAR _ConditionTable =
-			    CALCULATETABLE(
+			    FILTER(
 			        SUMMARIZE(
-			            'public dim_natural_condition',
+			            ALLSELECTED('public dim_natural_condition'),
 			            'public dim_natural_condition'[weather_condition],
 			            'public dim_natural_condition'[lighting_condition],
 			            "@Accidents", CALCULATE([Total Accident])
 			        ),
-			        REMOVEFILTERS('public dim_natural_condition'[weather_condition]),
-			        REMOVEFILTERS('public dim_natural_condition'[lighting_condition])
-			    )
-			VAR _ValidConditions =
-			    FILTER(
-			        _ConditionTable,
-			        NOT ISBLANK([@Accidents]) && [@Accidents] > 0
+			        [@Accidents] > 0
 			    )
 			RETURN
-			    IF(
-			        COUNTROWS(_ValidConditions) < 4,
-			        BLANK(),
-			        PERCENTILEX.INC(
-			            _ValidConditions,
-			            [@Accidents],
-			            0.75
-			        )
+			    PERCENTILEX.INC(
+			        _ConditionTable,
+			        [@Accidents],
+			        0.75
 			    )
 		formatString: 0
 		lineageTag: a9c6df4b-1d4f-4b88-a95c-f6b40cef9196
@@ -315,16 +295,9 @@ table 'All Measure'
 			VAR _IsConditionLevel =
 			    HASONEVALUE('public dim_natural_condition'[weather_condition])
 			        && HASONEVALUE('public dim_natural_condition'[lighting_condition])
-			VAR _HasValidThresholds =
-			    NOT ISBLANK(_P25)
-			        && NOT ISBLANK(_P75)
-			        && _P25 < _P75
 			RETURN
 			    IF(
-			        NOT _IsConditionLevel
-			            || ISBLANK(_Accidents)
-			            || _Accidents <= 0
-			            || NOT _HasValidThresholds,
+			        NOT _IsConditionLevel,
 			        BLANK(),
 			        SWITCH(
 			            TRUE(),
@@ -363,17 +336,17 @@ table 'All Measure'
 		lineageTag: 0907fd61-321b-4259-ab8b-cf85d06963fe
 
 	measure 'Selected Natural Condition' =
-
+			
 			VAR _HasWeather =
 			    HASONEVALUE(
 			        'public dim_natural_condition'[weather_condition]
 			    )
-
+			
 			VAR _HasLighting =
 			    HASONEVALUE(
 			        'public dim_natural_condition'[lighting_condition]
 			    )
-
+			
 			RETURN
 			    IF(
 			        _HasWeather && _HasLighting,
@@ -405,3 +378,4 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

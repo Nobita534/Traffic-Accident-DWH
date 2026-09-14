@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 154.34782608695653,
-    "z": 3,
+    "z": 3000,
     "height": 85.652173913043484,
     "width": 320,
-    "tabOrder": 3
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -110,6 +110,17 @@
                   "Value": "'Heading6'"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#94A3B8'"
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -124,6 +135,17 @@
               "expr": {
                 "Literal": {
                   "Value": "20D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E2E8F0'"
+                    }
+                  }
                 }
               }
             }
@@ -163,51 +185,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e3dc2b0f29ec13387c00",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "2ef8992d5ed008de53b0",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "6055ade0b686ee157371",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Avg Units per Accident"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -4,10 +4,10 @@
   "position": {
     "x": 0,
     "y": 65.217391304347828,
-    "z": 2,
+    "z": 2000,
     "height": 89.1304347826087,
     "width": 320,
-    "tabOrder": 2
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -103,6 +103,17 @@
                   "Value": "20D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#EF4444'"
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
@@ -131,6 +142,17 @@
               "expr": {
                 "Literal": {
                   "Value": "8D"
+                }
+              }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#94A3B8'"
+                    }
+                  }
                 }
               }
             }
@@ -186,37 +208,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "76d10c40980034e69429",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bb370d904b0880185dbe",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Accident Volume Bucket"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

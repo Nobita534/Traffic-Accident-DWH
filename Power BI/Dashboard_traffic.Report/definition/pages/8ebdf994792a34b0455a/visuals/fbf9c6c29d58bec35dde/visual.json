@@ -4,10 +4,9 @@
   "position": {
     "x": 0,
     "y": 32.173913043478265,
-    "z": 1,
+    "z": 1000,
     "height": 33.04347826086957,
-    "width": 320,
-    "tabOrder": 1
+    "width": 320
   },
   "visual": {
     "visualType": "card",
@@ -56,29 +55,37 @@
                   "Value": "12D"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E2E8F0'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
           }
         }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "9abc70a3b2ce4885c548",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Selected Natural Condition"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

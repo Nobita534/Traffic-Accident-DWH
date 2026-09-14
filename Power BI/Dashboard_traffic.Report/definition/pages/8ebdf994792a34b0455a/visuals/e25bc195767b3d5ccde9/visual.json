@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 32.173913043478265,
-    "width": 320
+    "width": 320,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "textbox",
@@ -21,7 +22,8 @@
                     "value": "ENVIRONMENTAL CONDITION DETAILS",
                     "textStyle": {
                       "fontWeight": "bold",
-                      "fontSize": "12pt"
+                      "fontSize": "12pt",
+                      "color": "#fffaf4"
                     }
                   }
                 ]

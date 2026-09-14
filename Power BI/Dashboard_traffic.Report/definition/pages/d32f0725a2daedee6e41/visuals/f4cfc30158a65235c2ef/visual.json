@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 666.66666666666674,
     "width": 658.33333333333337,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -48,6 +48,24 @@
               "queryRef": "public dim_natural_condition.weather_condition",
               "nativeQueryRef": "weather_condition",
               "active": true
+            }
+          ]
+        },
+        "Tooltips": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Severe Total"
+                }
+              },
+              "queryRef": "All Measure.Severe Total",
+              "nativeQueryRef": "Severe Total"
             }
           ]
         },
@@ -523,7 +541,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "7ed347bb00a510e55d09",
+        "name": "437fc610016ca20e2a23",
         "field": {
           "Column": {
             "Expression": {
@@ -537,7 +555,7 @@
         "type": "Categorical"
       },
       {
-        "name": "0532690ed02363d3c998",
+        "name": "a5699377500042d2391c",
         "field": {
           "Column": {
             "Expression": {
@@ -551,7 +569,21 @@
         "type": "Categorical"
       },
       {
-        "name": "f8856e601d4b8e1b0305",
+        "name": "2582461dea734a0841a3",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c824ee68dcccd9e55952",
         "field": {
           "Measure": {
             "Expression": {
