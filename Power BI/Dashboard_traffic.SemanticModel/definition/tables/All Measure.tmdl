@@ -366,6 +366,41 @@ table 'All Measure'
 		formatString: 0%;-0%;0%
 		lineageTag: fe7546e7-aa72-4a01-8b39-ea8e043373ab
 
+	measure 'Avg Units per Accident' =
+			DIVIDE(
+			    SUM('public fct_traffic_accidents'[num_units]),
+			    [Total Accident],
+			    0
+			)
+		formatString: 0.00
+		lineageTag: 0907fd61-321b-4259-ab8b-cf85d06963fe
+
+	measure 'Selected Natural Condition' =
+			
+			VAR _HasWeather =
+			    HASONEVALUE(
+			        'public dim_natural_condition'[weather_condition]
+			    )
+			
+			VAR _HasLighting =
+			    HASONEVALUE(
+			        'public dim_natural_condition'[lighting_condition]
+			    )
+			
+			RETURN
+			    IF(
+			        _HasWeather && _HasLighting,
+			        SELECTEDVALUE(
+			            'public dim_natural_condition'[weather_condition]
+			        )
+			            & " × "
+			            & SELECTEDVALUE(
+			                'public dim_natural_condition'[lighting_condition]
+			            ),
+			        "Hover one group natural condition"
+			    )
+		lineageTag: 49b82d0d-b0dd-488c-ae5f-23971e33b0ca
+
 	measure 'Heatmap Volume Severity Color' =
 			VAR _CurrentBucket = [Accident Volume Bucket]
 			VAR _CurrentRate = [Severe Rate]
@@ -424,7 +459,7 @@ table 'All Measure'
 			            || ISBLANK(_CurrentRate)
 			            || ISBLANK(_P25)
 			            || ISBLANK(_P75),
-			        BLANK(),
+			        "#0F172A",
 			        SWITCH(
 			            _CurrentBucket,
 			            "Low Volume",
@@ -454,45 +489,10 @@ table 'All Measure'
 			                    _Intensity <= 0.80, "#DC2626",
 			                    "#EF4444"
 			                ),
-			            "#1E293B"
+			            "#0F172A"
 			        )
 			    )
 		lineageTag: 28c37d01-68f0-4ada-b54e-44fa459a8d9a
-
-	measure 'Avg Units per Accident' =
-			DIVIDE(
-			    SUM('public fct_traffic_accidents'[num_units]),
-			    [Total Accident],
-			    0
-			)
-		formatString: 0.00
-		lineageTag: 0907fd61-321b-4259-ab8b-cf85d06963fe
-
-	measure 'Selected Natural Condition' =
-			
-			VAR _HasWeather =
-			    HASONEVALUE(
-			        'public dim_natural_condition'[weather_condition]
-			    )
-			
-			VAR _HasLighting =
-			    HASONEVALUE(
-			        'public dim_natural_condition'[lighting_condition]
-			    )
-			
-			RETURN
-			    IF(
-			        _HasWeather && _HasLighting,
-			        SELECTEDVALUE(
-			            'public dim_natural_condition'[weather_condition]
-			        )
-			            & " × "
-			            & SELECTEDVALUE(
-			                'public dim_natural_condition'[lighting_condition]
-			            ),
-			        "Hover one group natural condition"
-			    )
-		lineageTag: 49b82d0d-b0dd-488c-ae5f-23971e33b0ca
 
 	column Column
 		isHidden
@@ -511,3 +511,4 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
