@@ -40,22 +40,27 @@ Severe accidents occur more frequently when bad weather and poor road surface co
 
 ### Business Question
 
-Which combination of environmental factors creates the highest accident risk?
+Which sufficiently supported combination of weather and lighting conditions has the highest severe accident rate among recorded crashes?
 
-### Root Cause
+### Analytical Basis
 
-Multiple adverse environmental conditions can reduce visibility, vehicle control, and driver reaction time at the same time.
+Environmental combinations are evaluated using Severe Rate together with recorded-crash volume. Low Volume groups at or below the P25 accident-volume threshold remain visible for transparency but are excluded from priority ranking. Medium- and High-Volume groups are eligible for the `Peak Severe Condition` KPI.
 
 ### Recommendation
 
-- Create a list of high-risk environmental combinations for safety monitoring.
-- Deploy real-time warning systems in areas where dangerous environmental conditions often occur.
-- Regularly monitor environmental combinations with high Severe Rate to support road safety planning.
+- Monitor environmental combinations that have both sufficient recorded-crash volume and elevated Severe Rate.
+- Use `Total Accident`, `Severe Total`, and `Accident Volume Bucket` together with Severe Rate before assigning monitoring priority.
+- Treat Low Volume combinations with extreme rates as observations that require additional evidence rather than as priority conditions.
+- Use `Avg Units per Accident` only as supporting context for crash involvement, not as a traffic-exposure metric.
 
 ### Expected Impact
 
-- Help identify high-risk conditions earlier.
-- Support better accident prevention planning.
+- Reduce the chance of prioritizing an environmental combination based on an unstable rate from a very small denominator.
+- Improve transparency when comparing environmental severity patterns.
+
+### Limitation
+
+The dataset does not contain traffic exposure such as traffic volume, trips, or vehicle-miles traveled. Therefore, these recommendations concern severity patterns among recorded crashes and do not claim that a given environmental condition has a higher probability of causing a crash.
 
 ### Stakeholder
 
@@ -125,6 +130,6 @@ The **NOT DIVIDED** trafficway type has both a high number of accidents and a hi
 | Category | Recommendation |
 |----------|----------------|
 | **Infrastructure Safety** | Prioritize infrastructure improvements and warning systems in high-risk locations, especially **NOT DIVIDED** roads. |
-| **Environmental Risk Management** | Monitor environmental combinations with high Severe Rate and implement suitable warning measures. |
+| **Environmental Severity Monitoring** | Monitor environmental combinations with sufficient recorded-crash volume and elevated Severe Rate; do not prioritize Low Volume groups solely because of extreme rates. |
 | **Human Behavior Improvement** | Strengthen traffic monitoring and improve driver awareness to reduce human-related accidents. |
 | **Data Quality Enhancement** | Standardize accident reporting to reduce **UNABLE TO DETERMINE** records and improve data quality for future analysis. |
