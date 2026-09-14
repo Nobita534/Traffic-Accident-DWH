@@ -128,6 +128,104 @@
                   "Value": "12D"
                 }
               }
+            },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "All Measure"
+                                    }
+                                  },
+                                  "Property": "Accident Volume Bucket"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'High Volume'"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#EF4444'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "All Measure"
+                                    }
+                                  },
+                                  "Property": "Accident Volume Bucket"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Medium Volume'"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#F59E0B'"
+                            }
+                          }
+                        },
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 0,
+                              "Left": {
+                                "Measure": {
+                                  "Expression": {
+                                    "SourceRef": {
+                                      "Entity": "All Measure"
+                                    }
+                                  },
+                                  "Property": "Accident Volume Bucket"
+                                }
+                              },
+                              "Right": {
+                                "Literal": {
+                                  "Value": "'Low Volume'"
+                                }
+                              }
+                            }
+                          },
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#94A3B8'"
+                            }
+                          }
+                        }
+                      ],
+                      "DefaultValue": {
+                        "Literal": {
+                          "Value": "'#E2E8F0'"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           },
           "selector": {
