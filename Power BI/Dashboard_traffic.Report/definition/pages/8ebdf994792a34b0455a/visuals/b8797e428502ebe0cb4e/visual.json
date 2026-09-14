@@ -125,7 +125,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "16D"
+                  "Value": "12D"
                 }
               }
             }
@@ -208,5 +208,37 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "e99ab3a59ad1b14c8c5e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c1ef0d2d539850948d65",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Accident Volume Bucket"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
