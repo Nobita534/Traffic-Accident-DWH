@@ -51,24 +51,6 @@
             }
           ]
         },
-        "Values": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Severe Rate"
-                }
-              },
-              "queryRef": "All Measure.Severe Rate",
-              "nativeQueryRef": "Severe Rate"
-            }
-          ]
-        },
         "Tooltips": {
           "projections": [
             {
@@ -126,6 +108,24 @@
               },
               "queryRef": "All Measure.Avg Units per Accident",
               "nativeQueryRef": "Avg Units per Accident"
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Severe Rate"
+                }
+              },
+              "queryRef": "All Measure.Severe Rate",
+              "nativeQueryRef": "Severe Rate"
             }
           ]
         }
@@ -556,8 +556,130 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'8ebdf994792a34b0455a'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "7ed347bb00a510e55d09",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_natural_condition"
+              }
+            },
+            "Property": "lighting_condition"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0532690ed02363d3c998",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_natural_condition"
+              }
+            },
+            "Property": "weather_condition"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f8856e601d4b8e1b0305",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dd6d8c52a18060b90280",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "90217acb9de73a003b04",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bd161df3d0e59e76a6ec",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Accident Volume Bucket"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c150472dc6794d324757",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Avg Units per Accident"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

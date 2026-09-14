@@ -1365,12 +1365,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "condition": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "weather illness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1401,36 +1395,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "illness": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "complaint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "ailment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "weather disorder": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1438,16 +1402,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "disorder": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -1468,6 +1422,46 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "weather state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "weather form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "weather circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "weather order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
 			          }
 			        }
 			      ]
@@ -1491,12 +1485,6 @@ cultureInfo en-US
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "condition": {
-			            "State": "Generated",
-			            "Weight": 0.97
 			          }
 			        },
 			        {
@@ -1530,36 +1518,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "illness": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "complaint": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "ailment": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "lighting disorder": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1567,16 +1525,6 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "disorder": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -1597,6 +1545,46 @@ cultureInfo en-US
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "lighting state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "lighting form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "lighting circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "lighting order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
 			          }
 			        }
 			      ]
@@ -4805,34 +4793,29 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.peak_risk_window": {
+			    "public_dim_natural_condition.is_favorable_condition": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Peak Risk Window"
+			          "ConceptualEntity": "public dim_natural_condition",
+			          "ConceptualProperty": "is_favorable_condition"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "peak risk window": {
+			          "is favorable condition": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "window": {
+			          "is_favorable_condition": {
+			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.97
+			            "Weight": 0.99
 			          }
 			        },
 			        {
-			          "risk window": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "peak risk booth": {
+			          "is favorable illness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -4842,17 +4825,27 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "risk booth": {
+			          "is favorable complaint": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "peak risk gap": {
+			          "is favorable ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "is favorable disorder": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -4862,73 +4855,63 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "peak risk space": {
+			          "is favorable situation": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peak risk opening": {
+			          "is favorable fitness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.482
 			          }
 			        },
 			        {
-			          "peak risk hole": {
+			          "is favorable state": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "peak risk hole-in-the-wall": {
+			          "is favorable form": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "booth": {
+			          "is favorable circumstance": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.491
+			            "Weight": 0.468
 			          }
 			        },
 			        {
-			          "risk gap": {
+			          "is favorable order": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "risk space": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
+			            "Weight": 0.468
 			          }
 			        }
 			      ]
@@ -5626,7 +5609,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.identified_blackspots": {
+			    "all_measure.priority_trafficways": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measure",
@@ -5636,7 +5619,7 @@ cultureInfo en-US
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "identified blackspots": {
+			          "priority trafficways": {
 			            "State": "Generated"
 			          }
 			        }
@@ -5769,42 +5752,1228 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
-			    }
-			  },
-			  "Relationships": {
-			    "public_dim_crash_date_year_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.month": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.month"
-			          }
+			    },
+			    "all_measure.most_accidentprone_trafficway": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Most Accident-Prone Trafficway"
 			        }
 			      },
-			      "Phrasings": [
+			      "State": "Generated",
+			      "Terms": [
 			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_months"
+			          "most accident-prone trafficway": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "most accident prone trafficway": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
 			        }
 			      ]
 			    },
+			    "all_measure.avg_accident": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Avg Accident"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg accident": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average accident": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "avg coincidence": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "avg chance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg fortune": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg fate": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "avg mishap": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg misfortune": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg calamity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg catastrophe": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "avg disaster": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.avg_EPDO_score_according_Trafficway_type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Avg EPDO Score according Trafficway_type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg EPDO score according Trafficway_type": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "average epdo score according trafficway_type": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_rate_comparison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Rate Comparison"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe rate comparison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comparison": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate comparison": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe rate judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severe rate judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severe rate assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severe rate evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severe rate appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rate judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rate judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rate assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rate evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "rate appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.peak_severe_condition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Peak Severe Condition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "peak severe condition": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "peak severe illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peak severe complaint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peak severe ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "peak severe disorder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "peak severe situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peak severe fitness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "peak severe state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peak severe form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peak severe circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "peak severe order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.accident_volume_P25": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Accident Volume P25"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accident volume P25": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "P25": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "volume P25": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.accident_volume_P75": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Accident Volume P75"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accident volume P75": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "P75": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "volume P75": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.accident_volume_bucket": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Accident Volume Bucket"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "accident volume bucket": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "bucket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "volume bucket": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "accident volume pail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "accident volume container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "accident volume vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "volume pail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "volume container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "volume vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "pail": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "container": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "vessel": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.eligible_severe_condition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Eligible Severe Condition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "eligible severe condition": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "eligible severe illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "eligible severe complaint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "eligible severe ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "eligible severe disorder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "eligible severe situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "eligible severe fitness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "eligible severe state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "eligible severe form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "eligible severe circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "eligible severe order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.supported_severe_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Supported Severe Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "supported severe rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "supported severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "supported severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "supported severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "supported severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "supported severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "supported severe amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "supported severe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "supported severe speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "supported severe level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "supported severe scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.avg_units_per_accident": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Avg Units per Accident"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg units per accident": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg unit per accident": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.857
+			          }
+			        },
+			        {
+			          "average unit per accident": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "Avg Units": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.selected_natural_condition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Selected Natural Condition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "selected natural condition": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "natural condition": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "selected natural illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "selected natural complaint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "selected natural ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "natural illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "natural complaint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "natural ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "selected natural disorder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "natural disorder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "selected natural situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "selected natural fitness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        }
+			      ]
+			    },
+			    "condition_comparison": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Condition Comparison"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "condition comparison": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comparison": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "condition judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "condition judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "condition assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "condition evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "condition appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "judgement": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "judgment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "assessment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "evaluation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "appraisal": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "condition_comparison.condition": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Condition Comparison",
+			          "ConceptualProperty": "Condition"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "condition": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "illness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "complaint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "ailment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "disorder": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "fitness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "state": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "form": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        },
+			        {
+			          "order": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    }
+			  },
+			  "Relationships": {
 			    "public_dim_crash_date_year_hierarchy_has_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "public dim_crash_date"
@@ -6161,6 +7330,547 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "condition_comparison_has_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "Condition Comparison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "condition_comparison": {
+			          "Target": {
+			            "Entity": "condition_comparison"
+			          }
+			        },
+			        "condition_comparison.condition": {
+			          "Target": {
+			            "Entity": "condition_comparison.condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "condition_comparison"
+			            },
+			            "Object": {
+			              "Role": "condition_comparison.condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "condition_comparisons_have_conditions"
+			        },
+			        {
+			          "DynamicAdjective": {
+			            "Subject": {
+			              "Role": "condition_comparison"
+			            },
+			            "Adjective": {
+			              "Role": "condition_comparison.condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "conditions_describe_condition_comparisons"
+			        }
+			      ]
+			    },
+			    "public_dim_natural_condition_has_all_measure_selected_natural_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_natural_condition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_natural_condition": {
+			          "Target": {
+			            "Entity": "public_dim_natural_condition"
+			          }
+			        },
+			        "all_measure.selected_natural_condition": {
+			          "Target": {
+			            "Entity": "all_measure.selected_natural_condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_natural_condition"
+			            },
+			            "Object": {
+			              "Role": "all_measure.selected_natural_condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_natural_conditions_have_selected_natural_condition"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_avg_units_per_accident": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.avg_units_per_accident": {
+			          "Target": {
+			            "Entity": "all_measure.avg_units_per_accident"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_units_per_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_avg_units_per_accident"
+			        }
+			      ]
+			    },
+			    "all_measure_has_supported_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.supported_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.supported_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.supported_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_supported_severe_rate"
+			        }
+			      ]
+			    },
+			    "all_measure_has_eligible_severe_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.eligible_severe_condition": {
+			          "Target": {
+			            "Entity": "all_measure.eligible_severe_condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.eligible_severe_condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_eligible_severe_condition"
+			        }
+			      ]
+			    },
+			    "all_measure_has_accident_volume_bucket": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.accident_volume_bucket": {
+			          "Target": {
+			            "Entity": "all_measure.accident_volume_bucket"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.accident_volume_bucket"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_accident_volume_bucket"
+			        }
+			      ]
+			    },
+			    "all_measure_has_accident_volume_P75": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.accident_volume_P75": {
+			          "Target": {
+			            "Entity": "all_measure.accident_volume_P75"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.accident_volume_P75"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_accident_volume_P75"
+			        }
+			      ]
+			    },
+			    "all_measure_has_accident_volume_P25": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.accident_volume_P25": {
+			          "Target": {
+			            "Entity": "all_measure.accident_volume_P25"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.accident_volume_P25"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_accident_volume_P25"
+			        }
+			      ]
+			    },
+			    "all_measure_has_peak_severe_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.peak_severe_condition": {
+			          "Target": {
+			            "Entity": "all_measure.peak_severe_condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.peak_severe_condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_peak_severe_condition"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_rate_comparison": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_rate_comparison": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_comparison"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_comparison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_rate_comparison"
+			        }
+			      ]
+			    },
+			    "condition_comparison_has_all_measure_severe_rate_comparison": {
+			      "Binding": {
+			        "ConceptualEntity": "Condition Comparison"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "condition_comparison": {
+			          "Target": {
+			            "Entity": "condition_comparison"
+			          }
+			        },
+			        "all_measure.severe_rate_comparison": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_comparison"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "condition_comparison"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_comparison"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "condition_comparisons_have_severe_rate_comparison"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_avg_EPDO_score_according_Trafficway_type": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.avg_EPDO_score_according_Trafficway_type": {
+			          "Target": {
+			            "Entity": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_avg_EPDO_score_according_Trafficway_type"
+			        }
+			      ]
+			    },
+			    "public_dim_traffic_device_has_all_measure_avg_EPDO_score_according_Trafficway_type": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_traffic_device"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          }
+			        },
+			        "all_measure.avg_EPDO_score_according_Trafficway_type": {
+			          "Target": {
+			            "Entity": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_avg_EPDO_score_according_Trafficway_type"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_avg_accident": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.avg_accident": {
+			          "Target": {
+			            "Entity": "all_measure.avg_accident"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_avg_accident"
+			        }
+			      ]
+			    },
+			    "public_dim_traffic_device_has_all_measure_avg_accident": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_traffic_device"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          }
+			        },
+			        "all_measure.avg_accident": {
+			          "Target": {
+			            "Entity": "all_measure.avg_accident"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_avg_accident"
+			        }
+			      ]
+			    },
+			    "all_measure_has_most_accidentprone_trafficway": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.most_accidentprone_trafficway": {
+			          "Target": {
+			            "Entity": "all_measure.most_accidentprone_trafficway"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.most_accidentprone_trafficway"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_most_accidentprone_trafficway"
+			        }
+			      ]
+			    },
 			    "public_fct_traffic_accident_has_all_measure_human_error_ratio": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
@@ -6194,7 +7904,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_identified_blackspots": {
+			    "public_fct_traffic_accident_has_all_measure_priority_trafficways": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -6205,9 +7915,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "all_measure.identified_blackspots": {
+			        "all_measure.priority_trafficways": {
 			          "Target": {
-			            "Entity": "all_measure.identified_blackspots"
+			            "Entity": "all_measure.priority_trafficways"
 			          }
 			        }
 			      },
@@ -6218,29 +7928,29 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "all_measure.identified_blackspots"
+			              "Role": "all_measure.priority_trafficways"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_identified_blackspots"
+			          "ID": "public_fct_traffic_accidents_have_priority_trafficways"
 			        }
 			      ]
 			    },
-			    "public_dim_crash_type_has_all_measure_identified_blackspots": {
+			    "public_dim_traffic_device_has_all_measure_priority_trafficways": {
 			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_type"
+			        "ConceptualEntity": "public dim_traffic_device"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "public_dim_crash_type": {
+			        "public_dim_traffic_device": {
 			          "Target": {
-			            "Entity": "public_dim_crash_type"
+			            "Entity": "public_dim_traffic_device"
 			          }
 			        },
-			        "all_measure.identified_blackspots": {
+			        "all_measure.priority_trafficways": {
 			          "Target": {
-			            "Entity": "all_measure.identified_blackspots"
+			            "Entity": "all_measure.priority_trafficways"
 			          }
 			        }
 			      },
@@ -6248,15 +7958,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "public_dim_crash_type"
+			              "Role": "public_dim_traffic_device"
 			            },
 			            "Object": {
-			              "Role": "all_measure.identified_blackspots"
+			              "Role": "all_measure.priority_trafficways"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_dim_crash_types_have_identified_blackspots"
+			          "ID": "public_dim_traffic_devices_have_priority_trafficways"
 			        }
 			      ]
 			    },
@@ -6458,40 +8168,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_peak_risk_window": {
-			      "Binding": {
-			        "ConceptualEntity": "public fct_traffic_accidents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          }
-			        },
-			        "all_measure.peak_risk_window": {
-			          "Target": {
-			            "Entity": "all_measure.peak_risk_window"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "all_measure.peak_risk_window"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_peak_risk_window"
-			        }
-			      ]
-			    },
-			    "public_dim_natural_condition_has_all_measure_peak_risk_window": {
+			    "public_dim_natural_condition_has_is_favorable_condition": {
 			      "Binding": {
 			        "ConceptualEntity": "public dim_natural_condition"
 			      },
@@ -6502,9 +8179,9 @@ cultureInfo en-US
 			            "Entity": "public_dim_natural_condition"
 			          }
 			        },
-			        "all_measure.peak_risk_window": {
+			        "public_dim_natural_condition.is_favorable_condition": {
 			          "Target": {
-			            "Entity": "all_measure.peak_risk_window"
+			            "Entity": "public_dim_natural_condition.is_favorable_condition"
 			          }
 			        }
 			      },
@@ -6515,12 +8192,12 @@ cultureInfo en-US
 			              "Role": "public_dim_natural_condition"
 			            },
 			            "Object": {
-			              "Role": "all_measure.peak_risk_window"
+			              "Role": "public_dim_natural_condition.is_favorable_condition"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_dim_natural_conditions_have_peak_risk_window"
+			          "ID": "public_dim_natural_conditions_have_is_favorable_conditions"
 			        }
 			      ]
 			    },
@@ -8003,6 +9680,39 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_public_fct_traffic_accidents_are_severe_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.month": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_months"
 			        }
 			      ]
 			    },

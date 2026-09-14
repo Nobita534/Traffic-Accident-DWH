@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
-  "name": "c398d9bfdc01b7dc8be3",
+  "name": "b8797e428502ebe0cb4e",
   "position": {
-    "x": 93.333333333333343,
-    "y": 88.333333333333343,
-    "z": 1000,
-    "height": 93.333333333333343,
-    "width": 306.66666666666669,
-    "tabOrder": 8000
+    "x": 0,
+    "y": 65.217391304347828,
+    "z": 2,
+    "height": 89.1304347826087,
+    "width": 320,
+    "tabOrder": 2
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Values": {
+        "Data": {
           "projections": [
             {
               "field": {
@@ -23,11 +23,26 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Peak Severe Condition"
+                  "Property": "Severe Rate"
                 }
               },
-              "queryRef": "All Measure.Peak Severe Condition",
-              "nativeQueryRef": "Peak Severe Condition"
+              "queryRef": "All Measure.Severe Rate",
+              "nativeQueryRef": "Severe Rate"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Accident Volume Bucket"
+                }
+              },
+              "queryRef": "All Measure.Accident Volume Bucket",
+              "nativeQueryRef": "Volume Bucket",
+              "displayName": "Volume Bucket"
             }
           ]
         }
@@ -42,7 +57,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Peak Severe Condition"
+                "Property": "Severe Rate"
               }
             },
             "direction": "Descending"
@@ -52,82 +67,102 @@
       }
     },
     "objects": {
-      "categoryLabels": [
+      "layout": [
         {
           "properties": {
-            "fontFamily": {
+            "maxTiles": {
               "expr": {
                 "Literal": {
-                  "Value": "'''Segoe UI Bold'', wf_segoe-ui_bold, helvetica, arial, sans-serif'"
+                  "Value": "2L"
                 }
               }
             },
-            "fontSize": {
+            "cellPadding": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "4L"
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#94A3B8'"
-                    }
-                  }
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'top'"
                 }
               }
             }
           }
         }
       ],
-      "labels": [
+      "value": [
         {
           "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'''Segoe UI Semibold'', wf_segoe-ui_semibold, helvetica, arial, sans-serif'"
-                }
-              }
-            },
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#E2E8F0'"
-                    }
-                  }
-                }
-              }
-            },
-            "preserveWhitespace": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "20D"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
+          }
+        },
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measure.Accident Volume Bucket"
           }
         }
       ],
-      "wordWrap": [
+      "label": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "outline": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "fillCustom": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -155,7 +190,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "fdd7c2b035eadba3205b",
+        "name": "76d10c40980034e69429",
         "field": {
           "Measure": {
             "Expression": {
@@ -163,7 +198,21 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Peak Severe Condition"
+            "Property": "Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bb370d904b0880185dbe",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Accident Volume Bucket"
           }
         },
         "type": "Advanced"

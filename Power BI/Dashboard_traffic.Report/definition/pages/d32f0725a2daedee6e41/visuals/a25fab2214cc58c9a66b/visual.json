@@ -307,5 +307,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "5ee474ec6e0409a58a95",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_natural_condition"
+              }
+            },
+            "Property": "roadway_surface_cond"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "6bab0cf16064cb001716",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public fct_traffic_accidents"
+              }
+            },
+            "Property": "Severity Category"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "5965f9387ed75ca0e241",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
