@@ -366,6 +366,99 @@ table 'All Measure'
 		formatString: 0%;-0%;0%
 		lineageTag: fe7546e7-aa72-4a01-8b39-ea8e043373ab
 
+	measure 'Heatmap Volume Severity Color' =
+			VAR _CurrentBucket = [Accident Volume Bucket]
+			VAR _CurrentRate = [Severe Rate]
+			VAR _P25 = [Accident Volume P25]
+			VAR _P75 = [Accident Volume P75]
+			VAR _IsConditionLevel =
+			    HASONEVALUE('public dim_natural_condition'[weather_condition])
+			        && HASONEVALUE('public dim_natural_condition'[lighting_condition])
+			VAR _BaseTable =
+			    CALCULATETABLE(
+			        SUMMARIZE(
+			            'public dim_natural_condition',
+			            'public dim_natural_condition'[weather_condition],
+			            'public dim_natural_condition'[lighting_condition],
+			            "@Accidents", CALCULATE([Total Accident]),
+			            "@SevereRate", CALCULATE([Severe Rate])
+			        ),
+			        REMOVEFILTERS('public dim_natural_condition'[weather_condition]),
+			        REMOVEFILTERS('public dim_natural_condition'[lighting_condition])
+			    )
+			VAR _ValidTable =
+			    FILTER(
+			        _BaseTable,
+			        NOT ISBLANK([@Accidents])
+			            && [@Accidents] > 0
+			            && NOT ISBLANK([@SevereRate])
+			    )
+			VAR _BucketedTable =
+			    ADDCOLUMNS(
+			        _ValidTable,
+			        "@Bucket",
+			            SWITCH(
+			                TRUE(),
+			                [@Accidents] <= _P25, "Low Volume",
+			                [@Accidents] < _P75, "Medium Volume",
+			                "High Volume"
+			            )
+			    )
+			VAR _SameBucketTable =
+			    FILTER(
+			        _BucketedTable,
+			        [@Bucket] = _CurrentBucket
+			    )
+			VAR _MinRate = MINX(_SameBucketTable, [@SevereRate])
+			VAR _MaxRate = MAXX(_SameBucketTable, [@SevereRate])
+			VAR _Intensity =
+			    IF(
+			        _MaxRate = _MinRate,
+			        0.5,
+			        DIVIDE(_CurrentRate - _MinRate, _MaxRate - _MinRate, 0.5)
+			    )
+			RETURN
+			    IF(
+			        NOT _IsConditionLevel
+			            || ISBLANK(_CurrentBucket)
+			            || ISBLANK(_CurrentRate)
+			            || ISBLANK(_P25)
+			            || ISBLANK(_P75),
+			        BLANK(),
+			        SWITCH(
+			            _CurrentBucket,
+			            "Low Volume",
+			                SWITCH(
+			                    TRUE(),
+			                    _Intensity <= 0.20, "#1E293B",
+			                    _Intensity <= 0.40, "#334155",
+			                    _Intensity <= 0.60, "#475569",
+			                    _Intensity <= 0.80, "#64748B",
+			                    "#94A3B8"
+			                ),
+			            "Medium Volume",
+			                SWITCH(
+			                    TRUE(),
+			                    _Intensity <= 0.20, "#78350F",
+			                    _Intensity <= 0.40, "#92400E",
+			                    _Intensity <= 0.60, "#B45309",
+			                    _Intensity <= 0.80, "#D97706",
+			                    "#F59E0B"
+			                ),
+			            "High Volume",
+			                SWITCH(
+			                    TRUE(),
+			                    _Intensity <= 0.20, "#7F1D1D",
+			                    _Intensity <= 0.40, "#991B1B",
+			                    _Intensity <= 0.60, "#B91C1C",
+			                    _Intensity <= 0.80, "#DC2626",
+			                    "#EF4444"
+			                ),
+			            "#1E293B"
+			        )
+			    )
+		lineageTag: 28c37d01-68f0-4ada-b54e-44fa459a8d9a
+
 	measure 'Avg Units per Accident' =
 			DIVIDE(
 			    SUM('public fct_traffic_accidents'[num_units]),
