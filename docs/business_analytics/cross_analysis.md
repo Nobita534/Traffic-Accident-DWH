@@ -2,7 +2,7 @@
 
 ## 1. Overview
 
-Cross Analysis is a report used to examine the relationship between two or more variables at the same time. It helps stakeholders identify high-risk combinations and provides evidence for the next step of the analysis. This report also serves as a bridge to the Root Cause Analysis.
+Cross Analysis is a report used to examine the relationship between two or more variables at the same time. It helps stakeholders identify important combinations and provides evidence for the next step of the analysis. This report also serves as a bridge to the Root Cause Analysis.
 
 ---
 
@@ -25,6 +25,11 @@ Cross Analysis is a report used to examine the relationship between two or more 
 
 - Total Accident
 - Severe Rate
+- Severe Total
+- Accident Volume P25
+- Accident Volume P75
+- Accident Volume Bucket
+- Avg Units per Accident
 - Total EPDO Score
 - Human Error Rate
 - Priority Trafficways
@@ -80,11 +85,11 @@ Identify the impact of bad weather on traffic accidents in low-light road condit
 
 ### Business Question
 
-Which combination of environmental factors creates the highest accident risk?
+Which sufficiently supported combination of weather and lighting conditions has the highest severe accident rate among recorded crashes?
 
 ### Objective
 
-Identify the highest-risk environmental combinations to support road safety planning.
+Identify environmental combinations with elevated accident severity while preventing low-volume groups from dominating the ranking.
 
 ### Cross Dimensions
 
@@ -96,12 +101,32 @@ Identify the highest-risk environmental combinations to support road safety plan
 ### Supporting Dashboard and KPIs
 
 - Severe Crash Rate Interaction Matrix (Heatmap)
-- Peak Risk Window (KPI)
+- Peak Severe Condition (KPI)
+- Total Accident
+- Severe Total
+- Accident Volume Bucket
+- Avg Units per Accident
 
-### Observation
+### Analytical Method
 
-- The heatmap shows that the highest severe accident rate was found in the combination of **SEVERE CROSS WIND** and **DARKNESS, LIGHTED ROAD**, with a severe rate of about **17%** during **2013–2025**.
-- In **2013**, no environmental combination showed a high severe accident rate. By **mid-January 2025**, the combination of **BLOWING SNOW** and **DAYLIGHT** recorded a severe rate of **100%**.
+1. Calculate `Total Accident` and `Severe Rate` for each `weather_condition × lighting_condition` combination.
+2. Calculate the 25th and 75th percentiles of accident volume across the visible environmental combinations.
+3. Classify each combination as:
+   - **Low Volume:** `Total Accident <= P25`
+   - **Medium Volume:** `P25 < Total Accident < P75`
+   - **High Volume:** `Total Accident >= P75`
+4. Retain all combinations in the matrix, but exclude **Low Volume** combinations from the priority ranking.
+5. Among Medium- and High-Volume combinations, rank by `Severe Rate`; if two groups have the same Severe Rate, prioritize the group with the higher `Total Accident`.
+
+### Interpretation
+
+`Severe Rate` measures the proportion of recorded crashes that are severe within each environmental combination. It does **not** measure the probability that a crash will occur because the dataset does not contain a traffic-exposure denominator such as traffic volume, trips, or vehicle-miles traveled.
+
+The heatmap therefore shows observed severity among recorded crashes. Low-volume groups remain visible for transparency but are not highlighted as supported priority conditions.
+
+### Validation Requirement
+
+After refresh, verify the actual P25/P75 values, the number of groups assigned to each volume bucket, and the resulting `Peak Severe Condition`. Historical observations such as a 100% Severe Rate in a very small group must not be treated as a supported priority conclusion unless the group is above the P25 volume threshold.
 
 ---
 
@@ -171,7 +196,7 @@ Identify the locations or traffic scenarios that should receive priority for saf
 
 # 4. Key Findings
 
-- Bad environmental conditions are not the only factor that increases accident severity. The risk becomes much higher when several environmental factors happen together, especially bad weather and low-light conditions.
+- Environmental combinations should be interpreted using both **Severe Rate** and recorded-crash volume; a high rate from a very small group is not sufficient evidence for prioritization.
 
 - Most traffic accidents still happened under favorable weather conditions, and human error was the largest contributing factor in the dataset.
 
