@@ -51,66 +51,6 @@
             }
           ]
         },
-        "Tooltips": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Total Accident"
-                }
-              },
-              "queryRef": "All Measure.Total Accident",
-              "nativeQueryRef": "Total Accident"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Severe Total"
-                }
-              },
-              "queryRef": "All Measure.Severe Total",
-              "nativeQueryRef": "Severe Total"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Accident Volume Bucket"
-                }
-              },
-              "queryRef": "All Measure.Accident Volume Bucket",
-              "nativeQueryRef": "Accident Volume Bucket"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Avg Units per Accident"
-                }
-              },
-              "queryRef": "All Measure.Avg Units per Accident",
-              "nativeQueryRef": "Avg Units per Accident"
-            }
-          ]
-        },
         "Values": {
           "projections": [
             {
@@ -620,62 +560,6 @@
               }
             },
             "Property": "Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "dd6d8c52a18060b90280",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "90217acb9de73a003b04",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "bd161df3d0e59e76a6ec",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Accident Volume Bucket"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "c150472dc6794d324757",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Avg Units per Accident"
           }
         },
         "type": "Advanced"
