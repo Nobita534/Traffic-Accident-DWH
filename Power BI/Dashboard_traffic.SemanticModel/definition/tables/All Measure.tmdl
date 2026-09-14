@@ -210,22 +210,31 @@ table 'All Measure'
 
 	measure 'Peak Severe Condition' =
 			
-			VAR _P25 = [Accident Volume P25]
+			VAR _P75 = [Accident Volume P75]
 			VAR _ConditionTable =
-			    FILTER(
+			    CALCULATETABLE(
 			        SUMMARIZE(
-			            ALLSELECTED('public dim_natural_condition'),
+			            'public dim_natural_condition',
 			            'public dim_natural_condition'[weather_condition],
 			            'public dim_natural_condition'[lighting_condition],
 			            "@Accidents", CALCULATE([Total Accident]),
 			            "@SevereRate", CALCULATE([Severe Rate])
 			        ),
-			        [@Accidents] > 0
+			        REMOVEFILTERS('public dim_natural_condition'[weather_condition]),
+			        REMOVEFILTERS('public dim_natural_condition'[lighting_condition])
+			    )
+			VAR _ValidConditions =
+			    FILTER(
+			        _ConditionTable,
+			        NOT ISBLANK([@Accidents])
+			            && [@Accidents] > 0
+			            && NOT ISBLANK([@SevereRate])
 			    )
 			VAR _EligibleConditions =
 			    FILTER(
-			        _ConditionTable,
-			        [@Accidents] > _P25
+			        _ValidConditions,
+			        NOT ISBLANK(_P75)
+			            && [@Accidents] >= _P75
 			    )
 			VAR _TopCondition =
 			    TOPN(
@@ -245,7 +254,7 @@ table 'All Measure'
 			        ", "
 			    )
 			RETURN
-			    IF(ISBLANK(_Result), "No Data", _Result)
+			    IF(ISBLANK(_Result) || _Result = "", "No Data", _Result)
 		lineageTag: 7395fc6a-b864-4b32-8990-7a8a230d5c9e
 
 	measure 'Accident Volume P25' =
@@ -409,4 +418,3 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
-
