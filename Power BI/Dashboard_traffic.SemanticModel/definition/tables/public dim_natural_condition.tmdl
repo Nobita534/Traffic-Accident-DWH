@@ -34,6 +34,14 @@ table 'public dim_natural_condition'
 
 		annotation SummarizationSetBy = Automatic
 
+	column is_favorable_condition
+		dataType: boolean
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		summarizeBy: none
+		sourceColumn: is_favorable_condition
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'public dim_natural_condition' = m
 		mode: import
 		source =

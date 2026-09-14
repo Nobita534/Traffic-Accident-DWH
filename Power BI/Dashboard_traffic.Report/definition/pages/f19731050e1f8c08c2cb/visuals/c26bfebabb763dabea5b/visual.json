@@ -328,15 +328,15 @@
         }
       },
       {
-        "name": "1c72938c7a5b9bc58b22",
+        "name": "bq3_severe_only",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "public dim_natural_condition"
+                "Entity": "public fct_traffic_accidents"
               }
             },
-            "Property": "weather_condition"
+            "Property": "is_severe"
           }
         },
         "type": "Categorical",
@@ -344,8 +344,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "p",
-              "Entity": "public dim_natural_condition",
+              "Name": "f",
+              "Entity": "public fct_traffic_accidents",
               "Type": 0
             }
           ],
@@ -358,10 +358,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "p"
+                            "Source": "f"
                           }
                         },
-                        "Property": "weather_condition"
+                        "Property": "is_severe"
                       }
                     }
                   ],
@@ -369,7 +369,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'CLEAR'"
+                          "Value": "true"
                         }
                       }
                     ]
@@ -382,7 +382,7 @@
         "howCreated": "User"
       },
       {
-        "name": "c69eecf3f4491ad3e49e",
+        "name": "bq3_favorable_only",
         "field": {
           "Column": {
             "Expression": {
@@ -390,7 +390,7 @@
                 "Entity": "public dim_natural_condition"
               }
             },
-            "Property": "lighting_condition"
+            "Property": "is_favorable_condition"
           }
         },
         "type": "Categorical",
@@ -398,7 +398,7 @@
           "Version": 2,
           "From": [
             {
-              "Name": "p",
+              "Name": "n",
               "Entity": "public dim_natural_condition",
               "Type": 0
             }
@@ -412,10 +412,10 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "p"
+                            "Source": "n"
                           }
                         },
-                        "Property": "lighting_condition"
+                        "Property": "is_favorable_condition"
                       }
                     }
                   ],
@@ -423,7 +423,61 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'DAYLIGHT'"
+                          "Value": "true"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "bq3_human_factors_only",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_cause"
+              }
+            },
+            "Property": "cause_group"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "c",
+              "Entity": "public dim_cause",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "c"
+                          }
+                        },
+                        "Property": "cause_group"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Human Factors'"
                         }
                       }
                     ]
