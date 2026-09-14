@@ -23,11 +23,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Peak Risk Window"
+                  "Property": "Peak Severe Condition"
                 }
               },
-              "queryRef": "public fct_traffic_accidents.Peak Risk Window",
-              "nativeQueryRef": "Peak Risk Window"
+              "queryRef": "All Measure.Peak Severe Condition",
+              "nativeQueryRef": "Peak Severe Condition"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Peak Risk Window"
+                "Property": "Peak Severe Condition"
               }
             },
             "direction": "Descending"

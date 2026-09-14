@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
   "name": "d32f0725a2daedee6e41",
-  "displayName": "Environmental Risk Analysis",
+  "displayName": "Environmental Severity Analysis",
   "displayOption": "FitToPage",
   "height": 900,
   "width": 1400,

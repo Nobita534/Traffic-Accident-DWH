@@ -40,25 +40,31 @@ Although accidents occurring under adverse weather conditions represent only a r
 
 ### Business Question
 
-Which combination of environmental factors creates the highest level of risk?
+Which sufficiently supported combination of weather and lighting conditions has the highest severe accident rate among recorded crashes?
 
 ### Observation
 
-- The heatmap shows that the combination of **SEVERE CROSSWIND** and **DARKNESS, LIGHTED ROAD** recorded the highest severe accident rate (**~17%**) during **2013–2025**.
-- By mid-**January 2025**, the combination of **BLOWING SNOW** and **DAYLIGHT** recorded a **Severe Rate of 100%**.
+- Environmental combinations are evaluated using both **Severe Rate** and recorded-crash volume.
+- Each `weather_condition × lighting_condition` group is classified as **Low**, **Medium**, or **High Volume** using the P25 and P75 percentiles of `Total Accident`.
+- **Low Volume** groups remain visible in the heatmap but are excluded from the priority ranking to prevent very small denominators from dominating the result.
+- The **Peak Severe Condition** KPI ranks only Medium- and High-Volume groups by Severe Rate, using Total Accident as a tie-breaker.
 
-### Identified Root Cause
+### Interpretation
 
-Environmental factors typically do not affect driving conditions independently. Instead, they can simultaneously influence visibility, vehicle control, and driver reaction time.
+The analysis identifies combinations with a high observed proportion of severe crashes among recorded accidents. It does not estimate crash-occurrence probability because the dataset does not contain a traffic-exposure denominator such as traffic volume, trips, or vehicle-miles traveled.
 
-Under strong crosswind conditions combined with limited visibility, drivers may have greater difficulty maintaining vehicle stability and detecting potential hazards on the road. When multiple adverse factors occur simultaneously, the driver's ability to respond effectively is significantly reduced, increasing the severity of potential accidents.
-
-For the **BLOWING SNOW** and **DAYLIGHT** combination, although the dataset recorded a very high **Severe Rate** in **2025**, this result should be evaluated together with the actual number of accidents before drawing a general conclusion.
+A group with a very high Severe Rate but only a few recorded crashes should therefore be treated as a low-support observation rather than a priority condition.
 
 ### Supporting Evidence
 
-- **Severe Crash Rate Interaction Matrix (Heatmap)** shows that the combination of **SEVERE CROSSWIND + DARKNESS, LIGHTED ROAD** recorded the highest **Severe Rate (~17%)**.
-- **Peak Risk Window (KPI)** identifies environmental condition combinations with notably high risk levels.
+- **Severe Crash Rate Interaction Matrix (Heatmap)** displays Severe Rate for all recorded environmental combinations.
+- Heatmap highlighting is driven by **Supported Severe Rate**, so Low Volume groups are not emphasized as supported priority conditions.
+- Tooltip context includes **Total Accident**, **Severe Total**, **Accident Volume Bucket**, and **Avg Units per Accident**.
+- **Peak Severe Condition (KPI)** selects the highest Severe Rate only among combinations with `Total Accident > P25`.
+
+### Validation Requirement
+
+The actual P25/P75 values and resulting Peak Severe Condition must be validated after the Power BI model is refreshed. Historical 100% rates from very small groups should not be used as supported conclusions unless the group passes the volume-support threshold.
 
 ---
 

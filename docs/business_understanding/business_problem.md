@@ -11,7 +11,7 @@ Transportation authorities collect a large amount of traffic accident data every
 Stakeholders currently face several challenges:
 
 - It is difficult to measure how environmental conditions affect accident severity.
-- It is difficult to identify the combination of factors that creates the highest accident risk.
+- It is difficult to identify environmental combinations with both sufficient recorded-crash volume and elevated severe accident rates.
 - It is difficult to understand whether driver behavior remains a major cause of severe accidents under normal environmental conditions.
 - It is difficult to identify which locations should receive higher priority for road safety investment.
 - Existing reporting methods require a large amount of manual work and do not provide consistent KPIs.
@@ -30,7 +30,7 @@ Because of this, business decisions are often slower and less consistent, making
 
 Without a proper analytics platform:
 
-- High-risk areas may not receive enough attention.
+- High-severity accident patterns may not receive enough attention.
 - Resources may not be allocated effectively.
 - Road safety performance is difficult to monitor consistently.
 - Decision-making depends more on manual reports than analytical insights.
@@ -40,3 +40,5 @@ Without a proper analytics platform:
 ## 5. Why Analytics is Needed
 
 A centralized analytics platform is needed to transform accident data into meaningful KPIs, dashboards, and business insights. This helps stakeholders answer important business questions and make better decisions based on reliable data.
+
+> **Analytical limitation:** The current dataset does not include a traffic-exposure denominator such as traffic volume, trips, or vehicle-miles traveled. Environmental analysis therefore evaluates severity patterns among recorded crashes rather than absolute crash-occurrence risk.

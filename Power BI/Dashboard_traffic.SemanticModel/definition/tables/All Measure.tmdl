@@ -18,30 +18,45 @@ table 'All Measure'
 		formatString: 0
 		lineageTag: fdfe5d02-03ae-4b97-a37e-a73de04bd494
 
-	measure 'Peak Risk Window' = ```
+	measure 'Peak Severe Condition' = ```
 			
-			VAR _SummaryTable = 
-			    SUMMARIZE(
-			        'public dim_natural_condition',
-			        'public dim_natural_condition'[weather_condition],
-			        'public dim_natural_condition'[lighting_condition],
-			        "SevereRate", DIVIDE(
-			            CALCULATE(COUNTROWS('public fct_traffic_accidents'), 'public fct_traffic_accidents'[is_severe] = TRUE),
-			            COUNTROWS('public fct_traffic_accidents')
-			        )
+			VAR _P25 = [Accident Volume P25]
+			VAR _ConditionTable =
+			    FILTER(
+			        SUMMARIZE(
+			            ALLSELECTED('public dim_natural_condition'),
+			            'public dim_natural_condition'[weather_condition],
+			            'public dim_natural_condition'[lighting_condition],
+			            "@Accidents", CALCULATE([Total Accident]),
+			            "@SevereRate", CALCULATE([Severe Rate])
+			        ),
+			        [@Accidents] > 0
 			    )
-			VAR _MaxRate = MAXX(_SummaryTable, [SevereRate])
-			VAR _TopPair = FILTER(_SummaryTable, [SevereRate] = _MaxRate)
-			VAR _Result = 
+			VAR _EligibleConditions =
+			    FILTER(
+			        _ConditionTable,
+			        [@Accidents] > _P25
+			    )
+			VAR _TopCondition =
+			    TOPN(
+			        1,
+			        _EligibleConditions,
+			        [@SevereRate], DESC,
+			        [@Accidents], DESC,
+			        'public dim_natural_condition'[weather_condition], ASC,
+			        'public dim_natural_condition'[lighting_condition], ASC
+			    )
+			VAR _Result =
 			    CONCATENATEX(
-			        _TopPair, 
-			        'public dim_natural_condition'[lighting_condition] & " / " & 'public dim_natural_condition'[weather_condition], 
+			        _TopCondition,
+			        'public dim_natural_condition'[weather_condition]
+			            & " / "
+			            & 'public dim_natural_condition'[lighting_condition],
 			        ", "
 			    )
 			RETURN
 			    IF(ISBLANK(_Result), "No Data", _Result)
 			```
-		lineageTag: 6827aa72-6696-43fd-a51d-905f1fa59d17
 
 	measure 'Severe Rate' = DIVIDE(COUNTROWS(FILTER('public fct_traffic_accidents', 'public fct_traffic_accidents'[is_severe] = TRUE)), 'All Measure'[Total Accident])
 		formatString: 0%;-0%;0%
@@ -55,6 +70,90 @@ table 'All Measure'
 	measure 'Total Accident' = COUNT('public fct_traffic_accidents'[fact_id])
 		formatString: 0
 		lineageTag: 15bca1cb-f544-48ce-a160-b8792d338cfa
+
+	measure 'Accident Volume P25' = ```
+			VAR _ConditionTable =
+			    FILTER(
+			        SUMMARIZE(
+			            ALLSELECTED('public dim_natural_condition'),
+			            'public dim_natural_condition'[weather_condition],
+			            'public dim_natural_condition'[lighting_condition],
+			            "@Accidents", CALCULATE([Total Accident])
+			        ),
+			        [@Accidents] > 0
+			    )
+			RETURN
+			    PERCENTILEX.INC(
+			        _ConditionTable,
+			        [@Accidents],
+			        0.25
+			    )
+			```
+		formatString: 0
+
+	measure 'Accident Volume P75' = ```
+			VAR _ConditionTable =
+			    FILTER(
+			        SUMMARIZE(
+			            ALLSELECTED('public dim_natural_condition'),
+			            'public dim_natural_condition'[weather_condition],
+			            'public dim_natural_condition'[lighting_condition],
+			            "@Accidents", CALCULATE([Total Accident])
+			        ),
+			        [@Accidents] > 0
+			    )
+			RETURN
+			    PERCENTILEX.INC(
+			        _ConditionTable,
+			        [@Accidents],
+			        0.75
+			    )
+			```
+		formatString: 0
+
+	measure 'Accident Volume Bucket' = ```
+			VAR _Accidents = [Total Accident]
+			VAR _P25 = [Accident Volume P25]
+			VAR _P75 = [Accident Volume P75]
+			VAR _IsConditionLevel =
+			    HASONEVALUE('public dim_natural_condition'[weather_condition])
+			        && HASONEVALUE('public dim_natural_condition'[lighting_condition])
+			RETURN
+			    IF(
+			        NOT _IsConditionLevel,
+			        BLANK(),
+			        SWITCH(
+			            TRUE(),
+			            _Accidents <= _P25, "Low Volume",
+			            _Accidents < _P75, "Medium Volume",
+			            "High Volume"
+			        )
+			    )
+			```
+
+	measure 'Eligible Severe Condition' =
+			IF(
+			    [Accident Volume Bucket] IN { "Medium Volume", "High Volume" },
+			    1,
+			    0
+			)
+		formatString: 0
+
+	measure 'Supported Severe Rate' =
+			IF(
+			    [Eligible Severe Condition] = 1,
+			    [Severe Rate],
+			    BLANK()
+			)
+		formatString: 0%;-0%;0%
+
+	measure 'Avg Units per Accident' =
+			DIVIDE(
+			    SUM('public fct_traffic_accidents'[num_units]),
+			    [Total Accident],
+			    0
+			)
+		formatString: 0.00
 
 	measure 'Severe Environmental Impact' =
 			
