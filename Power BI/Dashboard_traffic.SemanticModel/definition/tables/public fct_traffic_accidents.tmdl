@@ -152,12 +152,12 @@ table 'public fct_traffic_accidents'
 
 		annotation SummarizationSetBy = Automatic
 
-	column epdo_priority_score
+	column crash_severity_weight
 		dataType: int64
 		formatString: 0
 		lineageTag: c3c9112a-8dc7-4018-ba86-5ca7e4623f63
 		summarizeBy: sum
-		sourceColumn: epdo_priority_score
+		sourceColumn: crash_severity_weight
 
 		annotation SummarizationSetBy = Automatic
 
