@@ -33,7 +33,7 @@ table 'public dim_casualty_analysis'
 		source =
 				let
 				    Source = #"public fct_traffic_accidents",
-				    #"Removed Columns" = Table.RemoveColumns(Source,{"natural_id", "crash_id", "cause_id", "device_id", "datekey", "crash_hour", "damage", "num_units", "most_severe_injury", "is_severe", "epdo_priority_score", "injuries_total"}),
+				    #"Removed Columns" = Table.RemoveColumns(Source,{"natural_id", "crash_id", "cause_id", "device_id", "datekey", "crash_hour", "damage", "num_units", "most_severe_injury", "is_severe", "crash_severity_weight", "injuries_total"}),
 				    #"Added Custom" = Table.AddColumn(#"Removed Columns", "Injured", each [injuries_fatal] + [injuries_incapacitating] + [injuries_non_incapacitating]),
 				    #"Removed Columns1" = Table.RemoveColumns(#"Added Custom",{"injuries_fatal", "injuries_incapacitating", "injuries_non_incapacitating"}),
 				    #"Reordered Columns" = Table.ReorderColumns(#"Removed Columns1",{"fact_id", "Injured", "injuries_no_indication", "injuries_reported_not_evident"}),
