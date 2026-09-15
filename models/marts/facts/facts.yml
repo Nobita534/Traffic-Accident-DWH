@@ -89,9 +89,9 @@ models:
         tests:
           - not_null
 
-      - name: epdo_priority_score
+      - name: crash_severity_weight
         description: >
-          Equivalent Property Damage Only (EPDO) priority score calculated
-          from injury severity.
+          Crash-level severity weight used to calculate the 12-3-1 Severity Index:
+          Fatal crash = 12, non-fatal injury crash = 3, PDO/no-injury crash = 1.
         tests:
           - not_null

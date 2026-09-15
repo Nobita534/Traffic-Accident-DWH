@@ -13,10 +13,11 @@ models:
           Boolean flag indicating whether the crash occurred at an intersection.
           Derived from the raw Y/N indicator.
 
-      - name: epdo_priority_score
+      - name: crash_severity_weight
         description: >
-          Equivalent Property Damage Only (EPDO) priority score derived from
-          injury severity using the 12–3–1 weighting rule.
+          Crash-level severity weight used for the 12-3-1 Severity Index.
+          Fatal crashes receive 12, non-fatal injury crashes receive 3,
+          and property-damage-only or no-injury crashes receive 1.
 
       - name: datekey
         description: >

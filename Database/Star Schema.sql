@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS "Fact_accident" (
 	"injuries_reported_not_evident" INTEGER,
 	"injuries_no_indication" INTEGER,
 	"is_severe" BOOLEAN,
-	"epdo_priority_score" INTEGER,
+	"crash_severity_weight" INTEGER,
 	PRIMARY KEY("fact_id")
 );
 
@@ -76,6 +76,7 @@ CREATE TABLE IF NOT EXISTS "Dim_Traffic_Device" (
 	"trafficway_type" VARCHAR,
 	PRIMARY KEY("device_id")
 );
+
 
 
 

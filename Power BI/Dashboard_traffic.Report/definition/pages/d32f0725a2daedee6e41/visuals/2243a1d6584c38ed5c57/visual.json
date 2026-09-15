@@ -23,11 +23,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Critical Priority Rate"
+                  "Property": "Fatal Crash Rate"
                 }
               },
-              "queryRef": "All Measure.Max EDPO Score",
-              "nativeQueryRef": "Critical Priority Rate"
+              "queryRef": "All Measure.Fatal Crash Rate",
+              "nativeQueryRef": "Fatal Crash Rate"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Critical Priority Rate"
+                "Property": "Fatal Crash Rate"
               }
             },
             "direction": "Descending"
