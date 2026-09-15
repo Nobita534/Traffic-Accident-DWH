@@ -61,11 +61,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Avg EPDO Score"
+                  "Property": "Severity Index"
                 }
               },
-              "queryRef": "All Measure.Avg EPDO Score",
-              "nativeQueryRef": "Avg EPDO Score"
+              "queryRef": "All Measure.Severity Index",
+              "nativeQueryRef": "Severity Index"
             }
           ]
         }
@@ -316,7 +316,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'Crash Severity Index (Avg EPDO)'"
+                  "Value": "'Crash Severity Index (12-3-1)'"
                 }
               }
             },
