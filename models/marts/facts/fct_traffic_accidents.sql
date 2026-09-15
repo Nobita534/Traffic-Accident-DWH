@@ -35,7 +35,7 @@ SELECT
     
     -- Khối chỉ số nghiệp vụ đã hạ tầng hóa sẵn
     i.is_severe,
-    i.epdo_priority_score
+    i.crash_severity_weight
 
 FROM int_data i
 LEFT JOIN dim_natural n 
