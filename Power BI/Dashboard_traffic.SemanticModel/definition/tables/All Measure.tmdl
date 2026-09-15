@@ -42,34 +42,21 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Critical Priority Rate' =
+	measure 'Fatal Crash Rate' =
 			
 			DIVIDE(
 			    CALCULATE(
 			        COUNTROWS('public fct_traffic_accidents'),
-			        'public fct_traffic_accidents'[epdo_priority_score] = 12
+			        'public fct_traffic_accidents'[crash_severity_weight] = 12
 			    ),
-			    COUNTROWS('public fct_traffic_accidents'),
+			    [Total Accident],
 			    0
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: db02dda8-2754-4682-9e17-43e802c5df28
 
-	measure 'Total EPDO Score' = ```
-			
-			SUMX(
-			    'public fct_traffic_accidents',
-			    ( 'public fct_traffic_accidents'[injuries_fatal] * 12 ) 
-			    + ( 'public fct_traffic_accidents'[injuries_incapacitating] * 3 ) 
-			    + ( 'public fct_traffic_accidents'[injuries_non_incapacitating] * 3 ) 
-			    + ( 'public fct_traffic_accidents'[injuries_reported_not_evident] * 3 ) 
-			    + IF(
-			        'public fct_traffic_accidents'[injuries_total] = 0, 
-			        1, 
-			        0
-			      )
-			)
-			```
+	measure 'Total Severity Weight' =
+			SUM('public fct_traffic_accidents'[crash_severity_weight])
 		formatString: 0
 		lineageTag: 6236f094-75d6-4724-af46-d164b8488b14
 
@@ -83,11 +70,10 @@ table 'All Measure'
 		formatString: 0
 		lineageTag: 3d6b560a-f55c-4234-bac9-74a08a030547
 
-	measure 'Avg EPDO Score' =
-			
+	measure 'Severity Index' =
 			DIVIDE(
-			    [Total EPDO Score],
-			    COUNTROWS('public fct_traffic_accidents'),
+			    [Total Severity Weight],
+			    [Total Accident],
 			    0
 			)
 		lineageTag: b2fc08af-bc9f-4cb9-8f64-9223627d193b
@@ -97,14 +83,14 @@ table 'All Measure'
 	measure 'Priority Trafficways' = ```
 			
 			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
-			VAR _ThresholdSeverity = 'All Measure'[Avg EPDO Score according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
+			VAR _ThresholdSeverity = 'All Measure'[Avg Severity Index according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
 			VAR _SummaryTable = 
 			    FILTER(
 			        SUMMARIZE(
 			            'public fct_traffic_accidents',
 			            'public dim_traffic_device'[trafficway_type]
 			        ),
-			        'All Measure'[Total Accident] > _ThresholdAccidents && [Avg EPDO Score] > _ThresholdSeverity
+			        'All Measure'[Total Accident] > _ThresholdAccidents && [Severity Index] > _ThresholdSeverity
 			    )
 			RETURN
 			    COUNTROWS(_SummaryTable)
@@ -150,11 +136,11 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Avg EPDO Score according Trafficway_type' =
+	measure 'Avg Severity Index according Trafficway_type' =
 			
 			AVERAGEX(
 			    VALUES('public dim_traffic_device'[trafficway_type]),
-			    [Avg EPDO Score]
+			    [Severity Index]
 			)
 		lineageTag: 04560f72-ffff-428b-8bd7-64787bb191eb
 
