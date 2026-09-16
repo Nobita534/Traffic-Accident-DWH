@@ -7,7 +7,7 @@
     "z": 8000,
     "height": 325,
     "width": 606.66666666666674,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -30,44 +30,6 @@
               "nativeQueryRef": "Weather",
               "active": true,
               "displayName": "Weather"
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Low-Light Severe Rate"
-                }
-              },
-              "queryRef": "All Measure.Low-Light Severe Rate",
-              "nativeQueryRef": "Low-Light Severe Rate",
-              "format": "0.00%;-0.00%;0.00%"
-            }
-          ]
-        },
-        "Y2": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Normal Condition Severe Rate"
-                }
-              },
-              "queryRef": "All Measure.Normal Condition Severe Rate",
-              "nativeQueryRef": "Normal Condition Severe Rate",
-              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         },
@@ -114,7 +76,30 @@
               },
               "queryRef": "All Measure.Total Injuries",
               "nativeQueryRef": "Total Injuries"
-            },
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Low-Light Severe Rate"
+                }
+              },
+              "queryRef": "All Measure.Low-Light Severe Rate",
+              "nativeQueryRef": "Low-Light Severe Rate",
+              "format": "0.00%;-0.00%;0.00%"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
             {
               "field": {
                 "Measure": {
@@ -175,18 +160,19 @@
               }
             }
           }
-        }
-      ],
-      "seriesLabels": [
+        },
         {
           "properties": {
-            "show": {
+            "showSeries": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             }
+          },
+          "selector": {
+            "metadata": "All Measure.Normal Condition Severe Rate"
           }
         }
       ],
@@ -237,13 +223,6 @@
                 }
               }
             },
-            "secShow": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -253,6 +232,25 @@
                       "Percent": 0
                     }
                   }
+                }
+              }
+            },
+            "titleColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "8D"
                 }
               }
             }
@@ -299,23 +297,18 @@
               }
             }
           }
-        },
+        }
+      ],
+      "seriesLabels": [
         {
           "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#94A3B8'"
-                    }
-                  }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
-          },
-          "selector": {
-            "metadata": "All Measure.Normal Condition Severe Rate"
           }
         }
       ]
@@ -364,7 +357,121 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "excludeUnknownWeather",
+        "name": "6cd3a2f30ac2e0c80716",
+        "ordinal": 0,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Low-Light Severe Rate"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "All Measure",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Measure": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "a"
+                            }
+                          },
+                          "Property": "Low-Light Severe Rate"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "1877b57dc9761b00ab43",
+        "ordinal": 1,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Normal Condition Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "08f0ec2d69541200bb3d",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8c38c185e924a889994a",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "3a1f66307b68933018d1",
+        "ordinal": 4,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Injuries"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "689a54f29480942b080a",
+        "ordinal": 5,
         "field": {
           "Column": {
             "Expression": {
@@ -380,7 +487,7 @@
           "Version": 2,
           "From": [
             {
-              "Name": "n",
+              "Name": "p",
               "Entity": "public dim_natural_condition",
               "Type": 0
             }
@@ -396,7 +503,7 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "n"
+                                "Source": "p"
                               }
                             },
                             "Property": "weather_condition"
@@ -407,7 +514,28 @@
                         [
                           {
                             "Literal": {
+                              "Value": "'CLEAR'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'CLOUDY/OVERCAST'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
                               "Value": "'UNKNOWN'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'OTHER'"
                             }
                           }
                         ]
@@ -418,36 +546,79 @@
               }
             }
           ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
         }
       },
       {
-        "name": "lowLightSevereRateFilter",
+        "name": "654f30f18e2c0e350b90",
+        "ordinal": 6,
         "field": {
-          "Measure": {
+          "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "All Measure"
+                "Entity": "public dim_natural_condition"
               }
             },
-            "Property": "Low-Light Severe Rate"
+            "Property": "lighting_condition"
           }
         },
-        "type": "Advanced"
-      },
-      {
-        "name": "normalConditionSevereRateFilter",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "public dim_natural_condition",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "p"
+                          }
+                        },
+                        "Property": "lighting_condition"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'DARKNESS'"
+                        }
+                      }
+                    ]
+                  ]
+                }
               }
-            },
-            "Property": "Normal Condition Severe Rate"
-          }
+            }
+          ]
         },
-        "type": "Advanced"
+        "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

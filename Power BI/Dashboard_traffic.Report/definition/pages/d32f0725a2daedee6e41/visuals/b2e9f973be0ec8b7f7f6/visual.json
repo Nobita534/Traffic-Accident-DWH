@@ -6,8 +6,7 @@
     "y": 8.3333333333333339,
     "z": 6000,
     "height": 55,
-    "width": 315,
-    "tabOrder": 1000
+    "width": 315
   },
   "visual": {
     "visualType": "slicer",
@@ -318,23 +317,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6cf0a5215734c3cc02c2",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_crash_date"
-              }
-            },
-            "Property": "year"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

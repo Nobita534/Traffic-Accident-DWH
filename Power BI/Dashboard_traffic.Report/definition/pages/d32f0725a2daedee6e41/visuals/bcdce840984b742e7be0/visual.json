@@ -3,11 +3,11 @@
   "name": "bcdce840984b742e7be0",
   "position": {
     "x": 423.33333333333337,
-    "y": 88.33333333333334,
+    "y": 88.333333333333343,
     "z": 4000,
-    "height": 93.33333333333334,
+    "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -149,23 +149,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "normalConditionSevereRateFilter",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Normal Condition Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

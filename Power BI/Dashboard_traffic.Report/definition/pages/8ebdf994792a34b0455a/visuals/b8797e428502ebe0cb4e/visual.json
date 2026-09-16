@@ -6,7 +6,8 @@
     "y": 65.217391304347828,
     "z": 2000,
     "height": 89.1304347826087,
-    "width": 320
+    "width": 320,
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -320,51 +321,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "44da7fb06504d4132405",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "92e1fd50dcec45e29e18",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Accident Volume Bucket"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "4bc60f8304bb1a80a3be",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Dominant Road Surface"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 93.333333333333343,
     "width": 310,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -164,5 +164,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "3f8cf5e58da0e5129411",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Priority Trafficways"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -149,5 +149,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "4d56442eba9d209ea7b1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Most Accident-Prone Trafficway"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

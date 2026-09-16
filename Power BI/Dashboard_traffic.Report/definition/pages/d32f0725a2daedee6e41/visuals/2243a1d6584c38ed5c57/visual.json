@@ -3,11 +3,11 @@
   "name": "2243a1d6584c38ed5c57",
   "position": {
     "x": 748.33333333333337,
-    "y": 88.33333333333334,
+    "y": 88.333333333333343,
     "z": 2000,
-    "height": 93.33333333333334,
+    "height": 93.333333333333343,
     "width": 310,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -164,23 +164,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "adverseLowLightSevereRateFilter",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Adverse Low-Light Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

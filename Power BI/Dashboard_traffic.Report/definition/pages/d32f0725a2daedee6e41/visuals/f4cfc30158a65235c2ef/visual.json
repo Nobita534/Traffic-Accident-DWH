@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 640.921586595104,
     "width": 657.51014530697739,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -630,34 +630,6 @@
             }
           ]
         }
-      },
-      {
-        "name": "81e26cbd564090c307cb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_natural_condition"
-              }
-            },
-            "Property": "lighting_condition"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "98a11ae1e82b9304bd20",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Rate"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

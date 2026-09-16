@@ -6,8 +6,7 @@
     "y": 154.34782608695653,
     "z": 3000,
     "height": 85.652173913043484,
-    "width": 320,
-    "tabOrder": 1000
+    "width": 320
   },
   "visual": {
     "visualType": "cardVisual",
@@ -185,51 +184,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "c711e9d14d086a40164b",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "e9fdfdc0cb1229569c10",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Total"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "064b11f2ac54e2c60374",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Avg Units per Accident"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

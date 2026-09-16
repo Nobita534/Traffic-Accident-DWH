@@ -75,7 +75,7 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Priority Trafficways' = ```
+	measure 'Priority Trafficways' =
 			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
 			VAR _ThresholdSeverity = 'All Measure'[Avg Severity Index according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
 			VAR _SummaryTable =
@@ -88,7 +88,6 @@ table 'All Measure'
 			    )
 			RETURN
 			    COUNTROWS(_SummaryTable)
-			```
 		formatString: 0
 		lineageTag: 7934271f-6311-4b6b-82aa-c57e21494923
 
@@ -134,56 +133,6 @@ table 'All Measure'
 		lineageTag: 04560f72-ffff-428b-8bd7-64787bb191eb
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
-	measure 'Normal Condition Severe Rate' =
-			CALCULATE(
-			    [Severe Rate],
-			    REMOVEFILTERS(
-			        'public dim_natural_condition'[weather_condition],
-			        'public dim_natural_condition'[lighting_condition]
-			    ),
-			    'public dim_natural_condition'[weather_condition]
-			        IN { "CLEAR", "CLOUDY/OVERCAST" },
-			    'public dim_natural_condition'[lighting_condition]
-			        IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 48029175-32fe-42e6-886a-2efc00c03b93
-
-	measure 'Adverse Low-Light Severe Rate' =
-			CALCULATE(
-			    [Severe Rate],
-			    REMOVEFILTERS(
-			        'public dim_natural_condition'[weather_condition],
-			        'public dim_natural_condition'[lighting_condition]
-			    ),
-			    'public dim_natural_condition'[weather_condition]
-			        IN {
-			            "RAIN",
-			            "SNOW",
-			            "BLOWING SNOW",
-			            "FREEZING RAIN/DRIZZLE",
-			            "FOG/SMOKE/HAZE",
-			            "SLEET/HAIL",
-			            "SEVERE CROSS WIND GATE",
-			            "BLOWING SAND, SOIL, DIRT"
-			        },
-			    'public dim_natural_condition'[lighting_condition] = "DARKNESS"
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 39c9900f-78b1-48ab-a355-c9851420aafd
-
-	measure 'Severe Rate Difference vs Normal pp' =
-			VAR _AdverseRate = [Adverse Low-Light Severe Rate]
-			VAR _NormalRate = [Normal Condition Severe Rate]
-			RETURN
-			    IF(
-			        NOT ISBLANK(_AdverseRate)
-			            && NOT ISBLANK(_NormalRate),
-			        _AdverseRate - _NormalRate
-			    )
-		formatString: +0.00%;-0.00%;0.00%
-		lineageTag: edfb3147-5afe-43cf-9e5c-22d7279169dd
 
 	measure 'Severe Rate Comparison' =
 			VAR _Condition =
@@ -486,6 +435,29 @@ table 'All Measure'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 0ae296c0-3185-4f63-8727-09f775cc6dc4
 
+	measure 'Adverse Low-Light Severe Rate' =
+			CALCULATE(
+			    [Severe Rate],
+			    REMOVEFILTERS(
+			        'public dim_natural_condition'[weather_condition],
+			        'public dim_natural_condition'[lighting_condition]
+			    ),
+			    'public dim_natural_condition'[weather_condition]
+			        IN {
+			            "RAIN",
+			            "SNOW",
+			            "BLOWING SNOW",
+			            "FREEZING RAIN/DRIZZLE",
+			            "FOG/SMOKE/HAZE",
+			            "SLEET/HAIL",
+			            "SEVERE CROSS WIND GATE",
+			            "BLOWING SAND, SOIL, DIRT"
+			        },
+			    'public dim_natural_condition'[lighting_condition] = "DARKNESS"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 39c9900f-78b1-48ab-a355-c9851420aafd
+
 	measure 'Total Injuries' = SUM('public fct_traffic_accidents'[injuries_total])
 		formatString: 0
 		lineageTag: 83f356f3-e9c8-490d-a702-e4dfac46a3d6
@@ -518,6 +490,29 @@ table 'All Measure'
 			    )
 		lineageTag: 1a4fd72c-5b2d-41e7-a8b3-b01d75d5099e
 
+	measure 'Normal Condition Severe Rate' =
+			CALCULATE(
+			    [Severe Rate],
+			    'public dim_natural_condition'[weather_condition]
+			        IN { "CLEAR", "CLOUDY/OVERCAST" },
+			    'public dim_natural_condition'[lighting_condition]
+			        IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 48029175-32fe-42e6-886a-2efc00c03b93
+
+	measure 'Severe Rate Difference vs Normal pp' =
+			VAR _AdverseRate = [Adverse Low-Light Severe Rate]
+			VAR _NormalRate = [Normal Condition Severe Rate]
+			RETURN
+			    IF(
+			        NOT ISBLANK(_AdverseRate)
+			            && NOT ISBLANK(_NormalRate),
+			        _AdverseRate - _NormalRate
+			    )
+		formatString: +0.00%;-0.00%;0.00%
+		lineageTag: edfb3147-5afe-43cf-9e5c-22d7279169dd
+
 	column Column
 		isHidden
 		formatString: 0
@@ -535,3 +530,4 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+
