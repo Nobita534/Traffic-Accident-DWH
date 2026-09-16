@@ -2,7 +2,6 @@ table 'All Measure'
 	lineageTag: 5cc51e54-a9c6-437f-88bc-b4a9c756579f
 
 	measure 'Adverse Surface Incident Rate' =
-			
 			DIVIDE(
 			    CALCULATE(
 			        COUNTROWS('public fct_traffic_accidents'),
@@ -32,7 +31,6 @@ table 'All Measure'
 		lineageTag: 15bca1cb-f544-48ce-a160-b8792d338cfa
 
 	measure 'Severe Environmental Impact' =
-			
 			CALCULATE(
 			    COUNTROWS('public fct_traffic_accidents'),
 			    'public fct_traffic_accidents'[is_severe] = TRUE,
@@ -43,7 +41,6 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Fatal Crash Rate' =
-			
 			DIVIDE(
 			    CALCULATE(
 			        COUNTROWS('public fct_traffic_accidents'),
@@ -60,7 +57,6 @@ table 'All Measure'
 		lineageTag: 6236f094-75d6-4724-af46-d164b8488b14
 
 	measure 'Clear-Weather Severe Accidents' =
-			
 			CALCULATE(
 			    'All Measure'[Total Accident],
 			    'public fct_traffic_accidents'[is_severe] = TRUE(),
@@ -80,10 +76,9 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Priority Trafficways' = ```
-			
 			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
 			VAR _ThresholdSeverity = 'All Measure'[Avg Severity Index according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
-			VAR _SummaryTable = 
+			VAR _SummaryTable =
 			    FILTER(
 			        SUMMARIZE(
 			            'public fct_traffic_accidents',
@@ -98,7 +93,6 @@ table 'All Measure'
 		lineageTag: 7934271f-6311-4b6b-82aa-c57e21494923
 
 	measure 'Human Error Ratio' =
-			
 			DIVIDE(
 			    CALCULATE(
 			        'All Measure'[Total Accident],
@@ -111,7 +105,6 @@ table 'All Measure'
 		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
 
 	measure 'Most Accident-Prone Trafficway' =
-			
 			VAR T =
 			    ADDCOLUMNS(
 			        VALUES('public dim_traffic_device'[trafficway_type]),
@@ -125,8 +118,6 @@ table 'All Measure'
 		lineageTag: 47680f71-9cd7-4db0-94ce-712233677614
 
 	measure 'Avg Accident' =
-			
-			// AVERAGEX(VALUES('public dim_traffic_device'[trafficway_type]), [Total Accident])
 			DIVIDE(
 			    [Total Accident],
 			    DISTINCTCOUNT('public dim_traffic_device'[trafficway_type])
@@ -136,7 +127,6 @@ table 'All Measure'
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Avg Severity Index according Trafficway_type' =
-			
 			AVERAGEX(
 			    VALUES('public dim_traffic_device'[trafficway_type]),
 			    [Severity Index]
@@ -145,56 +135,70 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Normal Condition Severe Rate' =
+			CALCULATE(
+			    [Severe Rate],
+			    REMOVEFILTERS(
+			        'public dim_natural_condition'[weather_condition],
+			        'public dim_natural_condition'[lighting_condition]
+			    ),
+			    'public dim_natural_condition'[weather_condition]
+			        IN { "CLEAR", "CLOUDY/OVERCAST" },
+			    'public dim_natural_condition'[lighting_condition]
+			        IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 48029175-32fe-42e6-886a-2efc00c03b93
+
+	measure 'Adverse Low-Light Severe Rate' =
+			CALCULATE(
+			    [Severe Rate],
+			    REMOVEFILTERS(
+			        'public dim_natural_condition'[weather_condition],
+			        'public dim_natural_condition'[lighting_condition]
+			    ),
+			    'public dim_natural_condition'[weather_condition]
+			        IN {
+			            "RAIN",
+			            "SNOW",
+			            "BLOWING SNOW",
+			            "FREEZING RAIN/DRIZZLE",
+			            "FOG/SMOKE/HAZE",
+			            "SLEET/HAIL",
+			            "SEVERE CROSS WIND GATE",
+			            "BLOWING SAND, SOIL, DIRT"
+			        },
+			    'public dim_natural_condition'[lighting_condition] = "DARKNESS"
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 39c9900f-78b1-48ab-a355-c9851420aafd
+
+	measure 'Severe Rate Difference vs Normal pp' =
+			VAR _AdverseRate = [Adverse Low-Light Severe Rate]
+			VAR _NormalRate = [Normal Condition Severe Rate]
+			RETURN
+			    IF(
+			        NOT ISBLANK(_AdverseRate)
+			            && NOT ISBLANK(_NormalRate),
+			        _AdverseRate - _NormalRate
+			    )
+		formatString: +0.00%;-0.00%;0.00%
+		lineageTag: edfb3147-5afe-43cf-9e5c-22d7279169dd
+
 	measure 'Severe Rate Comparison' =
-			
 			VAR _Condition =
 			    SELECTEDVALUE('Condition Comparison'[Condition])
-			
 			RETURN
-			SWITCH(
-			    _Condition,
-			
-			    "Normal Condition",
-			        CALCULATE(
-			            [Severe Rate],
-			            FILTER(
-			                'public dim_natural_condition',
-			                'public dim_natural_condition'[weather_condition]
-			                    IN { "CLEAR", "CLOUDY/OVERCAST" }
-			                &&
-			                'public dim_natural_condition'[lighting_condition]
-			                    IN { "DAYLIGHT", "DARKNESS, LIGHTED ROAD" }
-			            )
-			        ),
-			
-			    "Bad Condition",
-			        CALCULATE(
-			            [Severe Rate],
-			            FILTER(
-			                'public dim_natural_condition',
-			                'public dim_natural_condition'[weather_condition]
-			                    IN {
-			                        "RAIN",
-			                        "SNOW",
-			                        "BLOWING SNOW",
-			                        "FREEZING RAIN/DRIZZLE",
-			                        "FOG/SMOKE/HAZE",
-			                        "SLEET/HAIL",
-			                        "SEVERE CROSS WIND GATE",
-			                        "BLOWING SAND, SOIL, DIRT"
-			                    }
-			                &&
-			                'public dim_natural_condition'[lighting_condition]
-			                    IN {"DARKNESS"}
-			            )
-			        )
-			)
+			    SWITCH(
+			        _Condition,
+			        "Normal Condition", [Normal Condition Severe Rate],
+			        "Bad Condition", [Adverse Low-Light Severe Rate]
+			    )
 		lineageTag: 83b09750-e2b2-491e-bc50-88c18618b66e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	measure 'Peak Severe Condition' =
-			
 			VAR _P75 = [Accident Volume P75]
 			VAR _ConditionTable =
 			    CALCULATETABLE(
@@ -243,8 +247,6 @@ table 'All Measure'
 		lineageTag: 7395fc6a-b864-4b32-8990-7a8a230d5c9e
 
 	measure 'Accident Volume P25' =
-			// Clear the hovered Weather × Lighting filters so the percentile
-			// is calculated across the full condition population in the current slicer context.
 			VAR _ConditionTable =
 			    CALCULATETABLE(
 			        SUMMARIZE(
@@ -275,8 +277,6 @@ table 'All Measure'
 		lineageTag: e9ec9a76-27a4-4ef9-a390-61ad03495931
 
 	measure 'Accident Volume P75' =
-			// Clear the hovered Weather × Lighting filters so the percentile
-			// is calculated across the full condition population in the current slicer context.
 			VAR _ConditionTable =
 			    CALCULATETABLE(
 			        SUMMARIZE(
@@ -361,17 +361,14 @@ table 'All Measure'
 		lineageTag: 0907fd61-321b-4259-ab8b-cf85d06963fe
 
 	measure 'Selected Natural Condition' =
-			
 			VAR _HasWeather =
 			    HASONEVALUE(
 			        'public dim_natural_condition'[weather_condition]
 			    )
-			
 			VAR _HasLighting =
 			    HASONEVALUE(
 			        'public dim_natural_condition'[lighting_condition]
 			    )
-			
 			RETURN
 			    IF(
 			        _HasWeather && _HasLighting,
@@ -489,146 +486,6 @@ table 'All Measure'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 0ae296c0-3185-4f63-8727-09f775cc6dc4
 
-	measure 'Adverse Low-Light Severe Rate' =
-			CALCULATE(
-			    [Severe Rate],
-			    KEEPFILTERS(
-			        'public dim_natural_condition'[weather_condition]
-			            IN {
-			                "RAIN",
-			                "SNOW",
-			                "BLOWING SNOW",
-			                "FREEZING RAIN/DRIZZLE",
-			                "FOG/SMOKE/HAZE",
-			                "SLEET/HAIL",
-			                "SEVERE CROSS WIND GATE",
-			                "BLOWING SAND, SOIL, DIRT"
-			            }
-			    ),
-			    KEEPFILTERS(
-			        'public dim_natural_condition'[lighting_condition] = "DARKNESS"
-			    )
-			)
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 39c9900f-78b1-48ab-a355-c9851420aafd
-
-	measure 'Comparison Period Valid' =
-			VAR _SelectedMonths =
-			    SUMMARIZE(
-			        ALLSELECTED('public dim_crash_date'),
-			        'public dim_crash_date'[year],
-			        'public dim_crash_date'[month]
-			    )
-			VAR _SelectedMonthCount = COUNTROWS(_SelectedMonths)
-			VAR _StartIndex =
-			    MINX(
-			        _SelectedMonths,
-			        'public dim_crash_date'[year] * 12
-			            + 'public dim_crash_date'[month]
-			    )
-			VAR _EndIndex =
-			    MAXX(
-			        _SelectedMonths,
-			        'public dim_crash_date'[year] * 12
-			            + 'public dim_crash_date'[month]
-			    )
-			VAR _ExpectedCurrentMonths =
-			    _EndIndex - _StartIndex + 1
-			VAR _PreviousStartIndex =
-			    _StartIndex - _SelectedMonthCount
-			VAR _PreviousEndIndex =
-			    _StartIndex - 1
-			VAR _AvailableMonths =
-			    SUMMARIZE(
-			        ALL('public dim_crash_date'),
-			        'public dim_crash_date'[year],
-			        'public dim_crash_date'[month]
-			    )
-			VAR _PreviousMonthCount =
-			    COUNTROWS(
-			        FILTER(
-			            _AvailableMonths,
-			            'public dim_crash_date'[year] * 12
-			                    + 'public dim_crash_date'[month]
-			                >= _PreviousStartIndex
-			                && 'public dim_crash_date'[year] * 12
-			                    + 'public dim_crash_date'[month]
-			                <= _PreviousEndIndex
-			        )
-			    )
-			RETURN
-			    _SelectedMonthCount > 0
-			        && _SelectedMonthCount = _ExpectedCurrentMonths
-			        && _PreviousMonthCount = _SelectedMonthCount
-		lineageTag: 05f038f9-6d36-4c3e-828b-a39174f97af5
-
-	measure 'Previous Period Adverse Severe Rate' =
-			VAR _SelectedMonths =
-			    SUMMARIZE(
-			        ALLSELECTED('public dim_crash_date'),
-			        'public dim_crash_date'[year],
-			        'public dim_crash_date'[month]
-			    )
-			VAR _SelectedMonthCount = COUNTROWS(_SelectedMonths)
-			VAR _StartIndex =
-			    MINX(
-			        _SelectedMonths,
-			        'public dim_crash_date'[year] * 12
-			            + 'public dim_crash_date'[month]
-			    )
-			VAR _PreviousStartIndex =
-			    _StartIndex - _SelectedMonthCount
-			VAR _PreviousEndIndex =
-			    _StartIndex - 1
-			RETURN
-			    IF(
-			        [Comparison Period Valid],
-			        CALCULATE(
-			            [Adverse Low-Light Severe Rate],
-			            REMOVEFILTERS('public dim_crash_date'),
-			            FILTER(
-			                ALL('public dim_crash_date'),
-			                'public dim_crash_date'[year] * 12
-			                        + 'public dim_crash_date'[month]
-			                    >= _PreviousStartIndex
-			                    && 'public dim_crash_date'[year] * 12
-			                        + 'public dim_crash_date'[month]
-			                    <= _PreviousEndIndex
-			            )
-			        )
-			    )
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: e6913f83-f370-4ad1-92cd-c282601c38dc
-
-	measure 'Severe Rate Change pp' =
-			VAR _CurrentRate = [Adverse Low-Light Severe Rate]
-			VAR _PreviousRate = [Previous Period Adverse Severe Rate]
-			RETURN
-			    IF(
-			        [Comparison Period Valid]
-			            && NOT ISBLANK(_CurrentRate)
-			            && NOT ISBLANK(_PreviousRate),
-			        _CurrentRate - _PreviousRate
-			    )
-		formatString: +0.00%;-0.00%;0.00%
-		lineageTag: 57704267-312b-4916-b64a-b38862413827
-
-	measure 'Severe Rate Change %' =
-			VAR _CurrentRate = [Adverse Low-Light Severe Rate]
-			VAR _PreviousRate = [Previous Period Adverse Severe Rate]
-			RETURN
-			    IF(
-			        [Comparison Period Valid]
-			            && NOT ISBLANK(_CurrentRate)
-			            && NOT ISBLANK(_PreviousRate),
-			        DIVIDE(
-			            _CurrentRate - _PreviousRate,
-			            _PreviousRate
-			        )
-			    )
-		formatString: +0.0%;-0.0%;0.0%
-		lineageTag: 9396afdc-9f5d-49bf-bdc6-fe9ed49cc952
-
 	measure 'Total Injuries' = SUM('public fct_traffic_accidents'[injuries_total])
 		formatString: 0
 		lineageTag: 83f356f3-e9c8-490d-a702-e4dfac46a3d6
@@ -661,35 +518,6 @@ table 'All Measure'
 			    )
 		lineageTag: 1a4fd72c-5b2d-41e7-a8b3-b01d75d5099e
 
-	measure 'Severe Rate Change Display' =
-			
-			VAR _Change = [Severe Rate Change pp]
-			
-			RETURN
-			    IF(
-			        ISBLANK(_Change),
-			        "CHOOSE A TIME!",
-			        FORMAT(
-			            _Change,
-			            "+0.00%;-0.00%;0.00%"
-			        ) & " pp"
-			    )
-		lineageTag: 15b7e5cd-5326-43e5-a768-278cbdf97d81
-
-	measure 'Severe Rate Change Color' =
-			
-			VAR _Change = [Severe Rate Change pp]
-			
-			RETURN
-			    SWITCH(
-			        TRUE(),
-			        ISBLANK(_Change), "#94A3B8",   -- Neutral / Gray
-			        _Change > 0,     "#EF4444",   -- Red: severity increased
-			        _Change < 0,     "#22C55E",   -- Green: severity decreased
-			        "#94A3B8"                     -- No change
-			    )
-		lineageTag: 306cc398-f9bc-4b83-aa40-f9cabae55f76
-
 	column Column
 		isHidden
 		formatString: 0
@@ -707,4 +535,3 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
-
