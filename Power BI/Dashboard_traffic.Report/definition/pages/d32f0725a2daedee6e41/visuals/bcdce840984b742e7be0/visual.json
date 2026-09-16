@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "bcdce840984b742e7be0",
   "position": {
-    "x": 748.33333333333337,
-    "y": 88.333333333333343,
+    "x": 423.33333333333337,
+    "y": 88.33333333333334,
     "z": 4000,
-    "height": 93.333333333333343,
+    "height": 93.33333333333334,
     "width": 311.66666666666669,
     "tabOrder": 9000
   },
@@ -23,11 +23,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Severe Rate Change Display"
+                  "Property": "Normal Condition Severe Rate"
                 }
               },
-              "queryRef": "All Measure.Severe Rate Change Display",
-              "nativeQueryRef": "Severe Rate Change Display"
+              "queryRef": "All Measure.Normal Condition Severe Rate",
+              "nativeQueryRef": "Normal Condition Severe Rate"
             }
           ]
         }
@@ -81,7 +81,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "24D"
+                  "Value": "28D"
                 }
               }
             },
@@ -89,13 +89,8 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Measure": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "All Measure"
-                        }
-                      },
-                      "Property": "Severe Rate Change Color"
+                    "Literal": {
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
@@ -158,7 +153,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "5d82e2742ecd003083b8",
+        "name": "normalConditionSevereRateFilter",
         "field": {
           "Measure": {
             "Expression": {
@@ -166,7 +161,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Severe Rate Change Display"
+            "Property": "Normal Condition Severe Rate"
           }
         },
         "type": "Advanced"

@@ -2,10 +2,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "520501e37f481a3b1ff5",
   "position": {
-    "x": 423.33333333333337,
-    "y": 88.333333333333343,
+    "x": 93.33333333333334,
+    "y": 88.33333333333334,
     "z": 3000,
-    "height": 93.333333333333343,
+    "height": 93.33333333333334,
     "width": 313.33333333333337,
     "tabOrder": 8000
   },
@@ -23,11 +23,12 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Adverse Surface Incident Rate"
+                  "Property": "Severe Rate"
                 }
               },
-              "queryRef": "public fct_traffic_accidents.Adverse Surface Incident Rate",
-              "nativeQueryRef": "Adverse Surface Incident Rate"
+              "queryRef": "All Measure.Severe Rate",
+              "nativeQueryRef": "Overall Severe Rate",
+              "displayName": "Overall Severe Rate"
             }
           ]
         }
@@ -42,7 +43,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Adverse Surface Incident Rate"
+                "Property": "Severe Rate"
               }
             },
             "direction": "Descending"
@@ -168,7 +169,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "627574fb969aab96096d",
+        "name": "overallSevereRateFilter",
         "field": {
           "Measure": {
             "Expression": {
@@ -176,7 +177,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Adverse Surface Incident Rate"
+            "Property": "Severe Rate"
           }
         },
         "type": "Advanced"
