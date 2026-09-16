@@ -22,11 +22,12 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Severe Environmental Impact"
+                  "Property": "Severe Rate Change pp"
                 }
               },
-              "queryRef": "All Measure.Severe Environmental Impact",
-              "nativeQueryRef": "Severe Environmental Impact"
+              "queryRef": "All Measure.Severe Rate Change pp",
+              "nativeQueryRef": "Severe Rate Change (pp)",
+              "displayName": "Severe Rate Change (pp)"
             }
           ]
         }
@@ -41,7 +42,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Severe Environmental Impact"
+                "Property": "Severe Rate Change pp"
               }
             },
             "direction": "Descending"
@@ -175,7 +176,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Severe Environmental Impact"
+            "Property": "Severe Rate Change pp"
           }
         },
         "type": "Advanced"

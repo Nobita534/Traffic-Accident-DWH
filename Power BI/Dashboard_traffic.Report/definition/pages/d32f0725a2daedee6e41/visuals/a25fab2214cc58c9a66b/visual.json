@@ -10,7 +10,7 @@
     "tabOrder": 5000
   },
   "visual": {
-    "visualType": "hundredPercentStackedBarChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,34 +23,35 @@
                       "Entity": "public dim_natural_condition"
                     }
                   },
-                  "Property": "roadway_surface_cond"
+                  "Property": "weather_condition"
                 }
               },
-              "queryRef": "public dim_natural_condition.roadway_surface_cond",
-              "nativeQueryRef": "roadway_surface_cond",
+              "queryRef": "public dim_natural_condition.weather_condition",
+              "nativeQueryRef": "weather_condition",
               "active": true
             }
           ]
         },
-        "Series": {
+        "Y": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "public fct_traffic_accidents"
+                      "Entity": "All Measure"
                     }
                   },
-                  "Property": "Severity Category"
+                  "Property": "Low-Light Severe Rate"
                 }
               },
-              "queryRef": "public fct_traffic_accidents.Severity Category",
-              "nativeQueryRef": "Severity Category"
+              "queryRef": "All Measure.Low-Light Severe Rate",
+              "nativeQueryRef": "Low-Light Severe Rate",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         },
-        "Y": {
+        "Tooltips": {
           "projections": [
             {
               "field": {
@@ -65,6 +66,48 @@
               },
               "queryRef": "All Measure.Total Accident",
               "nativeQueryRef": "Total Accident"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Severe Total"
+                }
+              },
+              "queryRef": "All Measure.Severe Total",
+              "nativeQueryRef": "Severe Total"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Total Injuries"
+                }
+              },
+              "queryRef": "All Measure.Total Injuries",
+              "nativeQueryRef": "Total Injuries"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Fatal Crash Rate"
+                }
+              },
+              "queryRef": "All Measure.Fatal Crash Rate",
+              "nativeQueryRef": "Fatal Crash Rate"
             }
           ]
         }
@@ -79,7 +122,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Total Accident"
+                "Property": "Low-Light Severe Rate"
               }
             },
             "direction": "Descending"
@@ -104,87 +147,29 @@
               }
             }
           }
-        },
+        }
+      ],
+      "labels": [
         {
           "properties": {
-            "fill": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
               "solid": {
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#EF4444'"
+                      "Value": "'#E2E8F0'"
                     }
                   }
                 }
               }
             }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "public fct_traffic_accidents"
-                          }
-                        },
-                        "Property": "Severity Category"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Severe'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#118DFF'"
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "scopeId": {
-                  "Comparison": {
-                    "ComparisonKind": 0,
-                    "Left": {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "public fct_traffic_accidents"
-                          }
-                        },
-                        "Property": "Severity Category"
-                      }
-                    },
-                    "Right": {
-                      "Literal": {
-                        "Value": "'Non-severe'"
-                      }
-                    }
-                  }
-                }
-              }
-            ]
           }
         }
       ],
@@ -247,24 +232,6 @@
             }
           }
         }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "visualContainerObjects": {
@@ -298,7 +265,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Crash Severity Distribution by Road Surface'"
+                  "Value": "'Severe Rate by Weather under Low-Light Conditions'"
                 }
               }
             }
@@ -311,7 +278,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "d49378b02d0e872e8835",
+        "name": "lowLightDarknessOnly",
         "field": {
           "Column": {
             "Expression": {
@@ -319,7 +286,7 @@
                 "Entity": "public dim_natural_condition"
               }
             },
-            "Property": "roadway_surface_cond"
+            "Property": "lighting_condition"
           }
         },
         "type": "Categorical",
@@ -327,7 +294,60 @@
           "Version": 2,
           "From": [
             {
-              "Name": "p",
+              "Name": "n",
+              "Entity": "public dim_natural_condition",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "n"
+                          }
+                        },
+                        "Property": "lighting_condition"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'DARKNESS'"
+                        }
+                      }
+                    ]
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "excludeUnknownWeather",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_natural_condition"
+              }
+            },
+            "Property": "weather_condition"
+          }
+        },
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "n",
               "Entity": "public dim_natural_condition",
               "Type": 0
             }
@@ -343,10 +363,10 @@
                           "Column": {
                             "Expression": {
                               "SourceRef": {
-                                "Source": "p"
+                                "Source": "n"
                               }
                             },
-                            "Property": "roadway_surface_cond"
+                            "Property": "weather_condition"
                           }
                         }
                       ],
@@ -365,50 +385,7 @@
               }
             }
           ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
         }
-      },
-      {
-        "name": "6f24443821ad0b0b028e",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public fct_traffic_accidents"
-              }
-            },
-            "Property": "Severity Category"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "df5eac7d61c40eec0530",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Total Accident"
-          }
-        },
-        "type": "Advanced"
       }
     ]
   }

@@ -57,6 +57,20 @@
               "queryRef": "All Measure.Avg Units per Accident",
               "nativeQueryRef": "Avg Units",
               "displayName": "Avg Units"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Dominant Road Surface"
+                }
+              },
+              "queryRef": "All Measure.Dominant Road Surface",
+              "nativeQueryRef": "Dominant Road Surface"
             }
           ]
         }
@@ -134,7 +148,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "20D"
+                  "Value": "16D"
                 }
               }
             },
