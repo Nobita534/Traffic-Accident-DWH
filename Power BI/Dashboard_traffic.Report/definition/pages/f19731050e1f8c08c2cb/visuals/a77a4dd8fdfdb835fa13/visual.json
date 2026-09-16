@@ -23,11 +23,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Most Accident-Prone Trafficway"
+                  "Property": "Priority Trafficway(s)"
                 }
               },
-              "queryRef": "All Measure.Most Accident-Prone Trafficway",
-              "nativeQueryRef": "Most Accident-Prone Trafficway"
+              "queryRef": "All Measure.Priority Trafficway(s)",
+              "nativeQueryRef": "Priority Trafficway(s)"
             }
           ]
         }
@@ -81,7 +81,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "18D"
                 }
               }
             },
@@ -93,6 +93,26 @@
                       "Value": "'#E2E8F0'"
                     }
                   }
+                }
+              }
+            },
+            "preserveWhitespace": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "wordWrap": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -161,7 +181,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Most Accident-Prone Trafficway"
+            "Property": "Priority Trafficway(s)"
           }
         },
         "type": "Advanced"

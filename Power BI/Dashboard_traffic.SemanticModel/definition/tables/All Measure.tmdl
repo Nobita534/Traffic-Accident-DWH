@@ -103,18 +103,35 @@ table 'All Measure'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
 
-	measure 'Most Accident-Prone Trafficway' =
-			VAR T =
+	measure 'Priority Trafficway(s)' =
+			VAR _ThresholdAccidents = [Avg Accident]
+			VAR _ThresholdSeverity = [Avg Severity Index according Trafficway_type]
+			VAR _Trafficways =
 			    ADDCOLUMNS(
-			        VALUES('public dim_traffic_device'[trafficway_type]),
-			        "@Accident", [Total Accident]
+			        SUMMARIZE(
+			            'public fct_traffic_accidents',
+			            'public dim_traffic_device'[trafficway_type]
+			        ),
+			        "@Accidents", [Total Accident],
+			        "@SeverityIndex", [Severity Index]
+			    )
+			VAR _PriorityTrafficways =
+			    FILTER(
+			        _Trafficways,
+			        [@Accidents] > _ThresholdAccidents
+			            && [@SeverityIndex] > _ThresholdSeverity
+			    )
+			VAR _Result =
+			    CONCATENATEX(
+			        _PriorityTrafficways,
+			        'public dim_traffic_device'[trafficway_type],
+			        ", ",
+			        [@Accidents], DESC,
+			        'public dim_traffic_device'[trafficway_type], ASC
 			    )
 			RETURN
-			    MAXX(
-			        TOPN(1, T, [@Accident], DESC),
-			        'public dim_traffic_device'[trafficway_type]
-			    )
-		lineageTag: 47680f71-9cd7-4db0-94ce-712233677614
+			    IF(COUNTROWS(_PriorityTrafficways) = 0, "No Priority", _Result)
+		lineageTag: 6dfc51c7-7213-46ce-b532-25c81bdf4e31
 
 	measure 'Avg Accident' =
 			DIVIDE(
@@ -530,4 +547,3 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
-
