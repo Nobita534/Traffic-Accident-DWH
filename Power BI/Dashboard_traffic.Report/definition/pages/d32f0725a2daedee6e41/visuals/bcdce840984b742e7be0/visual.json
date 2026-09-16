@@ -19,13 +19,13 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "BQ1 Measures"
+                      "Entity": "All Measure"
                     }
                   },
                   "Property": "Severe Rate Change pp"
                 }
               },
-              "queryRef": "BQ1 Measures.Severe Rate Change pp",
+              "queryRef": "All Measure.Severe Rate Change pp",
               "nativeQueryRef": "Severe Rate Change (pp)",
               "displayName": "Severe Rate Change (pp)"
             }
@@ -39,7 +39,7 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "BQ1 Measures"
+                    "Entity": "All Measure"
                   }
                 },
                 "Property": "Severe Rate Change pp"
@@ -173,7 +173,7 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "BQ1 Measures"
+                "Entity": "All Measure"
               }
             },
             "Property": "Severe Rate Change pp"
