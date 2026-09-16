@@ -19,14 +19,15 @@
                 "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "All Measure"
+                      "Entity": "BQ1 Measures"
                     }
                   },
-                  "Property": "Severe Environmental Impact"
+                  "Property": "Severe Rate Change pp"
                 }
               },
-              "queryRef": "All Measure.Severe Environmental Impact",
-              "nativeQueryRef": "Severe Environmental Impact"
+              "queryRef": "BQ1 Measures.Severe Rate Change pp",
+              "nativeQueryRef": "Severe Rate Change (pp)",
+              "displayName": "Severe Rate Change (pp)"
             }
           ]
         }
@@ -38,10 +39,10 @@
               "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "All Measure"
+                    "Entity": "BQ1 Measures"
                   }
                 },
-                "Property": "Severe Environmental Impact"
+                "Property": "Severe Rate Change pp"
               }
             },
             "direction": "Descending"
@@ -172,10 +173,10 @@
           "Measure": {
             "Expression": {
               "SourceRef": {
-                "Entity": "All Measure"
+                "Entity": "BQ1 Measures"
               }
             },
-            "Property": "Severe Environmental Impact"
+            "Property": "Severe Rate Change pp"
           }
         },
         "type": "Advanced"
