@@ -164,5 +164,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "cad57bd319c0085dca8c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Adverse Surface Incident Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

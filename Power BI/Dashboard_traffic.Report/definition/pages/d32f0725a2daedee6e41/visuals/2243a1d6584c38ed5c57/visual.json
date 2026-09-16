@@ -164,5 +164,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "af10edf557905b10d3ba",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Fatal Crash Rate"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

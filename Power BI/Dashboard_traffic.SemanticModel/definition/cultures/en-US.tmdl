@@ -3536,125 +3536,28 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident.epdo_priority_score": {
+			    "all_measure.avg_severity_index_according_Trafficway_type": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "public fct_traffic_accidents",
-			          "ConceptualProperty": "epdo_priority_score"
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Avg Severity Index according Trafficway_type"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "epdo priority score": {
+			          "avg severity index according Trafficway_type": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "epdo_priority_score": {
-			            "Type": "Noun",
-			            "State": "Generated",
-			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "epdo priority notch": {
+			          "average severity index according trafficway_type": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority slash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority groove": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority nick": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority cut": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority mark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo priority total": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "epdo priority tally": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "epdo priority grade": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
-			          }
-			        },
-			        {
-			          "epdo priority result": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.468
+			            "Weight": 0.605
 			          }
 			        }
 			      ]
@@ -5032,162 +4935,156 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.critical_priority_rate": {
+			    "all_measure.severity_index": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Critical Priority Rate"
+			          "ConceptualProperty": "Severity Index"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "critical priority rate": {
+			          "severity index": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "rate": {
+			          "index": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "priority rate": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
-			          "critical priority degree": {
+			          "severity directory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "critical priority frequency": {
+			          "severity catalogue": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "critical priority percentage": {
+			          "severity catalog": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "critical priority ratio": {
+			          "severity guide": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "critical priority quotient": {
+			          "severity file": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.508
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "priority degree": {
+			          "severity key": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "priority frequency": {
+			          "severity table": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.485
 			          }
 			        },
 			        {
-			          "priority percentage": {
+			          "directory": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "priority ratio": {
+			          "catalogue": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.476
 			          }
 			        },
 			        {
-			          "priority quotient": {
+			          "catalog": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.5
+			            "Weight": 0.476
 			          }
 			        }
 			      ]
 			    },
-			    "all_measure.total_EPDO_score": {
+			    "all_measure.total_severity_weight": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Total EPDO Score"
+			          "ConceptualProperty": "Total Severity Weight"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "total EPDO score": {
+			          "total severity weight": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "score": {
+			          "weight": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "EPDO score": {
+			          "severity weight": {
 			            "State": "Generated",
 			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "aggregate epdo score": {
+			          "aggregate severity weight": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5197,7 +5094,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "overall epdo score": {
+			          "overall severity weight": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5207,7 +5104,47 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total epdo notch": {
+			          "total severity heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "total severity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severity heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "severity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "total severity mass": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5217,7 +5154,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total epdo slash": {
+			          "total severity bulk": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5227,7 +5164,7 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total epdo groove": {
+			          "total severity heft": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5237,53 +5174,13 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "total epdo nick": {
+			          "heaviness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total epdo cut": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "total epdo mark": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
-			          }
-			        },
-			        {
-			          "epdo notch": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
-			          }
-			        },
-			        {
-			          "epdo slash": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.485
+			            "Weight": 0.491
 			          }
 			        }
 			      ]
@@ -5493,118 +5390,130 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.avg_EPDO_score": {
+			    "all_measure.fatal_crash_rate": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Avg EPDO Score"
+			          "ConceptualProperty": "Fatal Crash Rate"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "avg EPDO score": {
+			          "fatal crash rate": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "average epdo score": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.591
+			          "rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "avg epdo notch": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.492
+			          "crash rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
 			          }
 			        },
 			        {
-			          "avg epdo slash": {
+			          "fatal crash degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "avg epdo groove": {
+			          "fatal crash frequency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "avg epdo nick": {
+			          "fatal crash percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "avg epdo cut": {
+			          "fatal crash ratio": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "avg epdo mark": {
+			          "fatal crash quotient": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.492
+			            "Weight": 0.508
 			          }
 			        },
 			        {
-			          "avg epdo total": {
+			          "crash degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "avg epdo tally": {
+			          "crash frequency": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.5
 			          }
 			        },
 			        {
-			          "avg epdo grade": {
+			          "crash percentage": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.468
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crash ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crash quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
 			          }
 			        }
 			      ]
@@ -5891,28 +5800,137 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.avg_EPDO_score_according_Trafficway_type": {
+			    "public_fct_traffic_accident.crash_severity_weight": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Avg EPDO Score according Trafficway_type"
+			          "ConceptualEntity": "public fct_traffic_accidents",
+			          "ConceptualProperty": "crash_severity_weight"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "avg EPDO score according Trafficway_type": {
+			          "crash severity weight": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "average epdo score according trafficway_type": {
+			          "crash_severity_weight": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "weight": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severity weight": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crash severity heaviness": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.605
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "crash severity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "severity heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "severity weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "crash severity mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crash severity bulk": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "crash severity heft": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heaviness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "weightiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "severity mass": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
 			          }
 			        }
 			      ]
@@ -6971,75 +6989,85 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "all_measure.heatmap_volume_severity_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Heatmap Volume Severity Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "heatmap volume severity color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "heatmap volume severity hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "heatmap volume severity tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap volume severity shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap volume severity dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap volume severity paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap volume severity pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "public_dim_crash_date_year_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
-			    "public_dim_crash_date_year_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.year": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_years"
-			        }
-			      ]
-			    },
 			    "public_dim_casualty_analysis_has_public_fct_traffic_accident": {
 			      "Binding": {
 			        "ConceptualEntity": "public dim_casualty_analysis"
@@ -7330,6 +7358,39 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "all_measure_has_heatmap_volume_severity_color": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.heatmap_volume_severity_color": {
+			          "Target": {
+			            "Entity": "all_measure.heatmap_volume_severity_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.heatmap_volume_severity_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_heatmap_volume_severity_color"
+			        }
+			      ]
+			    },
 			    "condition_comparison_has_condition": {
 			      "Binding": {
 			        "ConceptualEntity": "Condition Comparison"
@@ -7607,15 +7668,15 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure_has_peak_severe_condition": {
+			    "public_fct_traffic_accident_has_all_measure_peak_severe_condition": {
 			      "Binding": {
-			        "ConceptualEntity": "All Measure"
+			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "all_measure": {
+			        "public_fct_traffic_accident": {
 			          "Target": {
-			            "Entity": "all_measure"
+			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
 			        "all_measure.peak_severe_condition": {
@@ -7628,7 +7689,7 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "all_measure"
+			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
 			              "Role": "all_measure.peak_severe_condition"
@@ -7636,7 +7697,40 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "all_measures_have_peak_severe_condition"
+			          "ID": "public_fct_traffic_accidents_have_peak_severe_condition"
+			        }
+			      ]
+			    },
+			    "public_dim_natural_condition_has_all_measure_peak_severe_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_natural_condition"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_natural_condition": {
+			          "Target": {
+			            "Entity": "public_dim_natural_condition"
+			          }
+			        },
+			        "all_measure.peak_severe_condition": {
+			          "Target": {
+			            "Entity": "all_measure.peak_severe_condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_natural_condition"
+			            },
+			            "Object": {
+			              "Role": "all_measure.peak_severe_condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_natural_conditions_have_peak_severe_condition"
 			        }
 			      ]
 			    },
@@ -7706,7 +7800,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_avg_EPDO_score_according_Trafficway_type": {
+			    "public_fct_traffic_accident_has_crash_severity_weight": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -7717,9 +7811,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "all_measure.avg_EPDO_score_according_Trafficway_type": {
+			        "public_fct_traffic_accident.crash_severity_weight": {
 			          "Target": {
-			            "Entity": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			            "Entity": "public_fct_traffic_accident.crash_severity_weight"
 			          }
 			        }
 			      },
@@ -7730,45 +7824,39 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			              "Role": "public_fct_traffic_accident.crash_severity_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_avg_EPDO_score_according_Trafficway_type"
-			        }
-			      ]
-			    },
-			    "public_dim_traffic_device_has_all_measure_avg_EPDO_score_according_Trafficway_type": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_traffic_device"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_traffic_device": {
-			          "Target": {
-			            "Entity": "public_dim_traffic_device"
-			          }
+			          "ID": "public_fct_traffic_accidents_have_crash_severity_weights"
 			        },
-			        "all_measure.avg_EPDO_score_according_Trafficway_type": {
-			          "Target": {
-			            "Entity": "all_measure.avg_EPDO_score_according_Trafficway_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
 			        {
-			          "Attribute": {
+			          "Adjective": {
 			            "Subject": {
-			              "Role": "public_dim_traffic_device"
+			              "Role": "public_fct_traffic_accident"
 			            },
-			            "Object": {
-			              "Role": "all_measure.avg_EPDO_score_according_Trafficway_type"
+			            "Adjectives": [
+			              {
+			                "heavy": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "light": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "public_fct_traffic_accident.crash_severity_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_dim_traffic_devices_have_avg_EPDO_score_according_Trafficway_type"
+			          "ID": "crash_severity_weight_indicates_how_heavy_public_fct_traffic_accidents_are"
 			        }
 			      ]
 			    },
@@ -7970,7 +8058,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_avg_EPDO_score": {
+			    "public_fct_traffic_accident_has_all_measure_fatal_crash_rate": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -7981,9 +8069,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "all_measure.avg_EPDO_score": {
+			        "all_measure.fatal_crash_rate": {
 			          "Target": {
-			            "Entity": "all_measure.avg_EPDO_score"
+			            "Entity": "all_measure.fatal_crash_rate"
 			          }
 			        }
 			      },
@@ -7994,12 +8082,12 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "all_measure.avg_EPDO_score"
+			              "Role": "all_measure.fatal_crash_rate"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_avg_EPDO_score"
+			          "ID": "public_fct_traffic_accidents_have_fatal_crash_rate"
 			        }
 			      ]
 			    },
@@ -8069,7 +8157,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_total_EPDO_score": {
+			    "public_fct_traffic_accident_has_all_measure_total_severity_weight": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -8080,9 +8168,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "all_measure.total_EPDO_score": {
+			        "all_measure.total_severity_weight": {
 			          "Target": {
-			            "Entity": "all_measure.total_EPDO_score"
+			            "Entity": "all_measure.total_severity_weight"
 			          }
 			        }
 			      },
@@ -8093,16 +8181,43 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "all_measure.total_EPDO_score"
+			              "Role": "all_measure.total_severity_weight"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_total_EPDO_score"
+			          "ID": "public_fct_traffic_accidents_have_total_severity_weight"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Adjectives": [
+			              {
+			                "heavy": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "light": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "all_measure.total_severity_weight"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "total_severity_weight_indicates_how_heavy_public_fct_traffic_accidents_are"
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_all_measure_critical_priority_rate": {
+			    "public_fct_traffic_accident_has_all_measure_severity_index": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -8113,9 +8228,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "all_measure.critical_priority_rate": {
+			        "all_measure.severity_index": {
 			          "Target": {
-			            "Entity": "all_measure.critical_priority_rate"
+			            "Entity": "all_measure.severity_index"
 			          }
 			        }
 			      },
@@ -8126,12 +8241,12 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "all_measure.critical_priority_rate"
+			              "Role": "all_measure.severity_index"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_critical_priority_rate"
+			          "ID": "public_fct_traffic_accidents_have_severity_index"
 			        }
 			      ]
 			    },
@@ -8478,7 +8593,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_epdo_priority_score": {
+			    "public_fct_traffic_accident_has_all_measure_avg_severity_index_according_Trafficway_type": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -8489,9 +8604,9 @@ cultureInfo en-US
 			            "Entity": "public_fct_traffic_accident"
 			          }
 			        },
-			        "public_fct_traffic_accident.epdo_priority_score": {
+			        "all_measure.avg_severity_index_according_Trafficway_type": {
 			          "Target": {
-			            "Entity": "public_fct_traffic_accident.epdo_priority_score"
+			            "Entity": "all_measure.avg_severity_index_according_Trafficway_type"
 			          }
 			        }
 			      },
@@ -8502,12 +8617,45 @@ cultureInfo en-US
 			              "Role": "public_fct_traffic_accident"
 			            },
 			            "Object": {
-			              "Role": "public_fct_traffic_accident.epdo_priority_score"
+			              "Role": "all_measure.avg_severity_index_according_Trafficway_type"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_epdo_priority_scores"
+			          "ID": "public_fct_traffic_accidents_have_avg_severity_index_according_Trafficway_type"
+			        }
+			      ]
+			    },
+			    "public_dim_traffic_device_has_all_measure_avg_severity_index_according_Trafficway_type": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_traffic_device"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          }
+			        },
+			        "all_measure.avg_severity_index_according_Trafficway_type": {
+			          "Target": {
+			            "Entity": "all_measure.avg_severity_index_according_Trafficway_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "all_measure.avg_severity_index_according_Trafficway_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_avg_severity_index_according_Trafficway_type"
 			        }
 			      ]
 			    },
@@ -9680,6 +9828,72 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_public_fct_traffic_accidents_are_severe_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.year": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_quarters"
 			        }
 			      ]
 			    },

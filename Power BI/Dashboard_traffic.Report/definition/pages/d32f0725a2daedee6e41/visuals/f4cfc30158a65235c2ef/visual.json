@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "f4cfc30158a65235c2ef",
   "position": {
-    "x": 93.333333333333343,
-    "y": 195,
+    "x": 95.007199895274255,
+    "y": 194.53855216651394,
     "z": 7000,
-    "height": 666.66666666666674,
-    "width": 658.33333333333337,
+    "height": 640.921586595104,
+    "width": 657.51014530697739,
     "tabOrder": 3000
   },
   "visual": {
@@ -65,7 +65,8 @@
                 }
               },
               "queryRef": "All Measure.Severe Rate",
-              "nativeQueryRef": "Severe Rate"
+              "nativeQueryRef": "Severe Rate",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
@@ -189,7 +190,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "19D"
                 }
               }
             },
@@ -314,7 +315,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "8D"
                 }
               }
             },
@@ -348,7 +349,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "10D"
+                  "Value": "9D"
                 }
               }
             },
@@ -418,6 +419,59 @@
           },
           "selector": {
             "metadata": "All Measure.Severe Rate"
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "130.726270839443D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "public dim_natural_condition.weather_condition"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "98.08996164112503D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "public dim_natural_condition"
+                          }
+                        },
+                        "Property": "lighting_condition"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'DAWN'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]
@@ -531,7 +585,65 @@
             "Property": "weather_condition"
           }
         },
-        "type": "Categorical"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "p",
+              "Entity": "public dim_natural_condition",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "p"
+                              }
+                            },
+                            "Property": "weather_condition"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'UNKNOWN'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       },
       {
         "name": "c824ee68dcccd9e55952",

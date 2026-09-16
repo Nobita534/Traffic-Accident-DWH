@@ -28,12 +28,32 @@
                       "Hierarchy": "year Hierarchy"
                     }
                   },
+                  "Level": "year"
+                }
+              },
+              "queryRef": "public dim_crash_date.year Hierarchy.year",
+              "nativeQueryRef": "year Hierarchy year",
+              "active": true
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "public dim_crash_date"
+                        }
+                      },
+                      "Hierarchy": "year Hierarchy"
+                    }
+                  },
                   "Level": "month"
                 }
               },
               "queryRef": "public dim_crash_date.year Hierarchy.month",
               "nativeQueryRef": "year Hierarchy month",
-              "active": true
+              "active": false
             }
           ]
         },
@@ -56,8 +76,8 @@
                 }
               },
               "queryRef": "Sum(public fct_traffic_accidents.injuries_total)",
-              "nativeQueryRef": "Injuries_total",
-              "displayName": "Injuries_total"
+              "nativeQueryRef": "Total Injuries",
+              "displayName": "Total Injuries"
             }
           ]
         },
@@ -75,7 +95,8 @@
                 }
               },
               "queryRef": "public fct_traffic_accidents.Severe Rate",
-              "nativeQueryRef": "Severe Rate"
+              "nativeQueryRef": "Severe Rate",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
@@ -110,7 +131,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -173,6 +194,18 @@
               }
             },
             "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "secLabelColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -279,7 +312,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Monthly Incident & Severity Trend'"
+                  "Value": "'Annual Incident & Severity Trend'"
                 }
               }
             }
@@ -288,5 +321,80 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "424567427eb78b29ed9b",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "a873e72b89306207bdc8",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public fct_traffic_accidents"
+                  }
+                },
+                "Property": "injuries_total"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "52ecc0f80b660e737cc2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "11bc2a5c217113ea356d",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "year"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

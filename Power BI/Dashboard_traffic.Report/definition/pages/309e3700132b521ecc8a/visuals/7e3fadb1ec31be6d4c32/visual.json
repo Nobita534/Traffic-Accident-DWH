@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "7e3fadb1ec31be6d4c32",
   "position": {
-    "x": 933.33333333333337,
-    "y": 543.33333333333337,
+    "x": 933.48344024086919,
+    "y": 532.34192957193352,
     "z": 6000,
-    "height": 321.66666666666669,
-    "width": 451.66666666666669,
+    "height": 333.2792250294541,
+    "width": 450.90718680455558,
     "tabOrder": 3000
   },
   "visual": {
@@ -303,5 +303,42 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fa4891ec1a61be70cb6a",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_casualty_analysis"
+              }
+            },
+            "Property": "Casualty Type"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "f31137ac808a68869450",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_casualty_analysis"
+                  }
+                },
+                "Property": "People Count"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

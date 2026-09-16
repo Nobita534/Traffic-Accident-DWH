@@ -163,5 +163,23 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ae83a9e038b5b09302e1",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Environmental Impact"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

@@ -55,8 +55,7 @@ table 'All Measure'
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: db02dda8-2754-4682-9e17-43e802c5df28
 
-	measure 'Total Severity Weight' =
-			SUM('public fct_traffic_accidents'[crash_severity_weight])
+	measure 'Total Severity Weight' = SUM('public fct_traffic_accidents'[crash_severity_weight])
 		formatString: 0
 		lineageTag: 6236f094-75d6-4724-af46-d164b8488b14
 
@@ -497,3 +496,4 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

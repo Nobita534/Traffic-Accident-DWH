@@ -609,5 +609,113 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "ef208001cec200c2d286",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "year"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "bce2c690a3d4189a6e43",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "quarter"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4bbd52f9ca07501a25a9",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "month"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d9e3e3301735595bc41c",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "public dim_crash_date"
+                  }
+                },
+                "Hierarchy": "year Hierarchy"
+              }
+            },
+            "Level": "day"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d4cd0a92bebed719596d",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Condition Comparison"
+              }
+            },
+            "Property": "Condition"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "0317879555c4e6e17747",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Rate Comparison"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }
