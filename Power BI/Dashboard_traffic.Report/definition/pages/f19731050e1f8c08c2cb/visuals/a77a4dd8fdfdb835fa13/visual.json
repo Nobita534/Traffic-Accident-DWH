@@ -7,7 +7,7 @@
     "z": 4000,
     "height": 93.333333333333343,
     "width": 311.66666666666669,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "card",
@@ -23,16 +23,32 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Priority Trafficway(s)"
+                  "Property": "Priority Severe Crash Share"
                 }
               },
-              "queryRef": "All Measure.Priority Trafficway(s)",
-              "nativeQueryRef": "Priority Trafficway(s)"
+              "queryRef": "All Measure.Priority Severe Crash Share",
+              "nativeQueryRef": "Priority Severe Crash Share",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Measure": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "All Measure"
+                  }
+                },
+                "Property": "Priority Severe Crash Share"
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
@@ -81,7 +97,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "18D"
+                  "Value": "20D"
                 }
               }
             },
@@ -99,7 +115,7 @@
             "preserveWhitespace": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
@@ -173,7 +189,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "4d56442eba9d209ea7b1",
+        "name": "c453d0a4dd87537050b5",
         "field": {
           "Measure": {
             "Expression": {
@@ -181,7 +197,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Priority Trafficway(s)"
+            "Property": "Priority Severe Crash Share"
           }
         },
         "type": "Advanced"

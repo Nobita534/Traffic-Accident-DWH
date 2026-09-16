@@ -75,22 +75,6 @@ table 'All Measure'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Priority Trafficways' =
-			VAR _ThresholdAccidents = 'All Measure'[Avg Accident] -- Ngưỡng X định biên tùy chọn
-			VAR _ThresholdSeverity = 'All Measure'[Avg Severity Index according Trafficway_type]   -- Ngưỡng Y định biên tùy chọn
-			VAR _SummaryTable =
-			    FILTER(
-			        SUMMARIZE(
-			            'public fct_traffic_accidents',
-			            'public dim_traffic_device'[trafficway_type]
-			        ),
-			        'All Measure'[Total Accident] > _ThresholdAccidents && [Severity Index] > _ThresholdSeverity
-			    )
-			RETURN
-			    COUNTROWS(_SummaryTable)
-		formatString: 0
-		lineageTag: 7934271f-6311-4b6b-82aa-c57e21494923
-
 	measure 'Human Error Ratio' =
 			DIVIDE(
 			    CALCULATE(
@@ -102,36 +86,6 @@ table 'All Measure'
 			)
 		formatString: 0.00%;-0.00%;0.00%
 		lineageTag: 4ba95ffe-7778-4853-88da-96cdd1736a6f
-
-	measure 'Priority Trafficway(s)' =
-			VAR _ThresholdAccidents = [Avg Accident]
-			VAR _ThresholdSeverity = [Avg Severity Index according Trafficway_type]
-			VAR _Trafficways =
-			    ADDCOLUMNS(
-			        SUMMARIZE(
-			            'public fct_traffic_accidents',
-			            'public dim_traffic_device'[trafficway_type]
-			        ),
-			        "@Accidents", [Total Accident],
-			        "@SeverityIndex", [Severity Index]
-			    )
-			VAR _PriorityTrafficways =
-			    FILTER(
-			        _Trafficways,
-			        [@Accidents] > _ThresholdAccidents
-			            && [@SeverityIndex] > _ThresholdSeverity
-			    )
-			VAR _Result =
-			    CONCATENATEX(
-			        _PriorityTrafficways,
-			        'public dim_traffic_device'[trafficway_type],
-			        ", ",
-			        [@Accidents], DESC,
-			        'public dim_traffic_device'[trafficway_type], ASC
-			    )
-			RETURN
-			    IF(COUNTROWS(_PriorityTrafficways) = 0, "No Priority", _Result)
-		lineageTag: 6dfc51c7-7213-46ce-b532-25c81bdf4e31
 
 	measure 'Avg Accident' =
 			DIVIDE(
@@ -530,6 +484,176 @@ table 'All Measure'
 		formatString: +0.00%;-0.00%;0.00%
 		lineageTag: edfb3147-5afe-43cf-9e5c-22d7279169dd
 
+	measure 'Priority Trafficway(s)' =
+			VAR _ThresholdAccidents = [Avg Accident]
+			VAR _ThresholdSeverity = [Avg Severity Index according Trafficway_type]
+			VAR _Trafficways =
+			    ADDCOLUMNS(
+			        SUMMARIZE(
+			            'public fct_traffic_accidents',
+			            'public dim_traffic_device'[trafficway_type]
+			        ),
+			        "@Accidents", [Total Accident],
+			        "@SeverityIndex", [Severity Index]
+			    )
+			VAR _PriorityTrafficways =
+			    FILTER(
+			        _Trafficways,
+			        [@Accidents] > _ThresholdAccidents
+			            && [@SeverityIndex] > _ThresholdSeverity
+			    )
+			VAR _Result =
+			    CONCATENATEX(
+			        _PriorityTrafficways,
+			        'public dim_traffic_device'[trafficway_type],
+			        ", ",
+			        [@Accidents], DESC,
+			        'public dim_traffic_device'[trafficway_type], ASC
+			    )
+			RETURN
+			    IF(COUNTROWS(_PriorityTrafficways) = 0, "No Priority", _Result)
+		lineageTag: 6dfc51c7-7213-46ce-b532-25c81bdf4e31
+
+	measure 'Severe Favorable Human-Factor Crashes' =
+			
+			CALCULATE(
+			    [Total Accident],
+			
+			    KEEPFILTERS(
+			        'public fct_traffic_accidents'[is_severe] = TRUE()
+			    ),
+			
+			    KEEPFILTERS(
+			        'public dim_natural_condition'[is_favorable_condition] = TRUE()
+			    ),
+			
+			    KEEPFILTERS(
+			        'public dim_cause'[cause_group] = "Human Factors"
+			    )
+			)
+		formatString: 0
+		lineageTag: 6171cee3-cbbf-4493-a513-ad3f0ca76e0f
+
+	measure 'BQ3 Top 10 Flag' =
+			
+			VAR _CurrentCause =
+			    SELECTEDVALUE(
+			        'public dim_cause'[primary_cause]
+			    )
+			
+			VAR _CauseTable =
+			    ADDCOLUMNS(
+			        ALLSELECTED(
+			            'public dim_cause'[primary_cause]
+			        ),
+			        "@BQ3Accidents",
+			            CALCULATE(
+			                [Total Accident],
+			                KEEPFILTERS(
+			                    'public fct_traffic_accidents'[is_severe] = TRUE()
+			                ),
+			                KEEPFILTERS(
+			                    'public dim_natural_condition'[is_favorable_condition] = TRUE()
+			                ),
+			                KEEPFILTERS(
+			                    'public dim_cause'[cause_group] = "Human Factors"
+			                )
+			            )
+			    )
+			
+			VAR _ValidCauses =
+			    FILTER(
+			        _CauseTable,
+			        [@BQ3Accidents] > 0
+			    )
+			
+			VAR _Top10 =
+			    TOPN(
+			        10,
+			        _ValidCauses,
+			        [@BQ3Accidents], DESC,
+			        'public dim_cause'[primary_cause], ASC
+			    )
+			
+			RETURN
+			    IF(
+			        CONTAINS(
+			            _Top10,
+			            'public dim_cause'[primary_cause],
+			            _CurrentCause
+			        ),
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: e040f867-ce10-4129-a2cc-f1c7a7037bc0
+
+	measure 'Priority Severe Crash Share' =
+			
+			VAR _ThresholdAccidents =
+			    [Avg Accident]
+			
+			VAR _ThresholdSeverity =
+			    [Avg Severity Index according Trafficway_type]
+			
+			VAR _TrafficwayTable =
+			    ADDCOLUMNS(
+			        VALUES(
+			            'public dim_traffic_device'[trafficway_type]
+			        ),
+			        "@Accidents",
+			            CALCULATE([Total Accident]),
+			        "@SeverityIndex",
+			            CALCULATE([Severity Index]),
+			        "@SevereCrashes",
+			            CALCULATE([Severe Total])
+			    )
+			
+			VAR _PriorityTrafficways =
+			    FILTER(
+			        _TrafficwayTable,
+			        [@Accidents] > _ThresholdAccidents
+			            && [@SeverityIndex] > _ThresholdSeverity
+			    )
+			
+			VAR _PrioritySevereCrashes =
+			    SUMX(
+			        _PriorityTrafficways,
+			        [@SevereCrashes]
+			    )
+			
+			RETURN
+			    DIVIDE(
+			        _PrioritySevereCrashes,
+			        [Severe Total]
+			    )
+		lineageTag: 9a7dd357-097f-4bfa-a389-86d0e95c09af
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Priority Trafficways' =
+			
+			VAR _ThresholdAccidents =
+			    [Avg Accident]
+			
+			VAR _ThresholdSeverity =
+			    [Avg Severity Index according Trafficway_type]
+			
+			VAR _SummaryTable =
+			    FILTER(
+			        SUMMARIZE(
+			            'public fct_traffic_accidents',
+			            'public dim_traffic_device'[trafficway_type]
+			        ),
+			        [Total Accident] > _ThresholdAccidents
+			            && [Severity Index] > _ThresholdSeverity
+			    )
+			
+			RETURN
+			    COUNTROWS(_SummaryTable)
+		formatString: 0
+		lineageTag: 29a30a0c-c479-433a-85e7-496ecec160a0
+
 	column Column
 		isHidden
 		formatString: 0
@@ -547,3 +671,4 @@ table 'All Measure'
 	annotation PBI_Id = 8fa74cb5745e4305b82b50b08963b966
 
 	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

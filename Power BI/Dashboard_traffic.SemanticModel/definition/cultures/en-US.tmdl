@@ -5538,22 +5538,6 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.priority_trafficways": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Priority Trafficways"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "priority trafficways": {
-			            "State": "Generated"
-			          }
-			        }
-			      ]
-			    },
 			    "all_measure.human_error_ratio": {
 			      "Definition": {
 			        "Binding": {

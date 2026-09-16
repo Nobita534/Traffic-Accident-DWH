@@ -7,7 +7,7 @@
     "z": 2000,
     "height": 93.333333333333343,
     "width": 310,
-    "tabOrder": 6000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -161,6 +161,26 @@
             }
           }
         }
+      ],
+      "visualTooltip": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "section": {
+              "expr": {
+                "Literal": {
+                  "Value": "'da1669503a03bc070d8d'"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -168,7 +188,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3f8cf5e58da0e5129411",
+        "name": "9b4c23ae487eb8c57e7d",
         "field": {
           "Measure": {
             "Expression": {

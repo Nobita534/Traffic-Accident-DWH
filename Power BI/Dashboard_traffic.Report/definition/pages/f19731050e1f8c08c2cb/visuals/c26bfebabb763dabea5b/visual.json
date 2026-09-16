@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
   "name": "c26bfebabb763dabea5b",
   "position": {
-    "x": 101.66666666666667,
-    "y": 196.66666666666669,
+    "x": 101.42145018393957,
+    "y": 196.99166285726724,
     "z": 7000,
-    "height": 311.66666666666669,
-    "width": 635,
-    "tabOrder": 2000
+    "height": 312.0660005659679,
+    "width": 635.83447615315959,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "barChart",
@@ -43,11 +43,11 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Total Accident"
+                  "Property": "Severe Favorable Human-Factor Crashes"
                 }
               },
-              "queryRef": "All Measure.Total Accident",
-              "nativeQueryRef": "Total Accident"
+              "queryRef": "All Measure.Severe Favorable Human-Factor Crashes",
+              "nativeQueryRef": "Severe Favorable Human-Factor Crashes"
             }
           ]
         }
@@ -62,7 +62,7 @@
                     "Entity": "All Measure"
                   }
                 },
-                "Property": "Total Accident"
+                "Property": "Severe Favorable Human-Factor Crashes"
               }
             },
             "direction": "Descending"
@@ -227,216 +227,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "af8d9342cd86fea19feb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_cause"
-              }
-            },
-            "Property": "primary_cause"
-          }
-        },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "p",
-                        "Entity": "public dim_cause",
-                        "Type": 0
-                      },
-                      {
-                        "Name": "a",
-                        "Entity": "All Measure",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "p"
-                            }
-                          },
-                          "Property": "primary_cause"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Measure": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "a"
-                              }
-                            },
-                            "Property": "Total Accident"
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 10
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "p",
-              "Entity": "public dim_cause",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "p"
-                          }
-                        },
-                        "Property": "primary_cause"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      },
-      {
-        "name": "bq3_severe_only",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public fct_traffic_accidents"
-              }
-            },
-            "Property": "is_severe"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "public fct_traffic_accidents",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "f"
-                          }
-                        },
-                        "Property": "is_severe"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "true"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "bq3_favorable_only",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_natural_condition"
-              }
-            },
-            "Property": "is_favorable_condition"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "n",
-              "Entity": "public dim_natural_condition",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "n"
-                          }
-                        },
-                        "Property": "is_favorable_condition"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "true"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
         "name": "bq3_human_factors_only",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -488,7 +280,88 @@
           ]
         },
         "howCreated": "User"
+      },
+      {
+        "name": "af8d9342cd86fea19feb",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_cause"
+              }
+            },
+            "Property": "primary_cause"
+          }
+        },
+        "type": "TopN"
+      },
+      {
+        "name": "2317cacb79dc8d92ec99",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Favorable Human-Factor Crashes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "22b7ea3bc2916dd46876",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "BQ3 Top 10 Flag"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "a",
+              "Entity": "All Measure",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 0,
+                  "Left": {
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "a"
+                        }
+                      },
+                      "Property": "BQ3 Top 10 Flag"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "1L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }
