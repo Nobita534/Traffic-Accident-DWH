@@ -7,7 +7,7 @@
     "z": 7000,
     "height": 640.921586595104,
     "width": 657.51014530697739,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -560,20 +560,6 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "437fc610016ca20e2a23",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_natural_condition"
-              }
-            },
-            "Property": "lighting_condition"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
         "name": "a5699377500042d2391c",
         "field": {
           "Column": {
@@ -646,7 +632,21 @@
         }
       },
       {
-        "name": "c824ee68dcccd9e55952",
+        "name": "81e26cbd564090c307cb",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "public dim_natural_condition"
+              }
+            },
+            "Property": "lighting_condition"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "98a11ae1e82b9304bd20",
         "field": {
           "Measure": {
             "Expression": {

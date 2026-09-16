@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 85.652173913043484,
     "width": 320,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "cardVisual",
@@ -57,20 +57,6 @@
               "queryRef": "All Measure.Avg Units per Accident",
               "nativeQueryRef": "Avg Units",
               "displayName": "Avg Units"
-            },
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Dominant Road Surface"
-                }
-              },
-              "queryRef": "All Measure.Dominant Road Surface",
-              "nativeQueryRef": "Dominant Road Surface"
             }
           ]
         }
@@ -199,5 +185,51 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "c711e9d14d086a40164b",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e9fdfdc0cb1229569c10",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "064b11f2ac54e2c60374",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Avg Units per Accident"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
   }
 }

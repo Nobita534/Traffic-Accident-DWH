@@ -1463,6 +1463,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.461
 			          }
+			        },
+			        {
+			          "Weather": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -7065,207 +7075,1039 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "all_measure.severe_rate_change_pp": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Rate Change pp"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe rate change pp": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.lowlight_severe_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Low-Light Severe Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "low-light severe rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "low light severe rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "low-light severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "low-light severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "low-light severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "low-light severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "low-light severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "low light severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "low light severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "low light severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "low light severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "low light severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.adverse_lowlight_severe_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Adverse Low-Light Severe Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "adverse low-light severe rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "adverse low light severe rate": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "adverse low light severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "adverse low light severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "adverse low light severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "adverse low light severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "adverse low light severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "adverse low light severe amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "adverse low light severe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "adverse low light severe speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "adverse low light severe level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "adverse low light severe scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.comparison_period_valid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Comparison Period Valid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "comparison period valid": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "comparison era valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "comparison epoch valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "comparison age valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "comparison stage valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "comparison phase valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "comparison episode valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "comparison interlude valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "comparison interval valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        },
+			        {
+			          "comparison extent valid": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.458
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.previous_period_adverse_severe_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Previous Period Adverse Severe Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "previous period adverse severe rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "previous period adverse severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "previous period adverse severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "previous period adverse severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "previous period adverse severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "previous period adverse severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "previous period adverse severe amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "previous period adverse severe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "previous period adverse severe speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "previous period adverse severe level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "previous period adverse severe scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_rate_change_": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Rate Change %"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe rate change %": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "severe rate change percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.771
+			          }
+			        },
+			        {
+			          "severe rate change pct": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.748
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.total_injuries": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Total Injuries"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "total injuries": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "injuries": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "aggregate injury": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "overall injury": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "total grievance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "grievance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "total wound": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total damage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total wrong": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total hurt": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "total harm": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "wound": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.dominant_road_surface": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Dominant Road Surface"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dominant road surface": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "surface": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "road surface": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "dominant road facade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "dominant road façade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "shallow": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "external": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "exterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "outward": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "seeming": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "road facade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "road façade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "dominant road exterior": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_rate_change_display": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Rate Change Display"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe rate change display": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "change display": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate change display": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe rate change exhibition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "severe rate change presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "severe rate change demonstration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "severe rate change spectacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "severe rate change ceremony": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "severe rate change pageant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "rate change exhibition": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rate change presentation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rate change demonstration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "rate change spectacle": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_rate_change_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Rate Change Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe rate change color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "change color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "rate change color": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe rate change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "rate change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "change hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "severe rate change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "severe rate change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "severe rate change dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "severe rate change paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "severe rate change pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "rate change tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "rate change shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "public_dim_casualty_analysis_has_public_fct_traffic_accident": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_casualty_analysis"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_casualty_analysis": {
-			          "Target": {
-			            "Entity": "public_dim_casualty_analysis"
-			          }
-			        },
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          },
-			          "Nouns": [
-			            {
-			              "fact": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_casualty_analysis"
-			            },
-			            "Object": {
-			              "Role": "public_fct_traffic_accident"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_dim_casualty_analysises_have_public_fct_traffic_accidents"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "public_dim_casualty_analysis"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_public_dim_casualty_analysises"
-			        }
-			      ]
-			    },
-			    "public_fct_traffic_accident_has_public_dim_traffic_device": {
-			      "Binding": {
-			        "ConceptualEntity": "public fct_traffic_accidents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          }
-			        },
-			        "public_dim_traffic_device": {
-			          "Target": {
-			            "Entity": "public_dim_traffic_device"
-			          },
-			          "Nouns": [
-			            {
-			              "device": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "public_dim_traffic_device"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_public_dim_traffic_devices"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_traffic_device"
-			            },
-			            "Object": {
-			              "Role": "public_fct_traffic_accident"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_dim_traffic_devices_have_public_fct_traffic_accidents"
-			        }
-			      ]
-			    },
-			    "public_fct_traffic_accident_has_public_dim_natural_condition": {
-			      "Binding": {
-			        "ConceptualEntity": "public fct_traffic_accidents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          }
-			        },
-			        "public_dim_natural_condition": {
-			          "Target": {
-			            "Entity": "public_dim_natural_condition"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "public_dim_natural_condition"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_public_dim_natural_conditions"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_natural_condition"
-			            },
-			            "Object": {
-			              "Role": "public_fct_traffic_accident"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_dim_natural_conditions_have_public_fct_traffic_accidents"
-			        }
-			      ]
-			    },
-			    "public_fct_traffic_accident_has_public_dim_crash_type": {
-			      "Binding": {
-			        "ConceptualEntity": "public fct_traffic_accidents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          }
-			        },
-			        "public_dim_crash_type": {
-			          "Target": {
-			            "Entity": "public_dim_crash_type"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_type"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_public_dim_crash_types"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_type"
-			            },
-			            "Object": {
-			              "Role": "public_fct_traffic_accident"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_dim_crash_types_have_public_fct_traffic_accidents"
-			        }
-			      ]
-			    },
 			    "public_fct_traffic_accident_has_public_dim_crash_date": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
@@ -7355,6 +8197,501 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "public_dim_causes_have_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_rate_change_color": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_rate_change_color": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_rate_change_color"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_severe_rate_change_color": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.severe_rate_change_color": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_severe_rate_change_color"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_rate_change_display": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_rate_change_display": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_rate_change_display"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_severe_rate_change_display": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.severe_rate_change_display": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_display"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_display"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_severe_rate_change_display"
+			        }
+			      ]
+			    },
+			    "all_measure_has_dominant_road_surface": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.dominant_road_surface": {
+			          "Target": {
+			            "Entity": "all_measure.dominant_road_surface"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.dominant_road_surface"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_dominant_road_surface"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_total_injuries": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.total_injuries": {
+			          "Target": {
+			            "Entity": "all_measure.total_injuries"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.total_injuries"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_total_injuries"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_rate_change_": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_rate_change_": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_rate_change_"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_severe_rate_change_": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.severe_rate_change_": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_severe_rate_change_"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_previous_period_adverse_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.previous_period_adverse_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.previous_period_adverse_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.previous_period_adverse_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_previous_period_adverse_severe_rate"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_previous_period_adverse_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.previous_period_adverse_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.previous_period_adverse_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.previous_period_adverse_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_previous_period_adverse_severe_rate"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_comparison_period_valid": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.comparison_period_valid": {
+			          "Target": {
+			            "Entity": "all_measure.comparison_period_valid"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.comparison_period_valid"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_comparison_period_valid"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_adverse_lowlight_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.adverse_lowlight_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.adverse_lowlight_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.adverse_lowlight_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_adverse_lowlight_severe_rate"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_lowlight_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.lowlight_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.lowlight_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.lowlight_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_lowlight_severe_rate"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_rate_change_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_rate_change_pp": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_rate_change_pp"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_has_all_measure_severe_rate_change_pp": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.severe_rate_change_pp": {
+			          "Target": {
+			            "Entity": "all_measure.severe_rate_change_pp"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_rate_change_pp"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_dates_have_severe_rate_change_pp"
 			        }
 			      ]
 			    },
@@ -9781,6 +11118,61 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
+			    "public_dim_crash_date_is_comparison_period_valid": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date"
+			          }
+			        },
+			        "all_measure.comparison_period_valid": {
+			          "Target": {
+			            "Entity": "all_measure.comparison_period_valid"
+			          }
+			        }
+			      },
+			      "Conditions": [
+			        {
+			          "Target": {
+			            "Role": "all_measure.comparison_period_valid"
+			          },
+			          "Operator": "Equals",
+			          "Value": {
+			            "Boolean": [
+			              true
+			            ]
+			          }
+			        }
+			      ],
+			      "Phrasings": [
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date"
+			            },
+			            "Adjectives": [
+			              {
+			                "comparison period valid": {
+			                  "State": "Generated"
+			                }
+			              },
+			              {
+			                "comparison-period-valid": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "some_public_dim_crash_dates_are_comparison_period_valid_public_dim_crash_dates"
+			        }
+			      ]
+			    },
 			    "public_fct_traffic_accident_is_severe": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
@@ -9828,6 +11220,204 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_public_fct_traffic_accidents_are_severe_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_public_dim_crash_type": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "public_dim_crash_type": {
+			          "Target": {
+			            "Entity": "public_dim_crash_type"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_type"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_public_dim_crash_types"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_type"
+			            },
+			            "Object": {
+			              "Role": "public_fct_traffic_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_crash_types_have_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_public_dim_natural_condition": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "public_dim_natural_condition": {
+			          "Target": {
+			            "Entity": "public_dim_natural_condition"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "public_dim_natural_condition"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_public_dim_natural_conditions"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_natural_condition"
+			            },
+			            "Object": {
+			              "Role": "public_fct_traffic_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_natural_conditions_have_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_public_dim_traffic_device": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          },
+			          "Nouns": [
+			            {
+			              "device": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "public_dim_traffic_device"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_public_dim_traffic_devices"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "public_fct_traffic_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_dim_casualty_analysis_has_public_fct_traffic_accident": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_casualty_analysis"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_casualty_analysis": {
+			          "Target": {
+			            "Entity": "public_dim_casualty_analysis"
+			          }
+			        },
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          },
+			          "Nouns": [
+			            {
+			              "fact": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_casualty_analysis"
+			            },
+			            "Object": {
+			              "Role": "public_fct_traffic_accident"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_casualty_analysises_have_public_fct_traffic_accidents"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "public_dim_casualty_analysis"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_public_dim_casualty_analysises"
 			        }
 			      ]
 			    },

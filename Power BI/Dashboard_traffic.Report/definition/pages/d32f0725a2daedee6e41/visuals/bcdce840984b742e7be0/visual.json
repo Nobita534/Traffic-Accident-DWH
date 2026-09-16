@@ -6,7 +6,8 @@
     "y": 88.333333333333343,
     "z": 4000,
     "height": 93.333333333333343,
-    "width": 311.66666666666669
+    "width": 311.66666666666669,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -22,32 +23,16 @@
                       "Entity": "All Measure"
                     }
                   },
-                  "Property": "Severe Rate Change pp"
+                  "Property": "Severe Rate Change Display"
                 }
               },
-              "queryRef": "All Measure.Severe Rate Change pp",
-              "nativeQueryRef": "Severe Rate Change (pp)",
-              "displayName": "Severe Rate Change (pp)"
+              "queryRef": "All Measure.Severe Rate Change Display",
+              "nativeQueryRef": "Severe Rate Change Display"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "All Measure"
-                  }
-                },
-                "Property": "Severe Rate Change pp"
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -96,7 +81,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "28D"
+                  "Value": "24D"
                 }
               }
             },
@@ -104,8 +89,13 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#E2E8F0'"
+                    "Measure": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "All Measure"
+                        }
+                      },
+                      "Property": "Severe Rate Change Color"
                     }
                   }
                 }
@@ -168,7 +158,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "ae83a9e038b5b09302e1",
+        "name": "5d82e2742ecd003083b8",
         "field": {
           "Measure": {
             "Expression": {
@@ -176,7 +166,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "Severe Rate Change pp"
+            "Property": "Severe Rate Change Display"
           }
         },
         "type": "Advanced"

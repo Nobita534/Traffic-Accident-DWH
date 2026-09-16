@@ -7,7 +7,7 @@
     "z": 1000,
     "height": 93.333333333333343,
     "width": 306.66666666666669,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "card",
@@ -151,23 +151,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "07aaac1c19c05e458038",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Peak Severe Condition"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

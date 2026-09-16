@@ -7,7 +7,7 @@
     "z": 8000,
     "height": 325,
     "width": 606.66666666666674,
-    "tabOrder": 5000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "clusteredColumnChart",
@@ -27,27 +27,9 @@
                 }
               },
               "queryRef": "public dim_natural_condition.weather_condition",
-              "nativeQueryRef": "weather_condition",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "All Measure"
-                    }
-                  },
-                  "Property": "Low-Light Severe Rate"
-                }
-              },
-              "queryRef": "All Measure.Low-Light Severe Rate",
-              "nativeQueryRef": "Low-Light Severe Rate",
-              "format": "0.00%;-0.00%;0.00%"
+              "nativeQueryRef": "Weather",
+              "active": true,
+              "displayName": "Weather"
             }
           ]
         },
@@ -108,6 +90,25 @@
               },
               "queryRef": "All Measure.Fatal Crash Rate",
               "nativeQueryRef": "Fatal Crash Rate"
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Low-Light Severe Rate"
+                }
+              },
+              "queryRef": "All Measure.Low-Light Severe Rate",
+              "nativeQueryRef": "Low-Light Severe Rate",
+              "format": "0.00%;-0.00%;0.00%"
             }
           ]
         }
@@ -328,7 +329,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       },
       {
         "name": "excludeUnknownWeather",
@@ -386,6 +388,76 @@
             }
           ]
         }
+      },
+      {
+        "name": "83ecb0865eb2d71a9305",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Low-Light Severe Rate"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dd6bf1754629710bee04",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Accident"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "6057191b0b3937458e22",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Total"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "25150d5e514000bd62cd",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Total Injuries"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c21290933252e248bac2",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Fatal Crash Rate"
+          }
+        },
+        "type": "Advanced"
       }
     ]
   }

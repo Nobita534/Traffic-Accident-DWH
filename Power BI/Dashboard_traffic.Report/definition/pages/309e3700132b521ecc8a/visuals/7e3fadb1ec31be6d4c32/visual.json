@@ -7,7 +7,7 @@
     "z": 6000,
     "height": 333.2792250294541,
     "width": 450.90718680455558,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "pieChart",
@@ -303,42 +303,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "fa4891ec1a61be70cb6a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_casualty_analysis"
-              }
-            },
-            "Property": "Casualty Type"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "f31137ac808a68869450",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_casualty_analysis"
-                  }
-                },
-                "Property": "People Count"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

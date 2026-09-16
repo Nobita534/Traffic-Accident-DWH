@@ -6,8 +6,7 @@
     "y": 198.33333333333334,
     "z": 4000,
     "height": 666.66666666666674,
-    "width": 808.33333333333337,
-    "tabOrder": 1000
+    "width": 808.33333333333337
   },
   "visual": {
     "visualType": "lineStackedColumnComboChart",
@@ -321,80 +320,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "424567427eb78b29ed9b",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "month"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "a873e72b89306207bdc8",
-        "field": {
-          "Aggregation": {
-            "Expression": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public fct_traffic_accidents"
-                  }
-                },
-                "Property": "injuries_total"
-              }
-            },
-            "Function": 0
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "52ecc0f80b660e737cc2",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "All Measure"
-              }
-            },
-            "Property": "Severe Rate"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "11bc2a5c217113ea356d",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "public dim_crash_date"
-                  }
-                },
-                "Hierarchy": "year Hierarchy"
-              }
-            },
-            "Level": "year"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

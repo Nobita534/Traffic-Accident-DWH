@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 93.333333333333343,
     "width": 313.33333333333337,
-    "tabOrder": 9000
+    "tabOrder": 8000
   },
   "visual": {
     "visualType": "card",
@@ -168,7 +168,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "cad57bd319c0085dca8c",
+        "name": "627574fb969aab96096d",
         "field": {
           "Measure": {
             "Expression": {

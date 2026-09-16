@@ -6,8 +6,7 @@
     "y": 65.217391304347828,
     "z": 2000,
     "height": 89.1304347826087,
-    "width": 320,
-    "tabOrder": 1000
+    "width": 320
   },
   "visual": {
     "visualType": "cardVisual",
@@ -43,6 +42,21 @@
               "queryRef": "All Measure.Accident Volume Bucket",
               "nativeQueryRef": "Volume Bucket",
               "displayName": "Volume Bucket"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Dominant Road Surface"
+                }
+              },
+              "queryRef": "All Measure.Dominant Road Surface",
+              "nativeQueryRef": "Road Surface",
+              "displayName": "Road Surface"
             }
           ]
         }
@@ -73,7 +87,7 @@
             "maxTiles": {
               "expr": {
                 "Literal": {
-                  "Value": "2L"
+                  "Value": "3L"
                 }
               }
             },
@@ -310,7 +324,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "e99ab3a59ad1b14c8c5e",
+        "name": "44da7fb06504d4132405",
         "field": {
           "Measure": {
             "Expression": {
@@ -324,7 +338,7 @@
         "type": "Advanced"
       },
       {
-        "name": "c1ef0d2d539850948d65",
+        "name": "92e1fd50dcec45e29e18",
         "field": {
           "Measure": {
             "Expression": {
@@ -333,6 +347,20 @@
               }
             },
             "Property": "Accident Volume Bucket"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4bc60f8304bb1a80a3be",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Dominant Road Surface"
           }
         },
         "type": "Advanced"
