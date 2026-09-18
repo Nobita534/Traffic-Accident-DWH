@@ -524,7 +524,7 @@ table 'All Measure'
 			    ),
 			
 			    KEEPFILTERS(
-			        'public dim_natural_condition'[is_favorable_condition] = TRUE()
+			        'public dim_natural_condition'[condition_group] = "Favorable"
 			    ),
 			
 			    KEEPFILTERS(
@@ -533,6 +533,135 @@ table 'All Measure'
 			)
 		formatString: 0
 		lineageTag: 6171cee3-cbbf-4493-a513-ad3f0ca76e0f
+
+	measure 'Severe Adverse Human-Factor Crashes' =
+			CALCULATE(
+			    [Total Accident],
+			    KEEPFILTERS(
+			        'public fct_traffic_accidents'[is_severe] = TRUE()
+			    ),
+			    KEEPFILTERS(
+			        'public dim_natural_condition'[condition_group] = "Adverse"
+			    ),
+			    KEEPFILTERS(
+			        'public dim_cause'[cause_group] = "Human Factors"
+			    )
+			)
+		formatString: 0
+		lineageTag: e2672043-632c-41e4-af50-282f3dad8dff
+
+	measure 'Severe Human-Factor Crashes' =
+			[Severe Favorable Human-Factor Crashes]
+			    + [Severe Adverse Human-Factor Crashes]
+		formatString: 0
+		lineageTag: 6aba2fa9-d4c2-49bb-b5d5-27b3d828762e
+
+	measure 'BQ3 Top 5 Human-Factor Flag' =
+			VAR _CurrentCause =
+			    SELECTEDVALUE(
+			        'public dim_cause'[primary_cause]
+			    )
+			VAR _CauseTable =
+			    ADDCOLUMNS(
+			        ALLSELECTED(
+			            'public dim_cause'[primary_cause]
+			        ),
+			        "@SevereHumanCrashes",
+			            [Severe Human-Factor Crashes]
+			    )
+			VAR _ValidCauses =
+			    FILTER(
+			        _CauseTable,
+			        [@SevereHumanCrashes] > 0
+			    )
+			VAR _Top5 =
+			    TOPN(
+			        5,
+			        _ValidCauses,
+			        [@SevereHumanCrashes], DESC,
+			        'public dim_cause'[primary_cause], ASC
+			    )
+			RETURN
+			    IF(
+			        CONTAINS(
+			            _Top5,
+			            'public dim_cause'[primary_cause],
+			            _CurrentCause
+			        ),
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: dd945fd2-f9d4-4d97-b8c3-59e2822e27df
+
+	measure 'Severe Crash Share within Trafficway' =
+			VAR _CurrentSevere =
+			    [Severe Total]
+			VAR _TrafficwaySevere =
+			    CALCULATE(
+			        [Severe Total],
+			        REMOVEFILTERS('public dim_cause')
+			    )
+			RETURN
+			    DIVIDE(
+			        _CurrentSevere,
+			        _TrafficwaySevere
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 601a4d2d-dee9-429e-be57-7a3301087bef
+
+	measure 'Priority Trafficway Top 3 Flag' =
+			VAR _CurrentTrafficway =
+			    SELECTEDVALUE(
+			        'public dim_traffic_device'[trafficway_type]
+			    )
+			VAR _TrafficwayUniverse =
+			    ALLSELECTED(
+			        'public dim_traffic_device'[trafficway_type]
+			    )
+			VAR _ThresholdAccidents =
+			    AVERAGEX(
+			        _TrafficwayUniverse,
+			        CALCULATE([Total Accident])
+			    )
+			VAR _ThresholdSeverity =
+			    AVERAGEX(
+			        _TrafficwayUniverse,
+			        CALCULATE([Severity Index])
+			    )
+			VAR _TrafficwayTable =
+			    ADDCOLUMNS(
+			        _TrafficwayUniverse,
+			        "@Accidents", CALCULATE([Total Accident]),
+			        "@SeverityIndex", CALCULATE([Severity Index]),
+			        "@SevereCrashes", CALCULATE([Severe Total])
+			    )
+			VAR _PriorityTrafficways =
+			    FILTER(
+			        _TrafficwayTable,
+			        [@Accidents] > _ThresholdAccidents
+			            && [@SeverityIndex] > _ThresholdSeverity
+			    )
+			VAR _Top3 =
+			    TOPN(
+			        3,
+			        _PriorityTrafficways,
+			        [@SevereCrashes], DESC,
+			        [@Accidents], DESC,
+			        'public dim_traffic_device'[trafficway_type], ASC
+			    )
+			RETURN
+			    IF(
+			        CONTAINS(
+			            _Top3,
+			            'public dim_traffic_device'[trafficway_type],
+			            _CurrentTrafficway
+			        ),
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: 5db72e6a-cc3b-40e6-9ab2-b80d06a317e9
 
 	measure 'BQ3 Top 10 Flag' =
 			
@@ -553,7 +682,7 @@ table 'All Measure'
 			                    'public fct_traffic_accidents'[is_severe] = TRUE()
 			                ),
 			                KEEPFILTERS(
-			                    'public dim_natural_condition'[is_favorable_condition] = TRUE()
+			                    'public dim_natural_condition'[condition_group] = "Favorable"
 			                ),
 			                KEEPFILTERS(
 			                    'public dim_cause'[cause_group] = "Human Factors"
