@@ -34,6 +34,14 @@ table 'public dim_natural_condition'
 
 		annotation SummarizationSetBy = Automatic
 
+	column condition_group
+		dataType: string
+		lineageTag: 325e1a8b-27b1-4a0e-93f7-b92dac7edf08
+		summarizeBy: none
+		sourceColumn: condition_group
+
+		annotation SummarizationSetBy = Automatic
+
 	column is_favorable_condition
 		dataType: boolean
 		formatString: """TRUE"";""TRUE"";""FALSE"""
