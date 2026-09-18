@@ -43,6 +43,14 @@ table 'public dim_natural_condition'
 
 		annotation SummarizationSetBy = Automatic
 
+	column condition_group
+		dataType: string
+		lineageTag: edc99d96-161f-4140-a6db-f8460e1f781f
+		summarizeBy: none
+		sourceColumn: condition_group
+
+		annotation SummarizationSetBy = Automatic
+
 	partition 'public dim_natural_condition' = m
 		mode: import
 		source =
