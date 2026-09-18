@@ -89,13 +89,22 @@ models:
       - name: roadway_surface_cond
         description: Road surface condition.
 
+      - name: condition_group
+        description: >
+          Canonical environmental classification based on weather and lighting.
+          FAVORABLE when weather is CLEAR or CLOUDY/OVERCAST and lighting is
+          DAWN, DAYLIGHT, or DARKNESS, LIGHTED ROAD; UNKNOWN / EXCLUDED when
+          either weather or lighting is UNKNOWN or OTHER; ADVERSE otherwise.
+        tests:
+          - accepted_values:
+              values: ['Favorable', 'Adverse', 'Unknown / Excluded']
+
       - name: is_favorable_condition
         description: >
-          Indicates whether the recorded weather and lighting combination is
-          classified as favorable for BQ3 analysis. TRUE when weather is CLEAR
-          or CLOUDY/OVERCAST and lighting is DAWN, DAYLIGHT, or DARKNESS,
-          LIGHTED ROAD. NULL when weather is UNKNOWN or OTHER because the
-          condition cannot be classified reliably; FALSE otherwise.
+          Compatibility flag derived from condition_group for existing BQ3
+          logic. TRUE for Favorable, FALSE for Adverse, and NULL for
+          Unknown / Excluded. New semantic-model logic should prefer
+          condition_group so Adverse is not conflated with excluded values.
 
   - name: dim_traffic_device
     description: >
