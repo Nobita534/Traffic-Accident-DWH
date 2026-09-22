@@ -9,7 +9,11 @@ models:
     columns:
 
       - name: fact_id
-        description: Surrogate key of the traffic accident fact table.
+        description: >
+          Deterministic BIGINT surrogate key derived from the crash attributes
+          available in the current cleaned source. The same unchanged crash
+          record produces the same fact_id across rebuilds. This replaces the
+          previous ROW_NUMBER-based key and does not change the fact grain.
         tests:
           - unique
           - not_null
