@@ -5,9 +5,10 @@ For the data warehouse architecture, dbt models, and transformation logic, see t
 
 > **Interactive dashboard:** _Power BI public link will be added after publishing._
 
-![Dashboard preview](images/dashboard-preview.webp)
-
-*Figure 1. Human & Infrastructure Priorities dashboard preview.*
+<!-- IMAGE PLACEHOLDER:
+Dashboard preview.
+Target file: images/dashboard-preview.png
+-->
 
 ---
 
@@ -88,9 +89,10 @@ During 2022–2024, injury volume increased while Severe Rate did not move in th
 
 2024 recorded the highest injury volume among the three years but the lowest Severe Rate.
 
-![Executive Overview 2022–2024](images/page1-executive-overview-2022-2024.webp)
-
-*Figure 2. Executive Overview for 2022–2024, highlighting the divergence between injury volume and Severe Rate.*
+<!-- IMAGE PLACEHOLDER:
+Executive Overview for 2022–2024.
+Target file: images/page1-executive-overview-2022-2024.png
+-->
 
 **Interpretation**
 
@@ -100,59 +102,72 @@ Crash volume and crash severity represent different dimensions of road-safety pe
 
 ### 3.2 BQ1 — Adverse low-light conditions show higher aggregate severity, but the pattern is not consistent over time
 
-At the aggregate level, Adverse Low-Light conditions show a higher Severe Rate than Normal Conditions, but this difference is not consistent across individual years.
+Across the full period, Adverse Low-Light conditions show a higher Severe Rate than Normal Conditions. The same direction remains visible in the 2022–2024 focus period, but the year-level pattern is not consistent.
 
-**Evidence**
+**Finding 1 — Full-period pattern**
 
-For 2022–2024:
+- Normal Condition Severe Rate: **3.41%**
+- Adverse Low-Light Severe Rate: **3.80%**
+- Difference: **+0.39 percentage points**
 
-- Normal Condition Severe Rate: **3.42%**
-- Adverse Low-Light Severe Rate: **4.14%**
-- Difference: **+0.72 percentage points**
-
-The yearly comparison shows that 2023 produced the clearest gap, while 2022 and 2024 did not show the same pattern.
-
-Not every adverse weather condition under darkness exceeded the Normal baseline. In the full-period view:
+Weather-level comparison also shows that adverse weather under darkness is not uniformly more severe than the Normal baseline:
 
 - RAIN: **4.26%**
 - SNOW: **3.05%**
 - FREEZING RAIN/DRIZZLE: **2.33%**
 - Normal baseline: approximately **3.41%**
 
-![Normal vs Adverse Low-Light comparison](images/bq1-normal-vs-adverse-low-light.webp)
+**Finding 2 — 2022–2024 focus period**
 
-*Figure 3. Normal and Adverse Low-Light Severe Rates with period comparison.*
+- Normal Condition Severe Rate: **3.37%**
+- Adverse Low-Light Severe Rate: **3.64%**
+- Difference: **+0.27 percentage points**
+
+Within this period, the gap still varies materially by year. The largest divergence appears in 2023, while 2024 does not show the same relationship.
+
+<!-- IMAGE PLACEHOLDER:
+Full-period Environmental Severity dashboard.
+Target file: images/bq1-environmental-full-period.png
+-->
 
 **Interpretation**
 
-Adverse low-light conditions are associated with higher severity at the aggregate level, but the pattern depends on period and weather condition. They should not be treated as one uniform risk profile.
+The aggregate result supports monitoring Adverse Low-Light conditions, but it should not be interpreted as a uniform effect across every weather type or year. Environmental severity should therefore be reviewed at both the overall and period-specific levels.
 
 ---
 
-### 3.3 BQ2 — The highest-severity environmental condition is period-dependent and must be interpreted together with crash volume
+### 3.3 BQ2 — Environmental prioritization requires both period context and crash-volume support
 
-The Weather × Lighting combination with the highest supported Severe Rate changes with the analysis period.
+The most decision-relevant Weather × Lighting combination cannot be identified from raw Severe Rate alone. The analysis first establishes the full-period pattern, then reviews the 2022–2024 focus period to test whether the environmental profile remains stable.
 
-**Evidence**
+**Finding 1 — Full-period supported priority**
 
-Peak supported condition:
+- Supported Peak Severe Condition: **CLEAR × DARKNESS, LIGHTED ROAD**
+- Several cells show higher raw Severe Rates, but some are based on substantially smaller crash populations.
+- These low-volume extremes are not treated as the primary priority condition.
 
-- **Full period:** CLEAR × DARKNESS, LIGHTED ROAD
-- **2022–2024:** CLOUDY/OVERCAST × DARKNESS, LIGHTED ROAD
+**Finding 2 — 2022–2024 focus period**
 
-The heatmap also contains cells with very high Severe Rates but low crash volumes. To avoid prioritizing unstable extremes, environmental combinations are interpreted together with their crash-volume support.
+- The supported peak remains **CLEAR × DARKNESS, LIGHTED ROAD** in the current 2022–2024 view.
+- However, the surrounding Weather × Lighting severity distribution changes across the selected period, including several high-rate cells with limited support.
+- The selected-period view therefore remains important even when the top supported condition is unchanged.
 
-![Weather × Lighting Severe Rate heatmap](images/bq2-weather-lighting-heatmap.webp)
+**Volume guardrail**
 
-*Figure 4. Severe Rate interaction matrix with crash-volume support context.*
+Environmental combinations are interpreted using both Severe Rate and crash-volume support. A high rate from a small crash population is treated as weaker prioritization evidence than a similarly elevated rate supported by substantial volume.
+
+<!-- IMAGE PLACEHOLDER:
+Weather × Lighting Severe Rate interaction matrix.
+Target file: images/bq2-weather-lighting-heatmap.png
+-->
 
 **Interpretation**
 
-The highest Severe Rate is not automatically the most decision-relevant condition. Environmental prioritization should consider:
+BQ2 is therefore evaluated using:
 
 **Severity + Crash Volume + Period Context**
 
-rather than a rate in isolation.
+rather than ranking conditions by raw Severe Rate alone.
 
 ---
 
@@ -176,9 +191,10 @@ Full period:
 
 Failing to Yield remains the leading severe-crash category in both analysis scopes.
 
-![Top Human Factors — Favorable vs Adverse](images/bq3-human-factors-comparison.webp)
-
-*Figure 5. Severe-crash burden across the leading Human Factors under Favorable and Adverse conditions.*
+<!-- IMAGE PLACEHOLDER:
+Top Human Factors — Favorable vs Adverse.
+Target file: images/bq3-human-factors-comparison.png
+-->
 
 #### Severity intensity across major trafficways
 
@@ -203,13 +219,15 @@ For 2022–2024, the pattern remains elevated:
 - FOUR WAY × Disregarding Traffic Signals: **6.66%**
 - NOT DIVIDED × Disregarding Traffic Signals: **6.21%**
 
-![Human Factor × Trafficway Severe Rate](images/bq3-human-factor-trafficway-heatmap.webp)
+<!-- IMAGE PLACEHOLDER:
+Human Factor × Trafficway Severe Rate heatmap.
+Target file: images/bq3-human-factor-trafficway-heatmap.png
+-->
 
-*Figure 6. Severe Rate across leading Human Factors and major trafficway types.*
-
-![Signal Violations × FOUR WAY tooltip](images/bq3-signal-four-way-tooltip.webp)
-
-*Figure 7. Representative deep-dive tooltip showing Severe Rate, crash volume, severe crashes, fatalities, and Severe Crash Share within FOUR WAY.*
+<!-- IMAGE PLACEHOLDER:
+Signal Violations × FOUR WAY tooltip.
+Target file: images/bq3-signal-four-way-tooltip.png
+-->
 
 **Interpretation**
 
@@ -234,9 +252,10 @@ The trafficway type with the highest accident volume is not necessarily the high
 
 NOT DIVIDED has high crash frequency but does not simultaneously exceed both the frequency and Severity Index thresholds.
 
-![Full-period Priority Trafficway](images/bq4-priority-full-period.webp)
-
-*Figure 8. Full-period view with FOUR WAY identified as the Priority Trafficway.*
+<!-- IMAGE PLACEHOLDER:
+Full-period Priority Trafficway.
+Target file: images/bq4-priority-full-period.png
+-->
 
 #### 2022–2024
 
@@ -255,9 +274,10 @@ FOUR WAY also retains a notable behavioral pattern for Disregarding Traffic Sign
 - 2022–2024 Severe Rate: **6.66%**
 - 2022–2024 Severe Crash Share within FOUR WAY: **19.81%**
 
-![2022–2024 Priority Trafficways](images/bq4-priority-2022-2024.webp)
-
-*Figure 9. 2022–2024 view with FOUR WAY and T-INTERSECTION identified as Priority Trafficways.*
+<!-- IMAGE PLACEHOLDER:
+2022–2024 Priority Trafficways.
+Target file: images/bq4-priority-2022-2024.png
+-->
 
 **Interpretation**
 
