@@ -10,7 +10,39 @@ dim_type AS (SELECT * FROM {{ ref('dim_crash_type') }}),
 dim_device AS (SELECT * FROM {{ ref('dim_traffic_device') }})
 
 SELECT
-    ROW_NUMBER() OVER (ORDER BY i.crash_timestamp) AS fact_id,
+    (
+        ('x' || SUBSTR(
+            MD5(CONCAT_WS(
+                '||',
+                COALESCE(i.crash_timestamp::text, '<NULL>'),
+                COALESCE(i.traffic_control_device, '<NULL>'),
+                COALESCE(i.weather_condition, '<NULL>'),
+                COALESCE(i.lighting_condition, '<NULL>'),
+                COALESCE(i.first_crash_type, '<NULL>'),
+                COALESCE(i.trafficway_type, '<NULL>'),
+                COALESCE(i.alignment, '<NULL>'),
+                COALESCE(i.roadway_surface_cond, '<NULL>'),
+                COALESCE(i.crash_type, '<NULL>'),
+                COALESCE(i.damage, '<NULL>'),
+                COALESCE(i.prim_contributory_cause, '<NULL>'),
+                COALESCE(i.most_severe_injury, '<NULL>'),
+                COALESCE(i.intersection_related_i_raw, '<NULL>'),
+                COALESCE(i.num_units::text, '<NULL>'),
+                COALESCE(i.injuries_total::text, '<NULL>'),
+                COALESCE(i.injuries_fatal::text, '<NULL>'),
+                COALESCE(i.injuries_incapacitating::text, '<NULL>'),
+                COALESCE(i.injuries_non_incapacitating::text, '<NULL>'),
+                COALESCE(i.injuries_reported_not_evident::text, '<NULL>'),
+                COALESCE(i.injuries_no_indication::text, '<NULL>'),
+                COALESCE(i.crash_hour::text, '<NULL>'),
+                COALESCE(i.crash_day_of_week::text, '<NULL>'),
+                COALESCE(i.crash_month::text, '<NULL>'),
+                COALESCE(i.crash_year::text, '<NULL>')
+            )),
+            1,
+            16
+        ))::bit(64)::bigint
+    ) AS fact_id,
     
     -- Các Khóa ngoại (Foreign Keys) liên kết dạng số nguyên
     n.natural_id,
