@@ -10,8 +10,9 @@ models:
 
       - name: intersection_related_i
         description: >
-          Boolean flag indicating whether the crash occurred at an intersection.
-          Derived from the raw Y/N indicator.
+          Nullable Boolean flag derived from the raw intersection indicator.
+          Y maps to true, N maps to false, and missing or unexpected values remain
+          NULL so that unknown intersection status is not misclassified as false.
 
       - name: crash_severity_weight
         description: >
