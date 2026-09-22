@@ -10,7 +10,7 @@
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -48,6 +48,20 @@
               },
               "queryRef": "All Measure.Severe Favorable Human-Factor Crashes",
               "nativeQueryRef": "Severe Favorable Human-Factor Crashes"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Measure"
+                    }
+                  },
+                  "Property": "Severe Adverse Human-Factor Crashes"
+                }
+              },
+              "queryRef": "All Measure.Severe Adverse Human-Factor Crashes",
+              "nativeQueryRef": "Severe Adverse Human-Factor Crashes"
             }
           ]
         }
@@ -163,6 +177,94 @@
                   }
                 }
               }
+            },
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Severe Crashes'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#38BDF8'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measure.Severe Favorable Human-Factor Crashes"
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#F59E0B'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "All Measure.Severe Adverse Human-Factor Crashes"
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.1
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -214,7 +316,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Top 10 Human Errors in Favorable Conditions'"
+                  "Value": "'Top 5 Human Factors — Favorable vs Adverse Conditions'"
                 }
               }
             }
@@ -227,63 +329,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "bq3_human_factors_only",
+        "name": "c9981d2cd45b6231c50d",
         "ordinal": 0,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "public dim_cause"
-              }
-            },
-            "Property": "cause_group"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "c",
-              "Entity": "public dim_cause",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "c"
-                          }
-                        },
-                        "Property": "cause_group"
-                      }
-                    }
-                  ],
-                  "Values": [
-                    [
-                      {
-                        "Literal": {
-                          "Value": "'Human Factors'"
-                        }
-                      }
-                    ]
-                  ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "af8d9342cd86fea19feb",
-        "ordinal": 1,
         "field": {
           "Column": {
             "Expression": {
@@ -294,11 +341,11 @@
             "Property": "primary_cause"
           }
         },
-        "type": "TopN"
+        "type": "Categorical"
       },
       {
-        "name": "2317cacb79dc8d92ec99",
-        "ordinal": 2,
+        "name": "a08d3a98086183506371",
+        "ordinal": 1,
         "field": {
           "Measure": {
             "Expression": {
@@ -312,7 +359,22 @@
         "type": "Advanced"
       },
       {
-        "name": "22b7ea3bc2916dd46876",
+        "name": "21f2f079d4878d46c3b1",
+        "ordinal": 2,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "All Measure"
+              }
+            },
+            "Property": "Severe Adverse Human-Factor Crashes"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "2c8e28b46cb01c4bbce6",
         "ordinal": 3,
         "field": {
           "Measure": {
@@ -321,7 +383,7 @@
                 "Entity": "All Measure"
               }
             },
-            "Property": "BQ3 Top 10 Flag"
+            "Property": "BQ3 Top 5 Human-Factor Flag"
           }
         },
         "type": "Advanced",
@@ -346,7 +408,7 @@
                           "Source": "a"
                         }
                       },
-                      "Property": "BQ3 Top 10 Flag"
+                      "Property": "BQ3 Top 5 Human-Factor Flag"
                     }
                   },
                   "Right": {

@@ -534,135 +534,6 @@ table 'All Measure'
 		formatString: 0
 		lineageTag: 6171cee3-cbbf-4493-a513-ad3f0ca76e0f
 
-	measure 'Severe Adverse Human-Factor Crashes' =
-			CALCULATE(
-			    [Total Accident],
-			    KEEPFILTERS(
-			        'public fct_traffic_accidents'[is_severe] = TRUE()
-			    ),
-			    KEEPFILTERS(
-			        'public dim_natural_condition'[condition_group] = "Adverse"
-			    ),
-			    KEEPFILTERS(
-			        'public dim_cause'[cause_group] = "Human Factors"
-			    )
-			)
-		formatString: 0
-		lineageTag: e2672043-632c-41e4-af50-282f3dad8dff
-
-	measure 'Severe Human-Factor Crashes' =
-			[Severe Favorable Human-Factor Crashes]
-			    + [Severe Adverse Human-Factor Crashes]
-		formatString: 0
-		lineageTag: 6aba2fa9-d4c2-49bb-b5d5-27b3d828762e
-
-	measure 'BQ3 Top 5 Human-Factor Flag' =
-			VAR _CurrentCause =
-			    SELECTEDVALUE(
-			        'public dim_cause'[primary_cause]
-			    )
-			VAR _CauseTable =
-			    ADDCOLUMNS(
-			        ALLSELECTED(
-			            'public dim_cause'[primary_cause]
-			        ),
-			        "@SevereHumanCrashes",
-			            [Severe Human-Factor Crashes]
-			    )
-			VAR _ValidCauses =
-			    FILTER(
-			        _CauseTable,
-			        [@SevereHumanCrashes] > 0
-			    )
-			VAR _Top5 =
-			    TOPN(
-			        5,
-			        _ValidCauses,
-			        [@SevereHumanCrashes], DESC,
-			        'public dim_cause'[primary_cause], ASC
-			    )
-			RETURN
-			    IF(
-			        CONTAINS(
-			            _Top5,
-			            'public dim_cause'[primary_cause],
-			            _CurrentCause
-			        ),
-			        1,
-			        0
-			    )
-		formatString: 0
-		lineageTag: dd945fd2-f9d4-4d97-b8c3-59e2822e27df
-
-	measure 'Severe Crash Share within Trafficway' =
-			VAR _CurrentSevere =
-			    [Severe Total]
-			VAR _TrafficwaySevere =
-			    CALCULATE(
-			        [Severe Total],
-			        REMOVEFILTERS('public dim_cause')
-			    )
-			RETURN
-			    DIVIDE(
-			        _CurrentSevere,
-			        _TrafficwaySevere
-			    )
-		formatString: 0.00%;-0.00%;0.00%
-		lineageTag: 601a4d2d-dee9-429e-be57-7a3301087bef
-
-	measure 'Priority Trafficway Top 3 Flag' =
-			VAR _CurrentTrafficway =
-			    SELECTEDVALUE(
-			        'public dim_traffic_device'[trafficway_type]
-			    )
-			VAR _TrafficwayUniverse =
-			    ALLSELECTED(
-			        'public dim_traffic_device'[trafficway_type]
-			    )
-			VAR _ThresholdAccidents =
-			    AVERAGEX(
-			        _TrafficwayUniverse,
-			        CALCULATE([Total Accident])
-			    )
-			VAR _ThresholdSeverity =
-			    AVERAGEX(
-			        _TrafficwayUniverse,
-			        CALCULATE([Severity Index])
-			    )
-			VAR _TrafficwayTable =
-			    ADDCOLUMNS(
-			        _TrafficwayUniverse,
-			        "@Accidents", CALCULATE([Total Accident]),
-			        "@SeverityIndex", CALCULATE([Severity Index]),
-			        "@SevereCrashes", CALCULATE([Severe Total])
-			    )
-			VAR _PriorityTrafficways =
-			    FILTER(
-			        _TrafficwayTable,
-			        [@Accidents] > _ThresholdAccidents
-			            && [@SeverityIndex] > _ThresholdSeverity
-			    )
-			VAR _Top3 =
-			    TOPN(
-			        3,
-			        _PriorityTrafficways,
-			        [@SevereCrashes], DESC,
-			        [@Accidents], DESC,
-			        'public dim_traffic_device'[trafficway_type], ASC
-			    )
-			RETURN
-			    IF(
-			        CONTAINS(
-			            _Top3,
-			            'public dim_traffic_device'[trafficway_type],
-			            _CurrentTrafficway
-			        ),
-			        1,
-			        0
-			    )
-		formatString: 0
-		lineageTag: 5db72e6a-cc3b-40e6-9ab2-b80d06a317e9
-
 	measure 'BQ3 Top 10 Flag' =
 			
 			VAR _CurrentCause =
@@ -782,6 +653,249 @@ table 'All Measure'
 			    COUNTROWS(_SummaryTable)
 		formatString: 0
 		lineageTag: 29a30a0c-c479-433a-85e7-496ecec160a0
+
+	measure 'Severe Adverse Human-Factor Crashes' =
+			CALCULATE(
+			    [Total Accident],
+			    KEEPFILTERS(
+			        'public fct_traffic_accidents'[is_severe] = TRUE()
+			    ),
+			    KEEPFILTERS(
+			        'public dim_natural_condition'[condition_group] = "Adverse"
+			    ),
+			    KEEPFILTERS(
+			        'public dim_cause'[cause_group] = "Human Factors"
+			    )
+			)
+		formatString: 0
+		lineageTag: e2672043-632c-41e4-af50-282f3dad8dff
+
+	measure 'Severe Human-Factor Crashes' =
+			[Severe Favorable Human-Factor Crashes]
+			    + [Severe Adverse Human-Factor Crashes]
+		formatString: 0
+		lineageTag: 6aba2fa9-d4c2-49bb-b5d5-27b3d828762e
+
+	measure 'BQ3 Top 5 Human-Factor Flag' =
+			
+			VAR _CurrentCause =
+			    SELECTEDVALUE(
+			        'public dim_cause'[primary_cause]
+			    )
+			
+			VAR _CauseTable =
+			    ADDCOLUMNS(
+			        ALLSELECTED(
+			            'public dim_cause'[primary_cause]
+			        ),
+			        "@SevereHumanCrashes",
+			            CALCULATE(
+			                [Severe Human-Factor Crashes],
+			                REMOVEFILTERS(
+			                    'public dim_traffic_device'[trafficway_type]
+			                )
+			            )
+			    )
+			
+			VAR _ValidCauses =
+			    FILTER(
+			        _CauseTable,
+			        [@SevereHumanCrashes] > 0
+			    )
+			
+			VAR _Top5 =
+			    TOPN(
+			        5,
+			        _ValidCauses,
+			        [@SevereHumanCrashes], DESC,
+			        'public dim_cause'[primary_cause], ASC
+			    )
+			
+			RETURN
+			    IF(
+			        CONTAINS(
+			            _Top5,
+			            'public dim_cause'[primary_cause],
+			            _CurrentCause
+			        ),
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: dd945fd2-f9d4-4d97-b8c3-59e2822e27df
+
+	measure 'Severe Crash Share within Trafficway' =
+			VAR _CurrentSevere =
+			    [Severe Total]
+			VAR _TrafficwaySevere =
+			    CALCULATE(
+			        [Severe Total],
+			        REMOVEFILTERS('public dim_cause')
+			    )
+			RETURN
+			    DIVIDE(
+			        _CurrentSevere,
+			        _TrafficwaySevere
+			    )
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 601a4d2d-dee9-429e-be57-7a3301087bef
+
+	measure 'Top 3 Trafficway Flag' =
+			
+			VAR _CurrentTrafficway =
+			    SELECTEDVALUE(
+			        'public dim_traffic_device'[trafficway_type]
+			    )
+			
+			VAR _TrafficwayTable =
+			    ADDCOLUMNS(
+			        ALLSELECTED(
+			            'public dim_traffic_device'[trafficway_type]
+			        ),
+			        "@SevereCrashes",
+			            CALCULATE(
+			                [Severe Total],
+			                REMOVEFILTERS('public dim_cause')
+			            )
+			    )
+			
+			VAR _ValidTrafficways =
+			    FILTER(
+			        _TrafficwayTable,
+			        [@SevereCrashes] > 0
+			    )
+			
+			VAR _Top3 =
+			    TOPN(
+			        3,
+			        _ValidTrafficways,
+			        [@SevereCrashes], DESC,
+			        'public dim_traffic_device'[trafficway_type], ASC
+			    )
+			
+			RETURN
+			    IF(
+			        CONTAINS(
+			            _Top3,
+			            'public dim_traffic_device'[trafficway_type],
+			            _CurrentTrafficway
+			        ),
+			        1,
+			        0
+			    )
+		formatString: 0
+		lineageTag: 5db72e6a-cc3b-40e6-9ab2-b80d06a317e9
+
+	measure Measure
+		lineageTag: eb372293-482e-4430-bc25-08d5747006be
+
+		annotation 43dbc3e8-3a1c-4b6f-9923-b49ff7d6691c = True
+
+	measure 'Heatmap Severe Rate' =
+			
+			IF(
+			    [BQ3 Top 5 Human-Factor Flag] = 1
+			        && [Top 3 Trafficway Flag] = 1,
+			    [Severe Rate],
+			    BLANK()
+			)
+		lineageTag: 1e9c65e9-3b9b-4188-b244-dee8495eee0e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Heatmap Human Trafficway Color' =
+			
+			VAR _CurrentRate =
+			    [Heatmap Severe Rate]
+			
+			VAR _HeatmapCells =
+			    CALCULATETABLE(
+			        ADDCOLUMNS(
+			            CROSSJOIN(
+			                ALLSELECTED(
+			                    'public dim_cause'[primary_cause]
+			                ),
+			                ALLSELECTED(
+			                    'public dim_traffic_device'[trafficway_type]
+			                )
+			            ),
+			            "@Rate",
+			                CALCULATE(
+			                    [Heatmap Severe Rate]
+			                )
+			        ),
+			        REMOVEFILTERS(
+			            'public dim_cause'[primary_cause]
+			        ),
+			        REMOVEFILTERS(
+			            'public dim_traffic_device'[trafficway_type]
+			        )
+			    )
+			
+			VAR _ValidCells =
+			    FILTER(
+			        _HeatmapCells,
+			        NOT ISBLANK([@Rate])
+			    )
+			
+			VAR _MinRate =
+			    MINX(
+			        _ValidCells,
+			        [@Rate]
+			    )
+			
+			VAR _MaxRate =
+			    MAXX(
+			        _ValidCells,
+			        [@Rate]
+			    )
+			
+			VAR _Intensity =
+			    IF(
+			        _MaxRate = _MinRate,
+			        0.5,
+			        DIVIDE(
+			            _CurrentRate - _MinRate,
+			            _MaxRate - _MinRate,
+			            0.5
+			        )
+			    )
+			
+			RETURN
+			    IF(
+			        ISBLANK(_CurrentRate),
+			        "#1E293B",
+			        SWITCH(
+			            TRUE(),
+			            _Intensity <= 0.20, "#1E293B",
+			            _Intensity <= 0.40, "#164E63",
+			            _Intensity <= 0.60, "#155E75",
+			            _Intensity <= 0.80, "#0E7490",
+			            "#0369A1"
+			        )
+			    )
+		lineageTag: 6e75a377-8ee0-42f0-9d0f-6989ab4a7608
+
+	measure 'Heatmap Selected Context' =
+			
+			VAR _Cause =
+			    SELECTEDVALUE(
+			        'public dim_cause'[primary_cause]
+			    )
+			
+			VAR _Trafficway =
+			    SELECTEDVALUE(
+			        'public dim_traffic_device'[trafficway_type]
+			    )
+			
+			RETURN
+			    IF(
+			        NOT ISBLANK(_Cause)
+			            && NOT ISBLANK(_Trafficway),
+			        _Cause & " × " & _Trafficway,
+			        "Human Factor × Trafficway"
+			    )
+		lineageTag: baee5560-2498-43aa-9b66-f21c3b5ee994
 
 	column Column
 		isHidden

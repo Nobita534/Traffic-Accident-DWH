@@ -3869,6 +3869,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.9
 			          }
+			        },
+			        {
+			          "Fatalities": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -3908,6 +3918,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "Severe Injuries": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        },
+			        {
+			          "Severe Crashes": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -4356,12 +4376,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "measure": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "all degree": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -4402,36 +4416,6 @@ cultureInfo en-US
 			          }
 			        },
 			        {
-			          "degree": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "quota": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "extent": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "all amount": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -4453,6 +4437,16 @@ cultureInfo en-US
 			        },
 			        {
 			          "all ration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "all size": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -5666,24 +5660,85 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure.most_accidentprone_trafficway": {
+			    "public_dim_natural_condition.condition_group": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "All Measure",
-			          "ConceptualProperty": "Most Accident-Prone Trafficway"
+			          "ConceptualEntity": "public dim_natural_condition",
+			          "ConceptualProperty": "condition_group"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "most accident-prone trafficway": {
+			          "condition group": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "most accident prone trafficway": {
+			          "condition_group": {
+			            "Type": "Noun",
 			            "State": "Generated",
-			            "Weight": 0.97
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "condition category": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "condition organization": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "condition bracket": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "condition class": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "condition crew": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "condition team": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
 			          }
 			        }
 			      ]
@@ -7695,10 +7750,1380 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "all_measure.priority_trafficway": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Priority Trafficway(s)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "priority trafficway": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "priority trafficway (s)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Priority Trafficway(s)": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ],
+			      "Units": [
+			        "second",
+			        "s"
+			      ]
+			    },
+			    "all_measure.severe_favorable_humanfactor_crashes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Favorable Human-Factor Crashes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe favorable human-factor crashes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "severe favorable human factor crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe favorable human factor bang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor din": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor clatter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor clang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor boom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor crack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor thump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor thud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe favorable human factor wallop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.BQ3_top_10_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "BQ3 Top 10 Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BQ3 top 10 flag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "10 flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "top 10 flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "bq3 best 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "bq3 first 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "bq3 leading 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "bq3 maximum 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "bq3 peak 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "bq3 upper 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "best 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "first 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "leading 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "maximum 10 flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.priority_severe_crash_share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Priority Severe Crash Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "priority severe crash share": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "priority severe crash part": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash segment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash cut": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash stake": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash bit": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "priority severe crash piece": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.priority_trafficways": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Priority Trafficways"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "priority trafficways": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_adverse_humanfactor_crashes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Adverse Human-Factor Crashes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe adverse human-factor crashes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "severe adverse human factor crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe adverse human factor bang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor din": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor clatter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor clang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor boom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor crack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor thump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor thud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe adverse human factor wallop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_humanfactor_crashes": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Human-Factor Crashes"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe human-factor crashes": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "severe human factor crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "factor crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "human factor crashes": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "severe human-factor bang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor smash": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor din": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor clatter": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor clang": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor boom": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor crack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor thump": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor thud": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe human-factor wallop": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.BQ3_top_5_humanfactor_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "BQ3 Top 5 Human-Factor Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "BQ3 top 5 human-factor flag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "BQ3 top 5 human factor flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "factor flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "human factor flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "5 human factor flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "top 5 human factor flag": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "best 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "first 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "leading 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "maximum 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "peak 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "upper 5 human factor flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.605
+			          }
+			        },
+			        {
+			          "top 5 human factor ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "top 5 human factor pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "top 5 human factor pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "top 5 human factor emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.severe_crash_share_within_trafficway": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Severe Crash Share within Trafficway"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "severe crash share within trafficway": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "severe crash part within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash portion within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash segment within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash cut within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash stake within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash bit within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "severe crash piece within trafficway": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.top_3_trafficway_flag": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Top 3 Trafficway Flag"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top 3 trafficway flag": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "first 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "leading 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "maximum 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "peak 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "upper 3 trafficway flag": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.599
+			          }
+			        },
+			        {
+			          "top 3 trafficway ensign": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "top 3 trafficway pennant": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "top 3 trafficway pennon": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "top 3 trafficway emblem": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.measure": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Measure"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "measure": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "quota": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "extent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "portion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "ration": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "size": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.heatmap_severe_rate": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Heatmap Severe Rate"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "heatmap severe rate": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "heatmap severe degree": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap severe frequency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap severe percentage": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap severe ratio": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap severe quotient": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap severe amount": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap severe proportion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap severe speed": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap severe level": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap severe scale": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.heatmap_human_trafficway_color": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Heatmap Human Trafficway Color"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "heatmap human trafficway color": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "heatmap human trafficway hue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "heatmap human trafficway tint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap human trafficway shade": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap human trafficway dye": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap human trafficway paint": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "heatmap human trafficway pigment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        }
+			      ]
+			    },
+			    "all_measure.heatmap_selected_context": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "All Measure",
+			          "ConceptualProperty": "Heatmap Selected Context"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "heatmap selected context": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "heatmap selected situation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap selected framework": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap selected milieu": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap selected environment": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "heatmap selected setting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap selected background": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap selected perspective": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "heatmap selected circumstance": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "public_dim_casualty_analysis_has_public_fct_traffic_accident1": {
+			    "public_dim_casualty_analysis_has_public_fct_traffic_accident": {
 			      "Binding": {
 			        "ConceptualEntity": "public dim_casualty_analysis"
 			      },
@@ -7751,7 +9176,7 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "public_fct_traffic_accident_has_public_dim_traffic_device1": {
+			    "public_fct_traffic_accident_has_public_dim_traffic_device": {
 			      "Binding": {
 			        "ConceptualEntity": "public fct_traffic_accidents"
 			      },
@@ -7801,138 +9226,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "public_dim_traffic_devices_have_public_fct_traffic_accidents"
-			        }
-			      ]
-			    },
-			    "public_dim_crash_date_year_hierarchy_has_day": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.day": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_days"
-			        }
-			      ]
-			    },
-			    "public_dim_crash_date_year_hierarchy_has_month": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.month": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_months"
-			        }
-			      ]
-			    },
-			    "public_dim_crash_date_year_hierarchy_has_quarter": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.quarter": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.quarter"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.quarter"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_quarters"
-			        }
-			      ]
-			    },
-			    "public_dim_crash_date_year_hierarchy_has_year": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_crash_date"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_crash_date.year_hierarchy": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy"
-			          }
-			        },
-			        "public_dim_crash_date.year_hierarchy.year": {
-			          "Target": {
-			            "Entity": "public_dim_crash_date.year_hierarchy.year"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_crash_date.year_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "public_dim_crash_date.year_hierarchy.year"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "year_hierarchies_have_years"
 			        }
 			      ]
 			    },
@@ -8117,6 +9410,534 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "public_dim_causes_have_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_dim_traffic_device_has_all_measure_heatmap_selected_context": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_traffic_device"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          }
+			        },
+			        "all_measure.heatmap_selected_context": {
+			          "Target": {
+			            "Entity": "all_measure.heatmap_selected_context"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "all_measure.heatmap_selected_context"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_heatmap_selected_context"
+			        }
+			      ]
+			    },
+			    "public_dim_cause_has_all_measure_heatmap_selected_context": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_cause"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_cause": {
+			          "Target": {
+			            "Entity": "public_dim_cause"
+			          }
+			        },
+			        "all_measure.heatmap_selected_context": {
+			          "Target": {
+			            "Entity": "all_measure.heatmap_selected_context"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_cause"
+			            },
+			            "Object": {
+			              "Role": "all_measure.heatmap_selected_context"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_causes_have_heatmap_selected_context"
+			        }
+			      ]
+			    },
+			    "all_measure_has_heatmap_human_trafficway_color": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.heatmap_human_trafficway_color": {
+			          "Target": {
+			            "Entity": "all_measure.heatmap_human_trafficway_color"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.heatmap_human_trafficway_color"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_heatmap_human_trafficway_color"
+			        }
+			      ]
+			    },
+			    "all_measure_has_heatmap_severe_rate": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.heatmap_severe_rate": {
+			          "Target": {
+			            "Entity": "all_measure.heatmap_severe_rate"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.heatmap_severe_rate"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_heatmap_severe_rate"
+			        }
+			      ]
+			    },
+			    "all_measure_has_measure": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.measure": {
+			          "Target": {
+			            "Entity": "all_measure.measure"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.measure"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_measure"
+			        }
+			      ]
+			    },
+			    "all_measure_has_top_3_trafficway_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.top_3_trafficway_flag": {
+			          "Target": {
+			            "Entity": "all_measure.top_3_trafficway_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.top_3_trafficway_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_top_3_trafficway_flag"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_crash_share_within_trafficway": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_crash_share_within_trafficway": {
+			          "Target": {
+			            "Entity": "all_measure.severe_crash_share_within_trafficway"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_crash_share_within_trafficway"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_crash_share_within_trafficway"
+			        }
+			      ]
+			    },
+			    "all_measure_has_BQ3_top_5_humanfactor_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.BQ3_top_5_humanfactor_flag": {
+			          "Target": {
+			            "Entity": "all_measure.BQ3_top_5_humanfactor_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.BQ3_top_5_humanfactor_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_BQ3_top_5_humanfactor_flag"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_humanfactor_crashes": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_humanfactor_crashes": {
+			          "Target": {
+			            "Entity": "all_measure.severe_humanfactor_crashes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_humanfactor_crashes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_humanfactor_crashes"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_adverse_humanfactor_crashes": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_adverse_humanfactor_crashes": {
+			          "Target": {
+			            "Entity": "all_measure.severe_adverse_humanfactor_crashes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_adverse_humanfactor_crashes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_adverse_humanfactor_crashes"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_priority_trafficways": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.priority_trafficways": {
+			          "Target": {
+			            "Entity": "all_measure.priority_trafficways"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.priority_trafficways"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_priority_trafficways"
+			        }
+			      ]
+			    },
+			    "public_dim_traffic_device_has_all_measure_priority_trafficways": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_traffic_device"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_traffic_device": {
+			          "Target": {
+			            "Entity": "public_dim_traffic_device"
+			          }
+			        },
+			        "all_measure.priority_trafficways": {
+			          "Target": {
+			            "Entity": "all_measure.priority_trafficways"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_traffic_device"
+			            },
+			            "Object": {
+			              "Role": "all_measure.priority_trafficways"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_dim_traffic_devices_have_priority_trafficways"
+			        }
+			      ]
+			    },
+			    "all_measure_has_priority_severe_crash_share": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.priority_severe_crash_share": {
+			          "Target": {
+			            "Entity": "all_measure.priority_severe_crash_share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.priority_severe_crash_share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_priority_severe_crash_share"
+			        }
+			      ]
+			    },
+			    "all_measure_has_BQ3_top_10_flag": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.BQ3_top_10_flag": {
+			          "Target": {
+			            "Entity": "all_measure.BQ3_top_10_flag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.BQ3_top_10_flag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_BQ3_top_10_flag"
+			        }
+			      ]
+			    },
+			    "public_fct_traffic_accident_has_all_measure_severe_favorable_humanfactor_crashes": {
+			      "Binding": {
+			        "ConceptualEntity": "public fct_traffic_accidents"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_fct_traffic_accident": {
+			          "Target": {
+			            "Entity": "public_fct_traffic_accident"
+			          }
+			        },
+			        "all_measure.severe_favorable_humanfactor_crashes": {
+			          "Target": {
+			            "Entity": "all_measure.severe_favorable_humanfactor_crashes"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_fct_traffic_accident"
+			            },
+			            "Object": {
+			              "Role": "all_measure.severe_favorable_humanfactor_crashes"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "public_fct_traffic_accidents_have_severe_favorable_humanfactor_crashes"
+			        }
+			      ]
+			    },
+			    "all_measure_has_priority_trafficway": {
+			      "Binding": {
+			        "ConceptualEntity": "All Measure"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "all_measure": {
+			          "Target": {
+			            "Entity": "all_measure"
+			          }
+			        },
+			        "all_measure.priority_trafficway": {
+			          "Target": {
+			            "Entity": "all_measure.priority_trafficway"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "all_measure"
+			            },
+			            "Object": {
+			              "Role": "all_measure.priority_trafficway"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "all_measures_have_priority_trafficway"
 			        }
 			      ]
 			    },
@@ -8886,20 +10707,20 @@ cultureInfo en-US
 			        }
 			      ]
 			    },
-			    "all_measure_has_most_accidentprone_trafficway": {
+			    "public_dim_natural_condition_has_condition_group": {
 			      "Binding": {
-			        "ConceptualEntity": "All Measure"
+			        "ConceptualEntity": "public dim_natural_condition"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "all_measure": {
+			        "public_dim_natural_condition": {
 			          "Target": {
-			            "Entity": "all_measure"
+			            "Entity": "public_dim_natural_condition"
 			          }
 			        },
-			        "all_measure.most_accidentprone_trafficway": {
+			        "public_dim_natural_condition.condition_group": {
 			          "Target": {
-			            "Entity": "all_measure.most_accidentprone_trafficway"
+			            "Entity": "public_dim_natural_condition.condition_group"
 			          }
 			        }
 			      },
@@ -8907,15 +10728,15 @@ cultureInfo en-US
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "all_measure"
+			              "Role": "public_dim_natural_condition"
 			            },
 			            "Object": {
-			              "Role": "all_measure.most_accidentprone_trafficway"
+			              "Role": "public_dim_natural_condition.condition_group"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "all_measures_have_most_accidentprone_trafficway"
+			          "ID": "public_dim_natural_conditions_have_condition_groups"
 			        }
 			      ]
 			    },
@@ -8949,72 +10770,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "public_fct_traffic_accidents_have_human_error_ratio"
-			        }
-			      ]
-			    },
-			    "public_fct_traffic_accident_has_all_measure_priority_trafficways": {
-			      "Binding": {
-			        "ConceptualEntity": "public fct_traffic_accidents"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_fct_traffic_accident": {
-			          "Target": {
-			            "Entity": "public_fct_traffic_accident"
-			          }
-			        },
-			        "all_measure.priority_trafficways": {
-			          "Target": {
-			            "Entity": "all_measure.priority_trafficways"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_fct_traffic_accident"
-			            },
-			            "Object": {
-			              "Role": "all_measure.priority_trafficways"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_fct_traffic_accidents_have_priority_trafficways"
-			        }
-			      ]
-			    },
-			    "public_dim_traffic_device_has_all_measure_priority_trafficways": {
-			      "Binding": {
-			        "ConceptualEntity": "public dim_traffic_device"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "public_dim_traffic_device": {
-			          "Target": {
-			            "Entity": "public_dim_traffic_device"
-			          }
-			        },
-			        "all_measure.priority_trafficways": {
-			          "Target": {
-			            "Entity": "all_measure.priority_trafficways"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "public_dim_traffic_device"
-			            },
-			            "Object": {
-			              "Role": "all_measure.priority_trafficways"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "public_dim_traffic_devices_have_priority_trafficways"
 			        }
 			      ]
 			    },
@@ -10788,6 +12543,138 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "some_public_fct_traffic_accidents_are_severe_public_fct_traffic_accidents"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_year": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.year": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.year"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.year"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_years"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_quarter": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.quarter": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.quarter"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.quarter"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_quarters"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_month": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.month": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_months"
+			        }
+			      ]
+			    },
+			    "public_dim_crash_date_year_hierarchy_has_day": {
+			      "Binding": {
+			        "ConceptualEntity": "public dim_crash_date"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "public_dim_crash_date.year_hierarchy": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy"
+			          }
+			        },
+			        "public_dim_crash_date.year_hierarchy.day": {
+			          "Target": {
+			            "Entity": "public_dim_crash_date.year_hierarchy.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "public_dim_crash_date.year_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "public_dim_crash_date.year_hierarchy.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "year_hierarchies_have_days"
 			        }
 			      ]
 			    }
