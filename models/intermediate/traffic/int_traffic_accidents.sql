@@ -1,7 +1,7 @@
 {{ config(materialized='view') }}
 
 WITH staging_data AS (
-    SELECT * FROM {{ ref('stg_traffic_accidents') }}
+    SELECT DISTINCT * FROM {{ ref('stg_traffic_accidents') }}
 )
 
 SELECT
