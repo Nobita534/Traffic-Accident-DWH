@@ -5,11 +5,9 @@ For the data warehouse architecture, dbt models, and transformation logic, see t
 
 > **Interactive dashboard:** _Power BI public link will be added after publishing._
 
-<!-- IMAGE TODO:
-Add a dashboard preview here.
-Suggested file: images/dashboard-preview.png
-Purpose: Give HR/technical reviewers a quick visual overview before opening the interactive report.
--->
+![Dashboard preview](images/dashboard-preview.webp)
+
+*Figure 1. Human & Infrastructure Priorities dashboard preview.*
 
 ---
 
@@ -90,11 +88,9 @@ During 2022–2024, injury volume increased while Severe Rate did not move in th
 
 2024 recorded the highest injury volume among the three years but the lowest Severe Rate.
 
-<!-- IMAGE TODO:
-Add Page 1 — Executive Overview for 2022–2024.
-Suggested file: images/page1-executive-overview-2022-2024.png
-Caption: Executive Overview highlighting the divergence between injury volume and Severe Rate.
--->
+![Executive Overview 2022–2024](images/page1-executive-overview-2022-2024.webp)
+
+*Figure 2. Executive Overview for 2022–2024, highlighting the divergence between injury volume and Severe Rate.*
 
 **Interpretation**
 
@@ -123,11 +119,9 @@ Not every adverse weather condition under darkness exceeded the Normal baseline.
 - FREEZING RAIN/DRIZZLE: **2.33%**
 - Normal baseline: approximately **3.41%**
 
-<!-- IMAGE TODO:
-Add Page 2 — Normal vs Adverse Low-Light comparison.
-Suggested file: images/bq1-normal-vs-adverse-low-light.png
-Caption: Normal and Adverse Low-Light Severe Rates with period comparison.
--->
+![Normal vs Adverse Low-Light comparison](images/bq1-normal-vs-adverse-low-light.webp)
+
+*Figure 3. Normal and Adverse Low-Light Severe Rates with period comparison.*
 
 **Interpretation**
 
@@ -148,16 +142,9 @@ Peak supported condition:
 
 The heatmap also contains cells with very high Severe Rates but low crash volumes. To avoid prioritizing unstable extremes, environmental combinations are interpreted together with their crash-volume support.
 
-<!-- IMAGE TODO:
-Add Page 2 — Weather × Lighting Severe Rate heatmap.
-Suggested file: images/bq2-weather-lighting-heatmap.png
-Caption: Severe Rate interaction matrix with crash-volume support context.
--->
+![Weather × Lighting Severe Rate heatmap](images/bq2-weather-lighting-heatmap.webp)
 
-<!-- OPTIONAL IMAGE TODO:
-Add one representative Weather × Lighting tooltip if additional volume evidence is useful.
-Suggested file: images/bq2-weather-lighting-tooltip.png
--->
+*Figure 4. Severe Rate interaction matrix with crash-volume support context.*
 
 **Interpretation**
 
@@ -189,11 +176,9 @@ Full period:
 
 Failing to Yield remains the leading severe-crash category in both analysis scopes.
 
-<!-- IMAGE TODO:
-Add Page 3 — Top 5 Human Factors, Favorable vs Adverse.
-Suggested file: images/bq3-human-factors-comparison.png
-Caption: Severe-crash burden across the leading Human Factors under Favorable and Adverse conditions.
--->
+![Top Human Factors — Favorable vs Adverse](images/bq3-human-factors-comparison.webp)
+
+*Figure 5. Severe-crash burden across the leading Human Factors under Favorable and Adverse conditions.*
 
 #### Severity intensity across major trafficways
 
@@ -218,18 +203,13 @@ For 2022–2024, the pattern remains elevated:
 - FOUR WAY × Disregarding Traffic Signals: **6.66%**
 - NOT DIVIDED × Disregarding Traffic Signals: **6.21%**
 
-<!-- IMAGE TODO:
-Add Page 3 — Human Factor × Trafficway Severe Rate heatmap.
-Suggested file: images/bq3-human-factor-trafficway-heatmap.png
-Caption: Severe Rate across leading Human Factors and major trafficway types.
--->
+![Human Factor × Trafficway Severe Rate](images/bq3-human-factor-trafficway-heatmap.webp)
 
-<!-- OPTIONAL IMAGE TODO:
-Add one representative heatmap tooltip.
-Recommended example: DISREGARDING TRAFFIC SIGNALS × FOUR WAY
-Suggested file: images/bq3-signal-four-way-tooltip.png
-Purpose: Show Severe Rate together with Total Accidents, Severe Crashes, Fatalities, and Severe Crash Share within Trafficway.
--->
+*Figure 6. Severe Rate across leading Human Factors and major trafficway types.*
+
+![Signal Violations × FOUR WAY tooltip](images/bq3-signal-four-way-tooltip.webp)
+
+*Figure 7. Representative deep-dive tooltip showing Severe Rate, crash volume, severe crashes, fatalities, and Severe Crash Share within FOUR WAY.*
 
 **Interpretation**
 
@@ -254,11 +234,9 @@ The trafficway type with the highest accident volume is not necessarily the high
 
 NOT DIVIDED has high crash frequency but does not simultaneously exceed both the frequency and Severity Index thresholds.
 
-<!-- IMAGE TODO:
-Add Page 3 — Full-period infrastructure prioritization.
-Suggested file: images/bq4-priority-full-period.png
-Caption: Full-period view with FOUR WAY identified as the Priority Trafficway.
--->
+![Full-period Priority Trafficway](images/bq4-priority-full-period.webp)
+
+*Figure 8. Full-period view with FOUR WAY identified as the Priority Trafficway.*
 
 #### 2022–2024
 
@@ -277,11 +255,9 @@ FOUR WAY also retains a notable behavioral pattern for Disregarding Traffic Sign
 - 2022–2024 Severe Rate: **6.66%**
 - 2022–2024 Severe Crash Share within FOUR WAY: **19.81%**
 
-<!-- IMAGE TODO:
-Add Page 3 — 2022–2024 infrastructure prioritization.
-Suggested file: images/bq4-priority-2022-2024.png
-Caption: 2022–2024 view with FOUR WAY and T-INTERSECTION identified as Priority Trafficways.
--->
+![2022–2024 Priority Trafficways](images/bq4-priority-2022-2024.webp)
+
+*Figure 9. 2022–2024 view with FOUR WAY and T-INTERSECTION identified as Priority Trafficways.*
 
 **Interpretation**
 
