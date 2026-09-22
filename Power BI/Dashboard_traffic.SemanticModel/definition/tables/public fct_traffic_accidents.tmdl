@@ -2,8 +2,7 @@ table 'public fct_traffic_accidents'
 	lineageTag: 5430cc6b-8d4a-44c1-a537-dd54b0d80841
 
 	column fact_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 6d7a22ed-af3d-47e8-b793-5837b0708334
 		summarizeBy: none
 		sourceColumn: fact_id
