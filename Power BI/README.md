@@ -5,10 +5,9 @@ For the data warehouse architecture, dbt models, and transformation logic, see t
 
 > **Interactive dashboard:** _Power BI public link will be added after publishing._
 
-<!-- IMAGE PLACEHOLDER:
-Dashboard preview.
-Target file: images/dashboard-preview.png
--->
+![Dashboard preview](images/dashboard-preview.png)
+
+*Figure 1. Power BI dashboard preview.*
 
 ---
 
@@ -89,10 +88,9 @@ During 2022–2024, injury volume increased while Severe Rate did not move in th
 
 2024 recorded the highest injury volume among the three years but the lowest Severe Rate.
 
-<!-- IMAGE PLACEHOLDER:
-Executive Overview for 2022–2024.
-Target file: images/page1-executive-overview-2022-2024.png
--->
+![Executive Overview 2022–2024](images/page1-executive-overview-2022-2024.png)
+
+*Figure 2. Executive Overview for the 2022–2024 focus period.*
 
 **Interpretation**
 
@@ -125,15 +123,13 @@ Weather-level comparison also shows that adverse weather under darkness is not u
 
 Within this period, the aggregate gap is larger than in the full-period view, but the year-level pattern is still not uniform. The largest divergence appears in 2023, while 2022 and 2024 do not show the same relationship.
 
-<!-- IMAGE PLACEHOLDER:
-Full-period Environmental Severity dashboard.
-Target file: images/bq1-environmental-full-period.png
--->
+![Environmental Severity — Full Period](images/bq1-environmental-full-period.png)
 
-<!-- IMAGE PLACEHOLDER:
-2022–2024 Environmental Severity dashboard.
-Target file: images/bq1-bq2-environmental-2022-2024.png
--->
+*Figure 3. Full-period Environmental Severity view used for BQ1 and BQ2 baseline findings.*
+
+![Environmental Severity — 2022–2024](images/bq1-bq2-environmental-2022-2024.png)
+
+*Figure 4. Environmental Severity view for the 2022–2024 focus period.*
 
 **Interpretation**
 
@@ -161,10 +157,9 @@ The most decision-relevant Weather × Lighting combination cannot be identified 
 
 Environmental combinations are interpreted using both Severe Rate and crash-volume support. A high rate from a small crash population is treated as weaker prioritization evidence than a similarly elevated rate supported by substantial volume.
 
-<!-- IMAGE PLACEHOLDER:
-Weather × Lighting Severe Rate interaction matrix.
-Target file: images/bq2-weather-lighting-heatmap.png
--->
+![Weather × Lighting Severe Rate Heatmap](images/bq2-weather-lighting-heatmap.png)
+
+*Figure 5. Weather × Lighting Severe Rate interaction matrix used to compare severity with crash-volume support.*
 
 **Interpretation**
 
@@ -196,10 +191,9 @@ Full period:
 
 Failing to Yield remains the leading severe-crash category in both analysis scopes.
 
-<!-- IMAGE PLACEHOLDER:
-Top Human Factors — Favorable vs Adverse.
-Target file: images/bq3-human-factors-comparison.png
--->
+![Top Human Factors — Favorable vs Adverse](images/bq3-human-factors-comparison.png)
+
+*Figure 6. Top Human Factors under Favorable vs Adverse conditions.*
 
 #### Severity intensity across major trafficways
 
@@ -224,15 +218,13 @@ For 2022–2024, the pattern remains elevated:
 - FOUR WAY × Disregarding Traffic Signals: **6.66%**
 - NOT DIVIDED × Disregarding Traffic Signals: **6.21%**
 
-<!-- IMAGE PLACEHOLDER:
-Human Factor × Trafficway Severe Rate heatmap.
-Target file: images/bq3-human-factor-trafficway-heatmap.png
--->
+![Human Factor × Trafficway Severe Rate](images/bq3-human-factor-trafficway-heatmap.png)
 
-<!-- IMAGE PLACEHOLDER:
-Signal Violations × FOUR WAY tooltip.
-Target file: images/bq3-signal-four-way-tooltip.png
--->
+*Figure 7. Human Factor × Trafficway Severe Rate heatmap for BQ3 deep-dive analysis.*
+
+![Signal Violations × FOUR WAY Tooltip](images/bq3-signal-four-way-tooltip.png)
+
+*Figure 8. Representative tooltip for Disregarding Traffic Signals × FOUR WAY.*
 
 **Interpretation**
 
@@ -257,10 +249,9 @@ The trafficway type with the highest accident volume is not necessarily the high
 
 NOT DIVIDED has high crash frequency but does not simultaneously exceed both the frequency and Severity Index thresholds.
 
-<!-- IMAGE PLACEHOLDER:
-Full-period Priority Trafficway.
-Target file: images/bq4-priority-full-period.png
--->
+![Priority Trafficway — Full Period](images/bq4-priority-full-period.png)
+
+*Figure 9. Full-period priority trafficway evidence.*
 
 #### 2022–2024
 
@@ -279,10 +270,9 @@ FOUR WAY also retains a notable behavioral pattern for Disregarding Traffic Sign
 - 2022–2024 Severe Rate: **6.66%**
 - 2022–2024 Severe Crash Share within FOUR WAY: **19.81%**
 
-<!-- IMAGE PLACEHOLDER:
-2022–2024 Priority Trafficways.
-Target file: images/bq4-priority-2022-2024.png
--->
+![Priority Trafficways — 2022–2024](images/bq4-priority-2022-2024.png)
+
+*Figure 10. 2022–2024 priority trafficway view showing the recent-period infrastructure focus.*
 
 **Interpretation**
 
