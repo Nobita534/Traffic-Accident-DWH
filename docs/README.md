@@ -1,102 +1,86 @@
-# Business Documentation (Version 2)
+# Project Documentation
 
-Version 2 reorganizes the project documentation into two main phases: **Business Understanding** and **Business Analytics**. This structure provides a clear workflow from understanding business needs to generating actionable recommendations based on data analysis.
+The `docs/` directory contains the project's **business-understanding documentation** and release notes.
 
----
-
-# Documentation Structure
-
-## 01. Business Understanding
-
-| Document | Description |
-|----------|-------------|
-| business_problem.md | Defines the business problems that motivate the project. |
-| business_context.md | Describes the project background, objectives, and expected outcomes. |
-| business_question.md | Lists the key business questions that guide the analytical process. |
-| business_requirement.md | Defines the business requirements for the analytics platform. |
-| data_requirement.md | Identifies the required data elements needed to support business analysis. |
-| metric_dictionary.md | Standardizes KPI definitions, calculation logic, and business metrics. |
+Analytical findings, dashboard evidence, interpretations, and recommendations are maintained separately in the [Power BI analysis README](../Power%20BI/README.md). This avoids duplicating analytical conclusions across multiple documentation files.
 
 ---
 
-## 02. Business Analytics
+## Documentation Structure
 
-| Document | Description |
-|----------|-------------|
-| cross_analysis.md | Examines relationships between multiple business dimensions and identifies key patterns. |
-| root_cause_analysis.md | Explains the underlying causes behind the findings discovered in the cross analysis. |
-| recommendation_framework.md | Provides practical recommendations based on the identified root causes to support decision-making. |
+### Business Understanding
+
+| Document | Purpose |
+|---|---|
+| [business_context.md](business_understanding/business_context.md) | Describes the project context, analytical scope, and intended outcomes. |
+| [business_problem.md](business_understanding/business_problem.md) | Defines the road-safety problems that motivate the project. |
+| [business_question.md](business_understanding/business_question.md) | Defines the business questions that guide the analysis. |
+| [business_requirement.md](business_understanding/business_requirement.md) | Translates the analytical goals into business requirements. |
+| [business_workflow.md](business_understanding/business_workflow.md) | Documents the end-to-end business and analytical workflow. |
+| [data_requirement.md](business_understanding/data_requirement.md) | Identifies the data required to answer the business questions. |
+| [metric_dictionary.md](business_understanding/metric_dictionary.md) | Standardizes KPI definitions, calculation logic, and analytical meaning. |
+
+### Release Documentation
+
+| Document | Purpose |
+|---|---|
+| [released-v2.md](released-v2.md) | Summarizes the Version 2 refactor and major project changes. |
 
 ---
 
-# Business Analytics Workflow
+## Documentation Workflow
 
 ```text
-Business Problem
-        │
-        ▼
 Business Context
-        │
-        ▼
+      ↓
+Business Problem
+      ↓
 Business Questions
-        │
-        ▼
+      ↓
 Business Requirements
-        │
-        ▼
+      ↓
 Data Requirements
-        │
-        ▼
+      ↓
 Metric Dictionary
-        │
-        ▼       
-Star Schema Design
-        │
-        ▼
-Data Warehouse Implementation
-        │
-        ▼
-Power BI Dashboard
-        │
-        ▼
-Cross Analysis
-        │
-        ▼
-Root Cause Analysis
-        │
-        ▼
-Recommendation Framework
+      ↓
+Data Modeling & Transformation
+      ↓
+Power BI Analysis
+      ↓
+Findings & Recommendations
 ```
+
+The first six stages are documented in `docs/business_understanding/`.
+
+Technical transformation logic is implemented in the dbt project, while the final analytical layer is documented in `Power BI/README.md`.
 
 ---
 
-# Directory Structure
+## Directory Structure
 
 ```text
 docs/
-├── 01_business_understanding/
-│   ├── business_problem.md
+├── business_understanding/
 │   ├── business_context.md
+│   ├── business_problem.md
 │   ├── business_question.md
 │   ├── business_requirement.md
-│   ├── business_data_requirement.md
+│   ├── business_workflow.md
+│   ├── data_requirement.md
 │   └── metric_dictionary.md
 │
-├── 02_business_analytics/
-│   ├── cross_analysis.md
-│   ├── root_cause_analysis.md
-│   └── recommendation_framework.md
-│
+├── released-v2.md
 └── README.md
 ```
 
 ---
 
-# Version 2 Highlights
+## Documentation Principle
 
-- Reorganized documentation into **Business Understanding** and **Business Analytics**.
-- Standardized the business analysis workflow from problem definition to recommendations.
-- Added **Cross Analysis** to examine relationships between multiple business dimensions.
-- Introduced **Root Cause Analysis** to explain why business issues occur.
-- Established a **Recommendation Framework** that connects analytical findings with practical actions.
-- Improved traceability from business problems to actionable recommendations.
+The project separates documentation by responsibility:
+
+- **Business understanding** defines what the project is trying to answer and how success is measured.
+- **dbt models** contain transformation and analytical data-model logic.
+- **Power BI** contains the final analysis, evidence, findings, limitations, and high-level recommendations.
+
+This structure keeps the analytical story traceable from **Business Question → Metric → Model → Dashboard → Finding → Recommendation** without maintaining duplicate analysis documents.
