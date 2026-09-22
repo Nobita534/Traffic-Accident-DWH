@@ -102,7 +102,7 @@ Crash volume and crash severity represent different dimensions of road-safety pe
 
 ### 3.2 BQ1 — Adverse low-light conditions show higher aggregate severity, but the pattern is not consistent over time
 
-Across the full period, Adverse Low-Light conditions show a higher Severe Rate than Normal Conditions. The same direction remains visible in the 2022–2024 focus period, but the year-level pattern is not consistent.
+Across the full period, Adverse Low-Light conditions show a higher Severe Rate than Normal Conditions. The analysis then narrows to 2022–2024, a focus period where the aggregate gap becomes larger, while the year-level pattern remains inconsistent.
 
 **Finding 1 — Full-period pattern**
 
@@ -119,15 +119,20 @@ Weather-level comparison also shows that adverse weather under darkness is not u
 
 **Finding 2 — 2022–2024 focus period**
 
-- Normal Condition Severe Rate: **3.37%**
-- Adverse Low-Light Severe Rate: **3.64%**
-- Difference: **+0.27 percentage points**
+- Normal Condition Severe Rate: **3.42%**
+- Adverse Low-Light Severe Rate: **4.14%**
+- Difference: **+0.72 percentage points**
 
-Within this period, the gap still varies materially by year. The largest divergence appears in 2023, while 2024 does not show the same relationship.
+Within this period, the aggregate gap is larger than in the full-period view, but the year-level pattern is still not uniform. The largest divergence appears in 2023, while 2022 and 2024 do not show the same relationship.
 
 <!-- IMAGE PLACEHOLDER:
 Full-period Environmental Severity dashboard.
 Target file: images/bq1-environmental-full-period.png
+-->
+
+<!-- IMAGE PLACEHOLDER:
+2022–2024 Environmental Severity dashboard.
+Target file: images/bq1-bq2-environmental-2022-2024.png
 -->
 
 **Interpretation**
@@ -148,9 +153,9 @@ The most decision-relevant Weather × Lighting combination cannot be identified 
 
 **Finding 2 — 2022–2024 focus period**
 
-- The supported peak remains **CLEAR × DARKNESS, LIGHTED ROAD** in the current 2022–2024 view.
-- However, the surrounding Weather × Lighting severity distribution changes across the selected period, including several high-rate cells with limited support.
-- The selected-period view therefore remains important even when the top supported condition is unchanged.
+- Supported Peak Severe Condition: **CLOUDY/OVERCAST × DARKNESS, LIGHTED ROAD**
+- The supported priority therefore changes from the full-period result when the analysis is narrowed to 2022–2024.
+- The surrounding Weather × Lighting severity distribution also changes, reinforcing that environmental priorities should be interpreted within the selected period rather than treated as fixed.
 
 **Volume guardrail**
 
