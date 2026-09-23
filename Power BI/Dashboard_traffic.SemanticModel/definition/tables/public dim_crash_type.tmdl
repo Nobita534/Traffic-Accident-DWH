@@ -2,8 +2,7 @@ table 'public dim_crash_type'
 	lineageTag: c5ed452b-13eb-4bfe-8e03-4bfe8fb6ab82
 
 	column crash_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: d0a03464-b91d-4b27-94d7-eff006d9dfc7
 		summarizeBy: none
 		sourceColumn: crash_id
