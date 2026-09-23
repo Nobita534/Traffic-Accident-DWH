@@ -8,7 +8,7 @@ models:
 
     columns:
       - name: cause_id
-        description: Surrogate key of the cause dimension.
+        description: Deterministic MD5 surrogate key derived from primary_cause.
         tests:
           - unique
           - not_null
@@ -51,7 +51,9 @@ models:
 
     columns:
       - name: crash_id
-        description: Surrogate key of the crash type dimension.
+        description: >
+          Deterministic MD5 surrogate key derived from first_crash_type,
+          alignment, crash_type, and intersection_related_i.
         tests:
           - unique
           - not_null
@@ -75,7 +77,9 @@ models:
 
     columns:
       - name: natural_id
-        description: Surrogate key of the natural condition dimension.
+        description: >
+          Deterministic MD5 surrogate key derived from weather_condition,
+          lighting_condition, and roadway_surface_cond.
         tests:
           - unique
           - not_null
@@ -112,7 +116,9 @@ models:
 
     columns:
       - name: device_id
-        description: Surrogate key of the traffic device dimension.
+        description: >
+          Deterministic MD5 surrogate key derived from traffic_control_device
+          and trafficway_type.
         tests:
           - unique
           - not_null
