@@ -2,8 +2,7 @@ table 'public dim_cause'
 	lineageTag: 4cd7722b-e941-45a8-8664-0228210dc862
 
 	column cause_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: b33a3cf4-2dfa-44ac-8b37-14983bb2975e
 		summarizeBy: none
 		sourceColumn: cause_id
