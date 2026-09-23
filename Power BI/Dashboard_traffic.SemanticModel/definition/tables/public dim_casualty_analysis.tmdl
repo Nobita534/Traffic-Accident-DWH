@@ -2,8 +2,7 @@ table 'public dim_casualty_analysis'
 	lineageTag: 804aa462-7135-46c0-8b80-4c141384b011
 
 	column fact_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: ee088f01-1c4e-4232-977f-49e96abe1bc0
 		summarizeBy: none
 		sourceColumn: fact_id
