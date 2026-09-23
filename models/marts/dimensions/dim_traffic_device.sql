@@ -8,7 +8,11 @@ WITH unique_devices AS (
 )
 
 SELECT
-    ROW_NUMBER() OVER (ORDER BY traffic_control_device) AS device_id,
+    MD5(CONCAT_WS(
+        '||',
+        COALESCE(traffic_control_device, '<NULL>'),
+        COALESCE(trafficway_type, '<NULL>')
+    )) AS device_id,
     traffic_control_device,
     trafficway_type
 FROM unique_devices
