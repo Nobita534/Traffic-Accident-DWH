@@ -8,7 +8,10 @@ WITH unique_causes AS (
 )
 
 SELECT
-    ROW_NUMBER() OVER (ORDER BY primary_cause) AS cause_id,
+    MD5(CONCAT_WS(
+        '||',
+        COALESCE(primary_cause, '<NULL>')
+    )) AS cause_id,
     primary_cause,
     CASE
         -----------------------------------------------------------------------
