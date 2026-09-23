@@ -38,7 +38,7 @@ SELECT
         COALESCE(i.crash_year::text, '<NULL>')
     )) AS fact_id,
     
-    -- Các Khóa ngoại (Foreign Keys) liên kết dạng số nguyên
+    -- Deterministic dimension foreign keys; datekey remains YYYYMMDD integer
     n.natural_id,
     t.crash_id,
     c.cause_id,
@@ -74,7 +74,7 @@ LEFT JOIN dim_type t
     ON i.first_crash_type = t.first_crash_type 
     AND i.alignment = t.alignment 
     AND i.crash_type = t.crash_type 
-    AND i.intersection_related_i = t.intersection_related_i
+    AND i.intersection_related_i IS NOT DISTINCT FROM t.intersection_related_i
 LEFT JOIN dim_device d 
     ON i.traffic_control_device = d.traffic_control_device 
     AND i.trafficway_type = d.trafficway_type
