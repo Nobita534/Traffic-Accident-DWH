@@ -2,8 +2,7 @@ table 'public dim_natural_condition'
 	lineageTag: 3dbfa298-8bc7-4d8b-8668-a6e3da49fa93
 
 	column natural_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 20194c3b-41b6-41b3-aa87-58e20c90e7f8
 		summarizeBy: none
 		sourceColumn: natural_id
