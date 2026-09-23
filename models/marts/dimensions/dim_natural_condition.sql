@@ -26,9 +26,12 @@ classified_conditions AS (
 )
 
 SELECT
-    ROW_NUMBER() OVER (
-        ORDER BY weather_condition, lighting_condition, roadway_surface_cond
-    ) AS natural_id,
+    MD5(CONCAT_WS(
+        '||',
+        COALESCE(weather_condition, '<NULL>'),
+        COALESCE(lighting_condition, '<NULL>'),
+        COALESCE(roadway_surface_cond, '<NULL>')
+    )) AS natural_id,
     weather_condition,
     lighting_condition,
     roadway_surface_cond,
