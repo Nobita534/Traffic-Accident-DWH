@@ -8,7 +8,7 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["public dim_cause","public dim_crash_date","public dim_crash_type","public dim_natural_condition","public dim_traffic_device","public fct_traffic_accidents","public dim_casualty_analysis"]
+annotation PBI_QueryOrder = ["public dim_cause","public dim_crash_date","public dim_crash_type","public dim_natural_condition","public dim_traffic_device","public fct_traffic_accidents","casualty_analysis"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
@@ -18,7 +18,7 @@ ref table 'public dim_crash_type'
 ref table 'public dim_natural_condition'
 ref table 'public dim_traffic_device'
 ref table 'public fct_traffic_accidents'
-ref table 'public dim_casualty_analysis'
+ref table casualty_analysis
 ref table 'All Measure'
 ref table 'Condition Comparison'
 

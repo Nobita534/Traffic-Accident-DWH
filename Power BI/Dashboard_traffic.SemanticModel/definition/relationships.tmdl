@@ -19,6 +19,6 @@ relationship AutoDetected_2cf1bd83-3959-466d-9bbf-ce5c3460c2e8
 	toColumn: 'public dim_traffic_device'.device_id
 
 relationship AutoDetected_4444ee06-69a4-4a7d-a84a-837f7db1c408
-	fromColumn: 'public dim_casualty_analysis'.fact_id
+	fromColumn: casualty_analysis.fact_id
 	toColumn: 'public fct_traffic_accidents'.fact_id
 

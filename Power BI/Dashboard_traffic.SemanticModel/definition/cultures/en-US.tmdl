@@ -3941,7 +3941,7 @@ cultureInfo en-US
 			    "public_dim_casualty_analysis": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "public dim_casualty_analysis"
+			          "ConceptualEntity": "casualty_analysis"
 			        }
 			      },
 			      "State": "Generated",
@@ -3956,7 +3956,7 @@ cultureInfo en-US
 			    "public_dim_casualty_analysis.fact_id": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "public dim_casualty_analysis",
+			          "ConceptualEntity": "casualty_analysis",
 			          "ConceptualProperty": "fact_id"
 			        }
 			      },
@@ -4088,7 +4088,7 @@ cultureInfo en-US
 			    "public_dim_casualty_analysis.casualty_type": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "public dim_casualty_analysis",
+			          "ConceptualEntity": "casualty_analysis",
 			          "ConceptualProperty": "Casualty Type"
 			        }
 			      },
@@ -4210,7 +4210,7 @@ cultureInfo en-US
 			    "public_dim_casualty_analysis.people_count": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "public dim_casualty_analysis",
+			          "ConceptualEntity": "casualty_analysis",
 			          "ConceptualProperty": "People Count"
 			        }
 			      },
@@ -9125,7 +9125,7 @@ cultureInfo en-US
 			  "Relationships": {
 			    "public_dim_casualty_analysis_has_public_fct_traffic_accident": {
 			      "Binding": {
-			        "ConceptualEntity": "public dim_casualty_analysis"
+			        "ConceptualEntity": "casualty_analysis"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -11099,7 +11099,7 @@ cultureInfo en-US
 			    },
 			    "public_dim_casualty_analysis_has_people_count": {
 			      "Binding": {
-			        "ConceptualEntity": "public dim_casualty_analysis"
+			        "ConceptualEntity": "casualty_analysis"
 			      },
 			      "State": "Generated",
 			      "Roles": {
@@ -11132,7 +11132,7 @@ cultureInfo en-US
 			    },
 			    "public_dim_casualty_analysis_has_casualty_type": {
 			      "Binding": {
-			        "ConceptualEntity": "public dim_casualty_analysis"
+			        "ConceptualEntity": "casualty_analysis"
 			      },
 			      "State": "Generated",
 			      "Roles": {

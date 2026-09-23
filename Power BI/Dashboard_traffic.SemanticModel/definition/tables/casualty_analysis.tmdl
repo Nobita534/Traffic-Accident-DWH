@@ -1,4 +1,4 @@
-table 'public dim_casualty_analysis'
+table casualty_analysis
 	lineageTag: 804aa462-7135-46c0-8b80-4c141384b011
 
 	column fact_id
@@ -27,7 +27,7 @@ table 'public dim_casualty_analysis'
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition 'public dim_casualty_analysis' = m
+	partition casualty_analysis = m
 		mode: import
 		source =
 				let
@@ -42,6 +42,8 @@ table 'public dim_casualty_analysis'
 				    #"Renamed Columns1" = Table.RenameColumns(#"Unpivoted Other Columns",{{"Attribute", "Casualty Type"}, {"Value", "People Count"}})
 				in
 				    #"Renamed Columns1"
+
+	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 
