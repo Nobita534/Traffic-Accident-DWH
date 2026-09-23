@@ -2,8 +2,7 @@ table 'public dim_traffic_device'
 	lineageTag: 52457bdd-8ca9-4359-8270-69b8b1fcb18d
 
 	column device_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: abb9c11c-685e-4e84-b41c-3fc9bb37cff8
 		summarizeBy: none
 		sourceColumn: device_id
