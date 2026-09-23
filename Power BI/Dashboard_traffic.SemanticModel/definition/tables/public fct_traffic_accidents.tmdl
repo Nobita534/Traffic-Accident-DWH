@@ -10,8 +10,7 @@ table 'public fct_traffic_accidents'
 		annotation SummarizationSetBy = Automatic
 
 	column natural_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 3f9b9d10-696a-4992-a5f7-b5cf001d8ee4
 		summarizeBy: none
 		sourceColumn: natural_id
@@ -19,8 +18,7 @@ table 'public fct_traffic_accidents'
 		annotation SummarizationSetBy = Automatic
 
 	column crash_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 972f92c1-0975-4913-a8a1-d3ecc0952b40
 		summarizeBy: none
 		sourceColumn: crash_id
@@ -28,8 +26,7 @@ table 'public fct_traffic_accidents'
 		annotation SummarizationSetBy = Automatic
 
 	column cause_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 6cd493e7-effc-4225-aa13-dc14444233e4
 		summarizeBy: none
 		sourceColumn: cause_id
@@ -37,8 +34,7 @@ table 'public fct_traffic_accidents'
 		annotation SummarizationSetBy = Automatic
 
 	column device_id
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: 797909d0-e240-48ab-8e98-d77e00802859
 		summarizeBy: none
 		sourceColumn: device_id
